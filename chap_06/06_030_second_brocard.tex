@@ -1,0 +1,149 @@
+
+
+Upwards of seven Brocard triangles are defined in \cite{gibert2020-brocard}. The 1st, 2nd, 5th, and 7th Brocard triangles are inscribed in the Brocard circle, as shown on this \href{https://youtu.be/_bK-BCQv24A}{video}. Henceforth we shall focus on the second Brocard triangle, denoted $T'=A' B' C'$. All primed quantities ($\Omega_i'$, $\omega'$, etc.) below refer to those of $T'$. Specifically, $X_i'$ stands for triangle center $X_i$ of $T'$.\\
+
+\noindent Referring to Figure~\ref{fig:broc-por-sec-tri}:
+
+\begin{definition}[Second Brocard Triangle]
+The vertices $A',B',C'$ of the second Brocard triangle $T'$ lie at the intersections of cevians through $X_6$ with the Brocard circle $\K$, i.e., $T'$ is inscribed in $\K$.
+\end{definition}
+
+\noindent Over the Brocard porism:
+
+\begin{lemma}
+$X_3'$ (equivalent to $X_{182}$) is stationary and given by:
+
+\[
+X_3' = X_{182}=\left[0,-\frac{R\sqrt{ \Sha^2 -3}}{2\Sha}\right] \]
+\label{lem:x3}
+\end{lemma}
+
+This stems from the fact that $T'$ is inscribed in fixed $\K$ whose center is $X_{182}$. The explicit formula is obtained by noting that $X_{182}$ is the midpoint of $X_3 X_6$, with $X_3=[0,0]$ and $X_6$ as given in Lemma~\ref{lem:x6}. 
+
+\begin{lemma}
+$X_6'$ (equivalent to $X_{574}$) is stationary and given by:
+
+\[ X_6' = X_{574}= \left[0, -\frac{R\Sha \sqrt{\Sha^2-3}}{\Sha^2+3} \right] \]
+
+\label{lem:x574}
+\end{lemma}
+
+\begin{proof}
+$X_6'$ is $X_{574}$ of the reference triangle \cite[X(6)]{etc}. The latter is the inverse of $X_{187}$ with respect to the Brocard circle \cite[X(574)]{etc}. In turn, $X_{187}$ is the inverse of $X_6$ with respect to the circumcircle. $X_6$ is stationary in the porism \cite{bradley2007-brocard}. Carrying out the inversions in reverse order, and noting that both the circumcircle and Brocard circle are stationary, obtain the claim.  See Appendix~\ref{app:app_further} for a method to obtain the expression for $X_{574}$.
+\end{proof}
+
+\begin{corollary}
+ The Brocard Circle $\K'$ of $T'$ is stationary.
+\end{corollary}
+
+This stems from the fact that stationary $X_3'$ and $X_6'$ are antipodes on $\K'$ \cite[Brocard Circle]{mw}.
+
+\begin{corollary}
+$X_{15}'$ and $X_{16}'$ are stationary.
+\label{cor:x15x16p}
+\end{corollary}
+
+\begin{proof}
+ $X'_{15}$ (resp. $X'_{16}$) coincide with $X_{15}$ (resp. $X_{16}$) \cite[X(15) and X(16)]{etc}, shown in Lemma~\ref{lem:x15x16} to be stationary.
+\end{proof}
+
+\begin{corollary}
+The $T'$ family is equibrocardal, i.e., $\omega'$ is invariant.
+\label{cor:inv-w}
+\end{corollary}
+
+\begin{proof}
+Plugging invariant $X_3',X_6',X_{15}'$ are stationary in the ``combo'' \eqref{eqn:combo-x15} of Lemma~\ref{cor:x15x16p} yields a unique $\Sha'$. 
+\end{proof}
+
+Let $R$ denote the circumradius of a triangle. After \cite[Second Brocard Circle]{mw}:
+
+\begin{definition}[Second Brocard Circle] Let $\K_2$ denote the circle centered on $X_3$ through both Brocard points $\Omega_1,\Omega_2$ and with radius $R_2=R\sqrt{1-4\sin^2\omega}$. 
+\end{definition}
+
+\begin{lemma}
+The second Brocard circle $\K'_2$ of the $T'$ family is stationary. 
+\label{lem:broc2-circ}
+\end{lemma}
+
+\begin{proof}
+The $T'$ family is inscribed in a fixed circle (i.e., $X_3'$ is stationary and $R'$ is invariant). Since $\omega'$ is invariant (Corollary~\ref{cor:inv-w}), so is $R_2'$, and the result follows.
+\end{proof}
+
+\begin{corollary}
+The Brocard midpoint $X_{39}'$ of the $T'$ is stationary.
+\end{corollary}
+
+\begin{proof}
+$X_{39}$ is the inverse of $X_6$ with respect to $\K_2$ \cite[X(39)]{etc}. Since both $X_6'$ and $\K_2'$ are stationary (Lemmas~\ref{lem:x574} and \ref{lem:broc2-circ}), the result follows.
+\end{proof}
+
+\begin{corollary}
+$\Omega_1'$, $\Omega_2'$ are stationary.
+\label{cor:w1w2}
+\end{corollary}
+
+\begin{proof}
+These both lie on $\K'$ and their join is perpendicular to the Brocard axis $X_3'X_6'$, intersecting it at $X_{39}'$ \cite[Brocard Circle]{mw}. Since all stationary, the result follows.
+\end{proof}
+
+\noindent The following results are used to  entail Theorem~\ref{thm:nesting}.
+
+\begin{lemma}
+$X_6'$ (equivalent to $X_{574}$) is interior to the segment $X_3'X_6$ (equivalent to $X_{182}X_6$).
+\end{lemma}
+
+\begin{proof}
+Assume $X_3$ is at the origin. An expression for $X_6$ was given in Lemma~\ref{lem:x6} and one for $X_6'$ in Lemma~\ref{lem:x574}. Noting that $X_{182}=\frac{1}{2}X_6$ and $\Sha^2\geq 3$ (Remark~\ref{rem:sha-min}) yields the result.
+\end{proof}
+
+\begin{proposition}
+The Brocard circle $\K'$ of $T'$ is contained within its circumcircle, i.e., the Brocard circle $\K$ of its reference triangle.
+\label{prop:containment}
+\end{proposition}
+
+\begin{proof}
+Since $X_3'X_6'$ is a diameter of $\K'$, and both are contained within $\K$ (see Lemma~\ref{lem:x574}), the result follows. 
+\end{proof}
+
+\noindent Referring to Figure~\ref{fig:iteration}:
+
+\begin{theorem}
+The family of second Brocard Poncelet triangles in a new Brocard porism are specified by:
+
+\begin{align*}
+R'=&   \frac{R\sqrt{\Sha^2-3}}{2\Sha} \\
+X_3' =& \left[0,-R'\right] \\
+\Sha' =& \frac{\Sha^2+3}{2\Sha}\\
+(a',b')=& R'\left(\frac{1}{\sqrt{\Sha'^2+1}},\frac{2}{\Sha'^2+1}\right) \\
+\Omega_1'=& \Omega_2\left(R',\Sha'\right) +  X_3' \\
+\Omega_2'=&\Omega_1\left(R',\Sha'\right) +  X_3' \\
+%X_{182}'=&\left[ 0, - \,\frac { 3\left(   {\Sha}^{2}+1 \right) R\sqrt {{\Sha}^{2}-3}}{4\Sha\, \left( {\Sha}^{2}+3 \right) }\right]\\
+X_{182}'=&\left[ 0, - \,\frac { 3R'\left(   {\Sha}^{2}+1 \right) }{4\,\Sha'\,\Sha \, }\right]
+\end{align*}
+
+\noindent where  $\Sha'=\cot\omega'$ and $\Omega_i(R,\Sha)$,  $i=1,2$ are as in Proposition~\ref{prop:brocs12}.
+\label{thm:porism}
+\end{theorem}
+
+\begin{proof}
+In a general triangle (see Figure~\ref{fig:broc-por-sec-tri}), the major (resp. minor) axes of the Brocard Inellipse are oriented along $\Omega_1\Omega_2$ (resp. the Brocard axis $X_3 X_6$) and its center is the Brocard midpoint $X_{39}$ \cite[Brocard Inellipse]{mw} . Since the Brocard points $\Omega_1'$, $\Omega_2'$ of $T'$ are stationary (Corollary~\ref{cor:w1w2}), the center of $\E'$ is stationary center. Since $X_3$ and $X_6$ are stationary antipodes of $\K$, $\E'$ is axis-aligned with $\E$. Plug invariant $R_2$ and $\omega'$ into the equations in Lemma~\ref{lem:ab} and obtain invariant $(a',b')$ as in the claim.
+\end{proof}
+
+Peter Moses let us know that $X_{182}'$ is none other than $X_{39498}$ \cite{moses2020-private-brocard}.
+
+\begin{remark}
+The upper vertex of the inellipse of Brocard $\E'$ is at the Brocard midpoint $X_{39}=X_{39}'+[0,b']$.
+\end{remark}
+
+\begin{corollary}
+The semi-axes of $\E'$ can be expressed in terms of those of $\E$ as follows:
+\[ [a',b']= \left[{\frac {a\sqrt {{a}^{2}-{b}^{2}}}{\sqrt {{a}^{2}+2\,{b}^{2}}}},{
+\frac {b\sqrt {{a}^{2}-{b}^{2}}\sqrt {4\,{a}^{2}-{b}^{2}}}{{a}^{2}+2\,
+{b}^{2}}}\right]\]
+\end{corollary}
+
+\begin{proof} This follows from  Theorem \ref{thm:porism} and Lemma~\ref{lem:ab}.
+\end{proof}
+
+

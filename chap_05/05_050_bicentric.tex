@@ -1,0 +1,200 @@
+\section{Main Result}
+
+History of experiment. Pedro found out about our work via Youtube (insomnia). Asked us about an invariant involving billiard curvatures at the vertices, we found $\sum{k^{2/3}}$ but this is a direct corollary of the sum of cosines. This implied $\sum{1/(d_1 d_2)}$ was invariant. Jair gave the idea to check if the stronger result $\sum{1/d_1}$ was invariant, which it was. This corresponds to the sum of the inverse lengths of ``focal spokes'', or the sum of the lengths of the focal spokes to the inversive polygon, both which are invariant. We then simply tested the perimeter of the inversive polygon which was unexpectedly constant.
+
+In \cite{reznik2020-n3-focus-inversive} we showed:
+
+\begin{theorem}
+Over 3-periodics in the elliptic billiard (confocal pair) the perimeter of the focus-inversive polygon is invariant and given by:
+
+\[ ... \]
+
+Furthermore the inversive family is a 3-periodic of a rigidly rotating elliptic billiard whose axes are given by:
+
+\[ ... \]
+
+
+\end{theorem}
+
+\begin{theorem}
+Over N-periodics in the elliptic billiard (confocal pair) the perimeter of the focus-inversive polygon is invariant.
+\end{theorem}
+
+\section{Proof by Jacobi Elliptic Functions}
+
+
+\begin{lemma}
+The polar curve of the ellipse $\mathcal{E}$ is the circle
+\begin{align*}
+   C(x,y)&= (x +\frac{c(b^2 + \rho^2)}{b^2})^2+y^2-\frac{a^2\rho^4}{b^4}=0\\
+  % x_0&=  -\frac{c(b^2 + r^2)}{b^2}
+    %  x_0&=-\frac{(a - b)(ab + b^2 + r^2)}{bc}\\
+\end{align*}  
+\end{lemma}
+
+\textcolor{red}{ron:checar x0 abaixo}
+\begin{lemma}
+The polar curve of the hyperbola $\mathcal{H}$ is the circle
+\begin{align*}
+   C(x,y)&= \left(x- \frac{c(\rho^2 - b^2)}{b^2} \right)^2+y^2-\frac{a^2\rho^4}{b^4}=0\\
+ %  x_0&=  \frac{c(r^2 - b^2)}{b^2} 
+\end{align*}  
+\end{lemma}
+
+\begin{lemma}
+The limit points of a pair of polar circles associated to a pair of confocal ellipes are
+\[ \left[-c,0\right], \;\; \left[-c+\frac{\rho^2}{c} ,0\right]\]
+
+\end{lemma}
+\section{Mapping a Confocal to a Bicentric Pair}
+Under the polar transformation an origin-centered ellipse $\E$ is sent to the circle:
+
+\[ \left( x+{\frac {c \left( {b}^{2}+\rho^{2} \right) }{{b}^{2}}}
+ \right) ^{2}+{y}^{2}-{\frac {{a}^{2}\rho^{4}}{{b}^4}}=0\]
+ and the confocal ellipse $\E_c$ is sent to
+ \[ \left( x+\frac {c \left( b_c^{2}+\rho^{2} \right) }{b_c^2}
+ \right) ^{2}+{y}^{2}-{\frac {a_c^{2}\rho^{4}}{b_c^4}}=0\]
+ 
+Therefore:
+
+\begin{align*} r&=\frac{a \,\rho^2}{b^2},\; R=\frac{a_c\, \rho^2}{b_c^2}\\
+d&=\frac {c \left( b_c^{2}+\rho^{2} \right) }{b_c^2}-\frac {c \left( b^{2}+\rho^{2} \right) }{b^2}=\frac{c \rho^2(b^2 - b_c^2)}{b^2\, b_c^2}=\frac{\rho^2 c\, (a^2 - a_c^2)}{b^2\, b_c^2}\\
+  k^2&=\frac{4Rd}{(R+d)^2-r^2}=\frac{4 \,c\, a_c\,(a_c - c)^2    }{b_c^4}\\
+  \delta_{\pm}&=\pm {\frac {\rho^{6}{a}^{4}}{2\,c\, {b}^{8}}}+{\frac { \left( {a}^{2} b_c^{4}-a_c^{2}{b}^{4}-{c}^{6} \right) \rho^{2}}{2\,{b}^{2}  b_c^{2} {c}^{3}}}
+\end{align*}
+
+ The limiting points $\ell_1,\ell_2$ are given by: $[-c,0]$ and $[-c+\frac{\rho^2}{c},0]$.
+ 
+ 
+ \textcolor{red}{Ron: calculos abaixos foram simplificados na secao seguinte}
+ 
+ 
+ Reciprocally, given a pair of circles $C_R:\; (x+d)^2+y^2=R^2$ and $C_r:\; x^2+y^2=r^2$, by the  polar transformation, 
+ it is associated a pair of confocal ellipses $\{\E, \E_c\}$
+ with semiaxes given by:
+ 
+ \begin{align*}
+     a&= \sqrt{b^2+c^2}=\frac{\sqrt{2}\rho^2\sqrt{ (R^2 - d^2 - r^2)\sqrt{\alpha} +(R^2 - d^2)^2  - r^2(2R^2 - r^2) }}{2r\alpha} \\
+     b&= {\frac {\sqrt {2}{\rho}^{2}}{2\,\alpha\,r}\sqrt {\alpha\, \left( 
+\alpha+\sqrt {4\,\alpha\,{r}^{2}{d}^{2}+{\alpha}^{2}} \right) }}
+ \\
+     a_c&= \sqrt{b_c^2+c^2} = \frac{\sqrt{2}\rho^2\sqrt{(R^2 + d^2 - r^2)\sqrt{\alpha} + R^2(R^2 - 2r^2) + (d^2 - r^2)^2 }}{2R\alpha}\\
+     b_c&= {\frac {\sqrt {2}{\rho}^{2}}{2 \alpha\,R}\sqrt {\alpha\, \left( \alpha+
+\sqrt {4\,\alpha {R}^{2}\,{d}^{2}+{\alpha}^{2}} \right) }}
+ \\
+     c&= {\frac {d{\rho}^{2}}{2\,\alpha\, \left( R^2-r^2 \right)    } \left( \sqrt {\alpha\, \left( 4\, {r}^{2} d^2+\alpha
+ \right) }+\sqrt {\alpha\, \left( 4\,{R}^{2}{d}^{2}+\alpha \right) }
+ \right) }
+\\
+     \alpha&=(R - d + r)(R + d + r)(R - d - r)(R + d - r)
+ \end{align*}
+ 
+ Under the polar transformation an origin-centered ellipse $\E$ is sent to the circle:
+
+\[ \left( x+{\frac {c \left( {b}^{2}+\rho^{2} \right) }{{b}^{2}}}
+ \right) ^{2}+{y}^{2}-{\frac {{a}^{2}\rho^{4}}{{b}^4}}=0\]
+ and the confocal ellipse $\E_c$ is sent to
+ \[ \left( x+\frac {c \left( b_c^{2}+\rho^{2} \right) }{b_c^2}
+ \right) ^{2}+{y}^{2}-{\frac {a_c^{2}\rho^{4}}{b_c^4}}=0\]
+ 
+Therefore:
+
+\begin{align*} r&=\frac{a \,\rho^2}{b^2},\; R=\frac{a_c\, \rho^2}{b_c^2}\\
+d&=\frac {c \left( b_c^{2}+\rho^{2} \right) }{b_c^2}-\frac {c \left( b^{2}+\rho^{2} \right) }{b^2}=\frac{c \rho^2(b^2 - b_c^2)}{b^2\, b_c^2}=\frac{\rho^2 c\, (a^2 - a_c^2)}{b^2\, b_c^2}\\
+  k^2&=\frac{4Rd}{(R+d)^2-r^2}=\frac{4 \,c\, a_c\,(a_c - c)^2    }{b_c^4}\\
+  \delta_{\pm}&=\pm {\frac {\rho^{6}{a}^{4}}{2\,c\, {b}^{8}}}+{\frac { \left( {a}^{2} b_c^{4}-a_c^{2}{b}^{4}-{c}^{6} \right) \rho^{2}}{2\,{b}^{2}  b_c^{2} {c}^{3}}}
+\end{align*}
+
+ The limiting points $\ell_1,\ell_2$ are given by: $[-c,0]$ and $[-c+\frac{\rho^2}{c},0]$.
+ 
+ 
+ \section{ Hyperbolas}
+ 
+ Consider the pair of circles $x^2+y^2=r^2$
+ and $(x+d)^2+y^2=R^2$ and the limit points
+ $\ell_1= (R^2 - d^2 - r^2 -\Delta)/(2d)$ and $\ell_2=(R^2 - d^2 - r^2 + \Delta)/(2 d)$,
+where
+ \[ \Delta=\sqrt { \left( d+R+r \right)  \left( R-d+r \right)  \left( R+d-r
+ \right)  \left( R-d-r \right) }\]
+
+ \begin{lemma} The polar image of the circle $x^2+y^2=r^2$ with respect to the limit point $  \ell_2 $ is the hyperbola  centered at
+ \[ \left[\frac{\Delta^2-2d^2k^2  }{2 d \Delta} + \frac{R^2 - d^2 - r^2}{ 2 d },0\right] \]
+ and semiaxes given by
+ 
+ \begin{align*}
+     a^2&=\frac{k^4(   2d^2r^2-\Delta(R^2 - d^2 - r^2 - \Delta))}{2 r^2 \Delta^2}\\
+     b^2&= \frac{k^4(R^2 - d^2 - r^2 - \Delta)}{2 \Delta r^2  } \\
+     c^2&=a^2+b^2=\frac{k^4d^2}{\Delta^2}
+ \end{align*}
+ \end{lemma}
+ 
+ 
+ \begin{lemma} The polar image of the circle $(x+d)^2+y^2=R^2$ with respect to the limit point $  \ell_2 $ is the hyperbola  centered at
+ \[ \left[\frac{\Delta^2-2d^2k^2  }{2 d \Delta} + \frac{R^2 - d^2 - r^2}{ 2 d },0\right] \]
+ and semiaxes given by
+ 
+ \begin{align*}
+     a^2&= \frac{k^4(2R^2d^2 - \Delta (R^2 + d^2 - r^2 - \Delta))}{ 2R^2 \Delta^2} \\
+     b^2&=  \frac{(R^2+  d^2 - r^2 - \Delta)k^4}{ 2 \Delta R^2} \\
+     c^2&=a^2+b^2=\frac{k^4d^2}{\Delta^2}
+ \end{align*}
+ \end{lemma}
+
+
+\begin{lemma} The polar image of the circle $x^2+y^2=r^2$ with respect to the limit point $  \ell_1 $ is the ellipse  centered at
+ \[ \left[ \frac{ 2 d^2 k^2 - \Delta^2}{ 2 \Delta d} + \frac{R^2 - d^2 - r^2}{ 2 d},0\right] \]
+ and semiaxes given by
+ 
+ \begin{align*}
+     a^2&=\frac{( (\Delta + R^2 - d^2 - r^2)\Delta + 2d^2r^2)k^4}{ 2 \Delta r^2} \\
+     b^2&=\frac{    (R^2+ \Delta-d^2 - r^2 ) k^4}{2 \Delta r^2} \\
+     c^2&=a^2-b^2=\frac{k^4d^2}{\Delta^2}
+ \end{align*}
+ \end{lemma}
+ 
+ 
+ \begin{lemma} The polar image of the circle $(x+d)^2+y^2=R^2$ with respect to the limit point $  \ell_1 $ is the ellipse centered at
+ \[ \left[ \frac{ 2 d^2 k^2 - \Delta^2}{ 2 \Delta d} + \frac{R^2 - d^2 - r^2}{ 2 d},0\right] \]
+ and semiaxes given by
+ 
+ \begin{align*}
+     a^2&= \frac{(2R^2d^2 + \Delta (  \Delta+R^2 + d^2 - r^2 ))k^4}{ 2 \Delta R^2}  \\
+     b^2&=  \frac{(\Delta+R^2 + d^2 - r^2   )k^4}{ 2 \Delta R^2} \\
+     c^2&=a^2-b^2=\frac{k^4d^2}{\Delta^2}
+ \end{align*}
+ \end{lemma}
+
+ 
+\section{Poristic}
+
+\begin{definition}
+Let $\P=\{p_1,\ldots p_n\}$ be an $n-$gon with vertices  $p_i$ with $p_{n+1}=p_1$. From each vertex $p_i$ draw a perpendicular to the segment $p_{i-1}p_{i+1}$ .
+In general, these perpendiculars have no
+common point, but when  they meet at a single point,   this point will be   called
+the orthocentre of the $n-$gon  $\P$.
+\end{definition}
+\begin{theorem}
+Let $\Gamma$   be the circle inscribed in an n-gon $\P$, let $I$ be the inversion with
+respect to $\Gamma$, $a_i$ the centres of the circles equal to the $I-$images of the straight lines
+containing sides of $\P$ , and let $A$ be the base $n-$gon with vertices $a_i$. The polygon $\P$
+admits a circumscribed circle $\C$ if and only if the corresponding base $n-$gon $A$ has
+an orthocentre. This orthocentre is the centre of the circle
+$I(\C)$, the image of the
+circumscribed circle $\C$ under $I$ .
+\end{theorem}
+
+Pedro's paper.
+
+\section{Future Work}
+
+\begin{conjecture}
+Over N-periodics in the elliptic billiard, the sum of cosines of the inversive polygon is invariant except for simple $N=4$.
+\end{conjecture}
+
+\begin{conjecture}
+The product of areas of the two focus-inversive polygons is invariant for all odd $N$. 
+\end{conjecture}
+
+\begin{conjecture}
+The ratio of areas of polar to inversive polygons is invariant for all $N$. 
+\end{conjecture}

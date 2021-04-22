@@ -1,0 +1,71 @@
+\usepackage{graphics}
+\usepackage{thmtools}
+\usepackage{wasysym}
+
+\usepackage{amsthm,amsbsy,amsmath,amsfonts}
+\usepackage{hyperref}
+
+
+\usepackage{graphicx,float,latexsym,color}
+
+\usepackage[font={scriptsize,it}]{caption}
+\usepackage{subcaption}
+
+\usepackage{makecell}
+\renewcommand{\arraystretch}{1.2}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[nameinlink,capitalize,noabbrev]{cleveref}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{observation}{Observation}
+\newtheorem{proposition}{Proposition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+
+\hypersetup{
+    pagebackref=true,
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of 
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=OliveGreen,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=red           % color of external links
+}
+
+\usepackage{lineno}
+\def\linenumberfont{\normalfont\small\sffamily}
+%a4: 210 x 297
+%\textwidth=125mm
+%\textheight=195mm
+\arraycolsep=2pt
+\captionsetup{width=120mm}
+
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+ 
+\usepackage{comment}
+\usepackage{microtype}
+\usepackage{footnote}
+
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\F}{\mathcal{F}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\D}{\mathbb{D}}
+\renewcommand{\T}{\mathbb{T}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Cp}{\mathbb{C}}
+\newcommand{\ol}{\overline}
+\renewcommand{\l}{\lambda}
+
+\newcommand{\torp}[2]{\texorpdfstring{#1}{#2}}

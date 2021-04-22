@@ -1,0 +1,65 @@
+%% Creator: Inkscape inkscape 0.92.2, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'poncelet_nested.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{742.89680059bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.4603672)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{poncelet_nested.pdf}}%
+    \put(0.48513745,0.42968599){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1$}}}%
+    \put(-0.00335206,0.19716911){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_2=T(p_1)$}}}%
+    \put(0.43924594,0.00952379){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_3$}}}%
+    \put(0.25058089,0.42356716){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_1$}}}%
+    \put(0.59323744,0.04317764){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_2=T^{-1}(q_1)$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{poncelet_nested.pdf}}%
+    \put(0.67176286,0.33586342){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Gamma$}}}%
+    \put(0.40661201,0.16861432){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\gamma$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{poncelet_nested.pdf}}%
+    \put(0.29137336,0.2654964){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{poncelet_nested.pdf}}%
+  \end{picture}%
+\endgroup%

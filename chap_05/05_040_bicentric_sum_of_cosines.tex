@@ -1,0 +1,32 @@
+\begin{theorem}
+The sum of cosines of angles internal to the family of N-periodics interscribed in a bicentric pair is invariant.
+\label{thm:bicentric-sum}
+\end{theorem}
+
+\begin{proof}
+Let $\{p_{j}(u)\}$, as in  \eqref{jacobivertex}, denote the vertices of the family of bicentric polygons. Let $\theta_{j}(u)$ denote the internal angle at the vertex $p_{j}(u)$. It follows from elementary geometry that
+$\cos{\theta_{j}(u)}=-\cos({\phi_{j+1}(u)-\phi_{j-1}(u)}).$
+Thus, if we denote by $S(u)$ the sum of the cosines of the internal angles, we have:
+
+\begin{equation}
+\label{sumofcosines}
+S(u)=\sum \cos{\theta_{j}(u)}=-\sum{cn(u_{j+1})cn(u_{j-1})+sn(u_{j+1})cn(u_{j-1})},
+\end{equation}
+where $u_{j}=u+j\sigma$.
+
+We now consider the natural complexified version of $S(u)$ defined on the complex plane by assuming that $u$ is a complex variable. To prove that $S$ is constant, it is sufficient to show that it has no poles and then apply Liouville's theorem.
+
+So, suppose that $u=u_p$ is a pole of $S$. This implies that, for a certain index $j$, $u_{j}=u_{p}+j\sigma$ is a common pole of $cn(z)$ and $sn(z)$. We will now see that this leads to a contradiction.
+
+In fact, by looking at (\ref{sumofcosines}), the terms where $u_{j}$ appears are given by
+$$-(cn(u_{j})cn(u_{j-2})-sn(u_{j})cn(u_{j-2})+cn(u_{j+2})cn(u_{j})-sn(u_{j+2})cn(u_{j})).$$
+
+Thus, the coefficients of $cn(u_{j})$ and $sn(u_{j})$ are, respectively:
+
+$$-(cn(u_{j-2})+cn(u_{j+2})),$$
+
+$$-(sn(u_{j-2})+sn(u_{j+2})).$$
+
+Note that by (\ref{eqn:zpole}) both coefficients are zero, and they cancel out the simple poles of $cn(z)$ and $sn(z)$ at $u_{j}$, so $u_{p}$ is not a pole of $S$.   
+\end{proof}
+

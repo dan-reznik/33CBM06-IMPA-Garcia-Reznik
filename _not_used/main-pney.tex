@@ -1,0 +1,207 @@
+\documentclass{book}
+
+% For a set of fonts a bit better than standard TeX:
+\input{setup}
+
+\begin{document}
+
+\title{The title goes here}
+\author{John Doe, III}
+\maketitle
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+% Use \include{} and \input always to segregate the files of each chapter.
+
+\chapter{The first chapter}
+  \label{chap1}
+  \section{Entering the text}
+    \label{sec1.1}
+
+Enter the text as you would normally.
+
+The encoding of the files should be UTF-8 and that should be set in the text editor.
+This should be followed by all files including bibliography, etc.
+
+  \section{Using labels for references}
+
+Place \verb+\label{}+ in all chapters, sections, \dots so you can refer to all elements
+using the commands \verb+\cref{}+ from the package \texttt{cleveref}.
+
+\begin{theorem}[Euclid, c. 300 BC] 
+	\label{euclid}
+	There are infinitely many primes.
+\end{theorem} 
+
+And this is a reference to \cref{euclid} of \cref{sec1.1} of \cref{chap1}.
+
+    \subsection{}
+
+      \paragraph{}
+
+\chapter{The use of a foreign language}
+
+\section{How to mark it}
+
+All words not in English should be marked appropriately, so if the proof
+is by \textlatin{reductio ad absurdum} it should be marked as such.
+
+The word \emph{eigenvector} is derived from the German``\textgerman{Eigenvektor}''.
+
+% And if you have a text that is slightly longer
+%
+%\begin{greek}[variant=ancient]
+%μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε'
+%ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι \index[std]{discriminant}προί̈αψεν ἡρώων, αὐτοὺς δὲ ἑλώρια
+%τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή, ἐξ οὗ δὴ τὰ
+%πρῶτα διαστήτην ἐρίσαντε Ἀτρεί̈δης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+%\end{greek}
+
+\chapter{Creating indices}
+
+  \section{Itema that should go to the Nomenclature Index}
+
+The \emph{discriminant} of this base is the
+element of $K$ \nomenclature[]{$\Delta(\omega_1, \ldots, \omega_n)$}{discriminant of the base $\omega_1, \ldots, \omega_n$}.
+
+$L$\nomenclature[]{$L$}{subring of $K$}
+
+\section{Items going to the other indices}
+
+John Milnor\index[aut]{Milnor, John} was the first to show that there are 
+several differentiable structures\index[std]{differentiable structures} on
+the same manifold\index[std]{manifold}, in particular on the sphere
+$\mathbb{S}^7$\index[not]{$\mathbb{S}^7$}.
+
+
+\chapter{Another showing bibliographical citations}
+
+The system of citations give you three basic commands that produce:
+
+% paulo ney: use textcite[]{}
+
+{\small
+\begin{verbatim}
+  \cite{jon90}                   -->    Jones et al. 1990
+  \cite[cap. 2]{jon90}           -->    Jones et al. 1990, cap. 2
+  \textcite{jon90}               -->    Jones et al. (1990)
+  \textcite[cap. 2]{jon90}       -->    Jones et al. (1990, cap. 2)
+  \parencite{jon90}              -->    (Jones et al., 1990)
+  \parencite[cap. 2]{jon90}      -->    (Jones et al., 1990, cap. 2)
+  \parencite[see][]{jon90}       -->    (see Jones et al., 1990)
+  \parencite[see][cap. 2]{jon90} -->    (see Jones et al., 1990, cap. 2)
+\end{verbatim}
+}
+
+If you only open one set of square brackets it will assume the
+contents of the brackets is a \emph{postnote}, so if you only 
+want a \emph{prenote} make sure you still open the second set
+of square brackets and then just leave it empty.
+
+One of the most useful commands is \verb+\textcite+ which marks
+the citation clearly and let you sew the citation with the text,
+as in the phrase:
+
+\begin{quote}
+	The problems with the command \verb+\eqnarray+ in \LaTeX{} were
+	listed in \textcite{madsen}.
+\end{quote}
+
+Several other commands are available to cite the author name only, or the 
+year, \dots
+\begin{verbatim}
+    \citeauthor
+    \citeyear
+    \citetitle
+\end{verbatim}
+for a more harmonious and precise integration with the text.
+
+\section{How to colect references}
+
+By far one of the best ways to collect references is to use the AMS \emph{MRef}
+on the URL:
+
+\begin{quote}
+\url{https://mathscinet.ams.org/mref}
+\end{quote}
+
+Almost all are comple and very close to an ideal reference,
+neding only a few transformations.
+
+\chapter{Labelling graphics}
+
+The best way to add labels to a graphics is to use \TeX{}
+to manage all tags -- text and placement. We gain with a 
+precise choice of the location of the label, typography that
+is the same as the text and the possibility of using elaborate
+labels with a mathematical basis.
+
+This is even more important when the graphics are produced by
+other programs that do not offer positioning and tag control.
+
+The figure below is drawn by a simulation in the program Mathematica.
+The labels here are prepared by the program that despite the precision
+the figure has no precise labeling:
+
+\begin{center}
+  \includegraphics[width=0.7\textwidth]{fig_with_labels}
+\end{center}
+
+As you can see the figure labels are produced in a different source
+from the rest of the book, the $X2$, $X3$ and $X20$ labels are literally on top
+ellipses, and the positioning of the indexes of $P_1$, $P_2$ and
+$P_3$ have a lower quality typographic placement.
+
+The best way is to produce the figure without labels, as in:
+
+\begin{center}
+  \includegraphics[width=0.7\textwidth]{fig_no_labels}
+\end{center}
+
+and then add the labels with TikZ, as in:
+
+\begin{center}
+\begin{tikzpicture}
+  \node (image) at (0,0) {
+            \includegraphics[width=0.7\textwidth]{fig_no_labels}
+    };
+  \node [blue, font=\bfseries] at (4.3,1.9) {$P_1$};
+  \node [blue, font=\bfseries] at (1,3.7) {$P_2$};
+  \node [blue, font=\bfseries] at (-2.1,-0.5) {$P_3$};
+
+  \node [brown, font=\bfseries] at (1.1,1.7) {\tiny{$X2$}};
+  \node [red, font=\bfseries] at (1.4,0) {\small{$X3$}};
+  \node [black, font=\bfseries] at (0.7,5.1) {\small{$X4$}};
+  \node [green, font=\bfseries] at (1,2.7) {\scriptsize{$X5$}};
+  \node [teal, font=\bfseries] at (1.99,-5) {\small{$X20$}};
+\end{tikzpicture}
+\end{center}
+
+The position of the labels above were obtained by trial and error, but
+there are some tools to help position the labels.
+
+The use of \emph{TikZ} allows the use of colors, more elaborate typography,
+including mathematical equations, arrows and more complex annotations.
+
+\appendix
+
+\chapter{The first appendix}
+
+\backmatter
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\nocite{*}
+\sloppy
+\printbibliography
+
+\printindex[not]
+\printindex[aut]
+\printindex[std]
+
+\printnomenclature
+
+\end{document}

@@ -1,0 +1,124 @@
+ 
+ %%% NAO TROCAR ESTA ORDEM!
+% \usepackage[T2A]{fontenc}
+%\usepackage[russian,english]{babel}
+% \usepackage[utf8]{inputenc}
+ \usepackage{lmodern}
+%\usepackage{polyglossia}
+%  \setdefaultlanguage{english}
+  %\setotherlanguages{portuges,french,german,latin,greek}
+%\usepackage{csquotes}
+\usepackage{amsmath, latexsym, amssymb,amsbsy, amsthm,amsfonts,amscd,mathtext,float,makecell}
+\usepackage{graphicx,wrapfig,graphics}
+ \usepackage[T1]{fontenc}  
+ \usepackage[dvipsnames]{xcolor}
+ 
+
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{russian}
+
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+ %\usepackage{svg}
+
+% Antigo estilo do Dan:
+%\usepackage[style=chicago-authordate,sorting=ynt]{biblatex}
+
+% Bibliographical citations:
+\usepackage[style=authoryear,
+            sorting=nyt,
+            backref=true,
+            backrefstyle=three,
+            isbn=false,
+            backend=biber]{biblatex}
+\let\cite\textcite
+
+%\usepackage{imakeidx}
+%  \makeindex[name=not, intoc=true, columns=2, program=texindy, options=-L english -C utf8, title=Index of Notation]
+%  \makeindex[name=aut, intoc=true, columns=2, program=texindy, options=-L english -C utf8, title=Index of Authors]
+%  \makeindex[name=std, intoc=true, columns=2, program=texindy, options=-L english -C utf8, title=Index]
+
+% Use the package {nomencl} if you prefer the definitions together with the symbols.
+%\usepackage[refpage,intoc]{nomencl}
+%  \makenomenclature
+%  \renewcommand{\nomname}{List of Symbols}
+
+% For linkig it all.
+\usepackage[psdextra,
+            colorlinks=true,
+            linkcolor=blue,
+            citecolor=blue
+            ]{hyperref}
+
+% To refer to fórmulas, theorems, chapters, etc ... 
+\usepackage[nameinlink,capitalize,noabbrev]{cleveref}
+
+% Declare some macros to use in the text:
+  \DeclareMathOperator{\Div}{div}
+  \DeclareMathOperator{\Rot}{rot}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{observation}{Observation}
+\newtheorem{proposition}{Proposition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+%\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newcommand{\Cm}{\mathcal{C}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\T}{\mathcal{T}}
+\renewcommand{\C}{\mathcal{C}}
+\newcommand{\F}{\mathcal{F}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\D}{\mathbb{D}}
+\renewcommand{\T}{\mathbb{T}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Cp}{\mathbb{C}}
+\newcommand{\ol}{\overline}
+\renewcommand{\l}{\lambda}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\ab}{_{\alpha,\beta}}
+\def\Jcn{\mathrm{JacobiCN}}
+\def\Jsn{\mathrm{JacobiSN}}
+\def\cn{\mathrm{cn}}
+\def\sn{\mathrm{sn}}
+\def\am{\mathrm{am}}
+\def\dn{\mathrm{dn}}
+
+%%%
+
+
+\usepackage{lineno}
+\def\linenumberfont{\normalfont\small\sffamily}
+%a4: 210 x 297
+%\textwidth=125mm
+%\textheight=195mm
+%\arraycolsep=2pt
+%\captionsetup{width=120mm}
+
+ 
+\usepackage{comment}
+\usepackage{microtype}
+\usepackage{footnote}
+ \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+ 
+\newcommand{\torp}[2]{\texorpdfstring{#1}{#2}}
+\newcommand{\Sha}{\mathord{\textit{ш}}}
+\newcommand{\Zhe}{\mathord{\textit{Ж}}}
+
+\graphicspath{{pics_tex/},{chap_02/pics/},{chap_03/pics/},{chap_04/pics/},{chap_05/pics/},{chap_06/pics/},{chap_07/pics/},{chap_08/pics/},{zappA/pics/}}
+
+%\usepackage{tikz}
+%\include{000_setup_tikz}
+

@@ -1,0 +1,105 @@
+In this section we prove that the two pedal polygons of a bicentric Poncelet family with respect to circles centered on either of its two {\em limiting points} (see below) conserve perimeter.
+
+\begin{definition}[Pedal Polygon]
+Given a planar polygon $\P$ and a point $p$, the {\em pedal polygon} $\P_{\perp}$ of $\P$ wrt $p$ has vertices $q_{j}$ at the orthogonal projections of $p$ onto the jth sideline $p_{j}p_{j+1}$ or extension thereof.
+\end{definition}
+
+\begin{definition}[Limiting Point]
+Any pair of circles is associated with a pair of ``limiting'' points $\ell_1,\ell_2$ which lie on the line connecting the centers, with respect to which the circles are inverted to a concentric pair.
+\end{definition}
+
+Let $\C_{R}$ be a circle of radius $R$ centered at the origin $(0,0)$ and $\C_{r}$ be a circle of radius $r$ centered at $(-d,0)$. Then the limiting points $(\delta_{\pm},0)$ of the pencil of circles defined by $\C_{R}$ and $\C_{r}$ has abscissa given by \cite[Limiting Point, Eqn. 5]{mw}:
+
+\begin{equation}
+\delta_{\pm}=\frac{r^2-R^2-d^2 \pm %\sqrt{R^4-2R^2d^2-2R^2r^2+d^4-2d^2r^2+r^4}}{2d}
+\sqrt{d^4 -2(R^2 +r^2)d^2 + (R^2 - r^2)^2 }}{2d}
+\label{eqn:limiting-point}
+\end{equation}
+
+Let $\P(u)$ be the family of bicentric polygons with respect to a pair of circles $C_{R}$ and $C_{r}$, where $u$ is the real parameter introduced by Jacobi, with vertices given by (\ref{jacobivertex}). Let $\ell$ denote a limiting point of the pencil defined by these circles, as in \eqref{eqn:limiting-point}. Below we derive an expression for the length of the sides of pedal polygons  $\P_{\perp}(u)$ defined by $\P(u)$ and $\ell$.
+
+\begin{lemma}
+\label{lem:pedal-perimeter}
+ Let $p_{j-1}(u)$, $p_{j}(u)$ and $p_{j+1}(u)$ be three consecutive vertices of $\P(u)$, let $s_{j}(u)=|q_{j+1}(u)- q_{j}(u)|$ be jth sidelength of $\P_{\perp}$. Then:
+
+\begin{equation}
+\label{pedalside}
+s_{j}(u)=\frac{r_{j}(u)\rho_{j}(u)}{2R},
+\end{equation}
+%
+where $r_{j}(u)=\left|p_{j-1}(u)-p_{j+1}(u)\right|$ and $\rho_{j}(u)=\left|\ell-p_{j}(u)\right|$. In addition, $r_{j}(u)$ and $\rho_{j}(u)$ are given by the following expressions.
+  
+\begin{align}
+r_{j}(u)=&2R\sin{(\phi_{j+1}(u)-\phi_{j-1}(u))} \label{sideterm} \\
+=&2R\left(sn(u_{j+1})cn(u_{j-1})-sn(u_{j-1})cn(u_{j+1})\right) \nonumber
+\end{align} 
+where $u_{j}=u+j \sigma$.
+
+\begin{equation}
+\label{spoketerm}
+\rho_{j}(u)=\frac{2}{k}\sqrt{-\delta_{\pm}R}\,\,dn(u_{j}).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The proof of \eqref{pedalside} follows the standard one for sidelengths of the pedal triangle \cite[pp. 135--141]{johnson1960}. Equation \eqref{sideterm} follows by inspection from \cref{fig:jacobi-nested}, and the definition of Jacobi's $sn(u)$ and $cn(u)$. Finally, \eqref{spoketerm} is a long but simple computation. Below we show a few intermediate steps. First, if we let $\ell=(\delta_{\pm},0)$ be either limiting point. Then:
+
+\[\rho_{j}(u)=\cos(\phi_{j}(u))\sqrt{R^2-2R\delta_{\pm}}+\delta_{\pm}^2\]
+
+It is straightforward to check that $\delta_{\pm}<0$. Substitute the expression \eqref{eqn:limiting-point} for $\delta_{\pm}$ in the expression for $\rho_{j}(u)$ to obtain:
+
+\[\rho_{j}(u)=\sqrt{\frac{-\delta_{\pm}}{d}\Big( R^2+d^2-r^2-2Rd\cos{(2\phi_{j}(u))}\Big)}\]
+
+Finally, using \eqref{jacobirelation}, we get:
+
+\[\rho_{j}(u)=\frac{2}{k}\sqrt{-\delta_{\pm}R}\sqrt{1-k^2sn^2(u_{j})}=\frac{2}{k}\sqrt{-\delta_{\pm}R}\,\,dn(u_{j})\] 
+\end{proof}
+
+We are now in a position to prove the following.
+
+\begin{theorem}
+The perimeters $L_\pm$ of the pedal polygons of the bicentric Poncelet family with respect to either limiting point are invariant.
+\label{thm:bicentric-pedal-perimeter}
+\end{theorem}
+
+\begin{proof}
+From Lemma \ref{lem:pedal-perimeter}, the perimeter is given by:
+
+\[ L_\pm(u)=\frac{\sqrt{-\delta_{\pm}R}}{k}\sum{dn(u_{j})\Big(sn(u_{j+1})cn(u_{j-1})-sn(u_{j-1})cn(u_{j+1})\Big)} \]
+
+To prove the above is constant, we consider its natural complexified version, that is, we think of $L_\pm$ as function of a complex variable $u$. Clearly, $L_\pm$ becomes a meromorphic function defined on the complex plane. To prove that $L_\pm$ is constant we will show that it is entire and bounded. So by Liouville's theorem it must be constant.
+
+In turn this amounts to showing $L_\pm$ has no poles. Now, suppose that, for $u=u_p$, a certain $u_{j}$ is a common simple pole of $sn(z)$, $cn(z)$ and $dn(z)$. This is the only way that $L_\pm$ can have a pole.
+
+From the expression of $L_\pm$, it follows there are three terms in the sum where the pole $u_{j}$ of the three Jacobian elliptic functions appears:
+
+\begin{align*}
+dn(u_{j-1})&\left(sn(u_{j})cn(u_{j-2})-sn(u_{j-2})cn(u_{j})\right)\\
+dn(u_{j})&\left(sn(u_{j+1})cn(u_{j-1})-sn(u_{j-1})cn(u_{j+1})\right)\\
+dn(u_{j+1})&\left(sn(u_{j+2})cn(u_{j})-sn(u_{j})cn(u_{j+2})\right)
+\end{align*}
+
+We have to prove that the sum of these terms is finite at $u_{j}$. To see this, consider first the term that multiplies $dn(u_{j})$, namely
+
+\[sn(u_{j+1})cn(u_{j-1})-sn(u_{j-1})cn(u_{j+1}).\]
+
+Since $u_j=u+j \sigma$ is a pole and   $u_{j+1}=u_j+ \sigma$, $u_{j-1}=u_j- \sigma$ it follows from \eqref{eqn:zpole} that  $sn(u_{j-1})=-sn(u_{j+1})$ and $cn(u_{j-1})=-cn(u_{j+1})$. Therefore, the expression above is zero. And this cancels the simple pole of $dn(u)$ at $u_{j}$. The same argument can be applied to the terms that multiply $sn(u_{j})$ and $cn(u_{j})$ and this shows that $u_p$ is not a pole of $L_\pm$. 
+
+So $L_\pm$ has no poles and by the periodicity of the elliptic functions, it must be bounded. Thus, by Liouville's theorem $L_\pm$ is constant.
+\end{proof}
+
+%In Appendix~\ref{app:explicit-perimeter} we provide explicit %expressions (in terms of Jacobi elliptic functions) for $L_\pm$.
+
+In \cref{app:bicentric-to-confocal,app:confocal-to-bicentric} we show that the image of two nested circles wrt to $\ell_1$ is a confocal pair of ellipses, therefore under this tranformation, a bicentric N-gon is sent to an elliptic billiard N-gon. Lemmas \ref{lem:polar} and \ref{lem:limit-focus} found in the Appendix~\ref{app:polar-pedal} show that the bicentric pedal with respect to $\ell_1$ is identical to its polar image (elliptic billiard N-periodic) inverted with respect to a circle centered on $f_1=\ell_1$. Therefore:
+
+\begin{corollary}
+Over the family of N-periodics in the elliptic billiard (confocal pair), the perimeter of inversions of said N-periodics with respect to a focus-centered circle is invariant. 
+\label{cor:inv-per}
+\end{corollary}
+
+
+Though not yet proved, experimental evidence suggests:
+
+\begin{conjecture}
+The sum of cosines of bicentric pedal polygons with respect to either limiting point is invariant, except for the $\ell_1$-pedal in the $N=4$ case.
+\label{conj:limiting-sum-cosines}
+\end{conjecture}

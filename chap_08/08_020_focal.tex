@@ -1,0 +1,251 @@
+
+ The polar line associated to a point $P_0=(x_0,y_0)$ with respect to an ellipse is given by
+ \[ b^2x_0 x+a^2 y_0y-a^2b^2=0.\]
+The pair of tangent lines passing through the point $P_0=(x_0,y_0)$ is given by
+ \[ \left( x{ y_0}-y{x_0} \right) ^{2}-{a}^{2} \left( x-{  x_0}
+ \right) ^{2}-{b}^{2} \left( y-{ y_0} \right) ^{2}=0 \]
+
+\begin{proposition}\label{prop:bisectorline}
+    Consider an ellipse $\mathcal{E}$ with foci $F_1$ and $F_2$. Let $\ell_P$ be the tangent line to $\E$ at $P\in \E$. Then $\ell_P$ is a bisector of the   lines $PF_1$ and $PF_2$, see \cref{fig:bisectorline}.  
+\end{proposition}
+\begin{figure} 
+	\begin{center}
+		 \includegraphics[scale=0.7]{pics_08_001_bisector_tangent_ellipse.pdf}
+		\caption {The tangent line $\ell_p$ is a bisector of the external angle, i.e., the angles $\alpha_1$ and $\alpha_2$ are equal. 	\label{fig:bisectorline} }
+	\end{center}
+
+\end{figure}
+
+\begin{proof}
+
+\end{proof}
+
+
+\begin{proposition}\label{prop:circle_polarline}
+    Consider an ellipse $\mathcal{E}$ with foci $F_1$ and $F_2$. Let $ P_0 $ be an exterior point and $\ell_{P_0}$ be the polar line associated to $P_0$ intersecting the ellipse $\E$ at $P_1$ and $P_2$. Suppose that $F_2\in \ell_{P_0}$. Then $P_0$ is  the center of a circle $\mathcal{C}_0$  tangent to the polar line line at $F_2$ and to the lines $F_1P_1$ and $F_1P_2$,   see \cref{fig:circle_polarline}.  
+\end{proposition}
+\begin{figure} 
+	\begin{center}
+		 \includegraphics[scale=0.7]{pics_08_002_circle_tangent_polarline.pdf}
+		\caption {The polar line $\ell_{P_0}$ passing through the focus $F_2$ is tangent to the excircle $\mathcal{C}_0$ which is centered at $P_0$.	\label{fig:circle_polarline} }
+	\end{center}
+
+\end{figure}
+
+\begin{proof} See \cite[page 10]{akopyan2007-conics}. By Proposition \ref{prop:bisectorline} the line  $P_0P_2$ (resp. $P_0P_1$) is  the bisector line of $F_1P_2$ and $\ell_{P_0}$ (resp. of $F_1P_1$ and $\ell_{P_0}$). Therefore, there exists a circle $\mathcal{C}_0$ centered at $P_0$ and tangent to $\ell_{P_0}$, $P_1F_1$ and $F_1P_2.$ In fact, $\mathcal{C}_0$ is the excircle of the triangle $F_1P_1P_2$.
+Finally we observe that $\ell_{P_0}\cap \mathcal{C}_0$ is $F_2.$
+
+\end{proof}
+\begin{proposition} Consider an ellipse and two tangent lines passing through an exterior point $P_0$ as shown in   \cref{fig:angulofoco}. Let also the  line passing through the $P_0$ and   focus $F_2$.  Then it follows that that $\alpha_1=\alpha_2$. 
+\end{proposition} 
+
+\begin{figure}[H]
+	\begin{center}
+		 \includegraphics[scale=0.7]{pics_08_050_angulosiguais_foco.pdf}
+		\caption {Angles $\alpha_1$ and $\alpha_2$ are equal. 	\label{fig:angulofoco} }
+	\end{center}
+
+\end{figure}
+
+\begin{proof} Consider the quadrilateral $F_1P_2F_2P_1.$
+Observe that $|F_1P_2|+|P_2F_2|=|F_2P_1|+|P_1F_1|. $
+Therefore, there is a circle tangent to the sidelines $F_1P_2$, $F_1P_1$, $F_2P_2$ and $F_2P_1$, which is centered at $P_0.$ So, the line $F_2P_0$ is a bisector of $F_2P_1$ and $F_2P_2.$
+\end{proof}
+
+
+
+\begin{proposition} Consider an ellipse and two tangent lines passing through an exterior point as shown in    \cref{fig:angulocorda}. Let also the two lines passing through the foci and $P_0$.  Then  we have that $\theta_1=\theta_2$. 
+\end{proposition} 
+
+\begin{figure}
+	\begin{center}
+ \includegraphics[scale=0.9]{pics_tex/angulo_corda.pdf}
+		\caption {Angles $\theta_1$ and $\theta_2$ are equal. 	\label{fig:angulocorda} }
+	\end{center}
+
+\end{figure}
+
+ \begin{proof}
+Let $O$ be the point of intersection of the lines $F_1P_1$ and $F_2P_2.$
+Consider the triangle $P_0F_2P_2$ and the line $F_2Q$ tangent to the circle centered at $P_0.$ See \cref{fig:angulosiguaisproof}.
+
+
+\begin{figure}
+	\begin{center}
+ \includegraphics[scale=0.7]{pics_08_040_angulosiguais_proof.pdf}
+		\caption {Angle   $\theta_2$ is equal to  $\frac{1}{2}\angle F_2OP_2$.	\label{fig:angulosiguaisproof} }
+	\end{center}
+
+\end{figure}
+
+We have that
+\begin{align*}
+    \theta_2&=\angle F_2P_0P_2=\angle P_0P_2Q-\angle P_0F_2P_2\\ 
+    &= \angle P_0P_2Q-\angle P_0F_2P_1\\
+    &=\frac{1}{2}\angle F_1P_2Q -\frac{1}{2} \angle P_1F_2Q\\
+    &=
+    \frac{1}{2} \angle P_2OF_2
+ \end{align*}
+ The relations above follows from the fact that $P_0F_2$ is a bisector of the lines $P_1F_2$ and $F_2P_2$ and   that  $\angle F_1P_2Q$ is an external angle of triangle $OF_2P_2.$
+ Analogously, $\theta_1=\angle P_1OF_1$. So, $\theta_1=\theta_2.$
+\end{proof}
+
+\begin{proposition}
+	Consider a pair of confocal ellipses $\mathcal{E}$ and $\mathcal{E}_1$ with semi-axes $(a,b)$ and $(a_c,b_c)$ respectively. Referring to   \cref{fig:dEE1} it follows that:
+	
+	\[\frac{|P_0P_1|}{|P_1F_1|}+\frac{|P_0P_2|}{|P_2F_2|}=\frac{2 a_c (a-a_c)}{b_c^2}\]
+	is constant (independent of $P_0$).
+\label{prop:dEE1}	
+\end{proposition}
+\begin{figure}[h]
+	\begin{center}	 
+  \includegraphics[scale=0.5]{pics_08_060_relacaodEE.pdf}
+		\caption { Relation of focal distances. \label{fig:dEE1} }
+	\end{center}
+	
+\end{figure}
+\begin{proof}
+
+\end{proof}
+
+\begin{proposition}
+	Consider a confocal pair of an ellipse  $\mathcal{E}$ and a hyperbola $\mathcal{H}$. Referring to   \cref{fig:dEH} it follows that:
+	
+	\[\frac{|P_0P_1|}{|P_1F_1|}+\frac{|P_0P_2|}{|P_2F_2|}=\frac{2a_c(a+a_c)}{b_c^2}\;\;\; \text{and}\;\;\; \frac{|P_0P_1'|}{|P_1'F_1|}+\frac{|P_0P_2'|}{|P_2'F_2|}\]
+	are constant (independent of $P_0$).
+	parte 2 ao quadrado (ver maple)
+	\[4a_c^2(a b_c^2+a_c b^2)^2/(b_c^4(2a a_c(a_c^2+b_c^2)+2a_c^4+b^2 a_c^2+3 a_c^2 b_c^2+b_c^4))\]
+\end{proposition}
+\begin{figure}[H]
+	\begin{center}
+		\def\svgwidth{0.55\textwidth}
+		\input{pics_tex/relacao_EH.eps_tex}
+		%	 \includegraphics[angle=0, width=8cm]{relacao_distancias_bilhar.pdf_tex}
+		\caption { Relation of focal distances   }
+		\label{fig:dEH}
+	\end{center}
+\end{figure}
+\begin{proof}
+
+\end{proof}
+\begin{proposition}
+	Consider a pair of confocal hyperbolas $\mathcal{H}$ and $\mathcal{H}_1$. Referring to   \cref{fig:dHH} it follows that:
+	
+	\[\frac{|P_0P_1|}{|P_1F_1|}/\frac{|P_0P_2|}{|P_2F_2|}=\]
+	is constant (independent of $P_0$).
+	
+\end{proposition}
+\begin{figure}[H]
+	\begin{center}
+		\def\svgwidth{0.75\textwidth}
+		\input{pics_tex/razao_cruzada_HH.eps_tex}
+		%	 \includegraphics[angle=0, width=8cm]{relacao_distancias_bilhar.pdf_tex}
+		\caption { Relation of focal distances  }
+		\label{fig:dHH}
+	\end{center}
+\end{figure}
+\begin{proof}
+
+
+\end{proof}
+
+
+\begin{proposition} \label{prop:pedal_circle} Consider an ellipse $\mathcal{E}$  with foci $F_1=(-c,0)$ and $F_2=(c,0)$. Let $P_0=(x_0,y_0)\in\mathcal{E}$ and $Q_0$ the pedal of $F_2$ with respect to the tangent line passing through $P_0$. Let also $Q_2$ the reflection of $F_2$ with respect to the pedal point $Q_0$.
+	Then \[ |Q_2-F_1|=2a\]
+	Therefore the locus of points as constructed above is a circle $\mathcal{C}$  of radius $2a$ centered at $F_1$.
+	Also the locus of pedal points is a circle centered at the origin and radius $a$.
+	
+	The pair $\{\mathcal{E},\mathcal{C}\}$ is a Poncelet pair having all periodic orbits of period 3.
+\end{proposition}
+
+\begin{figure}[H]
+	\begin{center}
+		\def\svgwidth{0.55\textwidth}
+		\input{pics_tex/elipse_circulo2a.eps_tex}
+		\caption {   }
+	\end{center}
+	\label{fig:elipse_circulo}
+\end{figure}
+\begin{proof}
+
+
+\end{proof}
+
+
+\begin{theorem}
+Consider a pair of confocal conics with foci $F_1$ and $F_2$ in the plane (see   \cref{fig:galperin}).
+  Consider  the right branch of the hyperbola associated with $F_2$. Let $P$
+and $Q$ be the points of intersection of the ellipse with the right branch of the hyperbola.
+Consider a ray starting at $F_1$ and intersecting the right branch of the hyperbola. Denote
+by $X$, $A$ the intersection points of this ray with the ellipse and with the branch of the
+hyperbola. Suppose the focus $F_2$ lies on the line $P Q$. Then $P Q$ is the bisector of the
+angle $  \langle  AF_2B$.  
+\end{theorem}
+\begin{figure}[H]
+	\begin{center}
+		\def\svgwidth{0.75\textwidth}
+ 	\input{pics_tex/galperin.eps_tex}
+	 %	 \includegraphics[angle=0, width=10cm]{pics_tex/galperin.eps}
+		\caption { The line $PQ$ passing through the focus $F_2$ and the intersection of the ellipse with the right branch of the hyperbola  is a bisector of the angle $AF_2B$.}
+		 \label{fig:galperin}
+	\end{center}
+\end{figure}
+
+
+\begin{theorem}\label{th:ehfocus}
+Considear a pair of confocal conics (ellipse and hyperbola)  Consider an arbitrary point $M$ (exterior to the ellipse)
+on the line passing through the intersection points $P$ and $Q$ of the ellipse and the right branch of
+the hyperbola. Draw two tangent lines to the ellipse and to the hyperbola. Then the   lines $P_1Q_1$, $P_2Q_2$ (respec. $P_1Q_2$ and $P_2Q_1$)
+through the tangent points as shown in \cref{fig:ehfocus}  passe  through the focus $F_1$ (respec.   $F_2$). 
+\end{theorem}
+
+
+\begin{figure}[H]
+	\begin{center}
+		\def\svgwidth{0.75\textwidth}
+ 	\input{pics_tex/elipse_hiperbole_focus.eps_tex}
+	 %	 \includegraphics[angle=0, width=8cm]{pics_tex/elipse_hiperbole_focus.eps}
+		\caption {  The four lines passing through the point $M$ and tangent to the confocal conics determine four lines passing through the foci. \label{fig:ehfocus}}
+	\end{center}
+\end{figure}
+\begin{proof}
+
+
+\end{proof}
+
+
+\begin{theorem}
+Let two confocal ellipses $\E_1$ and $\E_2$   with foci $F_1 $ and $F_2$ are given. Let a
+ray with the origin at $F_1$ intersects $\E_1$ and $\E_2$ at $A$ and $B$, respectively. Let a ray with
+the origin at $F_2$ intersects $\E_1$ and $\E_2$ at $C$ and $D$, respectively. Suppose the points $B$ and
+$C$ lie on a branch $\mathcal{H}_1$   of the hyperbola with the foci at $F_1$ and $F_2$.
+Then:
+
+\noindent a) the points $A$
+and $D$ lie on a branch $\mathcal{H}_2$ of the hyperbola with the foci at $F_1$ and $F_2$. (see \cref{fig:eeH})
+
+\noindent b) Consider a ray starting at $F_1$ intersecting the branch $\mathcal{H}_1$ at $P_1$. Consider the ray
+$F_2P_1$  intersecting the ellipse $\E_2$  at $P_2$. Analogously, we define the points $P_3$, $P_4$, $P_5$.
+Then $P_5 = P_1$ (see \cref{fig:eeH}).
+\end{theorem}
+
+\begin{figure}[H]
+	\begin{center}
+		\def\svgwidth{0.75\textwidth}
+ 	\input{pics_tex/razao_cruzada_HH.eps_tex}
+	 %	 \includegraphics[angle=0, width=8cm]{pics_tex/elipse_elipse_H.eps}
+		\caption {}
+	\end{center}
+\end{figure}
+\label{fig:eeH}
+\begin{proof}
+
+
+\end{proof}
+
+
+\section{Exercises}
+
+\begin{exercise}
+Show that the ellipse $x^2/a^2+y^2/b^2=1$ and the circle $(x+c)^2+y^2=4a^2$ defines a Poncelet pair such that  all  orbits have   period 3.
+\end{exercise}
