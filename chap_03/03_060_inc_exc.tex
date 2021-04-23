@@ -1,36 +1,3 @@
-\section{Triangle Centers}
-
-\section{Some Concentric N=3 Families}
-
-\section{Elliptic Loci in Generic Pairs}
-
-\section{Exercises}
-
-\begin{exercise}
-blablabla
-\end{exercise}
-
-\section{Videos}
-
-
-Referring to Figure~\ref{fig:nonconcentric-xns}:
-
-\begin{figure}
-     \centering
-     \includegraphics[width=.8\textwidth]{pics_03_010_n3_nonconcentric_conics.eps}
-     \caption{A 3-periodic is shown interscribed between two non-concentric, non-aligned ellipses (black). The loci of $X_k$, $k=2,3,4,5,20$ (and many others) are elliptic. Those of $X_2$ and $X_4$ are axis-aligned with the outer ellipse. Furthermore, the centers of all elliptic loci are collinear (magenta line).}
-     \label{fig:nonconcentric-xns}
- \end{figure}
- 
-\section{Locus of Incenter and Excenters}\label{sec:inc_excenter}
-
-\begin{theorem}
-Over the family of 3-periodics interscribed in a generic nested pair of ellipses (non-concentric, non-axis-aligned),
-if $\X\ab$ is a fixed linear combination of $X_2$ and $X_3$, i.e., $\X\ab=\alpha X_2+\beta X_3$ for some fixed $\alpha,\beta\in\mathbb{C}$, then its locus is an ellipse. 
-\label{thm:ellipse-locus}
-\end{theorem}
-
-
 \begin{theorem}
 Over 3-periodics in the elliptic billiard (confocal pair) the locus of the incenter $X_1$ is an ellipse given by 
 $x^2/a_1^2+y^2/b_1^2=1$, where
@@ -54,52 +21,9 @@ $x^2/a_1^2+y^2/b_1^2=1$, where
 
 A list of the elliptic loci of centers in the $X_{1}$ to $X_{200}$ range can be found \href{https://dan-reznik.github.io/why-so-many-ellipses/}{here}.
 
-\section{Future Work}
-
-\begin{conjecture}
-The locus of the incenter is an ellipse if and only if the Poncelet ellipse pair is confocal.
-\end{conjecture}
-
 Let  $\mathbb{T } = \{ z\in \mathbb{C}: |z| = 1\} $ the unit circle and $\mathbb{D} = \{ z\in\mathbb{C} : |z| < 1\} $ the open unit disk
 bounded by $\mathbb{T }.$
 
-\begin{lemma}
-If $u,v,w\in\mathbb{C}$ and $\lambda$ is a parameter that varies over the unit circle $\T\subset\mathbb{C}$, then the curve parametrized by
-\[ F(\lambda)=u \lambda+ \frac{v}{\lambda}+w \]
-is an ellipse centered at $w$, with semiaxis $|u|+|v|$ and $\big||u|-|v|\big|$, rotated with respect to the horizontal axis of $\mathbb{C}$ by an angle of $(\arg u+\arg v)/2$.
-\label{lem:ell-param}
-\end{lemma}
-\begin{proof}
-
-\end{proof}
-
-
-Consider the Moebius map $M_{z_0}=(z_0-z)/(1-\overline{z_0} z)$ and the Blaschke product of degree 3 given by   $B=M_{z_0} M_{z_1} M_{z_2}$.
-\begin{theorem}
-Let $B$ be a Blaschke product of degree 3 with
-zeros $0, f, g.$ For $\lambda \in \mathbb{T}$, let $z_1, z_2, z_3 $ denote the three distinct solutions to $ B(z) = \lambda$. Then the
-lines joining $z_j$ and $z_k$, $(j \ne k)$ are tangent to the ellipse given by
-\[|w - f| + |w - g| = |1 -   \overline{f}   g |.\]
-\end{theorem}
-
-\begin{theorem}
- Given two points $f,g\in\mathbb{D}$. Then there exists a unique conic $\mathcal{E}$ with the foci
-$f,g$   which is 3-Poncelet caustic with respect to $\mathbb{T}$. Moreover, $\mathcal{E}$ is an ellipse. That ellipse is
-the Blaschke ellipse with the major axis of length $|1-\overline{f}g|.$
-\end{theorem}
-
-Consider the parametrization of a triangular orbit $\{z_1,z_2,z_3\}$ as given in \cite{helman2021-power-loci}.
-Let also the  affine transformation
-$T(z)=pz+q\ol z$.
-\begin{definition}[Blaschke's Parametrization]
-\begin{align*}
-    \sigma_1:=z_1+z_2+z_3=& f+g+\l\ol f \ol g =\alpha\\
-    \sigma_2:=z_1 z_2+z_2 z_3+z_3 z_1=& f g+\l(\ol f+\ol g) =\beta\\
-    \sigma_3:=z_1 z_2 z_3=& \l
-\end{align*}
-where $f,g$ are the foci of the inner ellipse and $\l\in\T$ is the varying parameter.
-\label{def:bla}
-\end{definition}
 \begin{proposition}\label{prop:X1c}
 Over Poncelet 3-periodics in the pair with an outer circle and an ellipse in generic position, the locus $X_1$ given by:
 \begin{align*}
@@ -191,4 +115,8 @@ Follows directly from  \cref{lem:ell-param} and  \cref{prop:X1q2}.
 
 \begin{conjecture}
 Over 3-periodics interscribed between two ellipses in general position, the locus of a triangle center $X_k$ is an ellipse if and only if $X_k$ is a fixed linear combination of $X_3$ and $X_4$.
+\end{conjecture}
+
+\begin{conjecture}
+The locus of the incenter is an ellipse if and only if the Poncelet ellipse pair is confocal.
 \end{conjecture}
