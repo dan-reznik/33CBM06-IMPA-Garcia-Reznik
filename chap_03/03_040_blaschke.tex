@@ -1,0 +1,49 @@
+Consider the parametrization of a triangular orbit $\{z_1,z_2,z_3\}$ as given in \cite{helman2021-power-loci}.
+Let also the  affine transformation
+$T(z)=pz+q\ol z$.
+\begin{definition}[Blaschke's Parametrization]
+\begin{align*}
+    \sigma_1:=z_1+z_2+z_3=& f+g+\l\ol f \ol g =\alpha\\
+    \sigma_2:=z_1 z_2+z_2 z_3+z_3 z_1=& f g+\l(\ol f+\ol g) =\beta\\
+    \sigma_3:=z_1 z_2 z_3=& \l
+\end{align*}
+where $f,g$ are the foci of the inner ellipse and $\l\in\T$ is the varying parameter.
+\label{def:bla}
+\end{definition}
+
+\textcolor{red}{figura do blaschke}
+
+\begin{theorem}
+Over the family of 3-periodics interscribed in a generic nested pair of ellipses (non-concentric, non-axis-aligned),
+if $\X\ab$ is a fixed linear combination of $X_2$ and $X_3$, i.e., $\X\ab=\alpha X_2+\beta X_3$ for some fixed $\alpha,\beta\in\mathbb{C}$, then its locus is an ellipse. 
+\label{thm:ellipse-locus}
+\end{theorem}
+
+\begin{lemma}
+If $u,v,w\in\mathbb{C}$ and $\lambda$ is a parameter that varies over the unit circle $\T\subset\mathbb{C}$, then the curve parametrized by
+\[ F(\lambda)=u \lambda+ \frac{v}{\lambda}+w \]
+is an ellipse centered at $w$, with semiaxis $|u|+|v|$ and $\big||u|-|v|\big|$, rotated with respect to the horizontal axis of $\mathbb{C}$ by an angle of $(\arg u+\arg v)/2$.
+\label{lem:ell-param}
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+
+
+
+Consider the Moebius map $M_{z_0}=(z_0-z)/(1-\overline{z_0} z)$ and the Blaschke product of degree 3 given by   $B=M_{z_0} M_{z_1} M_{z_2}$.
+\begin{theorem}
+Let $B$ be a Blaschke product of degree 3 with
+zeros $0, f, g.$ For $\lambda \in \mathbb{T}$, let $z_1, z_2, z_3 $ denote the three distinct solutions to $ B(z) = \lambda$. Then the
+lines joining $z_j$ and $z_k$, $(j \ne k)$ are tangent to the ellipse given by
+\[|w - f| + |w - g| = |1 -   \overline{f}   g |.\]
+\end{theorem}
+
+\begin{theorem}
+ Given two points $f,g\in\mathbb{D}$. Then there exists a unique conic $\mathcal{E}$ with the foci
+$f,g$   which is 3-Poncelet caustic with respect to $\mathbb{T}$. Moreover, $\mathcal{E}$ is an ellipse. That ellipse is
+the Blaschke ellipse with the major axis of length $|1-\overline{f}g|.$
+\end{theorem}
+
+
+
