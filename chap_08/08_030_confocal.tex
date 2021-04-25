@@ -15,11 +15,23 @@
 \end{figure}
 
 \begin{proof} Let 
-  \[ \alpha(u,v)=  \left[\sqrt {{\frac { \left( {a}^{2}-v \right)  \left( {a}^{2}-u \right) }{
-{a}^{2}-{b}^{2}}}},\sqrt {-{\frac { \left( {b}^{2}-v \right)  \left( {
-b}^{2}-u \right) }{{a}^{2}-{b}^{2}}}}\; \right]
-\]
-with $u\in [b^2,a^2]$ and $v\in (-\infty,b^2)\cup (a^2,\infty).$
+%  \[ \alpha(u,v)=  \left[\sqrt {{\frac { \left( {a}^{2}-v \right)  \left( {a}^{2}-u \right) }{
+%{a}^{2}-{b}^{2}}}},\sqrt {-{\frac { \left( {b}^{2}-v \right)  \left( {
+%b}^{2}-u \right) %}{{a}^{2}-{b}^{2}}}}\; \right]
+%\]
+%with $u\in [b^2,a^2]$ and $v\in (-\infty,b^2)\cup (a^2,\infty).$
+
+\[\alpha(u,v)=(c\cos u\cosh v, c\sin u\sinh v).\]
+
+We have that $\alpha$ is an orthogonal  diffeomorfism in the domain $(0,\frac{\pi}{2})\times (0,\infty)$.
+
+For $u=u_0$, $\alpha(u_0,v)$ parametrize a  hyperbola with axes $c\cos u_0$ and $ c\sin u_0$ and foci $(\pm c,0)$.
+For $v=v_0$, $\alpha(u ,v_0)$ parametrize an ellipse with axes $c\cosh{ v_0}$ and $c\sinh{ v_0}$ and foci $(\pm c,0)$. So, $\alpha$ parametrize a confocal family of conics (ellipses and hyperbolas).
+
+It is straightforward to obtain that
+\[ 
+|\alpha(u_1,v_1)-\alpha(u_2,v_2)|=|\alpha(u_1,v_2)-\alpha(u_2,v_1)|.\]
+This means that in any quadrangle the diagonals have equal length.
 \end{proof}
 
 

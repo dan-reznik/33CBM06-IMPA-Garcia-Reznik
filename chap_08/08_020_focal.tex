@@ -1,9 +1,9 @@
-
+% PAVEL E. DOLGIREV
  The polar line associated to a point $P_0=(x_0,y_0)$ with respect to an ellipse is given by
  \[ b^2x_0 x+a^2 y_0y-a^2b^2=0.\]
 The pair of tangent lines passing through the point $P_0=(x_0,y_0)$ is given by
- \[ \left( x{ y_0}-y{x_0} \right) ^{2}-{a}^{2} \left( x-{  x_0}
- \right) ^{2}-{b}^{2} \left( y-{ y_0} \right) ^{2}=0 \]
+ \[ \left( x{ y_0}-y{x_0} \right) ^{2}-{b}^{2} \left( x-{  x_0}
+ \right) ^{2}-{a}^{2} \left( y-{ y_0} \right) ^{2}=0 \]
 
 \begin{proposition}\label{prop:bisectorline}
     Consider an ellipse $\mathcal{E}$ with foci $F_1$ and $F_2$. Let $\ell_P$ be the tangent line to $\E$ at $P\in \E$. Then $\ell_P$ is a bisector of the   lines $PF_1$ and $PF_2$, see \cref{fig:bisectorline}.  
@@ -91,7 +91,7 @@ We have that
 \end{proof}
 
 \begin{proposition}
-	Consider a pair of confocal ellipses $\mathcal{E}$ and $\mathcal{E}_1$ with semi-axes $(a,b)$ and $(a_c,b_c)$ respectively. Referring to   \cref{fig:dEE1} it follows that:
+	Consider a pair of confocal ellipses $\mathcal{E}$ and $\mathcal{E}'$ with semi-axes $(a,b)$ and $(a_c,b_c)$ respectively. Referring to   \cref{fig:dEE1} it follows that:
 	
 	\[\frac{|P_0P_1|}{|P_1F_1|}+\frac{|P_0P_2|}{|P_2F_2|}=\frac{2 a_c (a-a_c)}{b_c^2}\]
 	is constant (independent of $P_0$).
@@ -100,53 +100,50 @@ We have that
 \begin{figure}[h]
 	\begin{center}	 
   \includegraphics[scale=0.5]{pics_08_060_relacaodEE.pdf}
-		\caption { Relation of focal distances. \label{fig:dEE1} }
+		\caption { The sum of relation of focal distances is constant. \label{fig:dEE1} }
 	\end{center}
 	
 \end{figure}
-\begin{proof}
-
+\begin{proof} 
+Follows from straightforward calculations, computing the quantities involved with help of CAS. 
 \end{proof}
 
 \begin{proposition}
 	Consider a confocal pair of an ellipse  $\mathcal{E}$ and a hyperbola $\mathcal{H}$. Referring to   \cref{fig:dEH} it follows that:
 	
-	\[\frac{|P_0P_1|}{|P_1F_1|}+\frac{|P_0P_2|}{|P_2F_2|}=\frac{2a_c(a+a_c)}{b_c^2}\;\;\; \text{and}\;\;\; \frac{|P_0P_1'|}{|P_1'F_1|}+\frac{|P_0P_2'|}{|P_2'F_2|}\]
+	\[\frac{|P_0P_1|}{|P_1F_1|}+\frac{|P_0P_2|}{|P_2F_2|}=\frac{2a_c(a+a_c)}{b_c^2}\;\;\; \text{and}\;\;\; \frac{|P_0F_1|}{|P_1'F_1|}+\frac{|P_0F_2|}{|P_2'F_2|}= \frac{2a_c(a-ac)}{b_c^2}\]
 	are constant (independent of $P_0$).
-	parte 2 ao quadrado (ver maple)
-	\[4a_c^2(a b_c^2+a_c b^2)^2/(b_c^4(2a a_c(a_c^2+b_c^2)+2a_c^4+b^2 a_c^2+3 a_c^2 b_c^2+b_c^4))\]
+ The sums  are constant for $P_0$ in the arc of ellipse  where the points $P_i,\; P'_i$ (i=1,2) are well defined.
 \end{proposition}
 \begin{figure}[H]
 	\begin{center}
-		\def\svgwidth{0.55\textwidth}
-		\input{pics_tex/relacao_EH.eps_tex}
+	%	\def\svgwidth{0.55\textwidth}
+ \includegraphics[scale=0.7]{ pics_08_070_razaoEH_confocal.pdf}
 		%	 \includegraphics[angle=0, width=8cm]{relacao_distancias_bilhar.pdf_tex}
-		\caption { Relation of focal distances   }
+		\caption { Sum of relations of focal distances in a confocal pair (ellipse and hyperbola) is constant.  }
 		\label{fig:dEH}
 	\end{center}
 \end{figure}
 \begin{proof}
-
+Follows from straightforward calculations, computing the quantities involved with help of CAS. 
 \end{proof}
 \begin{proposition}
 	Consider a pair of confocal hyperbolas $\mathcal{H}$ and $\mathcal{H}_1$. Referring to   \cref{fig:dHH} it follows that:
 	
-	\[\frac{|P_0P_1|}{|P_1F_1|}/\frac{|P_0P_2|}{|P_2F_2|}=\]
+	\[\frac{|P_0P_1|}{|P_1F_1|}/\frac{|P_0P_2|}{|P_2F_2|}=\frac{a+a_c}{a-a_c}\]
 	is constant (independent of $P_0$).
 	
 \end{proposition}
 \begin{figure}[H]
 	\begin{center}
-		\def\svgwidth{0.75\textwidth}
-		\input{pics_tex/razao_cruzada_HH.eps_tex}
-		%	 \includegraphics[angle=0, width=8cm]{relacao_distancias_bilhar.pdf_tex}
+	 %
+	 	 \includegraphics[scale=0.8]{ pics_08_080_razaoHH1_confocal.pdf}
 		\caption { Relation of focal distances  }
 		\label{fig:dHH}
 	\end{center}
 \end{figure}
 \begin{proof}
-
-
+Follows from straightforward calculations, computing the quantities involved with help of CAS. 
 \end{proof}
 
 
@@ -158,7 +155,7 @@ We have that
 	The pair $\{\mathcal{E},\mathcal{C}\}$ is a Poncelet pair having all periodic orbits of period 3.
 \end{proposition}
 
-\begin{figure}[H]
+\begin{figure} 
 	\begin{center}
 		\def\svgwidth{0.55\textwidth}
 		\input{pics_tex/elipse_circulo2a.eps_tex}
@@ -172,14 +169,14 @@ We have that
 \end{proof}
 
 
-\begin{theorem}
+\begin{theorem}[ Galperin-Plakhov Theorem]
 Consider a pair of confocal conics with foci $F_1$ and $F_2$ in the plane (see   \cref{fig:galperin}).
   Consider  the right branch of the hyperbola associated with $F_2$. Let $P$
 and $Q$ be the points of intersection of the ellipse with the right branch of the hyperbola.
 Consider a ray starting at $F_1$ and intersecting the right branch of the hyperbola. Denote
-by $X$, $A$ the intersection points of this ray with the ellipse and with the branch of the
-hyperbola. Suppose the focus $F_2$ lies on the line $P Q$. Then $P Q$ is the bisector of the
-angle $  \langle  AF_2B$.  
+by $B$ (resp.\ $A$ ) the intersection points of this ray with the ellipse (resp.\  with the right branch of the
+hyperbola). Suppose the focus $F_2$ lies on the line $P Q$. Then the line $P Q$ is the bisector of the
+angle $  \angle  AF_2B$.  
 \end{theorem}
 \begin{figure}[H]
 	\begin{center}
@@ -190,26 +187,39 @@ angle $  \langle  AF_2B$.
 		 \label{fig:galperin}
 	\end{center}
 \end{figure}
-
+\begin{proof}
+See \cite{galperin2011} and \cite{dolgirev2014} for synthetic proofs.
+Considering the parametrization of the confocal family  of conics it follows that
+\begin{align*}
+    A&=[c\cos u\cosh v,c \sin u \sinh v]\\
+    B&=\left[ {\frac {2c{{\rm e}^{v}}}{\cos u \left( {
+{\rm e}^{2\,v}}+1 \right) }},{\frac { c \left( {{\rm e}^{2\,v}}-1
+ \right) \sin u  }{\cos u
+ \left( {{\rm e}^{2\,v}}+1 \right) }}\right]\\
+    P&=[c,c\sin u\tan u],\;\;Q=[c,-c\sin u\tan u].  
+\end{align*}
+Performing the calculations it follows that
+\[\cos(\angle PF_2A)=\cos(\angle PF_2B)\]
+\end{proof}
 
 \begin{theorem}\label{th:ehfocus}
-Considear a pair of confocal conics (ellipse and hyperbola)  Consider an arbitrary point $M$ (exterior to the ellipse)
+Consider a pair of confocal conics (ellipse and hyperbola). Let $M$ be  an arbitrary point $M$ (exterior to the ellipse)
 on the line passing through the intersection points $P$ and $Q$ of the ellipse and the right branch of
-the hyperbola. Draw two tangent lines to the ellipse and to the hyperbola. Then the   lines $P_1Q_1$, $P_2Q_2$ (respec. $P_1Q_2$ and $P_2Q_1$)
-through the tangent points as shown in \cref{fig:ehfocus}  passe  through the focus $F_1$ (respec.   $F_2$). 
+the hyperbola. Draw two tangent lines to the ellipse and to the hyperbola. Then the   lines $P_1Q_1$, $P_2Q_2$ (resp.\ $P_1Q_2$ and $P_2Q_1$)
+through the tangent points as shown in \cref{fig:ehfocus}  passe  through the focus $F_1$ (resp.\   $F_2$). 
 \end{theorem}
 
 
 \begin{figure}[H]
 	\begin{center}
-		\def\svgwidth{0.75\textwidth}
- 	\input{pics_tex/elipse_hiperbole_focus.eps_tex}
-	 %	 \includegraphics[angle=0, width=8cm]{pics_tex/elipse_hiperbole_focus.eps}
+	%	\def\svgwidth{0.75\textwidth}
+ %	\input{pics_tex/elipse_hiperbole_focus.eps_tex}
+ 	 \includegraphics[scale=1]{pics_08_090_elipse_hiperbole_focus.pdf}
 		\caption {  The four lines passing through the point $M$ and tangent to the confocal conics determine four lines passing through the foci. \label{fig:ehfocus}}
 	\end{center}
 \end{figure}
 \begin{proof}
-
+See \cite{dolgirev2014}.
 
 \end{proof}
 
@@ -239,13 +249,8 @@ Then $P_5 = P_1$ (see \cref{fig:eeH}).
 \end{figure}
 \label{fig:eeH}
 \begin{proof}
-
+See \cite{dolgirev2014}.
 
 \end{proof}
 
-
-\section{Exercises}
-
-\begin{exercise}
-Show that the ellipse $x^2/a^2+y^2/b^2=1$ and the circle $(x+c)^2+y^2=4a^2$ defines a Poncelet pair such that  all  orbits have   period 3.
-\end{exercise}
+ 
