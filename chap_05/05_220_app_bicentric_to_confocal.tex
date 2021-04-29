@@ -1,0 +1,43 @@
+Consider the pair of nested circles:
+ 
+\[\C_{int}:\;x^2+y^2=r^2,\;\;\;\C_{ext}:\;(x+d)^2+y^2=R^2\]
+Their limiting points $\ell_1$ and $\ell_2$ are given by \cite[Limiting Points]{mw}:
+ 
+ \[ \ell_1= (R^2 - d^2 - r^2 -\Delta)/(2d),\;\;\;\ell_2=(R^2 - d^2 - r^2 + \Delta)/(2 d)\]
+where:
+ \[ \Delta=\sqrt { \left( d+R+r \right)  \left( R-d+r \right)  \left( R+d-r
+ \right)  \left( R-d-r \right) }\]
+
+Notice $\ell_1$ (resp. $\ell_2$) is internal (resp. external) to the circle pair. Below we show that the polar image of the  $\C_{int},\C_{ext}$ pair with respect to a circle of radius $\rho$ centered on $\ell_1$ (resp. $\ell_2$) is a confocal pair of ellipses (resp. hyperbolas).
+
+\begin{lemma}
+The polar image of $\C_{int}$ with respect to $\ell_1 $ is the ellipse $\E$ centered at
+ \[ \O_e=\left[  {\rho}^2\frac{d}{\Delta} +\frac{k-\Delta}{2d},0\right] \]
+where $k=R^2 - d^2 - r^2$. Its semi-axes are given by:
+ 
+\[  a^2={\rho}^4\left(\frac{2d^2r^2+ \Delta(k+\Delta)}{ 2 \Delta^2 r^2}\right),\;\;\;b^2= {\rho}^4\left(\frac{k+ \Delta}{2 \Delta r^2}\right) \]
+ \end{lemma}
+\noindent Note that $c^2=a^2-b^2={\rho}^4d^2/{\Delta^2}$.
+ 
+ \begin{lemma}
+ The polar image of $\C_{ext}$ with respect to $\ell_1$ is an ellipse $\E'$ confocal with $\E$ with semi-axes given by:
+ 
+\[  a'^2= {\rho}^4\frac{(2R^2d^2 + \Delta (k'+\Delta ))}{ 2 \Delta^2 R^2},\;\;\;b'^2=  {\rho}^4\left(\frac{k'+\Delta}{ 2 \Delta R^2}\right) \]
+ \end{lemma}
+ \noindent where $k'=R^2 + d^2 - r^2$.
+ 
+ \begin{lemma}
+ The polar image of $\C_{int}$ with respect to $\ell_2 $ is the hyperbola $\H$ centered at
+  \[  \O_h=\left[  {-\rho}^2\frac{d}{\Delta} +\frac{k+\Delta}{2d},0\right] \]
+ with semiaxes given by:
+ 
+\[  a_h^2={\rho}^4\left(\frac{  2d^2r^2-\Delta(k - \Delta)}{2  \Delta^2 r^2}\right),\;\;\;b_h^2= {\rho}^4\left(\frac{k - \Delta}{2 \Delta r^2}\right)\]
+ \end{lemma}
+ \noindent Note that $c_h^2=a_h^2+b_h^2={{\rho}^4d^2}/{\Delta^2}$. Note also that $c=c_h$.
+ 
+ \begin{lemma} The polar image of $\C_{out}$ with respect to $\ell_2$ is a hyperbola $\H'$ confocal with $\H$. Its semiaxes are given by:
+ 
+\[ a_h'^2= {\rho}^4\left(\frac{2R^2d^2 - \Delta (k' - \Delta)}{ 2 \Delta^2 R^2}\right),\;\;\; b_h'^2= {\rho}^4 \left(\frac{k' - \Delta}{ 2 \Delta R^2}\right)\]
+ \end{lemma}
+
+

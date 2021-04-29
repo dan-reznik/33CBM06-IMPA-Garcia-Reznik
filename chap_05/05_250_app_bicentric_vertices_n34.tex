@@ -1,0 +1,66 @@
+Consider a pair of circles
+\[\mathcal{C}_1: x^2+y^2-r^2=0, \;\;\; \mathcal{C}_2: (x+d)^2+y^2-R^2=0\]
+
+\subsection{N=3}
+
+Let $(x_0,y_0)=(r\cos t,r\sin t) \in \mathcal{C}_1$. Let
+$d^2=R(R-2r)$. Then the 3-periodic orbit is parametrized by
+$\{P_1,P_2,P_3 \}, $ where
+{\small  
+\begin{align*}
+P_1&=\left[{\frac {\cos t(2\,d R    \cos  t    +    {R}^{2}-  {d}^{2})+\Delta\,\sin t}{2\,R}}-d, {\frac {\sin t( 2d R\, \cos
+ t  +  {R}^{2}-d^2) -\Delta\,\cos t }{2\,R}}\right]
+\\
+P_2&=\left[ {\frac { \cos t(2\,d R  \cos t     +{R}^{2}- {d}^{2})-\Delta\,\sin
+ t }{2\,R}}-d,{\frac {\sin t(2d R\,  \cos
+ t  +   {R}^{2}-  {d}^{2})+\Delta\,\cos t }{2\,R}}\right]
+\\
+ P_3&=\left[-{\frac { \left( R\cos t   -d \right)  \left( {R}^{2}-{d
+}^{2} \right) }{     R^2+d^2-2\,d R\cos t }   }, {\frac 
+{ -R\left(   R^2-d^2 \right) \sin t }{ R^2+d^2-2\,d R \cos
+ t  }}\right]\\
+ \Delta&=\sqrt { \left(  R^2+d^2-2d R\,\cos t   \right) 
+ \left(   3\, R^2-d^2 +2\,d R\cos t\right) }
+ \end{align*}
+ }
+Under the above pair of circles, the limiting points are at:
+
+\begin{align*}
+    l_1&=\left[\frac{  R^2-d^2 }{8\,d {R}^{2} }
+ \left( \sqrt {   (9\,R^2-d^2)    
+  (R^2-d^2)     }+3\, R^2+d^2 \right) 
+,0\right]\\
+l_2&=l_1-\left[\frac{\sqrt{9R^2 - d^2} (R^2-d^2)^{\frac{3}{2}}}{4R^2d}, 0\right].
+\end{align*}
+ 
+\subsection{N=4}
+
+Let $(x_0,y_0)\in \mathcal{C}_1$. 
+The Cayley condition for a pair of circles to admit Poncelet 4-periodics due to Kerawala is \cite[Poncelet's Porism, Eq. 39]{mw}:
+
+\[ \frac{1}{(R-d)^2}+ \frac{1}{(R+d)^2}-\frac{1}{r^2}=0 \]
+  
+Let $P_i=[x_i,y_i]$, $i=1,...,4$ denote the vertices of a bicentric 4-periodic. Let $\alpha=R^2+d^2$ and $\beta=R^2-d^2$. The vertices are parametrized as:
+ 
+\begin{align*}
+\small
+   x_{1}&=\Delta\,y_0-{\frac { \left( \beta+2\,d x_0
+ \right)  \left( d \alpha  -\beta x_0 \right) }{2\,\alpha}},\\
+ y_{1}&=-\Delta\,x_0+{\frac { \left( 2\,d \beta x_0+
+ \alpha ^{2} \right) y_0}{2\,\alpha}}\\
+x_{2}&=-\Delta\,y_0-{\frac { \left( \beta+2\,dx_0
+ \right)  \left( d \beta - \beta x_0 \right) }{2\,\alpha}}\\
+y_{2}&=\Delta\,x_0+{\frac {2\,d \beta y_0\,x_0+
+ \alpha ^{2}y_0}{2\,\alpha}}\\
+%
+ x_3&= \frac{  ((( x_0^2 \alpha \beta - 4  x_0^2 \alpha^2 + 3/2 \beta^3 - 2 \beta^2 \alpha) \sqrt{2 \alpha - 2 \beta} + \beta (2 \Delta \alpha  y_0 + 8 \alpha^2  x_0 - 8 \alpha \beta  x_0 + \beta^2  x_0)) \beta)}{(4 (\sqrt{2 \alpha - 2 \beta} \alpha  x_0 + \beta (\beta - 2 \alpha)/2)^2)}\\
+ y_3&=\frac{\alpha \beta (\alpha (2  x_0  y_0 \alpha + \beta ( x_0  y_0 - 2 \Delta)) \sqrt{2 \alpha - 2 \beta} + (4 \Delta  x_0 - 2 \beta  y_0) \alpha^2 - 2 \Delta \alpha \beta  x_0 + \beta^3  y_0)}{(2 \sqrt{2 \alpha - 2 \beta} \alpha  x_0 - 2 \alpha \beta + \beta^2)^2}\\
+ x_4&=-\frac{((( x_0^2 \alpha \beta - 4  x_0^2 \alpha^2 + 3/2 \beta^3 - 2 \beta^2 \alpha) \sqrt{2 \alpha - 2 \beta} + \beta (-2 \Delta \alpha  y_0 + 8 \alpha^2  x_0 - 8 \alpha \beta  x_0 + \beta^2  x_0)) \beta)}{(4 (\sqrt{2 \alpha - 2 \beta} \alpha  x_0 + \beta (\beta - 2 \alpha)/2)^2)}\\
+ y_4&=\frac{(\alpha (2  x_0  y_0 \alpha + \beta ( x_0  y_0 + 2 \Delta)) \sqrt{2 \alpha - 2 \beta} + (-4 \Delta  x_0 - 2 \beta  y_0) \alpha^2 + 2 \Delta \alpha \beta  x_0 + \beta^3  y_0) \beta}{(2 \sqrt{2 \alpha - 2 \beta} \alpha  x_0 - 2 \alpha \beta + \beta^2)^2}\\
+ \Delta&=\frac{\sqrt{-2\sqrt{2\alpha - 2\beta}\; \alpha x_0\beta^2 - 2 x_0^2\alpha^3 + 2 x_0^2\alpha^2\beta + \alpha^2\beta^2 + \alpha\beta^3 - \beta^4}}{ (2\alpha}
+\end{align*}
+
+Under the above pair of circles, the limiting points are at:
+\begin{align*}
+    l_1=\left[\frac{R^2 - d^2}{2d}, 0\right],\;\;\; l_2=  \left[\frac{d(R^2-d^2)}{R^2 + d^2}, 0\right]
+\end{align*}

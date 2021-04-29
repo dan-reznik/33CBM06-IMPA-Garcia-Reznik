@@ -96,11 +96,11 @@ The trilinear vertex matrix of the Brocard triangle $B_1B_2B_3$ is given by:
 Given a triangle $T=ABC$  and a point $P$ which is not a vertex of $T$ drop three perpendiculars to the sidelines of $T$. The intersections of theses lines with the sidelines define a triangle $T'=A'B'C'$ that is known as the {\em pedal triangle} of $P$. See \cref{fig:pedal_triangle}, left.
 
 The antipedal triangle is defined by the following construction.
-Drop hallines from $P$ to the vertices of the triangle $T$. For each vertex draw a line perpendicular to the correspondent half  line. The intersections of these  lines will be the vertices of the {\em antipedal triangle}. See \cref{fig:pedal_triangle}, right.
+Drop half lines from $P$ to the vertices of the triangle $T$. For each vertex draw a line perpendicular to the correspondent half  line. The intersections of these  lines will be the vertices of the {\em antipedal triangle}. See \cref{fig:pedal_triangle}, right.
  \begin{figure}[H]
     %\centering
   % \includegraphics[scale=0.5]{trilinear.pdf}
-      \includegraphics[scale=0.8]{pics_appA_050_pedal_antipedal_triangle.pdf}
+      \includegraphics[scale=0.6]{pics_appA_050_pedal_antipedal_triangle.pdf}
     \caption{Pedal triangle $A'B'C'$ of the point $P$.}
     \label{fig:pedal_triangle}
 \end{figure}
@@ -132,3 +132,23 @@ The notion of pedal triangle  can be generalized for any polygon. From $P$ drop 
 
 Also the {\em  antipedal polygon} is defined analogously to the antipedal triangle.
  
+ \subsection{ Anticomplementary triangle}
+ 
+ The anticomplementary triangle of a triangle $T=ABC$ is the triangle $T'=A'BC'$ such that $T$ is the medial triangle of $T$.
+ 
+  \begin{figure}[H]
+     \centering
+      \includegraphics[scale=0.6]{zappA/pics/pics_appA_0100_anticimplementary.pdf}
+    \caption{Anticomplementary triangle $A'B'C'$ of $ABC$.}
+    \label{fig:pedal_triangle}
+\end{figure}
+The center of the circumcircle of $T'$ coincides with the orthocenter of $T$, i.e., $X'_3=X_4$.
+
+The trilinear vertex matrix of the antipedal triangle $T'=A'B'C'$ is given by \cite{mw}:
+ 
+\begin{align*}
+   \left(\begin{matrix}-\frac{1}{a} &\frac{1}{b} &\frac{1}{c}\\
+    \frac{1}{a} &-\frac{1}{b} &\frac{1}{c}\\
+    \frac{1}{a} &\frac{1}{b} &-\frac{1}{c}\end{matrix}\right)
+    \end{align*}
+   

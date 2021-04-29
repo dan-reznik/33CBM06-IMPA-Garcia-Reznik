@@ -1,0 +1,127 @@
+
+
+
+Consider a Triangle Center $X$ whose Trilinears $p:q:r$ are rational on the sidelengths $s_1,s_2,s_3$, i.e., the Triangle Center Function $h$ is rational, see  \cref{eqn:appAtrilin-cartesian}.
+
+\begin{theorem} In the family of 3-periodic orbits in a Poncelet pair of ellipses the locus of a rational triangle center is an algebraic curve.
+\label{thm:rational-center}
+\end{theorem}
+
+Our proof is based on the following 3-steps which yield an algebraic curve $\mathcal{L}(x,y)=0$ which contains the locus. We refer to \cref{lem:1coord} and \cref{lem:2sides} appearing below. %Appendix~\ref{app:rational-support} contains  supporting expressions.
+
+\begin{proof}
+
+\begin{step}
+Introduce the symbolic variables $u, u_1, u_2$:
+
+\begin{equation*}
+    u^2 + u_1^2 = 1,\;\;\;   u_2^2 = k_1u^2+k_2.
+\end{equation*} % \smallskip
+
+\end{step}
+ 
+\noindent The vertices will be given by rational functions of   $u, u_1, u_2$ 
+\begin{equation*} P_1 = (a\,u, b\,u_1),\;\;P_2 = (p_{2x}, p_{2y})/p_3,\;\;\;P_3 = (p_{3x}, p_{3y})/p_3 
+\end{equation*}
+ 
+\noindent Expressions for $P_1,P_2,P_3$ appear in \cref{eq:chap3_orb3} as do equations $g_i=0$, $i=1,2,3$, polynomial in $ s_i,u,u_1,u_2$.
+ 
+\begin{step}Express the locus  $X$ as a  rational function on  $u,u_1, u_2, s_1, s_2, s_3$.
+\end{step}
+
+Convert $p:q:r$ to Cartesians $ X = (x,y)$ via  \cref{eqn:appAtrilin-cartesian}. From  \cref{lem:1coord}, it follows that
+$\left(x,y\right)$ is rational on $u,u_1,u_2,s_1,s_2,s_3$.
+
+\begin{equation*} x=\mathcal{Q}/\mathcal{R},\;\;\;y=\mathcal{S}/\mathcal{T}
+\end{equation*}
+
+\noindent To obtain the polynomials    $\mathcal{Q,R,S,T}$  on said variables $u,u_1,u_2,s_1,s_2,s_3$,
+ one substitutes the 
+$p,q,r$ by the corresponding rational functions of  $s_1, s_2, s_3$ that define a specific Triangle Center $X$. Other than that, the method proceeds identically.
+
+\begin{step}
+Computing resultants.
+Our problem is now cast in terms of the polynomial equations:
+
+\begin{equation*}
+E_0= \mathcal{Q}-x\,\mathcal{R}=0,\;\;\; F_0= \mathcal{S}-y\,\mathcal{T}=0
+\end{equation*}
+
+\end{step}
+
+%Let $g_1$, $g_2$ and $g_3$ be the polynomials in Appendix~\ref{app:alg_locus}. 
+Firstly, compute the resultants, in chain fashion:  
+
+\begin{align*}
+    E_1=&\textrm{Res}(g_1,E_0,s_1)=0,\;\;\;F_1=\textrm{Res}(g_1,F_0,s_1)=0\\
+	E_2=&\textrm{Res}(g_2,E_1,s_2)=0,\;\;\;F_2=\textrm{Res}(g_2,F_1,s_2)=0\\
+	E_3=&\textrm{Res}(g_3,E_2,s_3)=0,\;\;\;F_3=\;\textrm{Res}(g_3,F_2,s_3)=0
+\end{align*}
+		 
+It follows that  $E_3(x,u,u_1,u_2)=0$ and $F_3(y,u,u_1,u_2)=0$ are polynomial
+equations. In other words, $s_1, s_2, s_3$ have been eliminated. 
+
+Now  eliminate the variables $u_1$ and $u_2$ by taking the following resultants:
+
+\begin{align*}
+	E_4(x,u,u_2)=&\textrm{Res}(E_3,u_1^2+u^2-1,u_1)=0\\ 	F_4(y,u,u_2)=&\textrm{Res}(F_3,u_1^2+u^2-1,u_1)=0\\
+	E_5(x,u)=&\textrm{Res}(E_4,u_2^2+\rho_1 u^2-1,u_2)=0\\
+	F_5(y,u)=&\textrm{Res}(F_4,u_2^2+\rho_1 u^2-1,u_2)=0
+\end{align*}
+
+This yields two polynomial equations $E_5(x,u)=0$ and $F_5(y,u)=0$. 
+
+Finally compute the resultant
+$$ {\mathcal L} = \textrm{Res}(E_5,F_5,u)=0
+$$
+that eliminates $u$ and gives  the implicit algebraic equation for the locus $X$. 
+\end{proof}
+
+\begin{remark}
+In practice,  after  obtaining  a resultant, a human assists the CAS by factoring out spurious branches
+(when recognized), in order to get the final answer in more reduced form.   
+\end{remark}
+
+When not rational in the sidelengths, except a few cases\footnote{For instance Hofstadter points $X(359), X(360)$.}, Triangle Centers
+in Kimberling's list have explicit Trilinears involving fractional powers and/or terms containing the triangle area. Those can be made implicit, i.e,
+given by zero sets of polynomials involving $p,q,r, s_1, s_2, s_3$.  The chain of resultants to be computed will be increased by three, in order to eliminate the variables $p,q, r$ before (or after) $s_1, s_2, s_3$.
+
+\subsubsection{Supporting Lemmas}
+\label{sec:supporting-lemmas}
+
+\begin{lemma}
+\label{lem:1coord}
+Let $P_1=({a}{u},b\sqrt{1-u^2}).$
+	The coordinates of $P_2$ and $P_3$ of the 3-periodic billiard orbit are rational functions in the variables $u, u_1, u_2$, where
+	$u_1=\sqrt{1-u^2}$, $u_2=\sqrt{k_1+k_2 u^2}$ 
+and
+%\textcolor{red}{checar valores de k1 e k2}
+	$k_1= a_c^2(b^2 - b_c^2)a^2b^2,$ $ k_2= a^2b^2(a^2b_c^2 - a_c^2b^2)$.  
+		
+	\end{lemma}
+	
+	\begin{proof}
+	Follows directly from the parametrization of the Poncelet orbit, see \cref{eq:chap3_orb3}.
+ 
+	In fact,  $P_2=(x_2(u),y_2(u)) =( p_{2x}/A_{11}, p_{2y}/A_{11})$ and $P_3=(x_3(u),y_3(u))$ $=( p_{3x}/A_{11}, p_{3y}/A_{11})$, where $p_{2x}$, $p_{2y}$, $p_{3x}$ and $p_{3y}$ have degree $2$ in $(u,u_1,u_2)$  and $A_{11}$ algebraic of degree $2$ in $u$. 
+%	Expressions for $u_1,u_2$ appear in %Appendix~\ref{app:exit-angle}.	\textcolor{red}{ver equacao a referenciar}
+\end{proof}
+	
+\begin{lemma}
+\label{lem:2sides} Let $P_1=(a u,b\sqrt{1-u^2}).$ Let $s_1$, $s_2$ and $s_3$ the sides of the triangular orbit ${P_1}{P_2}{P_3}$. Then $g_1(u,s_1)=0$, $g_2(s_2,u_2,u)=0$ and $g_3(s_3,u_2,u)=0$ for polynomial functions $g_i$.  
+\end{lemma}
+	
+\begin{proof}
+Using the parametrization of the 3-periodic Poncelet orbit it follows that $s_1^2-|P_2-P_3|^2=0$ is a rational equation in the variables $u,s_1$. Simplifying, leads to $g_1(s_1,u)=0.$
+
+Analogously for $s_2$ and $s_3$. In this case, the equations $s_2^2-|P_1-P_3|^2=0$ and  $s_3^2-|P_1-P_2|^2=0$   have   square roots $u_2=\sqrt{k_2-k_1 u^2}$ and $u_1=\sqrt{1-u^2}$ and  are rational in the variables $s_2,u_2,u_1,u$ and $s_3,u_2,u_1,u$ respectively. It follows that the degrees of $g_1$, $g_2$, and $g_3$ are $10$.  Simplifying, leads to $g_2(s_2,u_2,u_1,u)=0 $ and $g_3(s_3,u_2,u_1,u)=0$. 
+\end{proof}
+
+
+ \begin{theorem}\label{thm:loci_algebraic_general}
+ In the family of 3-periodic orbits in a generic Poncelet pair of conics the locus of a rational triangle center is an algebraic curve. 
+ \end{theorem}
+
+ \begin{proof}
+ The analysis follow the same steps as in the case of a Poncelet pair of ellipses.  See proof of \ref{thm:rational-center}. 
+\end{proof}
