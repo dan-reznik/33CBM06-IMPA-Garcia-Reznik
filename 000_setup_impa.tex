@@ -10,17 +10,17 @@
 %\usepackage{csquotes}
 \usepackage{amsmath, latexsym, amssymb,amsbsy, amsthm,amsfonts,amscd,mathtext,float,makecell}
 \usepackage{graphicx,wrapfig,graphics}
- \usepackage[T1]{fontenc}  
+\usepackage[T1]{fontenc}  
  \usepackage[dvipsnames]{xcolor}
  
+\usepackage{csquotes}
+%\usepackage{polyglossia}
+%\setmainlanguage{english}
+%\setotherlanguage{russian}
 
-\usepackage{polyglossia}
-\setmainlanguage{english}
-\setotherlanguage{russian}
-
-\setmainfont{FreeSerif}
-\setsansfont{FreeSans}
-\setmonofont{FreeMono}
+%\setmainfont{FreeSerif}
+%\setsansfont{FreeSans}
+%\setmonofont{FreeMono}
  %\usepackage{svg}
 
 % Antigo estilo do Dan:
@@ -31,8 +31,7 @@
             sorting=nyt,
             backref=true,
             backrefstyle=three,
-            isbn=false,
-            backend=biber]{biblatex}
+            isbn=false, backend=biber]{biblatex}
 \let\cite\textcite
 
 %\usepackage{imakeidx}
@@ -56,9 +55,9 @@
 \usepackage[nameinlink,capitalize,noabbrev]{cleveref}
 
 % Declare some macros to use in the text:
-  \DeclareMathOperator{\Div}{div}
-  \DeclareMathOperator{\Rot}{rot}
-
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\Rot}{rot}
+\newtheorem{step}{Step}
 \newtheorem{theorem}{Theorem}
 \newtheorem*{theorem*}{Theorem}
 \newtheorem{observation}{Observation}
@@ -99,7 +98,6 @@
 
 %%%
 
-
 \usepackage{lineno}
 \def\linenumberfont{\normalfont\small\sffamily}
 %a4: 210 x 297
@@ -108,11 +106,10 @@
 %\arraycolsep=2pt
 %\captionsetup{width=120mm}
 
- 
 \usepackage{comment}
 \usepackage{microtype}
 \usepackage{footnote}
- \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
  
 \newcommand{\torp}[2]{\texorpdfstring{#1}{#2}}
 \newcommand{\Sha}{\mathord{\textit{ш}}}

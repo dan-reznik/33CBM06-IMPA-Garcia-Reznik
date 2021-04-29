@@ -1,0 +1,57 @@
+%%%  
+Expressions for $X_k$, $k=6,15,16,39,574$ were given above. They were obtained by starting with the explicit calculation of the triangular center $X_i(t)$ over the family of Poncelet triangles in the Brocard porism given in Proposition \ref{prop:orbita}.
+
+To this end we make use of the trilinear coordinates $f(a,b,c)::$ of  the triangular center $X_i$ \cite{etc} and its conversion to Euclidean coordinates expressed by
+  \[X_i = \frac{ s_1 f(s_1,s_2,s_3) A +s_2f(s_2,s_3,s_1)B+ s_3 f(s_3,s_1,s_2) C}
+  {s_1 f(s_1,s_2,s_3)+s_2f(s_2,s_3,s_1)+s_3 f(s_3,s_1,s_2)}. \]
+  Here $s_1=|B-C|,\; s_2=|C-A|$ and $  s_3=|A-B|$. Obtain the result by simplification via a CA. It is worth mentioning that all triangular centers considered  are rational functions of $(d,h)$. Therefore, by Lemma \ref{lem:reciprocal} they will be rational functions of $(\Sha, \sqrt{\Sha^2-3}).$
+ 
+ \begin{lemma}
+ The distance between circumcenter $X_3$ (respec. $X'_3$) and symmedian $X_6$ (respec. $X'_6$) of $T$ (respec. $T'$) is given by
+
+\[ |X_3-X_6|=\frac{R\sqrt{ \Sha^2 -3}}{ \Sha},\;\;\;\;\;
+|X_3'-X_6'|=\frac{R(\Sha^2-3)^{\frac{3}{2}}}{2\Sha(\Sha^2+3)}
+\]
+ \label{lem:dX3X6}
+\end{lemma}
+
+\begin{proof} Consider any triangle with circumradius $R$ and Brocard angle $\omega$. By the construction   of the Brocard porism the family   has fixed triangular centers $X_3$,   $X_6$, $X_{182}=\frac{1}{2}(X_3+X_6)$ and $X_{574}$. As $X_3'=X_{182}$ and $X_6'=X_{574}$ the result follows from Lemmas \ref{lem:x3} and \ref{lem:x574}.
+%Proposition \ref{prop:sta_centers}.
+\end{proof}
+
+\subsection*{Convergence}
+
+ Recall that given a map $f:U\to U$, $ U\ne \emptyset$, the positive orbit of point $p_0$
+ is the set $O_{+}(p_0)=\{p_0,f(p_0), f(f(p_0)),\ldots, f^n(p_0),\ldots\}.$
+ Analogously, when $f$ is invertible, the negative orbit
+ is defined by
+ 
+ \[ O_{-}(p_0)=\{p_0,f^{-1}(p_0), f^{-1}(f^{-1}(p_0)),\ldots, f^{-n}(p_0),\ldots\}.\]
+ 
+ The future (resp. past) of an orbit is the closure of 
+ the positive (resp. negative) orbit and is  denoted by
+ the $\omega$-limit set $\omega(p_0)$ (resp. $\alpha$-limit set $\alpha(p_0)$). For an introduction to more properties of these concepts see \cite[Chapter 1]{devaney}.
+
+\begin{proposition}[Convergence]
+Let \[ f(R,\Sha)=  (p(R,\Sha),q(\Sha))=\left(  \frac{R\sqrt{\Sha^2-3}}{2\Sha},\;\;\;\;
+  \frac{\Sha^2+3}{2\Sha}\right) \]
+  
+  For any $p_0=[R_0,\Sha_0]$ with $R_0>0$ and $\Sha_0>\sqrt{3} $,  $\omega(p_0)$ is equal to
+  $[0,\sqrt{3}]$ and $\alpha(p_0)=[\infty,\infty].$
+%Denote    $\Omega_i=\Omega_i(R,\Sha).$ Then 
+%\begin{equation}\label{eq:brocard_iteration}
+%\Omega_1'=\Omega_2(f(R,\Sha) )+ X_3',\;\;\;\;\; 
+ %\Omega_2'=\Omega_1(f(R,\Sha))+X_3' \end{equation}
+ \label{prop:conjunto_limite}
+\end{proposition}
+\begin{proof}
+Define $U=\{(R,\Sha) : \Sha\geq \sqrt{3}\}$. We have that $U$ is invariant by $f$, i.e., $f(U)\subset U.$
+We observe that for $\Sha>0$,    $q$ has a unique fixed point $(0,\sqrt{3})$.  
+ 
+For any $\Sha_0\geq \sqrt{3}$, $\omega(\Sha_0)=\sqrt{3}$ for $q$ since $q^\prime(\sqrt{3})=0<1$ (attractor). In fact a global attractor. As $\frac{\sqrt{\Sha^2-3}}{2\Sha}<\frac{1}{2}$    for $\Sha>\sqrt{3}$ and $p(x)< \frac{Rx}{2}$ it follows by a graphic analysis that  $\omega( p_0)=[0,\sqrt{3}]$.
+ The inverse of $f$ is given by
+ \[ f^{-1}(R,\Sha)=\left(2\Sha+\sqrt{\Sha^2-3}, {\frac {\sqrt {2}R\,\sqrt {y+\sqrt {\Sha^{2}-3}}}{\sqrt [4]{\Sha^{2}-3}}}\right)\]
+A similar analysis shows that $[0,\sqrt{3}] $ is a repeller of $f^{-1}$ and that the positive orbit of $p_0$ goes to infinity.
+ \end{proof}
+ 
+

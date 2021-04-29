@@ -58,9 +58,7 @@
       <file>authoryear.bbx</file>
       <file>authoryear.cbx</file>
       <file>biblatex.cfg</file>
-      <file>russian.lbx</file>
       <file>english.lbx</file>
-      <file>american.lbx</file>
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="1">

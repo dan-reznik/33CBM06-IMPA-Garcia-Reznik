@@ -159,7 +159,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortlocale</bcf:key>
-      <bcf:value>american</bcf:value>
+      <bcf:value>english</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
@@ -2348,19 +2348,70 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">refs_rgk_media.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">barth1996</bcf:citekey>
-    <bcf:citekey order="2">centina2016a</bcf:citekey>
-    <bcf:citekey order="3">centina2016b</bcf:citekey>
-    <bcf:citekey order="4">chasles1843</bcf:citekey>
-    <bcf:citekey order="5">drag2014</bcf:citekey>
-    <bcf:citekey order="6">berger2010</bcf:citekey>
-    <bcf:citekey order="7">cima2010</bcf:citekey>
-    <bcf:citekey order="8">cieslak2016</bcf:citekey>
-    <bcf:citekey order="9">darboux1917</bcf:citekey>
-    <bcf:citekey order="10">drag_milena2011</bcf:citekey>
-    <bcf:citekey order="11">gla2016</bcf:citekey>
-    <bcf:citekey order="12">hahu2015</bcf:citekey>
-    <bcf:citekey order="13">hahu2017</bcf:citekey>
-    <bcf:citekey order="14">leb1921</bcf:citekey>
-    <bcf:citekey order="15">mirman2012</bcf:citekey>
-    <bcf:ci
+    <bcf:citekey order="1">dsr_vid11incenter</bcf:citekey>
+    <bcf:citekey order="1">dsr_vid11e</bcf:citekey>
+    <bcf:citekey order="2">olga14</bcf:citekey>
+    <bcf:citekey order="3">garcia2019-incenter</bcf:citekey>
+    <bcf:citekey order="4">corentin2021-circum</bcf:citekey>
+    <bcf:citekey order="5">schwartz2016-com</bcf:citekey>
+    <bcf:citekey order="6">sergei2014-circumcenter-of-mass</bcf:citekey>
+    <bcf:citekey order="7">daepp-2019</bcf:citekey>
+    <bcf:citekey order="8">helman2021-power-loci</bcf:citekey>
+    <bcf:citekey order="9">daepp-2019</bcf:citekey>
+    <bcf:citekey order="10">daepp-2019</bcf:citekey>
+    <bcf:citekey order="11">daepp-2019</bcf:citekey>
+    <bcf:citekey order="12">daepp-2019</bcf:citekey>
+    <bcf:citekey order="13">daepp-2019</bcf:citekey>
+    <bcf:citekey order="14">sergei2016-com</bcf:citekey>
+    <bcf:citekey order="15">sergei2014-circumcenter-of-mass</bcf:citekey>
+    <bcf:citekey order="16">daepp-2019</bcf:citekey>
+    <bcf:citekey order="17">stackexchange-x3a</bcf:citekey>
+    <bcf:citekey order="18">etc</bcf:citekey>
+    <bcf:citekey order="19">etc-central-lines</bcf:citekey>
+    <bcf:citekey order="20">etc</bcf:citekey>
+    <bcf:citekey order="21">mw</bcf:citekey>
+    <bcf:citekey order="22">schwartz2016-com</bcf:citekey>
+    <bcf:citekey order="23">mw</bcf:citekey>
+    <bcf:citekey order="24">mw</bcf:citekey>
+    <bcf:citekey order="25">mw</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="nyt">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="nyt/global//global/global"
+                type="entry"
+                sortingtemplatename="nyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>

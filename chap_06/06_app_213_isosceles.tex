@@ -1,0 +1,50 @@
+Consider an isosceles Poncelet triangle $\T=ABC$ in the Brocard porism, where $AB$ is tangent to $\E$ at one of its minor vertices. Let $|AB|=2d$ and the height be $h$. Let $\zeta=d^2+h^2$. Let the origin $(0,0)$ be at its circumcenter $X_3$. Its vertices will be given by:
+
+\[A=\left[-d ,\frac{d^2-h^2}{2h}\right], \;\;\; B= \left[d,\frac{d^2-h^2}{2h}\right], \;\;\; \left[0 ,\frac{\zeta}{2h}\right] \]
+
+
+\begin{proposition}\label{prop:pair_brocard}
+The Brocard porism containing $\T$ as a Poncelet triangle is defined by the following circumcircle $\K_0$ and Brocard inellipse $\E$:
+
+\begin{align*}
+\K_0:& x^2+y^2-R^2=0, \;\;\; R=\frac{\zeta}{2h}\\
+\E:& -64d^2  h^4  x^2-4  h^2  (9  d^2+h^2)  \zeta  y^2 +4  h  (3  d^2+h^2)  (3  d^2-h^2)  \zeta  y\\&-(d^2-h^2) (9d^2 -h^2) \zeta^2=0
+\end{align*}
+\end{proposition}
+
+\begin{proof}
+The proof follows from $\T$, and isosceles Poncelet triangle. Recall that the Brocard inellipse is centered at $X_{39}$. Its perspector is $X_6$, i.e., it will be tangent to $\T$ where cevians through $X_6$ intersect it; see Figure~\ref{fig:broc-por-sec-tri}.
+\end{proof}
+
+\begin{proposition}
+The semi-axes $(a,b)$ of $\E$ are given by:
+ 
+ \[  (a,b)=\left(\frac{d\sqrt{\zeta}}{9d^2+h^2},\frac{4d^2}{9d^2+h^2}\right)
+    \]
+
+Furthermore, the Brocard points, located at the foci of $\E$ are given by:
+
+\[ \Omega_1,\Omega_2=\left[ \pm\frac{d(3d^2- h^2)}{9d^2+h^2}, \frac{9d^4-h^4}{2h(9d^2+h^2)}\right] \]
+ \label{prop:orbita}
+\end{proposition}   
+    
+    \begin{proof} Follows directly from Proposition \ref{prop:pair_brocard} computing the semi-axes and foci of the ellipse defined by $\E$.
+    \end{proof}
+
+ 
+\begin{lemma}
+
+\[R= \frac{\zeta}{2h}, \;\;\; \Sha=  \frac{3d^2+h^2}{2dh} ,\;\;\; \sin\omega=\frac{2dh}{\sqrt{(9d^2+h^2)\zeta}}
+\]
+
+Or inversely:
+
+\[
+d=-{\frac { \left( -2\, \Sha+\sqrt {{ \Sha^2}-3} \right) R}{ \Sha^2
++1}},\;\; h=  \frac{( \Sha^2+\Sha\sqrt{ \Sha^2-3}+3) R}{   \Sha^2+1}
+\]
+\label{lem:reciprocal}
+\end{lemma}
+\begin{proof}
+Follows from Propositions \ref{prop:pair_brocard} and \ref{prop:orbita}.
+\end{proof}
