@@ -233,8 +233,10 @@ Over the homothetic family, the sum of squared sidelengths $s_i^2$ is invariant 
 \[ \sum_{i=1}^3 s_i^2=\frac{9}{2} \left({a_e}^{2}+{b_e}^{2}\right) \]
 \end{proposition}
 
+The proof below was kindly contributed by  \cite{sergei2020-private-sidelengths}.
+
 \begin{proof}
-CAS-simplification from vertex parametrization.
+Invariant sum of squared sidelengths follows from the fact that the average of the harmonics of degree 1 and 2 over the group of rotations of order 3 is zero. Namely, consider a unit vector $v(\alpha)=(\cos \alpha, \sin \alpha)$ and a matrix $\mathcal{A}$ taking concentric circles to homothetic ellipses. Then $|\mathcal{A}v(\alpha)|^2$ is a trigonometric polynomial of degree 2. Average it over $\mathbb{Z}_3$ by adding $2\pi/3$ and $4\pi/3$ to $\alpha$. The result is independent of $\alpha$, as needed. The actual value is obtained via CAS simplification from vertex parametrization.
 \end{proof}
 
 Referring to \cref{fig:03-homoth-brocard}, recall the definition of a triangle's Brocard angle $\omega$, given in \cite[Brocard Angle]{mw}: sidelines $P_i P_{i+1}$ rotated about $P_i$ by some angle $\alpha$ will only concur (at the first Brocard point $\Omega_1$) if $\alpha=\omega$. A second, distinct Brocard point $\Omega_2$ exists if sidelines $P_i P_{i-1}$ are rotated about $P_{i}$ by $-\omega$.
