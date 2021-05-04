@@ -2348,32 +2348,26 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">refs_rgk_media.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">dsr_vid11incenter</bcf:citekey>
-    <bcf:citekey order="1">dsr_vid11e</bcf:citekey>
-    <bcf:citekey order="2">olga14</bcf:citekey>
-    <bcf:citekey order="3">garcia2019-incenter</bcf:citekey>
-    <bcf:citekey order="4">corentin2021-circum</bcf:citekey>
-    <bcf:citekey order="5">schwartz2016-com</bcf:citekey>
-    <bcf:citekey order="6">sergei2014-circumcenter-of-mass</bcf:citekey>
-    <bcf:citekey order="7">daepp-2019</bcf:citekey>
-    <bcf:citekey order="8">helman2021-power-loci</bcf:citekey>
-    <bcf:citekey order="9">daepp-2019</bcf:citekey>
-    <bcf:citekey order="10">daepp-2019</bcf:citekey>
-    <bcf:citekey order="11">daepp-2019</bcf:citekey>
-    <bcf:citekey order="12">daepp-2019</bcf:citekey>
-    <bcf:citekey order="13">daepp-2019</bcf:citekey>
-    <bcf:citekey order="14">sergei2016-com</bcf:citekey>
-    <bcf:citekey order="15">sergei2014-circumcenter-of-mass</bcf:citekey>
-    <bcf:citekey order="16">daepp-2019</bcf:citekey>
-    <bcf:citekey order="17">stackexchange-x3a</bcf:citekey>
-    <bcf:citekey order="18">etc</bcf:citekey>
-    <bcf:citekey order="19">etc-central-lines</bcf:citekey>
-    <bcf:citekey order="20">etc</bcf:citekey>
-    <bcf:citekey order="21">mw</bcf:citekey>
-    <bcf:citekey order="22">schwartz2016-com</bcf:citekey>
-    <bcf:citekey order="23">mw</bcf:citekey>
-    <bcf:citekey order="24">mw</bcf:citekey>
-    <bcf:citekey order="25">mw</bcf:citekey>
+    <bcf:citekey order="1">sundrop2016</bcf:citekey>
+    <bcf:citekey order="1">esolar2017</bcf:citekey>
+    <bcf:citekey order="2">gross2020-solar</bcf:citekey>
+    <bcf:citekey order="3">dsr_vid11incenter</bcf:citekey>
+    <bcf:citekey order="4">dsr_vid11e</bcf:citekey>
+    <bcf:citekey order="5">olga14</bcf:citekey>
+    <bcf:citekey order="6">garcia2019-incenter</bcf:citekey>
+    <bcf:citekey order="7">schwartz2016-com</bcf:citekey>
+    <bcf:citekey order="8">garcia2019-incenter</bcf:citekey>
+    <bcf:citekey order="9">corentin2021-circum</bcf:citekey>
+    <bcf:citekey order="10">garcia2018</bcf:citekey>
+    <bcf:citekey order="11">mw</bcf:citekey>
+    <bcf:citekey order="12">olga19_mitten</bcf:citekey>
+    <bcf:citekey order="13">johnson1960</bcf:citekey>
+    <bcf:citekey order="14">garcia2020-new-properties</bcf:citekey>
+    <bcf:citekey order="15">johnson1960</bcf:citekey>
+    <bcf:citekey order="16">etc</bcf:citekey>
+    <bcf:citekey order="17">mw</bcf:citekey>
+    <bcf:citekey order="18">mw</bcf:citekey>
+    <bcf:citekey order="19">mw</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
