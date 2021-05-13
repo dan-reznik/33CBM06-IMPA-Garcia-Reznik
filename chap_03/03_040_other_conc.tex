@@ -9,7 +9,7 @@ Below we introduce five additional notable 3-periodic Poncelet families interscr
 
 \subsection{Excentral Family}
 
-This is the Ponceletian family of excentral triangles to billiard 3-periodics. If the axes of its caustic are $a,b$, this family is inscribed in an ellipse with $a',b'$ given in \cref{thm:03-incenter-excenter}; see \cref{fig:03-n3-affine}(left).
+This is the Ponceletian family of excentral triangles to billiard 3-periodics. If the axes of its caustic are $a,b$, this family is inscribed in an ellipse with $a_e,b_e$ given in \cref{thm:03-incenter-excenter}; see \cref{fig:03-n3-affine}(left).
 
 The symmedian point $X_6$ of the excentral triangle coincides with the mittenpunkt of its reference, see \cite[X(6)]{etc}. Therefore:
 
@@ -50,7 +50,13 @@ The cosine circle of the excentral family is stationary with radius $r^*=1/J$.
 
   
 \subsection{Incircle Family}
-The incircle family, shown in \cref{fig:03-n3-affine}(middle), is the Poncelet family in a CAP pair for which the caustic is a circle (let $r$ denote its radius). It follows immediately that the family's incenter $X_1$ is stationary. Let $a_e,b_e$ be the axes of the ellipse the family is inscribed in. Cayley yields $r=a_c=b_c=(a_e b_e)/(a_e+b_e)$. 
+The incircle family, shown in \cref{fig:03-n3-affine}(middle), is the Poncelet family in a CAP pair for which the caustic is a circle (let $r$ denote its radius). It follows immediately that the family's incenter $X_1$ is stationary. Let $a,b$ be the axes of the ellipse the family is inscribed in. Cayley yields:
+
+\begin{proposition}
+The inradius $r$ of the incircle family is given by: 
+\[ r=a_c=b_c=\frac{a b}{a+b} \]
+\label{prop:03-incircle}
+\end{proposition} 
 
 \begin{figure}
     \centering
@@ -62,7 +68,7 @@ The incircle family, shown in \cref{fig:03-n3-affine}(middle), is the Poncelet f
 As shown in \cref{fig:03-incircle-circum}:
 
 \begin{proposition}
-The incircle family has invariant circumradius given by $R=(a_e+b_e)/2$. Furthermore, the locus of its circumcenter $X_3$ is a circle of radius $d=R-b_e=a_e-R$ centered on the common center $O=X_1$.
+The incircle family has invariant circumradius given by $R=(a+b)/2$. Furthermore, the locus of its circumcenter $X_3$ is a circle of radius $d=R-b=a-R$ centered on the common center $O=X_1$.
 \label{prop:n3-incircle-R}
 \end{proposition}
 
@@ -71,41 +77,41 @@ Let $P_1=(x_1,y_1)$ be a first vertex of the incircle family. Using an explicit 
 
 {\scriptsize
 \[
-X_3=\frac{a_e-b_e}{2}\left[ - \,{\frac {x_1\, \left( -x_1^{2}
-			\left( a_e+b_e \right) ^{2}+{a_e}^{2} b_e \left( 2\,a_e+b_e \right)  \right) }{ a_e
-			\left(  \left( {a_e}^{2}-{b_e}^{2} \right) x_1^{2}+{a_e}^{2}{b_e}^{2}
+X_3=\frac{a-b}{2}\left[ - \,{\frac {x_1\, \left( -x_1^{2}
+			\left( a+b \right) ^{2}+{a}^{2} b \left( 2\,a+b \right)  \right) }{ a
+			\left(  \left( {a}^{2}-{b}^{2} \right) x_1^{2}+{a}^{2}{b}^{2}
 			\right) }}
-	 ,  {\frac { y_1\left( x_1^{2} \left( a_e+b_e
-	 		\right) ^{2}-{a_e}^{2}{b_e}^{2} \right)}{b_e \left( {a_e}^{2}x_1^2+{b_e}^{2} \left( {a_e}^{2}-x_1^{2} \right)  \right) }}
+	 ,  {\frac { y_1\left( x_1^{2} \left( a+b
+	 		\right) ^{2}-{a}^{2}{b}^{2} \right)}{b \left( {a}^{2}x_1^2+{b}^{2} \left( {a}^{2}-x_1^{2} \right)  \right) }}
 	   \right]
  \]
  }
 
-And circumradius $R=|P_1-X_3|=(a_e+b_e)/2$. Also obtain that the locus of $X_3$ is a circle concentric with the incircle and of radius $(a_e-b_e)/2$.
+And circumradius $R=|P_1-X_3|=(a+b)/2$. Also obtain that the locus of $X_3$ is a circle concentric with the incircle and of radius $(a-b)/2$.
 \end{proof}
 
 Referring to \cref{eqn:03-sum-cos}: 
 
 \begin{corollary}
 The incircle family conserves its sum of cosines given by:
-\[ \sum{\cos\theta_i}=1+\frac{r}{R}=\frac{{a_e}^2+4 {a_e}
-   {b_e}+{b_e}^2}{({a_e}+{b_e})^2}\]
+\[ \sum{\cos\theta_i}=1+\frac{r}{R}=\frac{{a}^2+4 {a}
+   {b}+{b}^2}{({a}+{b})^2}\]
 \label{cor:03-n3-inc-cos-sum}
 \end{corollary}
 
-\noindent \textbf{Affine image:} As \cref{fig:03-n3-affine}(middle) depicts, the incircle family can also be obtained from an affine image of billiard 3-periodics which sends the confocal caustic to a circle. As before, let $a,b$ be the semi-axes of its billiard ellipse pre-image.
+\noindent \textbf{Affine image:} As \cref{fig:03-n3-affine}(middle) depicts, the incircle family can also be obtained from an affine image of billiard 3-periodics which sends the confocal caustic to a circle. Let $\alpha,\beta$ be the semi-axes of its billiard ellipse pre-image.
 
 \begin{lemma}
 The confocal family is sent to the incircle family by scaling it along the major axis by an amount $s$ given by:
 
-\[ s=\frac{b (\delta-c^2)}{a^3} \]
+\[ s=\frac{\beta (\bar{\delta}-\alpha^2+\beta^2)}{\alpha^3},\;\;\; \bar{\delta}=\sqrt{\alpha^4-(\alpha \beta)^2+\beta^4}\]
 
 %\[ \lambda =\frac{(2a-r)\cdot r^3}{(a^2-r^2)\cdot (a-r)^2} \]
 \label{lem:03-incircle-affine}
 \end{lemma}
 
 \begin{proof}
-The scaled family will be inscribed in an ellipse with semi-axes $a_e = s a$, and $b_e =b$. Its caustic will be the circle $r=b_c$, where $b_c={b\left({a}^{2}-\delta\right)}/{c^2}$ is the confocal caustic minor axis given in \cref{prop:03-n3-caustic}. The Cayley condition for the incircle family imposes that $r=b_c=(a_e b_e)/(a_e + b_e)$, i.e., the result follows from solving $b_c = (s a b)/(s a + b)$ for $s$.
+The scaled family will be inscribed in an ellipse with semi-axes $a = s \alpha$, and $b =\beta$. Its caustic will be the circle $r=b_c$, where $b_c={\beta\left({\alpha}^{2}-\bar{\delta}\right)}/(\alpha^2-\beta^2)$ is the confocal caustic minor axis given in \cref{prop:03-n3-caustic}. The Cayley condition for the incircle family imposes that $r=b_c=(a b)/(a + b)$, i.e., the result follows from solving $b_c = (s \alpha \beta)/(s \alpha + \beta)$ for $s$.
 
 %The claim is obtained by imposing %$a_c^2-b_c^2=(s a)^2-b^2$ and solving %for $s^2$.
 \end{proof}
@@ -118,12 +124,12 @@ The sum of cosines conserved by the incircle family is identical to that conserv
 \end{proposition}
 
 \begin{proof}
-Let $s$ be the scaling along the major axis in \cref{lem:03-incircle-affine}. Plug $a_e=s a$ and $b_e=b$ into  \cref{cor:03-n3-inc-cos-sum}, subtract one (to obtain $r/R$ for the incircle family) and verify it yields the expression in \cref{thm:03-confocal-rovR}.
+Let $s$ be the scaling along the major axis in \cref{lem:03-incircle-affine}. Plug $a=s \alpha$ and $b=\beta$ into  \cref{cor:03-n3-inc-cos-sum}, subtract one (to obtain $r/R$ for the incircle family) and verify it yields the expression in \cref{thm:03-confocal-rovR}.
 \end{proof}
 
 \subsection{Circumcircle Family}
 
-The circumcircle family, shown in \cref{fig:03-n3-affine}(right), is the Poncelet family in a CAP pair for which the outer ellipse is a circle (let $R$ denote its radius). It follows immediately that the family's circumcenter $X_3$ is stationary. Let $a',b'$ be the axes of its inellipse and $s_i$ the sidelengths. Cayley imposes $a'+b'=R$.
+The circumcircle family, shown in \cref{fig:03-n3-affine}(right), is the Poncelet family in a CAP pair for which the outer ellipse is a circle (let $R$ denote its radius). It follows immediately that the family's circumcenter $X_3$ is stationary. Let $a_c,b_c$ be the axes of its inellipse and $s_i$ the sidelengths. Cayley imposes $a_c+b_c=R$.
 
 \begin{lemma}
 Poncelet triangles in the circumcircle family are always acute.
@@ -137,17 +143,17 @@ Since the stationary circumcenter $X_3$ is interior to the caustic caustic, it w
 \begin{proposition}
 The circumcircle family conserves the sum of squared sidelengths. This is given by:
 
-\[ \sum_{i=1}^3 s_i^2=4(a' + 2 b')(2 a' + b') \]
+\[ \sum_{i=1}^3 s_i^2=4(a_c + 2 b_c)(2 a_c + b_c) \]
 \end{proposition}
 
 \begin{proof}
 %\textcolor{red}{ronaldo}
-CAS-assisted simplification from vertex parametrization given by \cref{eq:03-n3-conc-general}.
+CAS-assisted simplification from the vertex parametrization in \cref{prop:03-vtx-param}.
 \end{proof}
 
 \begin{proposition}
 The circumcircle family conserves the product of its internal angle cosines. This is given by:
-\[ \prod_{i=1}^3{\cos\theta_i}=\frac{a' b'}{2(a'+b')^2}=\frac{a' b'}{2 R^2}\]
+\[ \prod_{i=1}^3{\cos\theta_i}=\frac{a_c b_c}{2(a_c+b_c)^2}=\frac{a_c b_c}{2 R^2}\]
 \label{prop:03-circum-cos-prod}
 \end{proposition}
 
@@ -160,12 +166,12 @@ Recall the orthic triangle has vertices at the feet a triangle's altitudes. Let 
 %Referring to Figure~\ref{fig:II-poristic} (left):
 
 \begin{proposition}
-Over the circumcircle family  $r_h$ is invariant and  given by $r_h=a' b'/(a'+b')$. 
+Over the circumcircle family  $r_h$ is invariant and  given by $r_h=a_c b_c/(a_c+b_c)$. 
 \label{prop:03-circumcircle-rh}
 \end{proposition}
 
 \begin{proof}
-In \cite[Orthic Triangle, Eqn. 5]{mw} one finds the relation  $r_h=2 R \prod_{i=1}^3{\cos\theta_i}$. Recalling $R=a'+b'$, substitution into \cref{prop:03-circum-cos-prod} yields the claim.
+In \cite[Orthic Triangle, Eqn. 5]{mw} one finds the relation  $r_h=2 R \prod_{i=1}^3{\cos\theta_i}$. Recalling $R=a_c+b_c$, substitution into \cref{prop:03-circum-cos-prod} yields the claim.
 \end{proof}
 
 \begin{figure}
@@ -185,12 +191,13 @@ Over the circumcircle family, the locus of the orthic circumcenter (i.e., the 9-
 
 %Below we analyze a Poncelet family with fixed incircle and non-concentric fixed circumcircle, known as the ``poristic'' family. The previous result implies that the orthics derived from the circumcircle family can be regarded as a rigidly moving poristic family.
 
-\noindent \textbf{Affine image:} As \cref{fig:03-n3-affine}(right) depicts, the circumcircle family can also be obtained from an affine image of billiard 3-periodics which sends the billiard ellipse with semi-axes $a,b$ to a circle with radius $R=b$. Therefore billiard 3-periodics are sent to the circumcircle family by scaling it along the major axis by an amount $s'={b/a}$. Therefore \cref{prop:03-n3-caustic} implies:
+\noindent \textbf{Affine image:} As \cref{fig:03-n3-affine}(right) depicts, the circumcircle family can also be obtained from an affine image of billiard 3-periodics which sends the billiard ellipse with semi-axes $\alpha,\beta$ to a circle with radius $R=\beta$. Therefore billiard 3-periodics are sent to the circumcircle family by scaling it along the major axis by an amount $s'={\beta/\alpha}$. Therefore \cref{prop:03-n3-caustic} implies:
 
 \begin{lemma}
-The caustic semi-axes $a',b'$ of the circumcircle family which is the $s'$-affine image of the confocal family are given by:
+The caustic semi-axes $a_c,b_c$ of the circumcircle family which is the $s'$-affine image of the confocal family are given by:
 
-\[ a'=\frac{b}{a}{a_c}=\frac{b(\delta-b^2)}{c^2},\;\;\;b'=b_c=\frac{b(a^2-\delta)}{c^2} \]
+\[ a_c=\frac{\beta}{\alpha}{\alpha_c}=\frac{\beta(\bar{\delta}-\beta^2)}{\alpha^2-\beta^2},\;\;\;b_c=\beta_c=\frac{\beta(\alpha^2-\bar{\delta})}{\alpha^2-\beta^2} \]
+where $\alpha_c,\beta_c$ are the caustic semi-axes of the confocal pre-image, and $\alpha,\beta,\bar{\delta}$ are as previously defined.
 \label{lem:03-circumcircle-affine}
 \end{lemma}
 
@@ -214,15 +221,15 @@ For the first statement it suffices to show that the $s'$-affine image of billia
     \label{fig:03-homoth-brocard}
 \end{figure}
 
-The homothetic family, shown in \cref{fig:03-homoth-brocard}, is the Poncelet family in a CAP pair for which the outer and inner ellipse are homothetic to each other, i.e., $a_e = k a'$ and $b_e = k b'$, where $a_e,b_e$ and $a',b'$ are outer and inner ellipse semi-axes, respectively. Cayley imposes a homothecy ratio $k=1/2$.
+The homothetic family, shown in \cref{fig:03-homoth-brocard}, is the Poncelet family in a CAP pair for which the outer and inner ellipse are homothetic to each other, i.e., $a = k a_c$ and $b = k b_c$, where $a,b$ and $a_c,b_c$ are outer and inner ellipse semi-axes, respectively. Cayley imposes a homothecy ratio $k=1/2$.
 
 \begin{proposition}
 The barycenter $X_2$ is stationary at the common center and area $A$ is invariant and given by:
-\[A= \frac{3\sqrt{3}}{4} a_e b_e \]
+\[A= \frac{3\sqrt{3}}{4} a b \]
 \end{proposition}
 
 \begin{proof}
-Consider an affine transformation that sends both outer and inner ellipse to a unit circle, e.g., by scaling the system along the major (resp. minor) axis by $1/a_e$ (resp. $1/b_e$). Uniquely amongst all triangle centers, the barycenter $X_2$ is invariant under affine transformations. By symmetry of the equilateral centroid, it will be identified with the center of the homothetic pair. Affine transformations preserve area ratios, so $A$ will be the the area of an equilateral triangle inscribed in a unit circle scaled by the inverse Jacobian $a_e b_e$. This completes the proof.
+Consider an affine transformation that sends both outer and inner ellipse to a unit circle, e.g., by scaling the system along the major (resp. minor) axis by $1/a$ (resp. $1/b$). Uniquely amongst all triangle centers, the barycenter $X_2$ is invariant under affine transformations. By symmetry of the equilateral centroid, it will be identified with the center of the homothetic pair. Affine transformations preserve area ratios, so $A$ will be the the area of an equilateral triangle inscribed in a unit circle scaled by the inverse Jacobian $a b$. This completes the proof.
 \end{proof}
 
 Curiously, the homothetic family shares the following invariant with the circumcircle family:
@@ -230,22 +237,22 @@ Curiously, the homothetic family shares the following invariant with the circumc
 \begin{proposition}
 Over the homothetic family, the sum of squared sidelengths $s_i^2$ is invariant and given by:
 	
-\[ \sum_{i=1}^3 s_i^2=\frac{9}{2} \left(a_e^{2}+b_e^{2}\right) \]
+\[ \sum_{i=1}^3 s_i^2=\frac{9}{2} \left(a^{2}+b^{2}\right) \]
 \end{proposition}
 
 The proof below was kindly contributed by  \cite{sergei2020-private-sidelengths}.
 
 \begin{proof}
-Invariant sum of squared sidelengths follows from the fact that the average of the harmonics of degree 1 and 2 over the group of rotations of order 3 is zero. Namely, consider a unit vector $v(\alpha)=(\cos \alpha, \sin \alpha)$ and a matrix $\mathcal{A}$ taking concentric circles to homothetic ellipses. Then $|\mathcal{A}v(\alpha)|^2$ is a trigonometric polynomial of degree 2. Average it over $\mathbb{Z}_3$ by adding $2\pi/3$ and $4\pi/3$ to $\alpha$. The result is independent of $\alpha$, as needed. The actual value is obtained via CAS simplification from vertex parametrization.
+Invariant sum of squared sidelengths follows from the fact that the average of the harmonics of degree 1 and 2 over the group of rotations of order 3 is zero. Namely, consider a unit vector $v(\varphi)=(\cos \varphi, \sin \varphi)$ and a matrix $\mathcal{A}$ taking concentric circles to homothetic ellipses. Then $|\mathcal{A}v(\varphi)|^2$ is a trigonometric polynomial of degree 2. Average it over $\mathbb{Z}_3$ by adding $2\pi/3$ and $4\pi/3$ to $\varphi$. The result is independent of $\varphi$, as needed. The actual value is obtained via CAS simplification from vertex parametrization.
 \end{proof}
 
-Referring to \cref{fig:03-homoth-brocard}, recall the definition of a triangle's Brocard angle $\omega$, given in \cite[Brocard Angle]{mw}: sidelines $P_i P_{i+1}$ rotated about $P_i$ by some angle $\alpha$ will only concur (at the first Brocard point $\Omega_1$) if $\alpha=\omega$. A second, distinct Brocard point $\Omega_2$ exists if sidelines $P_i P_{i-1}$ are rotated about $P_{i}$ by $-\omega$.
+Referring to \cref{fig:03-homoth-brocard}, recall the definition of a triangle's Brocard angle $\omega$, given in \cite[Brocard Angle]{mw}: sidelines $P_i P_{i+1}$ rotated about $P_i$ by some angle $\theta$ will only concur (at the first Brocard point $\Omega_1$) if $\theta=\omega$. A second, distinct Brocard point $\Omega_2$ exists if sidelines $P_i P_{i-1}$ are rotated about $P_{i}$ by $-\omega$.
 
 A known relation appearing in \cite[Brocard Angle, Eqn. 2]{mw} is $\cot\omega=(\sum_{i=1}^3 s_i^2)/(4 A)$. Therefore:
 
 \begin{corollary}
 Over the homothetic family, the Brocard angle $\omega$ is invariant. Its cotangent is given by:
-\[ \cot\omega=\frac{\sqrt{3}}{2} \frac{{a_e}^{2}+{b_e}^{2}}{a_e b_e} \]	
+\[ \cot\omega=\frac{\sqrt{3}}{2} \frac{{a}^{2}+{b}^{2}}{a b} \]	
 \end{corollary}
 
 \begin{proof}
@@ -269,14 +276,22 @@ The homothetic family conserves the sum of its internal angle cotangents.
 
 %\textcolor{red}{Quem e o dual: é aquele cuja caustica é anti-homotetica a externa, ou seja $a'/b'=b/a$}
 
-The dual family, shown in \cref{fig:03-n3-dual}, is the Poncelet family in a CAP pair such that the outer and inner ellipses are ``duals'' curves of each other, i.e., tangents to one are sent to points on the other and vice-versa. For ellipses, this simply implies their aspect ratios $a_e/b_e$ and $a'/b'$ will be reciprocals of one another. Cayley yields $a'=\lambda b_e,\; b'=\lambda a_e$ and therefore $\lambda= a_e b_e/(a_e^2+b_e^2)$. Remarkably:
+The dual family, shown in \cref{fig:03-n3-dual}, is the Poncelet family in a CAP pair such that the outer and inner ellipses are ``duals'' curves of each other, i.e., tangents to one are sent to points on the other and vice-versa. For ellipses, this simply implies their aspect ratios $a/b$ and $a_c/b_c$ will be reciprocals of one another. Cayley yields:
+
+\begin{proposition}
+The caustic semi-axes of the dual family are given by:
+\[ a_c=\lambda\,b,\;\;\;b_c=\lambda\,a,\;\;\;\lambda=\frac{a b}{a^2+b^2} \]
+\label{prop:03-dual-cayley}
+\end{proposition}
+
+Remarkably:
 
 \begin{proposition}
 The orthocenter $X_4$ of the dual family is stationary.
 \end{proposition}
 
 \begin{proof}
-Follows directly from the vertex parametrization, see \cref{eq:03-n3-conc-general}.
+Follows directly from the vertex parametrization in \cref{prop:03-vtx-param}.
 
 In terms of the vertices of a triangle $A=[x_a,y_a]$, $B=[x_b,y_b]$, $C=[x_c,y_c]$ the orthocenter $X_4=[x_{4n}/A_4,y_{4n}/A_4]$ is given by the following rational functions 
 
@@ -292,7 +307,64 @@ In terms of the vertices of a triangle $A=[x_a,y_a]$, $B=[x_b,y_b]$, $C=[x_c,y_c
 A_4&= \left(y_b-y_c \right) x_a+ \left( -x_b+x_c\right) y_a+x_b\,y_c-x_c\,y_b
 \end{align*}
 
-Therefore, using  the vertex parametrization, see \cref{eq:03-n3-conc-general}, and CAS the result follows by direct computations.
+The results follows from CAS-assisted simplification from the vertex parametrization in \cref{prop:03-vtx-param}.
 \end{proof}
 
 Despite much searching, no invariant quantities have yet been found for this family.
+
+\subsection{Vertex Parametrization for Generic CAP pair}
+\label{sec:03-vtx-param}
+
+Consider a general CAP pair of ellipses denoted $\E$ and $\E_c$. We will derive a generic parametrization for the vertices of 3-periodics in such a pair. A first calculation will be helpful. Referring to \cref{fig:ell-ints}(left):
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pics_03_070_ell_ints.eps}
+    \caption{\textbf{Left:} Two CAP ellipses (black and brown), and a point $P_1$ on the outer one. The lines thru $P_1$ tangent to the inner ellipse intersect the outer one at $P_2$ and $P_3$. Notice that $P_2 P_3$ cut thru the inner ellipse, i.e., the pair of ellipses does not satisfy Cayley's conditions. \textbf{Right:} the minor axis of the inner ellipse has been scaled such that $P_1 P_2 P_3$ is now a Poncelet triangle.}
+    \label{fig:ell-ints}
+\end{figure}
+
+\begin{proposition}
+The intersections $P_2$ and $P_3$ on $\E$ of the two tangents to $\E_c$ seen from a point $P_1=[x_1,y_1]$ also on $\E$ are given by:
+
+\begin{align*}
+    P_2& =[x_2,y_2]=\frac{1}{k_2}\left[\frac{u_1 x_1 + u_2 y_1}{b} ,  \frac{w_1 x_1 + w_2 y_1}{a} \right] \\
+    P_3&=[x_3,y_3]=\frac{1}{k_2}\left[\frac{w_1 x_1 - w_2 y_1}{b},\frac{w_1 x_1 - w_2 y_1}{a}\right]
+\end{align*}
+where:
+\begin{align*}
+    u_1 &=b\left(a^4  b_c^4 -(a^2 -  a_c^2)^2 b^4 \right) \\
+    u_2 &= 2 a k_1 \left( (a^2 + a_c^2)b^2 - b_c^2 a^2\right) \\
+    k_1&=\sqrt{ b^2  b_c^2 (a^2 -  a_c^2)  x_1^2 +  a_c^2 a^2(b^2 -  b_c^2)  y_1^2}\\
+    k_2 &=\left(\frac{a^2 (b^2 +  b_c^2) - a_c^2 b^2 }{a}x_1\right)^2+ \left(\frac{a^2 (b^2 -  b_c^2) + a_c^2b^2 }{b} y_1\right)^2\\
+    w_1&=2 b k_1\left( (b^2 +  b_c^2) a^2 - a_c^2 b^2\right) \\
+    w_2&= a\left(a_c^4b^4-a^4(b^2-b_c^2)^2\right)
+     %=-a (a^2( b^2 -    b_c^2) -  a_c^2 %b^2) (a^2 (b^2 -   b_c^2) +  a_c^2 b^2)
+\end{align*}
+\label{prop:03-vtx-param}
+\end{proposition}
+
+We can obtain parametrizations for specific families by setting the caustic semi-axes $a_c$, $b_c$ as follows:
+
+
+\begin{table}
+\begin{tabular}{|l|c|c|l|}
+\hline
+CAP family        & $a_c$ & $b_c$ & note \\
+\hline
+confocal     & ${a\left(\delta-{b}^{2}\right)}/{c^2}$ & ${b\left({a}^{2}-\delta\right)}/{c^2}$ & \cref{prop:03-n3-caustic}  \\
+\hline
+incircle  & $(a b)/(a+b)$  & $(a b)/(a+b)$  & \cref{prop:03-incircle}  \\
+\hline
+circumcircle & choose $a_c<R$ & $R-a_c$ & $R=a=b$     \\
+\hline
+homothetic   &  $a/2$ & $b/2$ &      \\
+\hline
+dual & $(a b^2)/(a^2+b^2)$  & $(a^2 b)/(a^2+b^2)$   &  \cref{prop:03-dual-cayley}    \\
+\hline
+\makecell[lc]{conf.\\excentrals} &  & & \cref{thm:03-incenter-excenter} \\
+\hline
+\end{tabular}
+\caption{Values for the caustic semi-axes $a_c,b_c$ to be used in the generic vertex parametrization for a CAP pair in \cref{prop:03-vtx-param}}
+\label{tab:03-cap-vtx}
+\end{table}

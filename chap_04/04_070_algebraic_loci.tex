@@ -4,8 +4,10 @@
 Consider a Triangle Center $X$ whose Trilinears $p:q:r$ are rational on the sidelengths $s_1,s_2,s_3$, i.e., the Triangle Center Function $h$ is rational, see  
 \cref{eqn:appAtrilin-cartesian}
 
-\begin{theorem} In the family of 3-periodic orbits in a Poncelet pair of ellipses, axis parallel and common center, the locus of a rational triangle center is an algebraic curve.
-\label{thm:rational-center}
+\begin{theorem}
+The locus of a rational triangle center
+over 3-periodics in a CAP pair is an algebraic curve.
+\label{thm:04-rational-center}
 \end{theorem}
 
 Our proof is based on the following 3-steps which yield an algebraic curve $\mathcal{L}(x,y)=0$ which contains the locus. We refer to \cref{lem:1coord} and \cref{lem:2sides} appearing below. %Appendix~\ref{app:rational-support} contains  supporting expressions.
@@ -25,7 +27,7 @@ Introduce the symbolic variables $u, u_1, u_2$:
 \begin{equation*} P_1 = (a\,u, b\,u_1),\;\;P_2 = (p_{2x}, p_{2y})/p_3,\;\;\;P_3 = (p_{3x}, p_{3y})/p_3 
 \end{equation*}
  
-\noindent Expressions for $P_1,P_2,P_3$ appear in \cref{eq:03-n3-conc-general} as do equations $g_i=0$, $i=1,2,3$, polynomial in $ s_i,u,u_1,u_2$.
+\noindent Expressions for the vertices appear in \cref{prop:03-vtx-param}. Equations $g_i=0$, $i=1,2,3$, polynomial in $ s_i,u,u_1,u_2$ appear in \textcolor{red}{ronaldo}.
  
 \begin{step}Express the locus  $X$ as a  rational function on  $u,u_1, u_2, s_1, s_2, s_3$.
 \end{step}
@@ -102,7 +104,7 @@ and
 	\end{lemma}
 	
 	\begin{proof}
-	Follows directly from the parametrization of the Poncelet orbit, see \cref{eq:03-n3-conc-general}.
+	Follows directly from the vertex parametrization in \cref{prop:03-vtx-param}.
  
 	In fact,  $P_2=(x_2(u),y_2(u)) =( p_{2x}/A_{11}, p_{2y}/A_{11})$ and $P_3=(x_3(u),y_3(u))$ $=( p_{3x}/A_{11}, p_{3y}/A_{11})$, where $p_{2x}$, $p_{2y}$, $p_{3x}$ and $p_{3y}$ have degree $2$ in $(u,u_1,u_2)$  and $A_{11}$ algebraic of degree $2$ in $u$. 
 %	Expressions for $u_1,u_2$ appear in %Appendix~\ref{app:exit-angle}.	\textcolor{red}{ver equacao a referenciar}
@@ -124,5 +126,5 @@ Analogously for $s_2$ and $s_3$. In this case, the equations $s_2^2-|P_1-P_3|^2=
  \end{theorem}
 
  \begin{proof}
- The analysis follow the same steps as in the case of a Poncelet pair of ellipses.  See proof of \cref{thm:rational-center}. 
+ The analysis follow the same steps as in the case of a Poncelet pair of ellipses.  See proof of \cref{thm:04-rational-center}. 
 \end{proof}

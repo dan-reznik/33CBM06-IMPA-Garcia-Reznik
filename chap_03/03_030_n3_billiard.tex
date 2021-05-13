@@ -64,41 +64,41 @@ J=\frac{\sqrt{2\delta-a^2-b^2}}{c^2},\;\;\;L=2(\delta+a^2+b^2)J
  	We have that
  	\[L=|P_2-P_3|+2|P_1-P_2|,\;\;
  	 J=\langle \frac{P_1-P_3}{|P_1-P_3|},[\frac{1}{a},0]\rangle\]
- 	 Straigthforward calculations, using the vertex parametrization given by  \cref{eq:03-n3-conc-general} leads to the result stated.
+ 	 Straigthforward calculations using the vertex parametrization given in \cref{prop:03-vtx-param}, lead to the stated result.
 %\textcolor{red}{ronaldo: CAS+parametrization}
 \end{proof}
 
 \noindent Note: the use of $J$ in this chapter refers to its value for the $N=3$ case. Referring to \cref{fig:billiard-grid}:
 
 \begin{theorem}
-Over billiard 3-periodics, the locus of the incenter $X_1$ and excenter are ellipses $\E_1$ and $\E'$ concentric and axis-parallel with the confocal pair whose axes $(a_1,b_1)$ and $(a',b')$ are given by:
+Over billiard 3-periodics, the locus of the incenter $X_1$ and excenter are ellipses $\E_1$ and $\E_e$ concentric and axis-parallel with the confocal pair whose axes $(a_1,b_1)$ and $(a_e,b_e)$ are given by:
 \begin{align*}
 a_1 =& \frac{\delta-b^2 }{a},\;\;\;b_1=\frac{a^2-\delta}{b}\\ 
-a'= &\frac{{b}^{2}+\delta}{a},\;\;\;b'=\frac{{a}^{2}+\delta}{b}
+a_e= &\frac{{b}^{2}+\delta}{a},\;\;\;b_e=\frac{{a}^{2}+\delta}{b}
 \end{align*}
-Furthermore, $\E_1$ and $\E'$ have reciprocal aspect ratios, i.e., $a_1/b_1=b_e/a_e$.
+Furthermore, $\E_1$ and $\E_e$ have reciprocal aspect ratios, i.e., $a_1/b_1=b_e/a_e$.
 \label{thm:03-incenter-excenter}
 \end{theorem}
 
 \begin{proof}
-It follows from the vertex parametrazation of the orbit $\{P_1,P_2,P_3\}$ given by   \cref{eq:03-n3-conc-general} and the definition of incenter and excenters points.  
+It follows from the vertex parametrization in \cref{prop:03-vtx-param} and the definition of incenter and excenters.  
 We have that
 \[X_1=\frac{s_1 P_1+s_2P_2+s_3P_3}{s_1+s_2+s_3}=
 \frac{1}{L}(s_1P_1+s_2P_2+s_3P_3)\]
 where $s_1=|P_2-P_3|$, $s_2=|P_1-P_3|$ and $s_3=|P_1-P_2|$.
-A careful symbolic analysis shows that $\mathcal{E}_1(X_1)=0$. A similar analysis, considering the excenter points shows the locus of the three points is the ellipse $\mathcal{E}'$ stated.
-
-\textcolor{red}{ronaldo}
+A careful symbolic analysis shows that $\mathcal{E}_1(X_1)=0$. A similar analysis considering the excenters shows that the locus of the three points is the ellipse $\mathcal{E}_e$ stated.
 \end{proof}
 
+\textcolor{red}{ronaldo consegue inverter, ou seja dados os semi-eixos externos $a_e$, $b_e$, quais são $a_c,b_c$ (bilhar)}
+
 \begin{corollary}
-The pair $\{\mathcal{E},\mathcal{E}'\}$ is Ponceletian.
+The pair $\{\mathcal{E},\mathcal{E}_e\}$ is Ponceletian.
 \label{cor:03-excentral-billiard-poncelet}
 \end{corollary}
 
 \begin{proof}
 Direct from Cayley condition
-\[\frac{a}{a'}+\frac{b}{b'}=\frac{a^2}{b^2+\delta}+\frac{b^2}{a^2+\delta}= 1\]
+\[\frac{a}{a_e}+\frac{b}{b_e}=\frac{a^2}{b^2+\delta}+\frac{b^2}{a^2+\delta}= 1\]
 
 \end{proof}
 
@@ -115,7 +115,7 @@ Consider an isosceles 3-periodic orbit given by \cref{eq:orbita3-isosceles}.
 	Therefore, the power of the center of the ellipse with respect to the circumcircle is given by  
 	$$|OC_0|^2-R_0^2=\left(\frac { {b}^{2}-\delta}{2b}\right)^2 - \left(\frac {{b}^{2}+\delta}{2b}\right)^2=-\delta.$$
 	
-	For a generic 3-periodic orbit, the stated invariance is confirmed via a CAS, using the explicit vertex expressions given by  \cref{eq:03-n3-conc-general}.  
+	For a generic 3-periodic orbit, the stated invariance is confirmed with a CAS using the vertex parametrization in \cref{prop:03-vtx-param}.  
 %	\textcolor{red}{localizar depois}
 \end{proof}
 
@@ -163,7 +163,7 @@ The following relation, found in \cite{johnson1960}, holds for any triangle:
 \label{eqn:rovR-cas}
 \end{equation}
 
-Next, let $P_1=(a,0)$ be a vertex of an isosceles 3-periodic. Obtain a candidate expression for $r/R$. This yields \eqref{eqn:rovR} exactly. Using explicit expressions for orbit vertices (see \cref{eq:03-n3-conc-general}), derive an expression for the square of the right-hand side of \eqref{eqn:rovR-cas} as a function of $x_1$ and subtract from it the square of \eqref{eqn:rovR}. In  \cite{garcia2020-new-properties}
+Next, let $P_1=(a,0)$ be a vertex of an isosceles 3-periodic. Obtain a candidate expression for $r/R$. This yields \eqref{eqn:rovR} exactly. Using the vertex parametrization in \cref{prop:03-vtx-param}, derive an expression for the square of the right-hand side of \eqref{eqn:rovR-cas} as a function of $x_1$ and subtract from it the square of \eqref{eqn:rovR}. In  \cite{garcia2020-new-properties}
 it is shown $\left(s_1s_2s_3/R^2\right)^2$ is rational on $x_1$. For simplification, use $R=s_1 s_2 s_3/(4A)$, where $A$ is the triangle area. With a CAS, show said difference is identically zero for all $x_1\in(-a,a)$.
 \end{proof}
 

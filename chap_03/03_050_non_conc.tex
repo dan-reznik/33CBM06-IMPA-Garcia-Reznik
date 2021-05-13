@@ -511,7 +511,7 @@ Here $b'>a'$.
 \label{prop:03-brocard-polarimage}
 \end{proposition}
  
-\begin{proof} It follows from the same approach developed in \cref{sec:09-polarimage }.  Details are left to the reader.
+\begin{proof} It follows from the same approach developed in \cref{sec:09-polarimage}.  Details are left to the reader.
 \textcolor{red}{notacao aqui precisa ser ajustada? }
 \end{proof}
 \begin{remark}
@@ -539,4 +539,50 @@ In terms of the homothetic pre-image semi-axes $a,b$, the invariant sum of inver
   $\sin\omega=(a')/(2b')=b/\sqrt{4a^2-c^2}.$
 Using that $\csc^2\omega-\cot^2\omega=1$ the result follows.
 \end{proof}
+
+\subsubsection{Vertices of the Brocard Porism}
+
+Consider an isosceles Poncelet triangle $\Tm=ABC$ in the Brocard porism, where $AB$ is tangent to $\E$ at one of its minor vertices. Let $|AB|=2d$ and the height be $h$. Let $\zeta=d^2+h^2$. Let the origin $(0,0)$ be at its circumcenter $X_3$. Its vertices will be given by:
+
+\[A=\left[-d ,\frac{d^2-h^2}{2h}\right], \;\;\; B= \left[d,\frac{d^2-h^2}{2h}\right], \;\;\; \left[0 ,\frac{\zeta}{2h}\right] \]
+
+
+\begin{proposition}\label{prop:pair_brocard}
+The Brocard porism containing $\Tm$ as a Poncelet triangle is defined by the following circumcircle $\K_0$ and Brocard inellipse $\E$:
+
+\begin{align*}
+\K_0:&\, x^2+y^2-R^2=0, \;\;\; R=\frac{\zeta}{2h}\\
+\E:&\, -64d^2  h^4  x^2-4  h^2  (9  d^2+h^2)  \zeta  y^2 +4  h  (3  d^2+h^2)  (3  d^2-h^2)  \zeta  y\\&-(d^2-h^2) (9d^2 -h^2) \zeta^2=0
+\end{align*}
+\end{proposition}
+
+\begin{proof}
+The proof follows from $\Tm$, and isosceles Poncelet triangle. Recall that the Brocard inellipse is centered at $X_{39}$. Its perspector is $X_6$, i.e., it will be tangent to $\Tm$ where cevians through $X_6$ intersect it; see \cite[Brocard inellipse]{mw}.
+\end{proof}
+
+Consider the pair: circle $x^2+y^2=R^2=(d^2+h^2)^2/(4h^2)$ and   ellipse
+$x^2/a^2+(y-y_0)^2/b^2=1$, with  semi-axes
+ \[  (a,b)=\left(\frac{d\sqrt{d^2+h^2}}{9d^2+h^2},\frac{4d^2}{9d^2+h^2}\right)
+    \]
+and center $(0,y_0)$,  $y_0=(9d^4 - h^4)/(2h(9d^2  +  h^3))$.
+
+Vertices $P_i=[x_i,y_i]$, $i=1,2,3$ of Brocard porism triangles are given by:
+
+{\small  
+\begin{equation}
+    \aligned
+    x_1 &= \cos{t}/q_1\\
+    y_1 &= \sin{t}/q_1 \\
+    x_2 &= -d (d^2 + h^2) ((3 d^2 + h^2)\sin{t} + 2d h \cos{t}- 3 d^2 + h^2)/q_2 \\
+    y_2&=-(d^2 + h^2) ((9 d^4 - 2 d^2 h^2 + h^4)\sin{t} - 2 d h (3 d^2 + h^2)\cos{t} - 9 d^4 + h^4)/(2 b q_2) \\
+    x_3 &= d (d^2 + h^2) (2 d h \cos{t} - (3 d^2 + h^2) \sin{t} + 3 d^2 - h^2)/q_3\\
+    y_3 &=(d^2 + h^2) (2d h (3 d^2 + h^2) \cos{t}+ (9 d^4 - 2 d^2 h^2 + h^4)\sin{t} - 9 d^4 + h^4)/(2 b q_3) \\
+    q_1&=(2h)/(d^2+h^2)\\
+    q_2&= 2 d h (3 d^2 - h^2)\cos{t} - (9 d^4 - h^4) \sin{t}  + 9 d^4 + 2 d^2 h^2 + h^4\\
+    q_3&= 2 d h (3 d^2 - h^2)\cos{t} + (9 d^4 - h^4)\sin{t} - 9 d^4 - 2 d^2 h^2 - h^4
+\endaligned
+\label{eqn:03-vertices-brocard}
+\end{equation}
+}
+
 
