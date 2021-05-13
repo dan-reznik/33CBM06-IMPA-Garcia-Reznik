@@ -1,23 +1,101 @@
 % PAVEL E. DOLGIREV
- The polar line associated to a point $P_0=(x_0,y_0)$ with respect to an ellipse is given by
- \[ b^2x_0 x+a^2 y_0y-a^2b^2=0.\]
-The pair of tangent lines passing through the point $P_0=(x_0,y_0)$ is given by
+ 
+ 
+ 
+  Consider an ellipse $\E$ given by $x^2/a^2+y^2/b^2=1$ with foci $F_1=[-c,0],\; F_2=[c,0]$ and centered at $0=[0,0].$
+  
+  Referring to \cref{fig:pics-09- polar-ellipse}
+  
+  \begin{figure}
+      \centering
+      \includegraphics[scale=0.7]{pics_09_010_polarline-elipse.pdf}
+      \caption{Polar line $\ell_P$.}
+      \label{fig:pics-09- polar-ellipse}
+  \end{figure}
+ \begin{definition}
+The polar of a point $P$ with respect to $\E$ is a line $\ell_{P}$ passing through the intersection points  of the two tangent lines to the ellipse passing through $P_0$.
+ \label{def:09-polarline}
+ \end{definition}
+ 
+ \begin{lemma}
+ The polar line   of a point $P_0=(x_0,y_0)\ne 0$ with respect to  $\E$  is given by
+ %\[ b^2x_0 x+a^2 y_0y-a^2b^2=0.\]
+ \begin{align}
+\ell_{P_0}: \;\; \frac{x_0x}{a^2}+\frac{y_0y}{b^2}-1=0 \label{eqn:09-polarline}
+\end{align}
+  \label{lem:09-polarline}
+  \end{lemma}
+  
+  \begin{proof}
+  The pair of tangent lines to $\E$ passing through the point $P_0=(x_0,y_0)$ is given by
  \[ \left( x{ y_0}-y{x_0} \right) ^{2}-{b}^{2} \left( x-{  x_0}
  \right) ^{2}-{a}^{2} \left( y-{ y_0} \right) ^{2}=0 \]
+ Computing the intersection with the ellipse we obtain the points $P_1$ and $P_2$ given by:
+ \begin{align*}
+     P_1 &= \left[\frac{ a^2\left(b^2 x_0 +   y_0\sqrt{g_0-a^2b^2}\right)}{g_0},   \frac{b^2\left(a^2y_0 -  x_0\sqrt{g_0-a^2b^2}\right)}{g_0} \right] \\
+      P_2 &= \left[\frac{ a^2\left(b^2 x_0 -   y_0\sqrt{g_0-a^2b^2}\right)}{g_0},   \frac{b^2\left(a^2y_0+  x_0\sqrt{g_0-a^2b^2}\right)}{g_0} \right] 
+ \end{align*}
+ where $g_0=b^2x_0^2+a^2y_0^2.$
+ It is straightforward do obtain that the polar line is that given by  \cref{eqn:09-polarline} which passes through  $P_1$ and $P_2$.
+  \end{proof}
+  
+  \begin{remark} When $P_0$ is interior to $\E$ the intersections obtained above are complex.
+  In this case consider two lines $\ell_1$ and $\ell_2$ passing through $P_0$. Let $Q_{1,i} $ and $Q_{2,i} $ be the intersections of $\ell_i$ with $\E$. The   tangent lines to $\E$ passing though these points determine a point $P_i$ exterior to $\E$. The line passing through $P_1$ and $P_2$ is the polar of $P_0$ with respect to $\E.$  
+  \end{remark}
+\begin{definition}
+The pole of a line $\ell$ not passing through $0$ (center of $\E$) with respect to $\E$ is the point of  intersection of the two tangent lines passing through  $\ell\cap\E={P_1,P_2}$.
+\label{def:09-pole}
+\end{definition}
 
-\begin{proposition}\label{prop:bisectorline}
-    Consider an ellipse $\mathcal{E}$ with foci $F_1$ and $F_2$. Let $\ell_P$ be the tangent line to $\E$ at $P\in \E$. Then $\ell_P$ is a bisector of the   lines $PF_1$ and $PF_2$, see \cref{fig:bisectorline}.  
+\begin{lemma} If the line $\ell$ is given by $x_0 x /a^2+y_0y/b^2=1$, then the pole is $[x_0,y_0].$
+\label{lem:09-polar}.
+\end{lemma}
+\begin{proof}
+Left to the reader.
+\end{proof}
+
+\begin{example} The pole of the line $2x+y-10=0$ with respect to the ellipse $x^2/3+y^2/4=1$ is the point
+$[3/5,2/5]$.
+\label{exa:09-pole}
+\end{example}
+
+\begin{remark}
+When $\ell\cap\E=\emptyset $ to determine the pole of $\ell$ (as in   \cref{exa:09-pole}) consider two points $P_1$ and $P_2$ in $\ell$. Then the pole of $\ell$ is the point
+of intersection of the polar lines $\ell_{P_1}$ and $\ell_{P_2}$.
+\end{remark}
+
+A fundamental property of this concept is its projective duality ($P \leftrightarrow \ell_P$). For instance, we have the following.
+\begin{proposition} 
+    Let $P$ be a point and $\ell_P$ its polar line. Then, for any point $Q\in \ell_P$ the polar line $\ell_Q$ passes through $P$,   see \cref{fig:pics-09-polarpole-ellipse}.
+    \label{prop:09-pole-polar}
+\end{proposition}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{pics_09_003_dual_polarline-pole-elipse.pdf}
+    \caption{Duality between pole and polar ($Q \in \ell_P$ and $P\in \ell_Q$).}
+    \label{fig:pics-09-polarpole-ellipse}
+\end{figure}
+
+\begin{proof} Direct from \cref{lem:09-polarline} and \cref{lem:09-polar}. In fact, let $P=[x_0,y_0]$. Then $\ell_P$ is given by \cref{eqn:09-polarline}. Therefore, if $Q=[x_1,y_1]\in \ell_P$ it follows that
+$x_0x_1/a^2+y_0y_1/b^2=1$. This also shows that $P_0\in \ell_Q.$
+\end{proof}
+
+\begin{proposition}
+    Consider an ellipse $\mathcal{E}$ with foci $F_1$ and $F_2$. Let $\ell_P$ be the tangent line to $\E$ at $P\in \E$. Then $\ell_P$ (also polar line of $P$)  is a bisector of the   lines $PF_1$ and $PF_2$, see \cref{fig:bisectorline}.  
+    \label{prop:09-bisectorline}
 \end{proposition}
 \begin{figure} 
 	\begin{center}
-		 \includegraphics[scale=0.7]{pics_08_001_bisector_tangent_ellipse.pdf}
+		 \includegraphics[scale=0.7]{pics_09_001_bisector_tangent_ellipse.pdf}
 		\caption {The tangent line $\ell_p$ is a bisector of the external angle, i.e., the angles $\alpha_1$ and $\alpha_2$ are equal. 	\label{fig:bisectorline} }
 	\end{center}
 
 \end{figure}
 
-\begin{proof}
-
+\begin{proof} Let $P=[x_1,y_1]\in \E$. Consider the vectors $V_1=F_1-P$ and $V_2=F_2-P_2$.
+Then the external bisector  is parametrized by:  $P+sV_{12}$, where $V_{12}=|V_2|V_1-|V_1|V_2$. As $|V_1|+|V_2|=2a$ for all $P\in \E$ it follows that $N_{12}=V_1/|V_1|+V_2/|V_2|$ is normal to the ellipse. Therefore, $\langle N_{12},V_{12}\rangle=0$. So,
+$V_{12}$ is tangent to $\E$.
 \end{proof}
 
 
@@ -26,7 +104,7 @@ The pair of tangent lines passing through the point $P_0=(x_0,y_0)$ is given by
 \end{proposition}
 \begin{figure} 
 	\begin{center}
-		 \includegraphics[scale=0.7]{pics_08_002_circle_tangent_polarline.pdf}
+		 \includegraphics[scale=0.7]{pics_09_002_circle_tangent_polarline.pdf}
 		\caption {The polar line $\ell_{P_0}$ passing through the focus $F_2$ is tangent to the excircle $\mathcal{C}_0$ which is centered at $P_0$.	\label{fig:circle_polarline} }
 	\end{center}
 
@@ -39,9 +117,9 @@ $ |F_1P_1|+|P_1F_2'|=|P_2F_1| +|P_2F_2'|$. Therefore $F_2=F_2'$, since $F_2$ (fo
 \begin{proposition} Consider an ellipse and two tangent lines passing through an exterior point $P_0$ as shown in   \cref{fig:angulofoco}. Let also the  line passing through the $P_0$ and   focus $F_2$.  Then it follows that that $\alpha_1=\alpha_2$. 
 \end{proposition} 
 
-\begin{figure}[H]
+\begin{figure} 
 	\begin{center}
-		 \includegraphics[scale=0.7]{pics_08_050_angulosiguais_foco.pdf}
+  \includegraphics[scale=0.7]{pics_09_050_angulosiguais_foco.pdf}
 		\caption {Angles $\alpha_1$ and $\alpha_2$ are equal. 	\label{fig:angulofoco} }
 	\end{center}
 
@@ -72,7 +150,7 @@ Consider the triangle $P_0F_2P_2$ and the line $F_2Q$ tangent to the circle cent
 
 \begin{figure}
 	\begin{center}
- \includegraphics[scale=0.7]{pics_08_040_angulosiguais_proof.pdf}
+ \includegraphics[scale=0.7]{pics_09_040_angulosiguais_proof.pdf}
 		\caption {Angle   $\theta_2$ is equal to  $\frac{1}{2}\angle F_2OP_2$.	\label{fig:angulosiguaisproof} }
 	\end{center}
 
@@ -97,9 +175,9 @@ We have that
 	is constant (independent of $P_0$).
 \label{prop:dEE1}	
 \end{proposition}
-\begin{figure}[h]
+\begin{figure} 
 	\begin{center}	 
-  \includegraphics[scale=0.5]{pics_08_060_relacaodEE.pdf}
+  \includegraphics[scale=0.5]{pics_09_060_relacaodEE.pdf}
 		\caption { The sum of relation of focal distances is constant. \label{fig:dEE1} }
 	\end{center}
 	
@@ -119,11 +197,9 @@ The above result is attributed  to   \cite{milena2003} and  \cite{taba2004_magne
 	are constant (independent of $P_0$).
  The sums  are constant for $P_0$ in the arc of ellipse  where the points $P_i,\; P'_i$ (i=1,2) are well defined.
 \end{proposition}
-\begin{figure}[H]
+\begin{figure} 
 	\begin{center}
-	%	\def\svgwidth{0.55\textwidth}
- \includegraphics[scale=0.7]{ pics_08_070_razaoEH_confocal.pdf}
-		%	 \includegraphics[angle=0, width=8cm]{relacao_distancias_bilhar.pdf_tex}
+ \includegraphics[scale=0.7]{pics_09_070razaoEH_confocal2.pdf}
 		\caption { Sum of relations of focal distances in a confocal pair (ellipse and hyperbola) is constant.  }
 		\label{fig:dEH}
 	\end{center}
@@ -138,11 +214,11 @@ Follows from straightforward calculations, computing the quantities involved wit
 	is constant (independent of $P_0$).
 	
 \end{proposition}
-\begin{figure}[H]
+\begin{figure}
 	\begin{center}
 	 %
-	 	 \includegraphics[scale=0.8]{ pics_08_080_razaoHH1_confocal.pdf}
-		\caption { Relation of focal distances  }
+\includegraphics[scale=0.6]{pics_09_080razaoHH1_confocal1.pdf}
+		\caption { Relation of focal distances in a pair of confocal hyperbolas. }
 		\label{fig:dHH}
 	\end{center}
 \end{figure}
@@ -182,7 +258,7 @@ by $B$ (resp.\ $A$ ) the intersection points of this ray with the ellipse (resp.
 hyperbola). Suppose the focus $F_2$ lies on the line $P Q$. Then the line $P Q$ is the bisector of the
 angle $  \angle  AF_2B$.  
 \end{theorem}
-\begin{figure}[H]
+\begin{figure} 
 	\begin{center}
 		\def\svgwidth{0.75\textwidth}
  	\input{pics_tex/galperin.eps_tex}
@@ -214,16 +290,14 @@ through the tangent points as shown in \cref{fig:ehfocus}  passe  through the fo
 \end{theorem}
 
 
-\begin{figure}[H]
+\begin{figure}
 	\begin{center}
-	%	\def\svgwidth{0.75\textwidth}
- %	\input{pics_tex/elipse_hiperbole_focus.eps_tex}
- 	 \includegraphics[scale=1]{pics_08_090_elipse_hiperbole_focus.pdf}
-		\caption {  The four lines passing through the point $M$ and tangent to the confocal conics determine four lines passing through the foci. \label{fig:ehfocus}}
+ 	 \includegraphics[scale=0.6]{pics_09_090_elipse_hiperbole_focus1.pdf}
+		\caption{The four lines passing through the point $M$ and tangent to the confocal conics determine four lines passing through the foci. \label{fig:ehfocus}}
 	\end{center}
 \end{figure}
 \begin{proof}
-See \cite{dolgirev2014}. A direct proof can be done computing the intersection points $\{P_1,P_2\}$ (resp.\ $\{Q_1,Q_2\}$) of the tangent lines passing through $M$ with the hyperbola (resp.\ ellipse). After this, it is straightforward to obtain that $F_1= Q_1P_1\cap P_2Q2$
+See \cite{dolgirev2014}. A direct proof can be performed computing the intersection points $\{P_1,P_2\}$ (resp.\ $\{Q_1,Q_2\}$) of the tangent lines passing through $M$ with the hyperbola (resp.\ ellipse). After this, it is straightforward to obtain that $F_1= Q_1P_1\cap P_2Q2$
 and $F_2= Q_2P_1\cap Q_1Q2$. 
 In the above analysis the property of of $M$ being in the straight line $PQ$ and that the pair of conics are confocal is essential.
 \end{proof}
@@ -246,11 +320,9 @@ The pair of tangent lines to a hyperbola $x^2/a^2-y^2/b^2=1$ and passing through
 % Then $P_5=P_1.$
  \end{theorem}
 
- \begin{figure}[H]
+ \begin{figure} 
  	\begin{center}
-%		\def\svgwidth{0.75\textwidth}
- %	\input{pics_tex/razao_cruzada_HH.eps_tex}
- 	 \includegraphics[scale=1]{pics_08_100_confocal_retangulo.pdf}
+ 	 \includegraphics[scale=1]{pics_09_100_confocal_retangulo.pdf}
  		\caption {Quadrangle $ACBD$ with vertices and diagonal  $AB$ (resp.\ $CD$) passing through $F_1$ (resp.\   $F_2$).
  		 \label{fig:retangulo_EH} }
  	\end{center}

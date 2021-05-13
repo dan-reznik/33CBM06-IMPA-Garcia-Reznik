@@ -121,7 +121,7 @@ The $P_i'$ are an image of the $P_i$ under a variable similarity transform compr
 CAS-assisted simplification.
 \end{proof}
 
-\cite{reznik2021-circum} term the ``circumbilliard'' $E_9$ of a triangle the circumellipse centered on $X_9$. Let $a_9,b_9$ its semi-axes. CAS manipulation yields:
+In \cite{reznik2021-circum} term the ``circumbilliard'' $E_9$ of a triangle the circumellipse centered on $X_9$. Let $a_9,b_9$ its semi-axes. CAS manipulation yields:
 
 \begin{corollary}
 Over the poristic family, $a_9(t)$ and $b_9(t)$ are given by:
@@ -145,9 +145,9 @@ Over the poristic family, the aspect ratio of the (varying) circumbilliard is in
 \end{equation*}
 \end{corollary}
 
-In \cite[Polar]{mw}, the {\em polar} of a point $P$ with respect to a circle $\C$ is defined as the line perpendicular to $O P$ which contains the inversion of $P$ wrt to $\C$. Dually, the pole of a line $L$ with respect to $\C$ is the inversion of the foot of the perpendicular dropped from $O$ onto $P$ wrt to $\C$.
+In \cite[Polar]{mw}, the {\em polar} of a point $P$ with respect to a circle $\Cm$ is defined as the line perpendicular to $O P$ which contains the inversion of $P$ wrt to $\Cm$. Dually, the pole of a line $L$ with respect to $\Cm$ is the inversion of the foot of the perpendicular dropped from $O$ onto $P$ wrt to $\Cm$.
 
-So given a smooth curve, we can speak of its {\em polar image} with respect to a circle as the set of poles of the curve's tangents with respect to $\C$. 
+So given a smooth curve, we can speak of its {\em polar image} with respect to a circle as the set of poles of the curve's tangents with respect to $\Cm$. 
 
 \begin{figure}
     \centering
@@ -161,9 +161,9 @@ The fact that the polar image of an ellipse with respect to a focus is a circle 
 Let $\E$ and $\E'$ be a confocal ellipse pair centered at $[0,0]$, with major axes along $x$. Let $a,b$ and $a',b'$ denote their major and minor semi-axes, respectively. The foci $f_1$ and $f_2$ are at $[\pm c,0]$, where $c^2=a^2-b^2$. A known classical result which we reproduce below is:
 
 \begin{lemma}
-The polar image of the $\E,\E'$ pair with respect to a circle of radius $\rho$ centered on $f_1$ is a pair of nested circles $\C_{int},\C_{ext}$ with centers given by:
+The polar image of the $\E,\E'$ pair with respect to a circle of radius $\rho$ centered on $f_1$ is a pair of nested circles $\Cm_{int},\Cm_{ext}$ with centers given by:
 
-\[\O_{int}=[-c-\rho^2\frac{c}{b^2},0],\;\;\;\O_{ext}=[-c-\rho^2\frac{c}{b'^2},0]\]
+\[\Om_{int}=[-c-\rho^2\frac{c}{b^2},0],\;\;\;\Om_{ext}=[-c-\rho^2\frac{c}{b'^2},0]\]
 Their radii $r,R$ and distance $d$ between their centers are given by: 
 
 \[ r=\rho^2\frac{a}{b^2},\;\;\;R=\rho^2\frac{a'}{b'^2},\;\;\; d=\rho^2\frac{ c\, (a^2 - {a'}^2)}{b^2\, {b'}^2} \]
@@ -199,7 +199,7 @@ The sum of cosines of the polar image of billiard 3-periodics with respect to a 
 
 Given a triangle, an inconic is is fully defined by its center and is tangent to the three sidelines, see \cite[Inconic]{mw}.
 
-Referring to \cref{fig:03-excentral-poristic-inconics}, let $E_1$ be the $X_1$-centered inconic to the poristic family. Let $\mu_1$, and $\nu_1$ denote its semi-axes. Interestingly:
+Referring to \cref{fig:03-excentral-poristic-inconics}, let $E_1$ be the $X_1$-centered circumconcic to the poristic family, i.e., it contains the vertices. Let $\mu_1$, and $\nu_1$ denote its semi-axes. Interestingly:
 
 \begin{proposition}
 $\mu_1=R+d$ and $\nu_1=R-d$ are invariant over the poristic family, i.e., $E_1$ rigidly rotates about $X_1$. \label{prop:03-e1}
@@ -294,24 +294,40 @@ Recall \cref{prop:03-circumcircle-rh}: the orthic triangles of the circumcircle 
  
 A property-rich family of Poncelet triangles is the so-called ``Brocard porism'', introduced in  \cite{bradley2007-brocard,shail1996-brocard, bradley2011-brocard}. It is inscribed in a circle and circumscribes the so-called {\em Brocard inellipse}. Remarkably, its foci coincide with the stationary Brocard points $\Omega_1$ and $\Omega_2$ of the family; see \cref{fig:03-brocard-porism}.
 
-Let $R$ denote the radius of the outer circle and $a,b$ the caustic semi-axes, with $c=a^2-b^2$. \textcolor{red}{should be $a',b'$?}
+Let $R$ denote the radius of the outer circle and $a',b'$ the caustic semi-axes, with $(c')^2=(a')^2-(b')^2$. Let also, $d=|X_{3}-X_{39}|$ the distance between the centers of the circle and of the caustic.
+
+\begin{proposition}
+A pair of circle (outer) $(x-x_0)^2+y^2=R^2$ and ellipse (caustic) $(x-x_1)^2/(a')^2+y^2/(b')^2=1$ admit a 1d familiy of Poncelet triangles if and only if 
+\[(a')^2  - 2 R a'- (b')^2 +  R^2-d^2=0,\;\; d=|x_1-x_0| \]
+\end{proposition}
+\begin{proof}
+  Follows from Cayley condition for 3-periodic orbits, see \cref{chap:02-prelims}.
+  %\textcolor{red}{citar prop. cap 2}
+\end{proof}
+\begin{proposition}
+For any triangle $T$, the circumcircle and Brocard inellipse are Ponceletian, they admit a 1d family of Poncelet triangles. Furthermore, their Brocard inellipse is stationary.
+\end{proposition}
+
+\begin{proof}
+ \textcolor{red}{ronaldo, acho q se vc provar q $X_{39}$, ou o proprio $X_6$ esta parado, acabou. Funciona mas a prova é longa} 
+\end{proof}
 
 \begin{proposition}
 The stationary circumcenter $X_3$ and circumradius $R$ are given by:
 
 \begin{equation}
-X_3=[0,-\frac{c\delta_1}{b}],\;\;\;R= \frac{2a^2}{b} \\
+X_3=[0,-\frac{c'\delta_1}{b'}],\;\;\;R= \frac{2 (a')^2}{b'} \\
  %=& \frac{\sqrt{3a^2+2c^2-2c\delta_1} (c +\delta_1)\delta_1}{ 3a^2b} 
  \label{eqn:broc-circumcircle}
 \end{equation}
-where $\delta_1=\sqrt{4a^2-b^2}$.
+where $\delta_1=\sqrt{4 (a')^2-(b')^2}$.
 \label{prop:cotw}
 \end{proposition}
 
 The following is a known requirement for the Brocard porism to be possible, appearing in \cite[Eqs. 15--17]{shail1996-brocard}:
 
 \begin{corollary}
-$R{\geq}2c$
+$R{\geq}2 c'$
 \label{rem:minR}
 \end{corollary}
 
@@ -319,25 +335,24 @@ Remarkably, and echoing a property seen above for the homothetic family, leaving
 
 \begin{proposition}
 Over the Brocard porism, the Brocard angle $\omega$ is invariant and given by:
-\[\cot\omega=\frac{\delta_1}{b} \geq \sqrt{3} \]
+\[\cot\omega=\frac{\delta_1}{b'} \geq \sqrt{3} \]
 \label{prop:03-brocard-w}
 \end{proposition}
 
-Recall for any triangle $\cot\omega=\sum_{i=1}^3{\cot{\theta_i}}$, i.e.:
+Henceforth we shall use symbol $\Sha$  $\cot\omega$. Recall for any triangle $\Sha=\sum_{i=1}^3{\cot{\theta_i}}$, i.e.:
 
 \begin{corollary}
 The Brocard porism conserves the sum of its internal angle cotangents.
 \end{corollary}
 
-\cite{shail1996-brocard} derives the distance between Brocard points in terms of invariant $R$ and $\omega$:
+\cite{shail1996-brocard} derives the distance between Brocard points (the foci of the Brocard inellipse), in terms of invariant $R$ and $\omega$:
 
-\[ |{\Omega_1}-{\Omega_2}|^2=4 R^2\sin^2{\omega}(1-4\sin^2{\omega})
-\]
-
-Since the $\Omega_i$ are foci of the caustic, and therefore $|{\Omega_1}-{\Omega_2}|^2= c^2$, obtain:
+\begin{equation} |{\Omega_1}-{\Omega_2}|^2=4 R^2\sin^2{\omega}(1-4\sin^2{\omega})=(c')^2
+\label{eq:03-omega-dist}
+\end{equation}
 
 \begin{corollary}
-\[ c = R\sin{\omega}\sqrt{1-4\sin^2{\omega}} \]
+\[ c' = R\sin{\omega}\sqrt{1-4\sin^2{\omega}} \]
 \end{corollary}
  
  \begin{figure}
@@ -363,10 +378,10 @@ Recall the two isodynamic points $X_{15}$ and $X_{16}$ of a triangle as the two 
 Over the Brocard porism, the two Isodynamic points $X_{15}$ and $X_{16}$ are stationary and given by:
 
 \[
-X_{15}=\left[0, \frac{R(\sqrt{3}-\cot{\omega})}{
- \sqrt{\cot^2{\omega}-3}}\right],\;\;\;
- X_{16}=\left[0, -\frac{R(\sqrt{3}+\cot{\omega})}{
- \sqrt{\cot^2{\omega}-3}}\right]
+X_{15}=\left[0, \frac{R(\sqrt{3}-\Sha)}{
+ \sqrt{\Sha^2-3}}\right],\;\;\;
+ X_{16}=\left[0, -\frac{R(\sqrt{3}+\Sha)}{
+ \sqrt{\Sha^2-3}}\right]
 \]
 \label{prop:03-x15x16}
 \end{proposition}
@@ -375,18 +390,18 @@ X_{15}=\left[0, \frac{R(\sqrt{3}-\cot{\omega})}{
 Let $P$ and $U$ be finite points on a triangle's plane with normalized barycentric coordinates $(p,q,r)$ and $(u,v,w)$, respectively. Let $f$ and $g$ be homogeneous functions of the sidelengths. The $(f,g)$ {\em barycentric combo} of $P$ and $U$, also denoted $f*P + g*U$, is the point with barycentrics $(f\,p + g\,u,f\,q + g\,v, f\,r + g\,w)$. In \cite[X(15), X(16)]{etc}, the following combos (see below), derived by Peter Moses, are provided:
 
 \begin{align}
-X_{15} =& \sqrt{3}*X_3 + \cot{\omega}*X_6 \label{eqn:combo-x15} \\
-X_{16} =& \sqrt{3}*X_3 - \cot{\omega}*X_6 \nonumber
+X_{15} =& \sqrt{3}*X_3 + \Sha*X_6 \label{eqn:combo-x15} \\
+X_{16} =& \sqrt{3}*X_3 - \Sha*X_6 \nonumber
 \end{align}
  
  With all involved quantities invariant, the result follows.
 \end{proof}
 
 \begin{proposition}
-The semi-axes $(a,b)$ and center $X_{39}$ of the Brocard inellipse are given by:
+The semi-axes $a'$ and $b'$ and center $X_{39}$ of the Brocard inellipse are given by:
 
 \begin{gather*}
-[a,b]= R\left[\sin\omega,2\sin^2\omega\right]=R\left[\frac{1}{\sqrt{1+\Sha^2}},\frac{2}{{1+\Sha^2}}\right]\\
+[a',b']= R\left[\sin\omega,2\sin^2\omega\right]=R\left[\frac{1}{\sqrt{1+\Sha^2}},\frac{2}{{1+\Sha^2}}\right]\\
  X_{39}=\left[0,-\frac{R\Sha\sqrt{\Sha^2-3}}{\Sha^2+1}\right]
 \end{gather*}
  \label{prop:03-brocard-axes}
@@ -396,11 +411,17 @@ The semi-axes $(a,b)$ and center $X_{39}$ of the Brocard inellipse are given by:
 
 Consider a triangle $T$ with sidelengths $s_1,s_2,s_3$, area  $\Delta$, and circumradius  $R$. The following identities appear in \cite{bradley2007-brocard,shail1996-brocard}:
 
-\[R=\frac{s_1 s_2 s_3}{4\Delta}, \;\;\; \sin\omega=\frac{2\Delta}{\sqrt{\Gamma}},\;\;\; |\Omega_1-\Omega_2|^2=4c^2=4R^2\sin^2\omega (1-4\sin^2\omega)\]
+\begin{equation}
+R=\frac{s_1 s_2 s_3}{4\Delta}, \;\;\; \sin\omega=\frac{2\Delta}{\sqrt{\Gamma}}
+\label{eq:03-broc-R-sinw}
+\end{equation}
 
-\noindent where $\Gamma=(s_1 s_2)^2+(s_2 s_3)^2+ (s_3 s_1)^2$, and $c^2=a^2-b^2$. The result follows from combining the above into expressions for the Brocard inellipse semi-axes given in \cite[Brocard Inellipse]{mw}:
+\noindent where $\Gamma=(s_1 s_2)^2+(s_2 s_3)^2+ (s_3 s_1)^2$. Bringing in \cref{eq:03-omega-dist}, the result follows from combining the above into expressions for the Brocard inellipse semi-axes given in \cite[Brocard Inellipse]{mw}:
 
-\[ a =\frac{s_1 s_2 s_3}{2\sqrt{\Gamma}},\;\;\;\;\;\; b =\frac{2 s_1 s_2 s_3 \Delta}{\Gamma}.\]
+\begin{equation}
+a' =\frac{s_1 s_2 s_3}{2\sqrt{\Gamma}},\;\;\;\;\;\;b' =\frac{2 s_1 s_2 s_3 \Delta}{\Gamma}
+\label{eq:03-broc-axes}
+\end{equation}
 
 \end{proof}
 
@@ -409,43 +430,113 @@ With the results above, we can derive the following quantities and centers expli
 \begin{align*}
 X_6&=\left[0,-\frac{R\sqrt{ \Sha^2 -3}}{ \Sha}\right] \\
 |X_3-X_6|&=\frac{R\sqrt{ \Sha^2 -3}}{ \Sha}\\
-\Omega_{1,2}(R,\Sha)&=\frac{R\sqrt{ \Sha^2-3}}{ \Sha^2+1} \left[\pm1, - \Sha  \right]\\
-X_{39}&=\left[0,-R {\frac {\Sha\,
-\sqrt {\Sha^2-3}}{\Sha^2+1}} \right]
+\Omega_{1,2}(R,\Sha)&=\frac{R\sqrt{ \Sha^2-3}}{ \Sha^2+1} \left[ \pm 1, - \Sha  \right]
+%X_{39}&=\left[0,-R {\frac {\Sha\,\sqrt {\Sha^2-3}}{\Sha^2+1}} \right]
 \end{align*}
 
-Introduced here for the first time is the following conservation unique to the Brocard porism:
- 
- \begin{proposition}
- Over the Brocard porism, the sum of inverse squared sidelengths is invariant and given by:
- 
-\textcolor{red}{ronaldo consegue expressar em termos de $R$, ou $a,b$ da caustica? esta notacao $d,h$ acho pode ser antiga}
-\[ \sum{s_i^{-2}}=\frac{9 d^2 + h^2}{ 4 d^2 \,(d^2 + h^2)}\]
-\label{prop:03-sum-inverse-brocard}
+Let $a'$ be the major axis of a generic triangle's Brocard inellipse. Interestingly, we have:
+
+\begin{lemma}
+\[ \sum_{i=1}^{3}{\frac{1}{s_i^2}}=\frac{1}{4 (a')^2} \]
+\end{lemma}
+
+\begin{proof}
+As
+\[\frac{1}{s_1^2}+\frac{1}{s_2^2}+\frac{1}{s_3^2}=\frac{s_2^ 2s_3^2+s_1^2 s_3^2+s_1^2 s_2^2}{s_1^2 s_2^2 s_3^2}\]
+the result follows from \cref{eq:03-broc-axes}.  
+\end{proof}
+
+\noindent Therefore, we have:
+
+\begin{corollary}
+Over the Brocard porism, the sum of inverse squared sidelengths is invariant
+\end{corollary}
+
+\noindent \textbf{Similarity and Polar image:} As it will be seen below, the Brocard porism is the image of the Homothetic family under two different transformations: variable similarity and polar.
+
+Referring to \cref{fig:03-homot-broc-inell}, we will first prove a handy lemma, introduced in  \cite{reznik2020-similarityII}:
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pics_03_270_homot_broc_inell.eps}
+    \caption{Over the homothetic family, the Brocard inellipse has semi-axes of variable lengths but invariant aspect ratio. \href{https://youtu.be/DIm2qTxGWXE}{Video}}
+    \label{fig:03-homot-broc-inell}
+\end{figure}
+
+\begin{lemma}
+Over the homothetic family, though the semi-axes of the Brocard inellipse have variable lengths, their ratio $\beta$ is invariant and given by:
+\[\beta=
+\frac{\sqrt{3a^4+10a^2b^2+3b^4}}{4ab} > 1\]
+\label{lem:03-beta}
+\end{lemma}
+
+\begin{proof}
+The result follows from combining \cref{eq:03-broc-R-sinw} with \cref{eq:03-broc-axes}, using the sidelengths $s_i$ of the homothetic family using the parametrization in \cref{sec:03-vtx-param}.
+\end{proof}
+
+The result below was introduced in \cite[Thm 4.1]{reznik2020-similarityII}:
+
+\begin{proposition}
+The Brocard family is the image of the homothetic one under a variable similarity transform.
 \end{proposition}
 
-\begin{itemize}
-    \item Brocard porism is a variable image of the homothetic family under a variable similarity transform.
-    \item Brocard porism is the polar image of the homothetic family wrt to a focus-centered circle.
-\end{itemize}
+\begin{proof}
+Consider the following similarity transform which sends points $X$ in the plane of the homothetic family to new ones $X'$:
 
-\subsection{General Case}
+\[X'=Scale(1/b'').Rot(-\theta).Transl(-X_{39}).X\]
 
-\begin{table}
-\centering
-\begin{tabular}{|r|c|c|l|}
-\hline
-Family & Fixed & Conserves & Notes \\
-\hline
-\makecell[rc]{Poristic\\(bicentric)} & $X_1$, $X_3$, $X_{40}$, $\ldots$ & $\sum\cos\theta_i,a_9/b_9$ & \makecell[lc]{polar image of Confocal family\\wrt to a focus} \\
-\hline
-\makecell[rt]{Poristic\\Excentrals} & $X_2$, $X_3$, $X_4$, $X_5$ & $\sum{s_i^2}$, $\prod\cos\theta_i$ & \makecell[lt]{Inscribed in circle;\\caustic is MacBeath inconic} \\
-\hline
-Brocard & \makecell[lc]{$X_3$, $X_6$, $X_{15}$, $X_{16}$,\\$X_{39}$, $X_{182},\ldots$,\\$\Omega_1$, $\Omega_2$} & $\sum{s_i^{-2}}$, $\omega$, $\sum\cot\theta_i$ & \makecell[lc]{polar image of Homothetic\\family wrt caustic focus;\\inscribed in circle;\\caustic is Brocard inellipse}\\
-%\hline
-%focus-Inversive & $X_7$ & $L,\sum\cos\theta_i$ & \makecell[lc]{inversive image of Confocals\\wrt a focus; non-Ponceletian;\\inscribed in Pascal's limaçon;\\caustic non-ellipse}\\
-\hline
-\end{tabular}
-\caption{Some Non-concentric, axis parallel families, their stationary triangle centers, and known conservations.}
-\label{tab:n3-non-conc-families}
-\end{table}
+\noindent where  $b''$ is the variable minor semi-axis length of the the (moving) Brocard inellipse $\E''$ in the homothetic pair, $\theta$ the angle between said minor axis and the horizontal, and $X_{39}$ the moving center of $\E''$. Clearly, $\E''$ will be sent to an origin-centered ellipse which is axis-parallel to the homothetic ones. By Lemma~\ref{lem:03-beta}, the aspect ratio $\beta$ of $\E''$ is invariant over the homothetic family, implying the transformed inellipse will have fixed axes $(\beta, 1)$. Notice its circumcenter and circumradius are prescribed by the semi-axes of the caustic (Equation~\ref{eqn:broc-circumcircle}). This completes the proof. 
+\end{proof}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.7\textwidth]{pics_03_260_brocard_homothetic_polar.eps}
+    \caption{The Brocard family (magenta) is the polar image of the homothetic family (solid blue) with respect to a circle (dashed gray) centered on a focus of the homothetic caustic (light brown) which is sent to the Brocard circumcircle (dashed magenta). The outer ellipse (black) is sent to the Brocard inellipse (green). \href{https://bit.ly/2RwKmAM}{Live}}
+    \label{fig:03-brocard-homoth}
+\end{figure}
+
+Referring to \cref{fig:03-brocard-homoth}, let $a,b$ be the semi-axes of the outer ellipse in the homothetic pair. 
+
+\begin{proposition}
+The Brocard porism is the polar image of the homothetic family with respect to a circle centered on a caustic focus $f'$.  The symmedian point $X_6$ of the image coincides with $f'$. Its outer circle and ellipse are given by:
+\begin{align*}
+   \mathcal{C}:&\;\; (x-x_0)^2+y^2  =R^2 \\
+  \mathcal{E}:& \;\;  \frac{(x-x_1)^2}{(a')^2}+\frac{y^2}{(b')^2}=1\\
+    x_0&=-\frac{c(b^2 + 4\rho^2)}{2b^2},\;\; 
+    x_1 =  -\frac{c(4a^2 - c^2 + 4\rho^2)}{2(4a^2 - c^2)}\\
+    (a')&= \frac{4a\rho^2}{4a^2 - c^2},\;\;
+    (b') = \frac{2a\rho^2 }{b\sqrt{4a^2 - c^2}},\;\; R=\frac{2a\rho^2}{b^2} 
+\end{align*}
+Here $b'>a'$.
+\label{prop:03-brocard-polarimage}
+\end{proposition}
+ 
+\begin{proof} It follows from the same approach developed in \cref{sec:09-polarimage }.  Details are left to the reader.
+\textcolor{red}{notacao aqui precisa ser ajustada? }
+\end{proof}
+\begin{remark}
+ From the relations obtained in \cref{prop:03-brocard-polarimage} it follows that
+ \[a=\rho^2\frac{(4 (b')^2-(a')^2)}{3 a' (b')^2},\;\; b=\rho^2\frac{\sqrt{4 (b')^2-(a')^2}}{\sqrt{3} (b')^2}\]
+ 
+\end{remark}
+
+Since two polar transformations with respect to the same circle is the identity:
+
+\begin{corollary}
+The homothetic family is the polar image of the Brocard family with respect to its stationary symmedian point $X_6$.
+\end{corollary}
+  
+\begin{corollary}
+In terms of the homothetic pre-image semi-axes $a,b$, the invariant sum of inverse squared sidelengths and Brocard angle are given by:
+ 
+\begin{align*}
+\sum_{i=1}^{3}{\frac{1}{s_i^2}}&=\frac{1}{4 (b')^2}=\frac{b^2(3a^2 + b^2)}{ 16\rho^4a^2}  \\
+ \cot\omega&=\Sha=\sqrt{3}\frac{a }{b } 
+\end{align*}
+\end{corollary}
+
+\begin{proof} By \cref{prop:03-brocard-axes} and \cref{prop:03-brocard-polarimage} it follows that
+  $\sin\omega=(a')/(2b')=b/\sqrt{4a^2-c^2}.$
+Using that $\csc^2\omega-\cot^2\omega=1$ the result follows.
+\end{proof}
+

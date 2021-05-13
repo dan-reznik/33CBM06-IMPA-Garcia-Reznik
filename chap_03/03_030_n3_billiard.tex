@@ -9,7 +9,7 @@ Henceforth let {\em billiard 3-periodics} refer to the 1d family of Poncelet tri
 \[ \E:\frac{x^2}{a^2}+\frac{y^2}{b^2}-1=0,\;\;\;\E_c:\frac{x^2}{a_c^2}+\frac{y^2}{b_c^2}-1=0\]
 where $c^2=a^2-b^2=a_c^2-b_c^2$.
 
-The Cayley condition for a concentric, axis parallel (CAP) pair of ellipses to admit a 3-periodic family was derived in \textcolor{red}{ronaldo}, and is reproduced below:
+The Cayley condition for a concentric, axis parallel (CAP) pair of ellipses to admit a 3-periodic family was derived in \cref{chap:02-prelims}, and is reproduced below:
 
 \begin{equation} \frac{a_c}{a}+\frac{b_c}{b}=1
 \label{eqn:n3-cayley}
@@ -27,7 +27,9 @@ where $\delta=\sqrt{a^4-a^2b^2+b^4}$, an oft-occurring quantity, will be hencefo
 \label{prop:03-n3-caustic}
 \end{proposition}
 
-Billiard N-periodics classically conserve  perimeter $L$ and Joachimsthal's constant $J$ (see \textcolor{red}{section xxx}). When $N=3$, we can derive these explicitly.
+Billiard N-periodics classically conserve  perimeter $L$ and Joachimsthal's constant $J$ (see \cref{app:appC-convex-billiard}), 
+When $N=3$, we can derive these explicitly.
+\textcolor{red}{section xxx}).
 
 \begin{proposition}
 For billiard 3-periodics, the perimeter and Joachimsthal's constant are given by:
@@ -49,7 +51,7 @@ J=\frac{\sqrt{2\delta-a^2-b^2}}{c^2},\;\;\;L=2(\delta+a^2+b^2)J
 %\end{equation}
  %}%
  {\small 
- \begin{equation} \label{eq:orbita3_isosceles}
+ \begin{equation} \label{eq:orbita3-isosceles}
  P_2=\left[   {\frac {a \left(  {b}^{2}-\delta \right) }{   a^2-b^2 
  			  }},{\frac {{b}^{2}\sqrt {2 \delta -{a}^{2}-{b}^{2}\,
  				}}{{a}^{2}-{b}^{2}}} 
@@ -62,9 +64,8 @@ J=\frac{\sqrt{2\delta-a^2-b^2}}{c^2},\;\;\;L=2(\delta+a^2+b^2)J
  	We have that
  	\[L=|P_2-P_3|+2|P_1-P_2|,\;\;
  	 J=\langle \frac{P_1-P_3}{|P_1-P_3|},[\frac{1}{a},0]\rangle\]
- 	 Straigthforward calculations leads to the result stated.
- 	 
-\textcolor{red}{ronaldo: CAS+parametrization}
+ 	 Straigthforward calculations, using the vertex parametrization given by  \cref{eq:03-n3-conc-general} leads to the result stated.
+%\textcolor{red}{ronaldo: CAS+parametrization}
 \end{proof}
 
 \noindent Note: the use of $J$ in this chapter refers to its value for the $N=3$ case. Referring to \cref{fig:billiard-grid}:
@@ -80,24 +81,42 @@ Furthermore, $\E_1$ and $\E'$ have reciprocal aspect ratios, i.e., $a_1/b_1=b_e/
 \end{theorem}
 
 \begin{proof}
+It follows from the vertex parametrazation of the orbit $\{P_1,P_2,P_3\}$ given by   \cref{eq:03-n3-conc-general} and the definition of incenter and excenters points.  
+We have that
+\[X_1=\frac{s_1 P_1+s_2P_2+s_3P_3}{s_1+s_2+s_3}=
+\frac{1}{L}(s_1P_1+s_2P_2+s_3P_3)\]
+where $s_1=|P_2-P_3|$, $s_2=|P_1-P_3|$ and $s_3=|P_1-P_2|$.
+A careful symbolic analysis shows that $\mathcal{E}_1(X_1)=0$. A similar analysis, considering the excenter points shows the locus of the three points is the ellipse $\mathcal{E}'$ stated.
+
 \textcolor{red}{ronaldo}
 \end{proof}
 
-It turns out $\delta$ has a curious geometric interpretation. Recall the power of a point $Q$ with respect to a circle $\C=(C_0,R_0)$ is given by $|Q-C_0|^2-R_0^2$, see \cite[Circle Power]{mw}. Let $\C$ denote the (moving) circumcircle of billiard 3-periodic, and $O=X_9$ the billiard center.
+\begin{corollary}
+The pair $\{\mathcal{E},\mathcal{E}'\}$ is Ponceletian.
+\label{cor:03-excentral-billiard-poncelet}
+\end{corollary}
+
+\begin{proof}
+Direct from Cayley condition
+\[\frac{a}{a'}+\frac{b}{b'}=\frac{a^2}{b^2+\delta}+\frac{b^2}{a^2+\delta}= 1\]
+
+\end{proof}
+
+It turns out $\delta$ has a curious geometric interpretation. Recall the power of a point $Q$ with respect to a circle $\Cm=(C_0,R_0)$ is given by $|Q-C_0|^2-R_0^2$, see \cite[Circle Power]{mw}. Let $\Cm$ denote the (moving) circumcircle of billiard 3-periodic, and $O=X_9$ the billiard center.
 
 \begin{proposition}
-The power of $O$ with respect to $\C$ is constant and equal to $-\delta$.
+The power of $O$ with respect to $\Cm$ is constant and equal to $-\delta$.
 \end{proposition}
 
 \begin{proof}
-Consider an isosceles 3-periodic orbit given by \cref{eq:orbita3_isosceles}.  
+Consider an isosceles 3-periodic orbit given by \cref{eq:orbita3-isosceles}.  
   
 	Its circumcircle will be centered at $C_0=[ {\frac { {b}^{2}-\delta}{2b}},0]$ with circumradius $R_0=\frac {{b}^{2}+\delta}{2b}.$
 	Therefore, the power of the center of the ellipse with respect to the circumcircle is given by  
 	$$|OC_0|^2-R_0^2=\left(\frac { {b}^{2}-\delta}{2b}\right)^2 - \left(\frac {{b}^{2}+\delta}{2b}\right)^2=-\delta.$$
 	
-	For a generic 3-periodic orbit, the stated invariance is confirmed via a CAS, using the explicit vertex expressions given by %\cref{eq:xx}.  
-	\textcolor{red}{localizar depois}
+	For a generic 3-periodic orbit, the stated invariance is confirmed via a CAS, using the explicit vertex expressions given by  \cref{eq:03-n3-conc-general}.  
+%	\textcolor{red}{localizar depois}
 \end{proof}
 
 The Mittenpunkt $X_9$ is a triangle center where lines from each excenter thru the side midpoint meet. Referring to \cref{fig:03-x9}:
@@ -108,7 +127,7 @@ Over the family of 3-periodics in the elliptic billiard, $X_9$ is stationary at 
 An elegant syntethic proof was kindly contributed by \cite{olga19_mitten}:
 
 \begin{proof}
-Let $\E$ be the outer ellipse in the confocal pair, $O$. By definition, the Mittenpunkt $X_9$ is where lines from the excenters $E_i$ through the side midpoints $M_i$ concur. Notice each side is an ellipse chord between tangents to $\E$ seen from the $E_i$ (this is because in the confocal pair the excentral triangle is tangent to $\E$). Consider the image of lines $E_i M_i$ under an affine transform which sends $\E$ to a circle $\C'$, let $O'$ be its center. The transformed lines will pass through the midpoints of chords of $\C'$ between tangents seen from $E_i'$ (the affine image of $E_i$). By circular symmetry, such lines must also pass through $O'$, and therefore remain stationary. But $O'$ is the affine image of $O$, so the result follows.
+Let $\E$ be the outer ellipse in the confocal pair, $O$. By definition, the Mittenpunkt $X_9$ is where lines from the excenters $E_i$ through the side midpoints $M_i$ concur. Notice each side is an ellipse chord between tangents to $\E$ seen from the $E_i$ (this is because in the confocal pair the excentral triangle is tangent to $\E$). Consider the image of lines $E_i M_i$ under an affine transform which sends $\E$ to a circle $\Cm'$, let $O'$ be its center. The transformed lines will pass through the midpoints of chords of $\Cm'$ between tangents seen from $E_i'$ (the affine image of $E_i$). By circular symmetry, such lines must also pass through $O'$, and therefore remain stationary. But $O'$ is the affine image of $O$, so the result follows.
 \end{proof}
 
 \begin{figure}
@@ -144,7 +163,7 @@ The following relation, found in \cite{johnson1960}, holds for any triangle:
 \label{eqn:rovR-cas}
 \end{equation}
 
-Next, let $P_1=(a,0)$ be a vertex of an isosceles 3-periodic. Obtain a candidate expression for $r/R$. This yields \eqref{eqn:rovR} exactly. Using explicit expressions for orbit vertices (see \textcolor{red}{ronaldo}), derive an expression for the square of the right-hand side of \eqref{eqn:rovR-cas} as a function of $x_1$ and subtract from it the square of \eqref{eqn:rovR}. In  \cite{garcia2020-new-properties}
+Next, let $P_1=(a,0)$ be a vertex of an isosceles 3-periodic. Obtain a candidate expression for $r/R$. This yields \eqref{eqn:rovR} exactly. Using explicit expressions for orbit vertices (see \cref{eq:03-n3-conc-general}), derive an expression for the square of the right-hand side of \eqref{eqn:rovR-cas} as a function of $x_1$ and subtract from it the square of \eqref{eqn:rovR}. In  \cite{garcia2020-new-properties}
 it is shown $\left(s_1s_2s_3/R^2\right)^2$ is rational on $x_1$. For simplification, use $R=s_1 s_2 s_3/(4A)$, where $A$ is the triangle area. With a CAS, show said difference is identically zero for all $x_1\in(-a,a)$.
 \end{proof}
 
@@ -175,4 +194,4 @@ Direct calculations yields an expression for the invariant sum of cosines in ter
 $\sum_{i=1}^{3}{\cos\theta_i}=J L - 3$
 \end{corollary}
 
-At it will be seen later, the above generalizes to $J L -N$ for all $N$.
+At it will be seen later in \cref{chap:05-billiard}, the above generalizes to $J L -N$ for all $N$.

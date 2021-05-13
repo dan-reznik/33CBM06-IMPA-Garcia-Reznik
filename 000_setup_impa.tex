@@ -1,5 +1,4 @@
- 
- %%% NAO TROCAR ESTA ORDEM!
+  %%% NAO TROCAR ESTA ORDEM!
 % \usepackage[T2A]{fontenc}
 %\usepackage[russian,english]{babel}
 % \usepackage[utf8]{inputenc}
@@ -8,6 +7,28 @@
 %  \setdefaultlanguage{english}
   %\setotherlanguages{portuges,french,german,latin,greek}
 %\usepackage{csquotes}
+
+% Medidas mais próximas das finais:
+\usepackage{geometry}
+% KDP Print
+\geometry{paperwidth=6.125in,
+          paperheight=9.25in,
+          margin=1.75cm,
+          top=1.53cm,
+          bottom=1.53cm,
+          includehead,
+          includefoot}
+
+
+
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{russian}
+
+\newfontfamily\russianfont[Script=Cyrillic]{Linux Libertine Display O}
+\newcommand{\Sha}{\mathord{\textit{\textrussian{ш}}}}
+
+
 \usepackage{amsmath, latexsym, amssymb,amsbsy, amsthm,amsfonts,amscd,mathtext,float,makecell}
 \usepackage{graphicx,wrapfig,graphics}
 %\usepackage[T1]{fontenc}  
@@ -68,6 +89,7 @@
 \newtheorem{property}{Property}
 \newtheorem{exercise}{Exercise}
 \newtheorem{lemma}{Lemma}
+\newtheorem{step}{Step}
 %\theoremstyle{remark}
 \newtheorem{remark}{Remark}
 %\theoremstyle{definition}
@@ -78,13 +100,13 @@
 \newcommand{\B}{\mathcal{B}}
 \newcommand{\K}{\mathcal{K}}
 \newcommand{\E}{\mathcal{E}}
-\newcommand{\T}{\mathcal{T}}
-\renewcommand{\C}{\mathcal{C}}
-\renewcommand{\O}{\mathcal{O}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Tm}{\mathcal{T}}
+\newcommand{\Om}{\mathcal{O}}
 \newcommand{\F}{\mathcal{F}}
 \renewcommand{\P}{\mathcal{P}}
 \newcommand{\D}{\mathbb{D}}
-\renewcommand{\T}{\mathbb{T}}
+\newcommand{\T}{\mathbb{T}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Cp}{\mathbb{C}}
 \newcommand{\ol}{\overline}
@@ -114,10 +136,13 @@
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
  
 \newcommand{\torp}[2]{\texorpdfstring{#1}{#2}}
-\newcommand{\Sha}{\mathord{\textit{ш}}}
-\newcommand{\Zhe}{\mathord{\textit{Ж}}}
 
-\graphicspath{{pics_tex/},{chap_02/pics/},{chap_03/pics/},{chap_04/pics/},{chap_05/pics/},{chap_06/pics/},{chap_07/pics/},{chap_08/pics/},{zappA/pics/}}
+
+%\newcommand{\Sha}{\mathord{\textit{ш}}}
+%\newcommand{\Zhe}{\mathord{\textit{Ж}}}
+
+\graphicspath{{pics_tex/},{chap_02/pics/},{chap_03/pics/},{chap_04/pics/},{chap_05/pics/},{chap_06/pics/},{chap_07/pics/},{chap_08/pics/},{chap_09/pics/},{zappA/pics/}, {zappB/pics/}, {zappC/pics/}}
 
 %\usepackage{tikz}
 %\include{000_setup_tikz}
+

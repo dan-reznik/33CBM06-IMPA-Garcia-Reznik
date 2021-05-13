@@ -1,0 +1,104 @@
+\usepackage{amsthm}
+\usepackage{amsbsy,amsmath,amssymb,amscd,amsfonts}
+
+\usepackage{graphics}
+\usepackage{thmtools}
+\usepackage{wasysym}
+
+%%% NAO TROCAR ESTA ORDEM!
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+
+\usepackage[dvipsnames]{xcolor}
+%\usepackage{tikz}
+
+\usepackage[pagebackref=true]{hyperref}
+\usepackage[nameinlink,capitalize,noabbrev]{cleveref}
+
+\usepackage{graphicx,float,latexsym}
+%\usepackage{refcheck}
+%\usepackage{mathspec}
+\usepackage[font={scriptsize,it}]{caption}
+\usepackage{subcaption}
+%\let\proof\relax
+%\let\endproof\relax
+
+\usepackage{makecell}
+\renewcommand{\arraystretch}{1.2}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{observation}{Observation}
+\newtheorem{proposition}{Proposition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{exercise}{Exercise}
+\newtheorem{step}{Step}
+\hypersetup{
+    %bookmarks=true,         % show bookmarks bar?
+    %unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of 
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=OliveGreen,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=red           % color of external links
+}
+
+\usepackage{lineno}
+\def\linenumberfont{\normalfont\small\sffamily}
+%a4: 210 x 297
+%\textwidth=125mm
+%\textheight=195mm
+\arraycolsep=2pt
+\captionsetup{width=120mm}
+
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newcommand{\torp}[2]{\texorpdfstring{#1}{#2}}
+ 
+\usepackage{comment}
+\usepackage{microtype}
+\usepackage{footnote}
+%\usepackage{tablefootnote}
+%\usepackage{longtable}
+
+%\usepackage{night}
+
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\Om}{\mathcal{O}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\Cm}{\mathcal{C}}
+\newcommand{\Tm}{\mathcal{T}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\F}{\mathcal{F}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\D}{\mathbb{D}}
+\renewcommand{\T}{\mathbb{T}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Cp}{\mathbb{C}}
+\newcommand{\ol}{\overline}
+\renewcommand{\l}{\lambda}
+\def\Jcn{\mathrm{JacobiCN}}
+\def\Jsn{\mathrm{JacobiSN}}
+\def\cn{\mathrm{cn}}
+\def\sn{\mathrm{sn}}
+\def\am{\mathrm{am}}
+\def\dn{\mathrm{dn}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\ab}{_{\alpha,\beta}}
+
+\newcommand{\Sha}{\mathord{\textit{ш}}}
+\newcommand{\Zhe}{\mathord{\textit{Ж}}}
+
+\graphicspath{{pics_tex/},{chap_02/pics/},{chap_03/pics/},{chap_04/pics/},{chap_05/pics/},{chap_06/pics/},{chap_07/pics/},{chap_08/pics/},{chap_09/pics/},{zappA/pics/}, {zappB/pics/}, {zappC/pics/}}

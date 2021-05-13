@@ -141,8 +141,8 @@ The circumcircle family conserves the sum of squared sidelengths. This is given 
 \end{proposition}
 
 \begin{proof}
-\textcolor{red}{ronaldo}
-CAS-assisted simplification from vertex parametrization.
+%\textcolor{red}{ronaldo}
+CAS-assisted simplification from vertex parametrization given by \cref{eq:03-n3-conc-general}.
 \end{proof}
 
 \begin{proposition}
@@ -202,7 +202,7 @@ The sum of cosines conserved by billiard 3-periodics is the same as the one cons
 
 \begin{proof}
 For the first statement it suffices to show that the $s'$-affine image of billiard excentrals has sides parallel to those of the $s$-image of billiard 3-periodics, i.e., the incircle family and use \cref{prop:03-incircle-same-sum-cos}.
-\textcolor{red}{ronaldo consegue seguir}
+\textcolor{red}{ronaldo consegue seguir: Vou pensar nisso. Ainda nao finalizei}
 \end{proof}
 
 \subsection{Homothetic Family}
@@ -230,7 +230,7 @@ Curiously, the homothetic family shares the following invariant with the circumc
 \begin{proposition}
 Over the homothetic family, the sum of squared sidelengths $s_i^2$ is invariant and given by:
 	
-\[ \sum_{i=1}^3 s_i^2=\frac{9}{2} \left({a_e}^{2}+{b_e}^{2}\right) \]
+\[ \sum_{i=1}^3 s_i^2=\frac{9}{2} \left(a_e^{2}+b_e^{2}\right) \]
 \end{proposition}
 
 The proof below was kindly contributed by  \cite{sergei2020-private-sidelengths}.
@@ -296,53 +296,3 @@ Therefore, using  the vertex parametrization, see \cref{eq:03-n3-conc-general}, 
 \end{proof}
 
 Despite much searching, no invariant quantities have yet been found for this family.
-
-\begin{table}
-\centering
-\begin{tabular}{|r|c|c|l|}
-\hline
-Family & Fixed & Conserves & Notes \\
-\hline
-Confocal & $X_9$ & $L$, $J$, $r/R$, $\sum\cos\theta_i$ & i.e., billiard 3-periodics \\
-\hline
-Incircle & $X_1$ & $R$, $\sum\cos\theta_i$ & \makecell[lc]{sum of cosines same as\\confocal affine pre-image} \\
-\hline
-Circumcircle & $X_3$ & \makecell[cc]{$\sum{s_i^2}$, $\prod\cos\theta_i$,\\$r_h$,$R_h$} & \makecell[lc]{product of cosines same as\\excentrals' in confocal affine\\pre-image} \\
-\hline
-\makecell[rc]{Confocal\\Excentrals} & $X_6$ & \makecell[cc]{$A'/A$, $\prod\cos\theta_i'$,\\$\sum{(s_i')^2}/\prod{s_i'}$} & \makecell[lc]{primed quantities refer to those\\of the excentral family}  \\
-\hline
-Homothetic & $X_2$ & $A$, $\sum{s_i^2}$, $\omega$, $\sum\cot\theta_i$ & affine image of concentric circles  \\
-\hline
-Dual & $X_4$ & n/a &  \\
-\hline
-\end{tabular}
-\caption{Summary of fixed points and (known) conserved quantites for the CAP families mentioned in this section.}
-\label{tab:n3-conc-families}
-\end{table}
-
-\subsection{Vertex parametrization for any CAP pair}
-
-Consider a general pair of CAP ellipses denoted $\E$ and $\E_c$. We will derive a generic parametrization for the vertices of 3-periodics in such a pair. A first calculation will be helpful. Referring to \cref{fig:ell-ints}(left), the following are coordinates for the intersections $P_2$ and $P_3$ on $\E$ of the two tangents to $\E_c$ seen from a point $P_1=[x_1,y_1]$ also on $\E$:
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{pics_03_070_ell_ints.eps}
-    \caption{\textbf{Left:} Two CAP ellipses (black and brown), and a point $P_1$ on the outer one. The lines thru $P_1$ tangent to the inner ellipse intersect the outer one at $P_2$ and $P_3$. Notice that $P_2 P_3$ cut thru the inner ellipse, i.e., the pair of ellipses does not satisfy Cayley's conditions. \textbf{Right:} the minor axis of the inner ellipse has been scaled such that $P_1 P_2 P_3$ is now a Poncelet triangle.}
-    \label{fig:ell-ints}
-\end{figure}
-
-\textcolor{red}{ronaldo reduzi a notação, pode checar? que tal minúsculas para escalares, maiúsculas para pontos; exceção historica: L e J}
-\begin{align}
-    P_2& =[x_2,y_2]=\frac{1}{k_2}\left[\frac{u_1 x_1 + u_2 y_1}{b} ,  \frac{w_1 x_1 + w_2 y_1}{a} \right] \label{eq:03-n3-conc-general} \\
-    P_3&=[x_3,y_3]=\frac{1}{k_2}\left[\frac{w_1 x_1 - w_2 y_1}{b},\frac{w_1 x_1 - w_2 y_1}{a}\right] \nonumber
-\end{align}
-where:
-\begin{align*}
-    u_1 &=b\left(a^4  b_c^4 -(a^2 -  a_c^2)^2 b^4 \right) \\
-    u_2 &= 2 a k_1 \left( (a^2 + a_c^2)b^2 - b_c^2 a^2\right) \\
-    k_1&=\sqrt{ b^2  b_c^2 (a^2 -  a_c^2)  x_1^2 +  a_c^2 a^2(b^2 -  b_c^2)  y_1^2}\\
-    k_2 &=\left(\frac{a^2 (b^2 +  b_c^2) - a_c^2 b^2 }{a}x_1\right)^2+ \left(\frac{a^2 (b^2 -  b_c^2) + a_c^2b^2 }{b} y_1\right)^2\\
-    w_1&=2 b k_1\left( (b^2 +  b_c^2) a^2 - a_c^2 b^2\right) \\
-    w_2&= a\left(a_c^4b^4-a^4(b^2-b_c^2)^2\right)
-     %=-a (a^2( b^2 -    b_c^2) -  a_c^2 %b^2) (a^2 (b^2 -   b_c^2) +  a_c^2 b^2)
-\end{align*}
