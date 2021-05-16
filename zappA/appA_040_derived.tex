@@ -1,5 +1,8 @@
 A {\em derived triangle} $T'$ is constructed from the vertices of  a reference triangle $T$. A convenient representation is by a $3\times  3$  matrix, where each row, taken as trilinears, is a vertex of $T'$.
 
+
+
+
 \subsection{Excentral, medial, and intouch triangles}
 
 The {\em  excentral triangle} is the triangle defined by the intersections of the external bisectors of a triangle.
@@ -93,16 +96,16 @@ The trilinear vertex matrix of the Brocard triangle $B_1B_2B_3$ is given by:
 
 \subsection{Pedal and Antipedal Triangles}
 
-Given a triangle $T=ABC$  and a point $P$ which is not a vertex of $T$ drop three perpendiculars to the sidelines of $T$. The intersections of theses lines with the sidelines define a triangle $T'=A'B'C'$ that is known as the {\em pedal triangle} of $P$. See \cref{fig:appA-pedal_triangle}, left.
+Given a triangle $T=ABC$  and a point $P$ which is not a vertex of $T$ drop three perpendiculars to the sidelines of $T$. The intersections of theses lines with the sidelines define a triangle $T'=A'B'C'$ that is known as the {\em pedal triangle} of $P$. See \cref{fig:appA-pedal-triangle}, left.
 
 The antipedal triangle is defined by the following construction.
-Drop half lines from $P$ to the vertices of the triangle $T$. For each vertex draw a line perpendicular to the correspondent half  line. The intersections of these  lines will be the vertices of the {\em antipedal triangle}. See \cref{fig:pedal_triangle}, right.
+Drop half lines from $P$ to the vertices of the triangle $T$. For each vertex draw a line perpendicular to the correspondent half  line. The intersections of these  lines will be the vertices of the {\em antipedal triangle}. See \cref{fig:pedal-triangle}, right.
  \begin{figure}[H]
     %\centering
   % \includegraphics[scale=0.5]{trilinear.pdf}
       \includegraphics[scale=0.6]{pics_appA_050_pedal_antipedal_triangle.pdf}
     \caption{Pedal triangle $A'B'C'$ of the point $P$.}
-    \label{fig:appA-pedal_triangle}
+    \label{fig:appA-pedal-triangle}
 \end{figure}
 
 Let $P=[p:q:r]$ given in trilinear coordinates. The trilinear vertex matrix of the pedal triangle $T'=A'B'C'$ is given by \cite{mw}:
@@ -140,7 +143,7 @@ Also the {\em  antipedal polygon} is defined analogously to the antipedal triang
      \centering
       \includegraphics[scale=0.6]{zappA/pics/pics_appA_0100_anticimplementary.pdf}
     \caption{Anticomplementary triangle $A'B'C'$ of $ABC$.}
-    \label{fig:pedal_triangle}
+    \label{fig:pedal-triangle}
 \end{figure}
 The center of the circumcircle of $T'$ coincides with the orthocenter of $T$, i.e., $X'_3=X_4$.
 
@@ -152,3 +155,37 @@ The trilinear vertex matrix of the antipedal triangle $T'=A'B'C'$ is given by \c
     \frac{1}{a} &\frac{1}{b} &-\frac{1}{c}\end{matrix}\right)
     \end{align*}
    
+   \section{Ceva Triangle}
+   
+   Given a triangle $ABC$ and a point $P$, draw the lines $AP$, $BP$, $CP$. The intersections of these lines with the opposite sidelines of $T$ define a triangle $A_1B_1C_1$ which is called {\em Ceva triangle}, see \cref{fig:appA-ceva-triangle}
+   
+     \begin{figure}[H]
+     \centering
+      \includegraphics[scale=0.4]{pics-appA-120-ceva.pdf}
+    \caption{Ceva triangle $A_1B_1C_1$ of $ABC$.}
+    \label{fig:appA-ceva-triangle}
+\end{figure}
+Let $P=[p:q:r]$. The trilinear vertex matrix of the Ceva triangle $A_1B_1C_1$ is given by:
+\[
+\left( \begin{matrix}  0 & q & r \\  p & 0 & r
+\\p & q & 0 \end{matrix} \right) \]
+
+
+\section{Feuerbach Triangle}
+
+Given a triangle $ABC$ consider the 9-point circle and the three external circles. The points of contact between the circles define the so called {\em Feuerbach triangle}. See \cref{fig:appA-feurbach-triangle}
+
+   \begin{figure}[H]
+     \centering
+      \includegraphics[scale=0.9]{zappA/pics/pics-appA-130-feurbach-triangle.pdf}
+    \caption{Feurbach triangle $A_1B_1C_1$ of $ABC$. The point $F=X_{11}$ is the Feurbach point.}
+    \label{fig:appA-feurbach-triangle}
+\end{figure}
+
+
+The trilinear vertex matrix of the Feurbach triangle $A_1B_1C_1$ is given by, \cite[Feurbach triangle]{mw}:
+\begin{align*}
+  \left(\begin{matrix}-\sin^2(\frac{B-C}{2}) & \cos^2(\frac{C-A}{2})  & \cos^2(\frac{A-B}{2})\\ \cos^2(\frac{B-C}{2}) & -\sin^2(\frac{C-A}{2}) & \cos^2(\frac{A-B}{2})\\ \cos^2(\frac{B-C}{2}) & \cos^2(\frac{C-A}{2}) & -\sin^2(\frac{A-B}{2})\end{matrix}\right)
+\end{align*}
+The trilinear coordinates of $X_{11}$ is given by:
+\[[ 1 - \cos(B - C) : 1 - \cos(C - A) : 1 - \cos(A - B)]\]

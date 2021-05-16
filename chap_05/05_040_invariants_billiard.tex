@@ -17,15 +17,16 @@ The sum of cosines of elliptic billiard N-periodic cosines is invariant for all 
 
 \section{Proof for \torp{$N=3$}{N=3}}
 
-\cite{reznik2020-intelligencer,garcia2020-new-properties}.
+This section is based in 
+\cite{reznik2020-intelligencer, garcia2020-new-properties}.
 
 Let $r(t)$ and $R(t)$ be the radius of the incircle and circumcircle aof 3-periodic billiard orbit $\mathcal{P}_3(t)=\{p_1(t),p_2(t),p_3(t)\}$, respectively.
 
 \begin{theorem}
-\label{thm:rovR}
+\label{thm:05-rovR-invariant}
 $r/R$ is invariant over the 3-periodic orbit family and given by
 \begin{equation}
-\label{eqn:rovR}
+\label{eqn:05-rovR-3periodic}
 \frac{r}{R}=\frac{2 (\delta-b^2)(a^2-\delta)}{(a^2-b^2)^2}.
 \end{equation}
 \end{theorem}
@@ -40,11 +41,11 @@ Let $r$ and $R$ be the radius of the incircle and circumcircle, respectively. Fo
 
 \begin{equation}
 \frac{r}{R}=\frac{1}{2L} \frac{s_1s_2s_3}{R^2}\cdot
-\label{eqn:rovR-cas}
+\label{eqn:05-rovR-cas}
 \end{equation}
 
-Next, with $P_1=(a,0)$, obtain a {\em candidate} expression for $r/R$. This yields \cref{eqn:rovR} exactly. Using explicit expressions for orbit vertices (see) %\cref{app:orbit-vertices}),
-derive an expression for the square of the right-hand side of \cref{eqn:rovR-cas} as a function of $x_1$ and subtract from it the square of \cref{eqn:rovR}. It can be shown $\left(s_1s_2s_3/R^2\right)^2$ is rational on $x_1$ \cite{garcia2020-ellipses}. For simplification, use $R=s_1 s_2 s_3/(4A)$, where $A$ is the triangle area. With a computer algebra system (CAS), show said difference is identically zero for all $x_1\in(-a,a)$.
+Next, with $P_1=(a,0)$, obtain a {\em candidate} expression for $r/R$. This yields \cref{eqn:05-rovR-3periodic} exactly. Using explicit expressions for orbit vertices (see) %\cref{app:orbit-vertices}),
+derive an expression for the square of the right-hand side of \cref{eqn:05-rovR-cas} as a function of $x_1$ and subtract from it the square of \cref{eqn:rovR}. It can be shown $\left(s_1s_2s_3/R^2\right)^2$ is rational on $x_1$ \cite{garcia2020-ellipses}. For simplification, use $R=s_1 s_2 s_3/(4A)$, where $A$ is the triangle area. With a computer algebra system (CAS), show said difference is identically zero for all $x_1\in(-a,a)$.
 \end{proof}
 
 \begin{corollary}
@@ -53,7 +54,7 @@ is invariant over the 3-periodic orbit family.
 \end{corollary}
 
 \begin{proof}
-The relation stated is valid for any triangle. Therefore the result follows directly from Theorem \ref{thm:rovR}.
+The relation stated is valid for any triangle. Therefore the result follows directly from Theorem \ref{thm:05-rovR-invariant}.
 \end{proof}
 \section{Case of \torp{$N=4$}{N=4}}
 
@@ -137,7 +138,7 @@ Then
 \end{theorem}
 \begin{figure}
     \centering
-    \includegraphics[scale=0.8]{pics_tex/orbita5_C_E.pdf}
+    \includegraphics[scale=0.8]{pics-05-120-orbita5_C_E.pdf}
     \caption{Poncelet 5-periodic orbit.}
     \label{fig:orb5_poncelet}
 \end{figure}
@@ -211,4 +212,4 @@ p_3&=\left[-\frac{ a(x_1(a - 1)^2 + y_1\Delta } { (1-2a)x_1^2 + a^2  }, \frac{(a
 
 %\section{Future Work}
 
-In \cite{reznik2021-fifty-invariants} we provide a complete list of invariants, many conjectured.
+In \cite{reznik2021-fifty-invariants} we provide a list of invariants, many conjectured.

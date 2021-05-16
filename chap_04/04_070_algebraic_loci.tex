@@ -14,22 +14,33 @@ Our proof is based on the following 3-steps which yield an algebraic curve $\mat
 
 \begin{proof}
 
+		
 \begin{step}
-Introduce the symbolic variables $u, u_1, u_2$:
 
+ 
+Introduce the symbolic variables $u, u_1, u_2$
+ 
 \begin{equation*}
-    u^2 + u_1^2 = 1,\;\;\;   u_2^2 = k_1u^2+k_2.
+    u^2 + u_1^2 = 1,\;\;\;   u_2^2 = r_1u^2+r_2.
 \end{equation*} % \smallskip
+Let sidelengths $s_1=|P_3-P_2|,\; s_2=|P_1-P_3|,\;s_3=|P_2-P_1|$. The following are polynomial expressions on $s_i$ and $u,u_1,u_2$:
 
+
+	\begin{align*}
+		g_1=&    -h_1 \, s_1^2 
+		+h_0,\;\;g_2=- h_1\, s_2^2 -
+		h_2 \,u_1 \,u_2 +h_3,\;\;\;g_3=- h_1 \,s_3^2 + h_2\,  u_1\, u_2+h_3\end{align*}
+Here $h_i$ are polynomials in the variable $u$.	The long expressions will be 
+omitted, but can be evaluated from the vertex parametrization given in \cref{prop:03-vtx-param}.	
 \end{step}
  
 \noindent The vertices will be given by rational functions of   $u, u_1, u_2$ 
 \begin{equation*} P_1 = (a\,u, b\,u_1),\;\;P_2 = (p_{2x}, p_{2y})/p_3,\;\;\;P_3 = (p_{3x}, p_{3y})/p_3 
 \end{equation*}
  
-\noindent Expressions for the vertices appear in \cref{prop:03-vtx-param}. Equations $g_i=0$, $i=1,2,3$, polynomial in $ s_i,u,u_1,u_2$ appear in \textcolor{red}{ronaldo}.
+\noindent Expressions for the vertices appear in \cref{prop:03-vtx-param}. Equations $g_i=0$, $i=1,2,3$, are polynomial in $ s_i,u,u_1,u_2$.
  
-\begin{step}Express the locus  $X$ as a  rational function on  $u,u_1, u_2, s_1, s_2, s_3$.
+\begin{step} Express the locus  $X$ as a  rational function on  $u,u_1, u_2, s_1, s_2, s_3$.
 \end{step}
 
 Convert $p:q:r$ to Cartesians $ X = (x,y)$ via  \cref{eqn:appAtrilin-cartesian}. From  \cref{lem:1coord}, it follows that

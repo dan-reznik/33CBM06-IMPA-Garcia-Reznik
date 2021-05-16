@@ -9,7 +9,7 @@ Henceforth let {\em billiard 3-periodics} refer to the 1d family of Poncelet tri
 \[ \E:\frac{x^2}{a^2}+\frac{y^2}{b^2}-1=0,\;\;\;\E_c:\frac{x^2}{a_c^2}+\frac{y^2}{b_c^2}-1=0\]
 where $c^2=a^2-b^2=a_c^2-b_c^2$.
 
-The Cayley condition for a concentric, axis parallel (CAP) pair of ellipses to admit a 3-periodic family was derived in \cref{chap:02-prelims}, and is reproduced below:
+The Cayley condition for a concentric, axis parallel (CAP) pair of ellipses to admit a 3-periodic family is given by:
 
 \begin{equation} \frac{a_c}{a}+\frac{b_c}{b}=1
 \label{eqn:n3-cayley}
@@ -27,9 +27,22 @@ where $\delta=\sqrt{a^4-a^2b^2+b^4}$, an oft-occurring quantity, will be hencefo
 \label{prop:03-n3-caustic}
 \end{proposition}
 
-Billiard N-periodics classically conserve  perimeter $L$ and Joachimsthal's constant $J$ (see \cref{app:appC-convex-billiard}), 
-When $N=3$, we can derive these explicitly.
-\textcolor{red}{section xxx}).
+When $a=b$, we have that $a_c=b_c=a/2$.
+
+\begin{remark}
+The semi-axes $a$ and $b$ of the ellipse in terms of the semi-axes $a_c$ and $b_c$ of the confocal ellipse are given by:
+\begin{align*}
+a&= -\frac{1}{2} \sqrt{w_1} + \frac{1}{2} \sqrt{ w_2 -\frac{ 2 a_c^3 - 4 c^2a_c}{\sqrt{w_1}} } +\frac{a_c}{2},\;\; b=\sqrt{a^2-c^2}\\
+w_1&=a_c^2-(4 c a_c b_c)^{\frac{2}{3}},\;\; w_2=2 a_c^2+ (4 c a_c b_c)^{\frac{2}{3}}
+\end{align*}
+The implicit equation that defines $a$ above is the quartic  given by
+\[c^2( a_c^2   - 2   a_c   a )+ a^2(2a_c a  - a^2)=0\]
+\end{remark}
+
+Billiard N-periodics classically conserve  perimeter $L$ and Joachimsthal's constant $J$ (see \cref{app:appC-convex-billiard}).
+\textcolor{red}{checar ref. de cruzamento acima}
+When $N=3$, we can derive these explicitly using the vertex parametrization given in \cref{prop:03-vtx-param}.
+ 
 
 \begin{proposition}
 For billiard 3-periodics, the perimeter and Joachimsthal's constant are given by:
@@ -64,7 +77,7 @@ J=\frac{\sqrt{2\delta-a^2-b^2}}{c^2},\;\;\;L=2(\delta+a^2+b^2)J
  	We have that
  	\[L=|P_2-P_3|+2|P_1-P_2|,\;\;
  	 J=\langle \frac{P_1-P_3}{|P_1-P_3|},[\frac{1}{a},0]\rangle\]
- 	 Straigthforward calculations using the vertex parametrization given in \cref{prop:03-vtx-param}, lead to the stated result.
+ 	 Straightforward calculations using the vertex parametrization given in \cref{prop:03-vtx-param}, lead to the stated result.
 %\textcolor{red}{ronaldo: CAS+parametrization}
 \end{proof}
 
@@ -89,7 +102,12 @@ where $s_1=|P_2-P_3|$, $s_2=|P_1-P_3|$ and $s_3=|P_1-P_2|$.
 A careful symbolic analysis shows that $\mathcal{E}_1(X_1)=0$. A similar analysis considering the excenters shows that the locus of the three points is the ellipse $\mathcal{E}_e$ stated.
 \end{proof}
 
-\textcolor{red}{ronaldo consegue inverter, ou seja dados os semi-eixos externos $a_e$, $b_e$, quais são $a_c,b_c$ (bilhar)}
+\begin{remark} Given the semi-axes $a_e$, $b_e$ of $\mathcal{E}_e$ it follows that semi-axes $a$, $b$ of the caustic $\mathcal{E}$ are given by
+\[a=\frac{(\delta_1- a_e^2 - 3b_e^2) a_e}{2(a_e^2 -  b_e^2)},\;\; b=\frac{(3a_e^2 + b_e^2 - \delta_1)b_e}{2(a_e^2 - b_e^2)},\;
+  \delta_1=\sqrt{a_e^4 + 14a_e^2b_e^2 + b_e^4}\]
+
+\end{remark}
+\textcolor{red}{Feito:  acima. ronaldo consegue inverter, ou seja dados os semi-eixos externos $a_e$, $b_e$, quais são $a_c,b_c$ (bilhar)}
 
 \begin{corollary}
 The pair $\{\mathcal{E},\mathcal{E}_e\}$ is Ponceletian.
@@ -170,7 +188,7 @@ it is shown $\left(s_1s_2s_3/R^2\right)^2$ is rational on $x_1$. For simplificat
 
 \begin{figure}
     \centering
-    \includegraphics[width=.7\textwidth]{pics_03_100_radii}
+    \includegraphics[width=\textwidth]{pics_03_100_radii}
     \caption{The incircle (green), circumcircle (purple), and 9-point (Euler's) circle (pink) of a billiard triangle (blue). These are centered on $X_1$, $X_3$, and $X_5$, respectively. Their radii are the inradius $r$, circumradius $R$, and 9-point circle radius $r_9=2R$. Over the family, the ratio $r/R$ is invariant. In turn this implies an invariant sum of cosines. \href{https://bit.ly/337hvpf}{Live}}
     \label{fig:radii}
 \end{figure}
@@ -195,3 +213,49 @@ $\sum_{i=1}^{3}{\cos\theta_i}=J L - 3$
 \end{corollary}
 
 At it will be seen later in \cref{chap:05-billiard}, the above generalizes to $J L -N$ for all $N$.
+
+\section{Vertex Parametrization with Jacobi's Elliptic Functions}
+ 
+ \input{chap_03/03_070_vtx_param}
+
+\textcolor{red}{ronaldo, stachel, pagina observable}
+
+\cite{stachel2021-billiards},\cite{reznik2021-n3-spatiotemporal},\cite{reznik2021-n3-jacobi}
+
+\textcolor{red}{dan: comparar posicao de p1 na parametrizacao natural vs jacobi}
+
+\section{Exercises}
+
+\begin{exercise}
+\label{ex:03-circumbilliard} 
+Show that every triangle has a circumbilliard, i.e., an ellipse to which it is inscribed and to which it is a billiard 3-periodic. Compute the axes of said circumbilliard with respect to triangle vertices. 
+\end{exercise}
+
+\begin{exercise}
+A pair of circles uniquely defines a {\em pencil} of coaxial circles; see \cite[Limiting Points]{mw}. The pencil contains exactly two circles which degenerate to a point, known as {\em limiting points}. Derive the location of such points for the poristic pair obtained from the image of two confocal ellipses centered at $[0,0]$ and with axes $a,b$ and $a',b'$.
+\end{exercise}
+
+\begin{exercise}
+Let $\ell_1,\ell_2$ be the limiting points of the two circles which are polar images of a confocal pair $\E,\E'$ with respect to a circle centered on $f_1$. At what aspect ratio $a/b$ of $\E$ will $\ell_2$ coincide with $f_2$?
+\end{exercise}
+
+\begin{exercise}
+A well-known result is that the inversion of a circle pair $\Cm,\Cm'$ with respect to a circle $\Cm_1$ centered on $\ell_1$ (resp. $\Cm_2$ centered on $\ell_2$) is a pair of concentric circles $\Cm_1'$ and $\Cm_1''$ (resp. $\Cm_1'$ and $\Cm_1''$). Prove the following lesser known result: the ratio of radii between $\Cm_1'$ and $\Cm_1''$ is the same as the ratio between $\Cm_2'$ and $\Cm_2''$. 
+\end{exercise}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\textwidth]{pics_03_210_concentric_inverted_pairs.eps}
+    \caption{Concentric circle pairs (light blue) which are the inversions of the circumcircle and incircle (dashed orange) of the bicentric family  (blue) with respect to its two limiting point $\ell_1$ and $\ell_2$. Also shown are Billiard 3-periodics (blue) in the polar pre-image with respect to a circle (dashed gray) -- centered on $f_1=\ell_1$.}
+    \label{fig:03-concentric-inverted}
+\end{figure}
+
+\begin{exercise}
+Referring to \cref{fig:03-concentric-inverted}, let $\Cm,\Cm'$ be the pair of circles which are the polar image of a confocal pair of ellipses $\E,\E'$. Let $\Cm_1', \Cm_1''$ be the inversive images of $\Cm,\Cm'$ wrt to a circle centered on a focus of the ellipse pair. Prove that: (i) $\Cm_1'$ and $\Cm_1''$ are concentric with the ellipse pair and (ii) $\Cm_1'$ (resp. $\Cm_1''$) is externally tangent to $\E$ (resp. $\E'$) at its left and right major vertices.
+\end{exercise}
+
+
+\begin{exercise}
+Prove the inversive image of billiard 3-periodics with respect to a focus-centered circle is a non-Ponceletian family inscribed in Pascal's Limaçon whose Gergonne point $X_7$ is stationary; see it \href{https://bit.ly/3edwKD7}{Live}. Indeed, this family has constant perimeter (to be shown later).
+\end{exercise}

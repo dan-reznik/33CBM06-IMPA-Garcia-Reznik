@@ -137,13 +137,13 @@ Therefore, there is a circle tangent to the sidelines $F_1P_2$, $F_1P_1$, $F_2P_
 
 
 
-\begin{proposition} Consider an ellipse and two tangent lines passing through an exterior point as shown in    \cref{fig:angulocorda}. Let also the two lines passing through the foci and $P_0$.  Then  we have that $\theta_1=\theta_2$. 
+\begin{proposition} Consider an ellipse and two tangent lines passing through an exterior point as shown in    \cref{fig:09-angulocorda}. Let also the two lines passing through the foci and $P_0$.  Then  we have that $\theta_1=\theta_2$. 
 \end{proposition} 
 
 \begin{figure}
 	\begin{center}
- \includegraphics[scale=0.9]{pics_tex/angulo_corda.pdf}
-		\caption {Angles $\theta_1$ and $\theta_2$ are equal. 	\label{fig:angulocorda} }
+ \includegraphics[scale=0.9]{chap_09/pics/pics_09_004-angulo_corda.pdf}
+		\caption {Angles $\theta_1$ and $\theta_2$ are equal. 	\label{fig:09-angulocorda} }
 	\end{center}
 
 \end{figure}
@@ -242,15 +242,28 @@ Follows from straightforward calculations, computing the quantities involved wit
 
 \begin{figure} 
 	\begin{center}
-		\def\svgwidth{0.55\textwidth}
-		\input{pics_tex/elipse_circulo2a.eps_tex}
-		\caption {   }
+	%	\def\svgwidth{0.55\textwidth}
+	%	\input{pics_tex/elipse_circulo2a.eps_tex}
+		\includegraphics[scale=0.5]{chap_09/pics/pics-09-012-par_circulo_elipse.pdf}
+		\caption {Poncelet pair $\{\mathcal{E},\mathcal{C}\}$ constructed by pedal of a focus and reflection.   }
 	\end{center}
 	\label{fig:elipse_circulo}
 \end{figure}
-\begin{proof}
 
+\begin{proof} Let $P_0=[x_0,y_0]\in\mathcal{E}$.
+Then the pedal point of $F_1$ is 
+\[  Q_0=  \left[\frac{a^2(a^2 c + b^2 x_0 - cx_0^2)}{  a^4-c^2x_0^2  } , \frac{a^2 y_0(a^2 - c x_0)}{a^4 - c^2x_0^2 } \right] \]
+and $Q_2=2Q_2-F_0$. Direct calculations show that   $Q_2$ is a point of the circle $\mathcal{C}$ centered at $F_1=[-c,0]$ and radius $2a$.  
+It can be verified that the pair,  circle $(x+c)^2+y^2=4a^2$ and   ellipse $x^2/a^2+y^2/b^2=1$, satisfies the Cayley  condition  for 3-periodic orbits.  
 
+In fact, considering the quadratic forms 
+$q_1=(x+cz)^2+y^2-4a^2z^2$ and 
+ $q_0=x^2/a^2+y^2/b^2-z^2$ it follows that
+ \[ f(t)=\sqrt{\textrm{ det}( q_0+tq_1)}= \frac{1}{ab}+\frac{(2a^2 + b^2)t}{ab}   +%\textcolor{red}{0}
+ \underbrace{0}_{ \mathrm{\ Cayley }}
+ \;t^2+2a^3 b t^3 + O(t^4)\]
+ The fact that the pedal point $Q_0$ belongs to  the circle $x^2+y^2=a^2$ can be verified directly.
+  This ends the proof. 
 \end{proof}
 
 
@@ -265,10 +278,10 @@ angle $  \angle  AF_2B$.
 \end{theorem}
 \begin{figure} 
 	\begin{center}
-		\def\svgwidth{0.75\textwidth}
- 	\input{pics_tex/galperin.eps_tex}
-	 %	 \includegraphics[angle=0, width=10cm]{pics_tex/galperin.eps}
-		\caption { The line $PQ$ passing through the focus $F_2$ and the intersection of the ellipse with the right branch of the hyperbola  is a bisector of the angle $AF_2B$.}
+	%	\def\svgwidth{0.75\textwidth}
+ %	\input{pics_tex/galperin.eps_tex}
+  \includegraphics[angle=0, width=8cm]{pics-09-120-galperin.pdf}
+	\caption { The vertical line $PQ$ passing through the focus $F_2$ and the intersection of the ellipse with the right branch of the hyperbola  is a bisector of the angle $AF_2B$.}
 		 \label{fig:galperin}
 	\end{center}
 \end{figure}
