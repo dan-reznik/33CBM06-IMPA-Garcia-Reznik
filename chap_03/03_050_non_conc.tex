@@ -19,9 +19,7 @@ First described by \cite{chapple1746-poristics}, the family was later studied by
 d^2=R(R-2 r)
 \label{eq:03-euler-poristic}
 \end{equation}
-where $r,R$ are the radii of outer and inner circle.
-
-Referring to \cref{fig:03-poristic obtuse}:
+where $r,R$ are the radii of outer and inner circle. Referring to \cref{fig:03-poristic obtuse}:
 
 \begin{proposition}
 The Poristic family will contain obtuse triangles iff $d>r$.
@@ -206,7 +204,6 @@ $\mu_1=R+d$ and $\nu_1=R-d$ are invariant over the poristic family, i.e., $E_1$ 
 \end{proposition}
 
 A proof appears in \cite[Appendix C]{garcia2020-similarity-I}.
-
 \section{Poristic Excentrals}
 
 \begin{figure}
@@ -306,10 +303,11 @@ A pair of circle (outer) $(x-x_0)^2+y^2=R^2$ and ellipse (caustic) $(x-x_1)^2/(a
 \end{proof}
 \begin{proposition}
 For any triangle $T$, the circumcircle and Brocard inellipse are Ponceletian, they admit a 1d family of Poncelet triangles. Furthermore, their Brocard inellipse is stationary.
+\label{prop:04-broc-inellipse-stationary}
 \end{proposition}
 
 \begin{proof}
- \textcolor{red}{ronaldo, acho q se vc provar q $X_{39}$, ou o proprio $X_6$ esta parado, acabou. Funciona mas a prova é longa} 
+Follows from vertex parametrization for the Brocard family and/or from stationarity of $X_6$, see \cref{prop:04-x6-stationary}. 
 \end{proof}
 
 \begin{proposition}
@@ -366,6 +364,7 @@ Referring to \cref{fig:03-brocard-porism}, all of $\Omega_1$, $\Omega_2$, $X_3$,
  
 \begin{proposition}
 Over the Brocard porism, the following 3 objects are stationary: (i) the Brocard circle, (ii) the Brocard axis, and (iii) the symmedian point $X_6$ are stationary.
+\label{prop:04-x6-stationary}
 \end{proposition}
 
 \begin{proof}
@@ -511,9 +510,11 @@ Here $b'>a'$.
 \label{prop:03-brocard-polarimage}
 \end{proposition}
  
-\begin{proof} It follows from the same approach developed in \cref{sec:09-polarimage}.  Details are left to the reader.
-\textcolor{red}{notacao aqui precisa ser ajustada? }
+\begin{proof}
+Proof is left as an exercise.
 \end{proof}
+
+%%% It follows from the same approach developed in \cref{sec:09-polarimage}.  Details are left to the reader.
 \begin{remark}
  From the relations obtained in \cref{prop:03-brocard-polarimage} it follows that
  \[a=\rho^2\frac{(4 (b')^2-(a')^2)}{3 a' (b')^2},\;\; b=\rho^2\frac{\sqrt{4 (b')^2-(a')^2}}{\sqrt{3} (b')^2}\]
@@ -540,7 +541,28 @@ In terms of the homothetic pre-image semi-axes $a,b$, the invariant sum of inver
 Using that $\csc^2\omega-\cot^2\omega=1$ the result follows.
 \end{proof}
 
-\subsection{Vertices of the Brocard Porism}
+\section{Vertex Parametrization}
+
+\subsection{Poristic family}
+\label{sec:04-vtx-poristic}
+
+Consider a pair of circles $x^2+y^2=R^2$,
+$(x-d)^2+y^2=r^2$, with $d^2=R(R-2r)$. Then a 3-periodic orbit is parametrized by:
+
+\begin{align}
+P_1&=[x_1,y_1]\nonumber \\
+ P_2&=\frac{1}{w^2} [ -4R r^2 q  y_1 - w_1w_2 , -2r R w_1y_1 + 2 r q w_2 ]\nonumber \\
+  P_3 &=  \frac{1}{w^2} [4R r^2 q  y_1 - w_1w_2 , -2r R w_1y_1 - 2 r q w_2 ]\label{eq:04-vtx-poristic} \\
+  q&=\sqrt{R^2 - r^2 - 2d x_1  + d^2},\;\; w=R^2 - 2d x_1  + d^2\nonumber 
+  \\ w_1&=R^2 - 2r^2 - 2 d x_1 + d^2,\;\;\;
+  w_2=(R^2+d^2) x_1 - 2 R^2 d  \nonumber
+\end{align}
+
+\subsection{Poristic Excentrals}
+
+Its vertices sweep a circle centered on $X_{40}$ of the original poristic family, so we omit the parametrization.
+
+\subsection{Brocard Porism}
 
 Consider an isosceles Poncelet triangle $\Tm=ABC$ in the Brocard porism, where $AB$ is tangent to $\E$ at one of its minor vertices. Let $|AB|=2d$ and the height be $h$. Let $\zeta=d^2+h^2$. Let the origin $(0,0)$ be at its circumcenter $X_3$. Its vertices will be given by:
 
@@ -585,25 +607,6 @@ Vertices $P_i=[x_i,y_i]$, $i=1,2,3$ of Brocard porism triangles are given by:
 \end{equation}
 }
 
-\section{Vertex parametrization of the Poristic family}
-\label{sec:04-vtx-poristic}
-
-Consider a pair of circles $x^2+y^2=R^2$,
-$(x-d)^2+y^2=r^2$, with $d^2=R(R-2r)$.
-
-Then a 3-periodic orbit is parametrized by:
-
-\begin{align}
-P_1&=[x_1,y_1]\nonumber \\
- P_2&=\frac{1}{w^2} [ -4R r^2 q  y_1 - w_1w_2 , -2r R w_1y_1 + 2 r q w_2 ]\nonumber \\
-  P_3 &=  \frac{1}{w^2} [4R r^2 q  y_1 - w_1w_2 , -2r R w_1y_1 - 2 r q w_2 ]\label{eq:04-vtx-poristic} \\
-  q&=\sqrt{R^2 - r^2 - 2d x_1  + d^2},\;\; w=R^2 - 2d x_1  + d^2\nonumber 
-  \\ w_1&=R^2 - 2r^2 - 2 d x_1 + d^2,\;\;\;
-  w_2=(R^2+d^2) x_1 - 2 R^2 d  \nonumber
-\end{align}
-
-
-
 \section{Summary}
 
 Fixed points and (known) conserved quantites for the non-concentric (NCAP) families in chapter appear in
@@ -631,9 +634,10 @@ Brocard & \makecell[lc]{$X_3$, $X_6$, $X_{15}$, $X_{16}$,\\$X_{39}$, $X_{182},\l
 \label{tab:n3-non-conc-families}
 \end{table}
 
+% \includegraphics[trim={left bot right top},clip]
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{chap_03/pics/pics_03_250_poncelet_transformations.pdf}
+    \includegraphics[trim={60 90 80 90},clip,width=\textwidth]{chap_03/pics/pics_03_250_poncelet_transformations.pdf}
   \caption{Families mentioned in this chapter (blue ones are concentric, tan ones are non-concentric), as well as the transformations under which certain families are interrelated.}
     \label{fig:03-transformations}
 \end{figure}

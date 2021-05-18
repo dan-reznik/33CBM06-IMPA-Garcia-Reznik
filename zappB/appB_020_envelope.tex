@@ -36,20 +36,48 @@ x(u)=\frac{b c^\prime-c b^\prime}{a b^\prime-b a^\prime},\;\;\; y(u)=\frac{c a^\
 \end{example}
 
  
-A congruence of lines, in the parametric form, is given by
+ A congruence of lines, in the parametric form, is given by
  
-\[ x=x_0(t)+v a(t), y=y_0(t)+v b(t)\]
+ \[ x=x_0(t)+v a(t), y=y_0(t)+v b(t)\]
 
-Therefore, the envelope is given by:
+ Therefore, the envelope is given by:
  
 	
-	\begin{align*}
-  x(t)=&x_0(t)+\frac{   a( b x'_0-a y'_0)}{a b^\prime-b a^\prime} \\
-	y(t)=&y_0(t)+ \frac{   b( b x'_0-a y'_0)}{a b^\prime-b a^\prime} 	\end{align*}
+ 	\begin{align*}
+   x(t)=&x_0(t)+\frac{   a( b x'_0-a y'_0)}{a b^\prime-b a^\prime} \\
+ 	y(t)=&y_0(t)+ \frac{   b( b x'_0-a y'_0)}{a b^\prime-b a^\prime} 	\end{align*}
  
+ 
+ 
+ 
+ 
+ Consider a  3-periodic  billiard orbit with vertices $P_i=[x_i(t),y_i(t)]$ (i=1,2,3)
+Let $C_i(t)=[1/x_i(t),1/y_i(t)]$. We have that $\{C_1(t),C_2(t),C_3(t)\}$ is a segment. See \cref{exe:chap02-inverse-envelope}.
+\begin{proposition}
+    The envelope of the family of lines defined by the degenerated polygon $C_i(t)$ (i=1,2,3) is the ellipse $\mathcal{B}$ given by
+    \[ {\frac {{a}^{6}{x}^{2}}{ \left( {b}^{2}+\sqrt {{a}^{4}-{a}^{2}{b}^{2}+
+{b}^{4}} \right) ^{2}}}+{\frac {{b}^{6}{y}^{2}}{ \left( {a}^{2}+\sqrt 
+{{a}^{4}-{a}^{2}{b}^{2}+{b}^{4}} \right) ^{2}}}-1
+=0.
+    \]
+    Moreover, $\mathcal{B}$ is similar to the caustic rotated by $\frac{\pi}{2}.$ See   \cref{fig:appB-inverso-envelope}.
+\end{proposition}
+ 
+\begin{proof}
+This can be done from the definition of envelope of the family of lines containing the vertices $C_i(t)$.
+The calculations are long, but straightforward.
+It is helpful to use symbolic computations here. 
+\end{proof}
 
+ \begin{figure}
+     \centering
+     \includegraphics[scale=0.5]{zappB/pics/pics-appB-040inverso_locus_envelope.png}
+     \caption{Envelope of the family of lines defined by the degenerated polygons $C_i(t)$}
+     \label{fig:appB-inverso-envelope}
+ \end{figure}
  
-  For more on theory of envelopes see  \cite[Chapter  3]{arnold-1994},  \cite[pp. 305]{berger-1992}, \cite[Chapter   5]{bruce-1992}. %\cite[Chap{ghys-2017}.  % \cite{kling}. 
+  For more on theory of envelopes see  \cite[Chapter  3]{arnold-1994},  \cite[pp. 305]{berger-1992}, \cite[Chapter   5]{bruce-1992}.  See also \cite[Cap. 1]{carneiro2019-impa}.
+  %\cite[Chap{ghys-2017}.  % \cite{kling}. 
  
 
  

@@ -1,46 +1,12 @@
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{pics_03_080_billiard_grid.eps}
-    \caption{\textbf{Top Left:} An elliptic billiard 3-periodic (solid blue) is shown inscribed in an outer ellipse (black) and a confocal caustic (brown). Graves' theorem implies its internal angles will be bisected by ellipse normals (black arrows). Also shown is the incenter $X_1$ defined as the intersection of said bisectors. \textbf{Bottom Left:} Poncelet's porism implies a 1d family of such triangles exists. Some samples are shown (dashed blue). A classic invariant is  perimeter. The Mittenpunkt $X_9$ remains stationary at the center. The incenter $X_1$ sweeps an ellipse (dashed green). \textbf{Right:} The excentral triangle (solid green) has sides perpendicular to the bisectors. Over billiard 3-periodics, the excentral is of variable perimeter. Its vertices (known as the ``excenters'') also sweep an ellipse (dashed green) whose aspect ratio is the reciprocal of that of the incenter locus. The Symmedian point $X_6'$ of the excentral triangle coincides with $X_9$ of the reference and is therefore stationary. \href{https://bit.ly/3gWl3CI}{Live}}
-    \label{fig:billiard-grid}
-\end{figure}
+\section{Preliminaries}
+
 
 Henceforth let {\em billiard 3-periodics} refer to the 1d family of Poncelet triangles interscribed between pair of confocal ellipses $\E$ and $\E_c$ given by:
 \[ \E:\frac{x^2}{a^2}+\frac{y^2}{b^2}-1=0,\;\;\;\E_c:\frac{x^2}{a_c^2}+\frac{y^2}{b_c^2}-1=0\]
 where $c^2=a^2-b^2=a_c^2-b_c^2$.
 
-The Cayley condition for a concentric, axis parallel (CAP) pair of ellipses to admit a 3-periodic family is given by:
 
-\begin{equation} \frac{a_c}{a}+\frac{b_c}{b}=1
-\label{eqn:n3-cayley}
-\end{equation}
-
-In turn, this constrains the semi-axes of the confocal caustic.
-
-\begin{proposition}
-The semi-axes $a_c,b_c$ of the confocal caustic are given by:
-\begin{align*}
-a_c=&\frac{a\left(\delta-{b}^{2}\right)}{c^2},\;\;\;\;
-b_c=\frac{b\left({a}^{2}-\delta\right)}{c^2}\cdot
-\end{align*}
-where $\delta=\sqrt{a^4-a^2b^2+b^4}$, an oft-occurring quantity, will be henceforth called the Darboux constant.
-\label{prop:03-n3-caustic}
-\end{proposition}
-
-When $a=b$, we have that $a_c=b_c=a/2$.
-
-\begin{remark}
-The semi-axes $a$ and $b$ of the ellipse in terms of the semi-axes $a_c$ and $b_c$ of the confocal ellipse are given by:
-\begin{align*}
-a&= -\frac{1}{2} \sqrt{w_1} + \frac{1}{2} \sqrt{ w_2 -\frac{ 2 a_c^3 - 4 c^2a_c}{\sqrt{w_1}} } +\frac{a_c}{2},\;\; b=\sqrt{a^2-c^2}\\
-w_1&=a_c^2-(4 c a_c b_c)^{\frac{2}{3}},\;\; w_2=2 a_c^2+ (4 c a_c b_c)^{\frac{2}{3}}
-\end{align*}
-The implicit equation that defines $a$ above is the quartic  given by
-\[c^2( a_c^2   - 2   a_c   a )+ a^2(2a_c a  - a^2)=0\]
-\end{remark}
-
-Billiard N-periodics classically conserve  perimeter $L$ and Joachimsthal's constant $J$ (see \cref{app:appC-convex-billiard}).
-\textcolor{red}{checar ref. de cruzamento acima}
+Billiard N-periodics classically conserve  perimeter $L$ and Joachimsthal's constant $J$. The latter one is equivalent to stating all trajectory segments are tangent to a confocal caustic, see \cite[Thm 4.4]{sergei91} and \cite{arnold2020-joachim}.
 When $N=3$, we can derive these explicitly using the vertex parametrization given in \cref{prop:03-vtx-param}.
  
 
@@ -51,6 +17,7 @@ For billiard 3-periodics, the perimeter and Joachimsthal's constant are given by
 J=\frac{\sqrt{2\delta-a^2-b^2}}{c^2},\;\;\;L=2(\delta+a^2+b^2)J
 \label{eqn:n3-L-J}
 \end{equation*}
+where $\delta=\sqrt{a^4-a^2b^2+b^4}$.
 \end{proposition}
 
 \begin{proof} We compute the values considering  an isosceles 3-periodic orbit with $P_1=[a,0]$, and
@@ -81,7 +48,55 @@ J=\frac{\sqrt{2\delta-a^2-b^2}}{c^2},\;\;\;L=2(\delta+a^2+b^2)J
 %\textcolor{red}{ronaldo: CAS+parametrization}
 \end{proof}
 
-\noindent Note: the use of $J$ in this chapter refers to its value for the $N=3$ case. Referring to \cref{fig:billiard-grid}:
+Henceforth the oft-ocurring quantity $\delta$ will be referred to as the Darboux constant. An interesting geometric interpretation for it appears in \cref{prop:03-delta}.
+
+%\noindent Note: the use of $J$ in this chapter refers to its value for the $N=3$ case.
+
+\section{Caustic semi-axes}
+
+The Cayley condition for a concentric, axis parallel (CAP) pair of ellipses to admit a 3-periodic family is given by:
+
+\begin{equation} \frac{a_c}{a}+\frac{b_c}{b}=1
+\label{eqn:n3-cayley}
+\end{equation}
+
+In turn, this constrains the semi-axes of the confocal caustic.
+
+\begin{proposition}
+The semi-axes $a_c,b_c$ of the confocal caustic are given by:
+\begin{align*}
+a_c=&\frac{a\left(\delta-{b}^{2}\right)}{c^2},\;\;\;\;
+b_c=\frac{b\left({a}^{2}-\delta\right)}{c^2}\cdot
+\end{align*}
+\label{prop:03-n3-caustic}
+\end{proposition}
+
+When $a=b$, we have that $a_c=b_c=a/2$.
+
+\begin{proposition}
+The semi-axes $a$ and $b$ of the ellipse in terms of the semi-axes $a_c$ and $b_c$ of the confocal ellipse are given by:
+\begin{align*}
+a&= -\frac{1}{2} \sqrt{w_1} + \frac{1}{2} \sqrt{ w_2 -\frac{ 2 a_c^3 - 4 c^2a_c}{\sqrt{w_1}} } +\frac{a_c}{2},\;\; b=\sqrt{a^2-c^2}\\
+w_1&=a_c^2-(4 c a_c b_c)^{\frac{2}{3}},\;\; w_2=2 a_c^2+ (4 c a_c b_c)^{\frac{2}{3}}
+\end{align*}
+The implicit equation that defines $a$ above is the quartic  given by
+\[c^2( a_c^2   - 2   a_c   a )+ a^2(2a_c a  - a^2)=0\]
+\label{prop:03-caustic-to-billiard}
+\end{proposition}
+
+\section{Incenter and excenter loci}
+\label{sec:03-inc-exc-loci}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pics_03_080_billiard_grid.eps}
+    \caption{\textbf{Top Left:} An elliptic billiard 3-periodic (solid blue) is shown inscribed in an outer ellipse (black) and a confocal caustic (brown). Graves' theorem implies its internal angles will be bisected by ellipse normals (black arrows). Also shown is the incenter $X_1$ defined as the intersection of said bisectors. \textbf{Bottom Left:} Poncelet's porism implies a 1d family of such triangles exists. Some samples are shown (dashed blue). A classic invariant is  perimeter. The Mittenpunkt $X_9$ remains stationary at the center. The incenter $X_1$ sweeps an ellipse (dashed green). \textbf{Right:} The excentral triangle (solid green) has sides perpendicular to the bisectors. Over billiard 3-periodics, the excentral is of variable perimeter. Its vertices (known as the ``excenters'') also sweep an ellipse (dashed green) whose aspect ratio is the reciprocal of that of the incenter locus. The Symmedian point $X_6'$ of the excentral triangle coincides with $X_9$ of the reference and is therefore stationary. \href{https://bit.ly/3gWl3CI}{Live}}
+    \label{fig:billiard-grid}
+\end{figure}
+
+An intriguing phenomenon is that over billiard 3-periodics, the locus of both incenter and the excenters are ellipses, as was initially detected experimentally (see an early \href{https://youtu.be/BBsyM7RnswA}{Video}). This was proved by \cite{olga14} and \cite{garcia2019-incenter}. Indeed, we haven't yet found another Poncelet pair where this is the case, see \cref{conj:04-incenter-excenter-loci}.
+
+Referring to \cref{fig:billiard-grid}:
 
 \begin{theorem}
 Over billiard 3-periodics, the locus of the incenter $X_1$ and excenter are ellipses $\E_1$ and $\E_e$ concentric and axis-parallel with the confocal pair whose axes $(a_1,b_1)$ and $(a_e,b_e)$ are given by:
@@ -102,12 +117,7 @@ where $s_1=|P_2-P_3|$, $s_2=|P_1-P_3|$ and $s_3=|P_1-P_2|$.
 A careful symbolic analysis shows that $\mathcal{E}_1(X_1)=0$. A similar analysis considering the excenters shows that the locus of the three points is the ellipse $\mathcal{E}_e$ stated.
 \end{proof}
 
-\begin{remark} Given the semi-axes $a_e$, $b_e$ of $\mathcal{E}_e$ it follows that semi-axes $a$, $b$ of the caustic $\mathcal{E}$ are given by
-\[a=\frac{(\delta_1- a_e^2 - 3b_e^2) a_e}{2(a_e^2 -  b_e^2)},\;\; b=\frac{(3a_e^2 + b_e^2 - \delta_1)b_e}{2(a_e^2 - b_e^2)},\;
-  \delta_1=\sqrt{a_e^4 + 14a_e^2b_e^2 + b_e^4}\]
-
-\end{remark}
-\textcolor{red}{Feito:  acima. ronaldo consegue inverter, ou seja dados os semi-eixos externos $a_e$, $b_e$, quais são $a_c,b_c$ (bilhar)}
+\noindent A more general treatment to the above is given in \cref{chap:04-n3-loci}.
 
 \begin{corollary}
 The pair $\{\mathcal{E},\mathcal{E}_e\}$ is Ponceletian.
@@ -120,22 +130,8 @@ Direct from Cayley condition
 
 \end{proof}
 
-It turns out $\delta$ has a curious geometric interpretation. Recall the power of a point $Q$ with respect to a circle $\Cm=(C_0,R_0)$ is given by $|Q-C_0|^2-R_0^2$, see \cite[Circle Power]{mw}. Let $\Cm$ denote the (moving) circumcircle of billiard 3-periodic, and $O=X_9$ the billiard center.
-
-\begin{proposition}
-The power of $O$ with respect to $\Cm$ is constant and equal to $-\delta$.
-\end{proposition}
-
-\begin{proof}
-Consider an isosceles 3-periodic orbit given by \cref{eq:orbita3-isosceles}.  
-  
-	Its circumcircle will be centered at $C_0=[ {\frac { {b}^{2}-\delta}{2b}},0]$ with circumradius $R_0=\frac {{b}^{2}+\delta}{2b}.$
-	Therefore, the power of the center of the ellipse with respect to the circumcircle is given by  
-	$$|OC_0|^2-R_0^2=\left(\frac { {b}^{2}-\delta}{2b}\right)^2 - \left(\frac {{b}^{2}+\delta}{2b}\right)^2=-\delta.$$
-	
-	For a generic 3-periodic orbit, the stated invariance is confirmed with a CAS using the vertex parametrization in \cref{prop:03-vtx-param}.  
-%	\textcolor{red}{localizar depois}
-\end{proof}
+\section{A stationary point}
+\label{sec:03-stationary}
 
 The Mittenpunkt $X_9$ is a triangle center where lines from each excenter thru the side midpoint meet. Referring to \cref{fig:03-x9}:
 \begin{theorem}
@@ -155,6 +151,8 @@ Let $\E$ be the outer ellipse in the confocal pair, $O$. By definition, the Mitt
      \href{https://youtu.be/tMrBqfRBYik}{Video}}
      \label{fig:03-x9} 
 \end{figure}
+
+\section{Conserved Quantities}
 
 Given a triangle, let $r$ and $R$ denote the radius of its incircle and circumcircle, known as the {\em inradius} and {\em circumradius}, respectively. Over billiard 3-periodics, note these two radii are variable. Referring to \cref{fig:radii}:
 
@@ -214,22 +212,42 @@ $\sum_{i=1}^{3}{\cos\theta_i}=J L - 3$
 
 At it will be seen later in \cref{chap:05-billiard}, the above generalizes to $J L -N$ for all $N$.
 
+\section{An interpretation for \torp{$\delta$}{delta}}
+
+The Darboux constant $\delta$ appearing above has a curious geometric interpretation. Recall the power of a point $Q$ with respect to a circle $\Cm=(C_0,R_0)$ is given by $|Q-C_0|^2-R_0^2$, see \cite[Circle Power]{mw}. Let $\Cm$ denote the (moving) circumcircle of billiard 3-periodic, and $O=X_9$ the billiard center.
+
+\begin{proposition}
+The power of $O$ with respect to $\Cm$ is constant and equal to $-\delta$.
+\label{prop:03-delta}
+\end{proposition}
+
+\begin{proof}
+Consider an isosceles 3-periodic orbit given by \cref{eq:orbita3-isosceles}.  
+	Its circumcircle will be centered at $C_0=[ {\frac { {b}^{2}-\delta}{2b}},0]$ with circumradius $R_0=\frac {{b}^{2}+\delta}{2b}.$
+	Therefore, the power of the center of the ellipse with respect to the circumcircle is given by  
+	$$|OC_0|^2-R_0^2=\left(\frac { {b}^{2}-\delta}{2b}\right)^2 - \left(\frac {{b}^{2}+\delta}{2b}\right)^2=-\delta.$$
+	
+	For a generic 3-periodic orbit, the stated invariance is confirmed with a CAS using the vertex parametrization in \cref{prop:03-vtx-param}.  
+%	\textcolor{red}{localizar depois}
+\end{proof}
+
 \section{Vertex Parametrization with Jacobi's Elliptic Functions}
- 
- \input{chap_03/03_070_vtx_param}
+\input{chap_03/03_070_vtx_param}
 
-\textcolor{red}{ronaldo, stachel, pagina observable}
-
-\cite{stachel2021-billiards},\cite{reznik2021-n3-spatiotemporal},\cite{reznik2021-n3-jacobi}
-
-\textcolor{red}{dan: comparar posicao de p1 na parametrizacao natural vs jacobi}
 
 \section{Exercises}
 
 \begin{exercise}
 \label{ex:03-circumbilliard} 
-Show that every triangle has a circumbilliard, i.e., an ellipse to which it is inscribed and to which it is a billiard 3-periodic. Compute the axes of said circumbilliard with respect to triangle vertices. 
+Referring to \cref{fig:03-circumbilliard}, show that every triangle has a circumbilliard, i.e., an ellipse to which it is inscribed and to which it is a billiard 3-periodic. Compute the axes of said circumbilliard with respect to triangle vertices. 
 \end{exercise}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\textwidth]{pics_03_320_circumplot.eps}
+    \caption{Two random triangles shown with their circumbilliards. \href{https://youtu.be/vSCnorIJ2X8}{Video}}
+    \label{fig:03-circumbilliard}
+\end{figure}
 
 \begin{exercise}
 A pair of circles uniquely defines a {\em pencil} of coaxial circles; see \cite[Limiting Points]{mw}. The pencil contains exactly two circles which degenerate to a point, known as {\em limiting points}. Derive the location of such points for the poristic pair obtained from the image of two confocal ellipses centered at $[0,0]$ and with axes $a,b$ and $a',b'$.
@@ -259,3 +277,36 @@ Referring to \cref{fig:03-concentric-inverted}, let $\Cm,\Cm'$ be the pair of ci
 \begin{exercise}
 Prove the inversive image of billiard 3-periodics with respect to a focus-centered circle is a non-Ponceletian family inscribed in Pascal's Limaçon whose Gergonne point $X_7$ is stationary; see it \href{https://bit.ly/3edwKD7}{Live}. Indeed, this family has constant perimeter (to be shown later).
 \end{exercise}
+
+\begin{exercise}
+ Consider the ellipse $x^2/a^2+y^2/b^2=1$. For a  3-periodic  billiard orbit with vertices $P_i=[x_i,y_i]$ (i=1,2,3)  show that:  
+
+\[ 
+ \left( x_2\,y_3-x_3\,y_2 \right) x_1\,
+y_1+ \left(x_3\,y_1  - x_1\,y_3\right) x_2\, y_2+ \left( x_1\,y_2-x_2\,y_1 \right) x_3
+\,y_3=0
+\]
+
+\end{exercise}
+
+\begin{exercise} For a  3-periodic  billiard orbit with vertices $P_i=[x_i(t),y_i(t)]$ (i=1,2,3)
+Let $C_i(t)=[1/x_i(t),1/y_i(t)]$. 
+%Here $P_i(t)=[x_i(t),y_i(t)]$.
+
+Show that the polygon $\{C_1(t),C_2(t),C_3(t)\}$ is a segment that can be bounded or unbounded.
+ \label{exe:chap02-inverse-envelope}
+\end{exercise}
+
+\begin{exercise} Which simple or self-intersected $N$- gon (closed polygon with $N$ vertices and $N$ sides) can be an orbit on an elliptic billiard? 
+
+ For $N=4$ only the parallelogram can be a non self-intersected orbit on an elliptic billiard, see \cite{connes07}. For the analysis of self-intersected $4-gons$ see \cite{garcia2020-self-intersected}.
+\end{exercise}
+
+\section{Research Questions}
+
+\begin{question}
+Recall the extouch triangle has vertices at the points of contact of the excircles with a triangle's sidelines \cite[Extouch triangle]{mw}. 
+In \cref{chap:04-n3-loci} we show that the vertices of the extouch triangles of billiard 3-periodics coincide with the caustic touchpoints, see it 
+\href{https://bit.ly/33PufRv}{Live}. Show that said extouch family is also Ponceletian and concentric with the elliptic billiard; derive expressions for the semi-axes of its elliptic caustic. Is its center a triangle center? 
+\label{que:03-extouch}
+\end{question}

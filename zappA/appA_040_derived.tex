@@ -94,6 +94,40 @@ The trilinear vertex matrix of the Brocard triangle $B_1B_2B_3$ is given by:
    b^3 &a^3 &abc\end{matrix}\right)
 \end{align*}
 
+\subsection{Intouch and extouch triangles}
+
+Given a triangle $T=ABC$ and their incircle,  the intouch triangle (or contact triangle) is the triangle  whose vertices are the contact points of the incircle with the sidelines of $T$. The sidelines of the intouch triangle are the polar lines of the vertices of $T$.
+
+Analogously, the extouch triangle is the triangle whose vertices are   contact points of the sidelines of $T$ with the excircles (circles centered at excenters).
+
+ See \cref{fig:appA-intouch-extouch}.
+ \begin{figure}[H]
+     \centering
+      \includegraphics[scale=0.4]{zappA/pics/pics-appA-intouch-extouch.pdf}
+    \caption{Intouch triangle (blue) and extouch triangle (brown).}
+    \label{fig:appA-intouch-extouch}
+\end{figure}
+
+The extouch points are midpoints of the perimeter of $T$. For example, $|A-C|+|A-C_e|=|B-C|+|B-C_e|$. Also, the extouch points are in the caustic (Mandart innelipse) of an elliptic billiard having $T=ABC$ as 3-periodic orbit.
+
+The trilinear vertex matrix of the intouch triangle is given by:
+\begin{align*}
+    \left(\begin{matrix}
+    0 &\frac{ac}{a-b+c} &\frac{ab}{a+b-c}\\
+     \frac{bc}{-a+b+c} & 0 &\frac{ab}{a+b-c}\\
+       \frac{bc}{-a+b+c}   &\frac{ac}{a-b+c}&0  
+    \end{matrix}\right)
+\end{align*}
+
+The trilinear vertex matrix of the extouch triangle is given by:
+\begin{align*}
+    \left(\begin{matrix}
+    0 &\frac {a-b+c}{b} &\frac{a+b-c}{c}\\
+     \frac{-a+b+c}{a} & 0 &\frac{a+b-c}{c}\\
+       \frac{-a+b+c}{a}   &\frac{a-b+c}{b}&0  
+    \end{matrix}\right)
+\end{align*}
+
 \subsection{Pedal and Antipedal Triangles}
 
 Given a triangle $T=ABC$  and a point $P$ which is not a vertex of $T$ drop three perpendiculars to the sidelines of $T$. The intersections of theses lines with the sidelines define a triangle $T'=A'B'C'$ that is known as the {\em pedal triangle} of $P$. See \cref{fig:appA-pedal-triangle}, left.

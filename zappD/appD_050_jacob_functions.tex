@@ -3,7 +3,7 @@ Here we review Jacobi's functions and derive some basic properties. For more on 
 Let $0<k<1$ and consider the elliptic integral
 \[u=F(\varphi,k)=\int_{0}^{\varphi} \frac {dx}{\sqrt {1-k^2   \sin^2 x  
 }} \]
-The inverse of $F$ will be denoted by $\varphi=am(u,k)$ and is called the amplitude Jacobi function.
+The inverse of $F$ will be denoted by $\varphi=\text{am}(u,k)=\text{am}(u)$ and is called the amplitude Jacobi function.
 
 The functions
 \begin{align*}
@@ -14,11 +14,16 @@ The functions
  \end{align*}
 \noindent  are called the Jacobi's elliptic  functions. 
 For $k$ fixed they will denoted simply by $\cn(u)$ and $\sn(u).$
+
+
+\noindent Note: In the software Mathematica these functions are implemented taking $k^2$ as $k$.
+
+
 From definition basic properties are:
 
 \begin{align*}
 \cn(0)&=1,\; \sn(0)=0, \; \dn(0)=1;\\
-\cn(K)&=0,\; \sn(K)=1, \; \dn(K)=\sqrt{1-k^2}=k\\
+\cn(K)&=0,\; \sn(K)=1, \; \dn(K)=\sqrt{1-k^2}=k_1\\
 \cn(2K)&=-1,\; \sn(2K)=0, \; \dn(2K)=1.
    %
 \end{align*}
@@ -28,12 +33,13 @@ Also,
  \dn^2 (u)&+k^2\sn^2(u)  =1\\
 \sn'(u)&=\cn(u)\dn(u)\\
 \cn'(u)&=-\sn(u)\dn(u)\\
-\dn'(u)&=-k^2\sn(u)\cn(u)
+\dn'(u)&=-k^2\sn(u)\cn(u)\\
+\text{am}'(u)&=\dn(u)
 \end{align*}
 
 \begin{align*}
     \cn(u+v)&=\frac{\cn(u)\cn(v)-\sn(u)\sn(v)\dn(u)\dn(v)}{\Delta(u,v)}\\
-    \sn(u+v)&=\frac{\sn(u)\cn(v)\dn(v)+\sn(v)\cn(u)\dn(u)\dn(u)}{\Delta(u,v)}\\
+    \sn(u+v)&=\frac{\sn(u)\cn(v)\dn(v)+\sn(v)\cn(u)\dn(u) }{\Delta(u,v)}\\
     \dn(u+v)&=\frac{\dn(u)\dn(v)-k^2\sn(u)\sn(v)\cn(u)\cn(v) }{\Delta(u,v)}\\
     %
     \Delta(u,v)&=1-k^2\sn^2(u)\,\sn^2(v)

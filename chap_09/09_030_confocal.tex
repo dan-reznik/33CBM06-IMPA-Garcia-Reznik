@@ -40,7 +40,7 @@ This means that in any quadrangle the diagonals have equal length.
 
  \begin{proposition}[{\rm\cite[{\rm  Chapitre III}]{darboux1917}}] 
  	  \label{prop:dar1} Consider two confocal ellipses $\mathcal E$ and $\mathcal{E}'$ and a point $M\in\mathcal E$. Consider the   two tangents $\ell_P$ and $\ell_Q$,  as shown in   \cref{fig:da_cordas}, intersecting $\mathcal{E}_1$ in $P$ and $Q$. Then $|MP|+|MQ|-\text{arc}{(P,Q)}=\mathrm{cte}$, where $\text{arc}(P,Q)$ is the length of the elliptic arc with extremal points   $P$ and $Q$. In particular, in a   billiard triangle $\text{conv}[P_1,P_2,P_3]$,  $|P_1P_2|+|P_2P_3|+|P_3P_1|-L(\mathcal{E}_1  )=  c_1$, where $L(\mathcal{E}_1) $ is the length of $\mathcal{E}_1$, and all the billiard triangles have the same perimeter.
- 	
+ \label{prop:09-graves}	
  \end{proposition}
  \begin{figure}
  \begin{center}
@@ -75,4 +75,16 @@ Referring to \cref{fig:09-reciproca-graves}.
 
 \begin{proof} See \cref{app:appC-convex-billiard}. 
 See also \cite[page 14]{akopyan2007-conics}.
+\end{proof}
+
+   Suppose that in a pair of confocal ellipses $\{\E,\E_c \}$ we have a $N-$periodic $P_i$ $(i=1,\ldots, N) definig a $N$-gon $\mathcal{P}$ with turning number $\tau$. Denote by $Q_i$ the points of contact of the sidelines $P_iP_{i+1}$ with the caustic $\E_c$. Let $L$ (resp. $L_c$) be the perimeter of the N-gon $\mathcal{P}$ (resp. $\E_c$). In the above conditions it follows that:
+   
+\begin{proposition}
+   Then \[N D +\tau L_c= L\]
+   where $D=|P_{i+1}-Q_{i+1}|+|P_{i+1}-Q_i|-\text{arc}(Q_i,Q_{i+1})=\text{cte}$.
+  \label{prop:09-relacao-caustica} 
+\end{proposition}
+Direct consequence of \cref{prop:09-graves}.
+\begin{proof}
+
 \end{proof}

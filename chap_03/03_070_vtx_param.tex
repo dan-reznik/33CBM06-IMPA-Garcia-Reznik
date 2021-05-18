@@ -1,21 +1,104 @@
+Let us term $P(t)=[a\cos{t},b\sin{t}]$ the {\em standard} parametrization of a point $P$ on an ellipse. Conversely, obtain the ``position'' $t$ of $P=[x,y]$ on an ellipse:
 
+\[ t=\tan^{-1}{\frac{a y}{b x}}. \]
+
+As shown in \cref{fig:03-jacobi-param}(top), when a first vertex $P_1(t)$ in the billiard 3-periodic is parametrized in the standard way, though its position is linear on the $t$ parameter, it will drive motions of the other two vertices $P_2(t)$ and $P_3(t)$ which are both distinct and non-linear. 
+
+Fortunately, a uniform parametrization exists, which goes back to Jacobi, for all Poncelet families, based on the so-called ``universal measure'', which linearizes the Poncelet map, see \cite{koiller2021-spatial}. Specifically, vertices are obtained at fixed multiples of a constant $\Delta{u}$ in the argument of certain Jacobi elliptic functions. This parametrization, adapted to the elliptic billiard case, appears in \cite{stachel2021-billiards,stachel2021-billiards-param} and is reproduced below. First let's recall a few useful definitions. 
+
+The  notation adopted below is as \cite{armitage-2006}. 
+
+\begin{definition}
+The incomplete elliptic integral of the first kind $K(\varphi,k)$ is given by:
+\begin{equation}
+K(\varphi,k)=\int_0^{\varphi}\frac{d\theta}{\sqrt{1-k^2 \sin^2\theta}}
+\label{eqn:03-ellipticK}
+\end{equation}
+%\end{definition}
+
+%\begin{definition}
+The complete elliptic integral of the first kind $K(k)$ is simply $K(\pi/2,k)$.
+\end{definition}
+
+\begin{definition}
+The elliptic sine $\text{sn}$, cosine $\text{cn}$, and delta-amplitude $\text{dn}$ are given by:
+\begin{align*}
+\text{sn}(u,k)&=\sin\varphi\\
+\text{cn}(u,k)&=\cos\varphi\\
+\text{dn}(u,k)&=\sqrt{1- k^2\sin^2\varphi}\\
+\end{align*}
+where $\varphi=\text{am}(u,k)$ is known as the amplitude, i.e., the upper-limit in the integral in \cref{eqn:03-ellipticK} such that $K(\varphi,k)=u$.
+\end{definition}
+For a review of these functions see \cref{app:appD-jacob-functions}.
+
+\begin{remark} The above functions, when called in Mathematica, expect $ k^2 =m$  instead of $k$. In Maple this is not the case.
+With this terminology the  Jacobi elliptic functions are defined    as follows:
+\begin{align*}
+K(\varphi,m)&=\int_0^{\varphi} \frac{dy}{\sqrt{1-m\sin^2y}}=u,\;\; \varphi=\text{am}(u,m)\\
+%K(\varphi,k)=u\\ %
+\sn(u,m)&=\sin\varphi,\; \cn(u,m)=\cos\varphi,\; dn(u,m)=\sqrt{1-m\sin^2\varphi}, \end{align*}
+
+
+For example, in Maple we have $\sn(2,0.4)=\text{JacobiSN}(2,.4)=0.94569756\ldots$. In    Mathematica   $\sn(2,0.16)=\text{JacobiSN}(2,.16)=0.945698 \ldots$  and $\text{JacobiSN}(2,.4)=0.985090\ldots$.
+\end{remark}
+
+
+ \textcolor{red}{cuidado aqui. Na parametrizacao o m deve ser a excentricidade. Ja estou confuso com a incompatibilidade do maple mathematica}
+ 
 \begin{theorem}
-A billiard orbit $P_n$ $(n=1,\ldots, N) $ of period $N$  with turning number $\tau$, where $\mathrm{gcd}(N,\tau) =1$,  is parametrized by
+A billiard orbit $P_i$ $(i=1,\ldots, N) $ of period $N$  with turning number $\tau$, where $\mathrm{gcd}(N,\tau) =1$,  is parametrized on $u$ with period $4K$ where:
+
 
 \[ 
-P_n=
+P_i=
 %=\left[a\; \Jsn \left(u+\frac{4n\tau K}{N}, \frac{c}{a}\right), b\; \Jcn \left(u+\frac{4n\tau K}{N}, \frac{c}{a}\right)\right]\\
-\left[-a\,\sn  \left(u+\frac{4n\tau K}{N}, m \right) , b\,\cn  \left(u+\frac{4n\tau K}{N}, m \right)\right]
+\left[-a\,\sn  \left(u+ i \Delta{u},  {m} \right) , b\,\cn  \left(u + i \Delta{u}, { m} \right)\right]
 \]
- 
+
 where,
-\[ K=\int_{0}^{\frac{\pi}{2}} \frac {dx}{\sqrt {1-m^{2}   \sin^2 x  
-}},\;\; m=\frac{\sqrt{a_c^2-b_c^2}}{a_c}  \]
-\[a= \sqrt{b^2+ a_c^2-b_c^2}, \;\; b=\frac{b_c}{cn(\frac{2\tau K}{N}, m)}\]
-
-and $0\leq u\leq 4K.$
+\[ m^2=\frac{a_c^2-b_c^2}{a_c^2},\;\;\Delta{u}=\frac{4\tau K}{N},\;\;\;K=\int_{0}^{\frac{\pi}{2}} \frac {dx}{\sqrt {1-m^2\sin^2 x}} \]
+\[a= \sqrt{b^2+ a_c^2-b_c^2}, \;\; b=\frac{b_c}{\cn(\frac{\Delta{u}}{2}, m)}\]
 \end{theorem}
+\begin{proof} See \cite{stachel2021-billiards}.\end{proof}
 
-\begin{proof} See \cite{stachel2021-billiards-param}.
+A basic fact to obtain this parametrization is the following.
 
+Referring to \cref{fig:03-velocidade-angular}:
+
+\begin{proposition} 
+Consider a billiard orbit $P_i(t)$ $(i=1,2,\ldots, N$ and contact points $Q_i(t)$ with the caustic. Let $\vec v$ the vector velocity of $P_2(t)$. Let $\vec r_1=Q_1-P_2$ and $\vec r_2=Q_2-P_2$. Then
+\[ |\vec \omega_1|\;|\vec r_1|=|\vec \omega_2|\; |\vec r_2|\]
+where $\vec v=\vec\omega_1\wedge r_1= \vec\omega_2\wedge \vec r_2$.
+
+\label{fig:03-velocidade-angular}
+\end{proposition}
+
+\begin{proof}
 \end{proof}
+ 
+
+\textcolor{red}{ronaldo}
+ 
+
+Since in this chapter we are considering billiard 3-periodics, so above $N=3$, and $\tau=1$. As shown in \cref{fig:03-jacobi-param}, under the Jacobi parametrization each of the 3 vertices of billiard 3-periodics follows the exact same curve, albeit with a 120-degree phase.
+
+
+
+Recall the sum of cosines is constant for billiard 3-periodics. \cref{fig:03-jacobi-cos-param} shows how individual cosines follow either (i) 3-distinct curves, or (ii) the same exact curve (at different phases) if the parametrization is standard or Jacobi, respectively.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pics_03_290_parametrizations.eps}
+    \caption{The ``position'' $\theta_i$ (vertical axis) of a point on an ellipse with semi-axes $a,b$ vs the billiard 3-periodic parameter (horizontal axis). \textbf{Top:} vertex  under ``standard parametrization'', i.e., $P_1(t)=[a\cos{t},b\sin{t}]$. Notice while $P_1$'s position evolves linearly, those of $P_2$ and $P_3$ are different curves. \textbf{Bottom:} Said positions under Jacobi's parametrization. Notice the three positions are 120-degree delayed copies of one another.}. 
+    \label{fig:03-jacobi-param}
+\end{figure}
+
+\begin{proof}
+\textcolor{red}{ronaldo}
+\end{proof}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pics_03_300_cos_parametrizations.eps}
+    \caption{The cosines $\cos(theta_i)$ of billiard 3-periodic internal angles for the standard (top) and Jacobi parametrizations (bottom). While in the former case the three curves are distinct, in the latter case all cosines follow the same curve at different phases.}
+    \label{fig:03-jacobi-cos-param}
+\end{figure}

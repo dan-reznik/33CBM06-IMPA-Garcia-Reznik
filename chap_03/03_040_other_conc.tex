@@ -9,7 +9,14 @@ Below we introduce five additional notable 3-periodic Poncelet families interscr
 
 \section{Excentral Family}
 
-This is the Ponceletian family of excentral triangles to billiard 3-periodics. If the axes of its caustic are $a,b$, this family is inscribed in an ellipse with $a_e,b_e$ given in \cref{thm:03-incenter-excenter}; see \cref{fig:03-n3-affine}(left).
+This is the Ponceletian family of excentral triangles to billiard 3-periodics. If the axes of its caustic are $a,b$, this family is inscribed in an ellipse with $a_e,b_e$ given in \cref{thm:03-incenter-excenter}; see \cref{fig:03-n3-affine}(left). Indeed, by inverting the relations in the latter, we can express $a,b$\footnote{There is a slight abuse of notation in that these should have been labeled $a_c,b_c$. However we maintained these as $a,b$ since the caustic to the excentral family is the elliptic billiard.} in terms of $a_e,b_e$:
+
+\begin{proposition}
+Given the semi-axes $a_e$, $b_e$ of $\mathcal{E}_e$ the semi axis of the caustic $\mathcal{E}$ are given by:
+\[a=\frac{(\delta_e- a_e^2 - 3b_e^2) a_e}{2 c_e^2},\;\; b=\frac{(3a_e^2 + b_e^2 - \delta_e)b_e}{2 c_e^2}\]
+where $c_e^2=a_e^2-b_e^2$ and $  \delta_e=\sqrt{a_e^4 + 14a_e^2b_e^2 + b_e^4}$.
+\label{prop:03-excentral-caustic}
+\end{proposition}
 
 The symmedian point $X_6$ of the excentral triangle coincides with the mittenpunkt of its reference, see \cite[X(6)]{etc}. Therefore:
 
@@ -208,8 +215,7 @@ The sum of cosines conserved by billiard 3-periodics is the same as the one cons
 \end{proposition}
 
 \begin{proof}
-For the first statement it suffices to show that the $s'$-affine image of billiard excentrals has sides parallel to those of the $s$-image of billiard 3-periodics, i.e., the incircle family and use \cref{prop:03-incircle-same-sum-cos}.
-\textcolor{red}{ronaldo consegue seguir: Vou pensar nisso. Ainda nao finalizei}
+For the first statement it suffices to show that the $s'$-affine image of billiard excentrals has sides parallel to those of the $s$-image of billiard 3-periodics, i.e., the incircle family and use \cref{prop:03-incircle-same-sum-cos}. The second statement can be proved algebraically from vertex parametrizaton.
 \end{proof}
 
 \section{Homothetic Family}
@@ -337,8 +343,7 @@ The intersections $P_2$ and $P_3$ on $\E$ of the two tangents to $\E_c$ seen fro
     P_2& =[x_2,y_2]=\frac{1}{k_2}\left[\frac{p_1 x_1 + p_2 y_1}{b} ,  \frac{-w_1 x_1 + w_2 y_1}{a} \right] \\
     P_3&=[x_3,y_3]=\frac{1}{k_2}\left[\frac{p_1 x_1 - p_2 y_1}{b},\frac{w_1 x_1 + w_2 y_1}{a}\right]
 \end{align*}
-\textcolor{red}{15maio: parece que foi introduzido erro. conferir}
-where:
+
 \begin{align*}
     p_1 &=b\left(a^4  b_c^4 -(a^2 -  a_c^2)^2 b^4 \right) \\
     p_2 &= 2 a  \left( (a^2 + a_c^2)b^2 - a^2b_c^2  \right) k_1 \\
@@ -351,7 +356,7 @@ where:
 \label{prop:03-vtx-param}
 \end{proposition}
 
-We can obtain parametrizations for specific families by setting the caustic semi-axes $a_c$, $b_c$ as follows:
+Parametrizations for specific CAP families can be obtained from \cref{prop:03-vtx-param} by setting the caustic semi-axes $a_c$, $b_c$ as in \cref{tab:03-cap-vtx}.
 
 
 \begin{table}
@@ -370,7 +375,7 @@ homothetic   &  $a/2$ & $b/2$ &  \cref{prop:03-homothetic-cayley}    \\
 \hline
 dual & $(a b^2)/(a^2+b^2)$  & $(a^2 b)/(a^2+b^2)$   &  \cref{prop:03-dual-cayley}    \\
 \hline
-\makecell[lc]{conf.\\excentrals} & \textcolor{red}{ron}  &\textcolor{red}{ron} & \cref{thm:03-incenter-excenter} \\
+\makecell[lc]{conf.\\excentrals} & $\frac{(\delta_e- a_e^2 - 3b_e^2) a_e}{2 c_e^2}$ & $\frac{(3a_e^2 + b_e^2 - \delta_e)b_e}{2 c_e^2}$   & \cref{prop:03-excentral-caustic}\\
 \hline
 \end{tabular}
 \caption{Values for the caustic semi-axes $a_c,b_c$ to be used in the generic vertex parametrization for a CAP pair in \cref{prop:03-vtx-param}}
@@ -405,59 +410,30 @@ Dual & $X_4$ & n/a &  \\
 \label{tab:n3-conc-families}
 \end{table}
 
-\section{Exercises}
+Also of interest is data about caustics, regarded as a family's fixed inconic, shown in \cref{tab:03-inconics}.
 
-\begin{exercise}
- \label{ex:03-power-euler} 
-Prove that the power of the circumcircle with with respect to the common center in each of the following 3-periodic families is constant and given by the listed expressions. (i) incircle: $-a_e b_e$; (ii) homothetic: $-({a_e^2+b_e^2})/{2}$, and (iii) excentral: $-a^2-b^2-2\delta$. 
-\end{exercise}
+\begin{table}
+\centering
+\begin{tabular}{|r|c|c|c|c|c|}
+\hline
+\makecell[rc]{Poncelet\\family} &
+center &
+\makecell[cc]{caustic\\(inconic)} & 
+\makecell[cc]{Brianchon\\point} &
+\makecell[cc]{caustic\\contact tri} &
+\makecell[cc]{contact tri\\ \texttt{bit.ly/*}} \\
+\hline
+incircle & $X_1$ &  incircle & $X_7$ & intouch & \href{https://bit.ly/3tYYu3h}{\texttt{3tYYu3h}}\\
+homothetic & $X_2$ & Steiner & $X_2$ & medial & \href{https://bit.ly/3474753}{\texttt{3474753}} \\
+circumcircle & $X_3$ & ? & $X_{69}$ & $X_{69}$-cev. & \href{https://bit.ly/2T3qu9f}{\texttt{2T3qu9f}}\\
+dual & $X_4$ & ? & $X_{253}$ & $X_{253}$-cev. & \href{https://bit.ly/2SUfomB}{\texttt{2SUfomB}} \\
+excentral & $X_6$ & orthic & $X_4$ & orthic & \href{https://bit.ly/3uXXI7H}{\texttt{3uXXI7H}}\\
+confocal & $X_9$ & Mandart & $X_8$ & extouch & \href{https://bit.ly/3wiBeyv}{\texttt{3wiBeyv}} \\
+\hline
+\end{tabular}
+\caption{Information about the caustic to various CAP families, regarded as a fixed inconic. The Brianchon point is the perspector to the triangle whose vertices are at the touchpoints with the inconic, see \cite[Brianchon point]{mw}. When named, this triangel appears in the ``caustic contact tri'' column. An link to an animation for each case is provided.}
+\label{tab:03-inconics}
+\end{table}
 
-\begin{exercise}
-\label{ex:03-cosine-circle}
-Prove the radius $r^*$ of the stationary cosine circle of the excentral family is larger than the major axis $a$ of its caustic. 
-\end{exercise}
-
-
-\begin{exercise}
-Prove \cref{lem:03-circum-x5-locus}.
-\label{ex:03-circum-x5-locus}
-\end{exercise}
-
-\begin{exercise}
-Recall the dual family has stationary orthocenter $X_4$. Prove that the inversive image of the dual family wrt to a circle concentric with the ellipse pair is a non-Ponceletian family with incenter $X_1'$ stationary at the common center. This inversive family is inscribed in Booth's curve and its caustic can contain multiple spikes; see it \href{https://bit.ly/3vCCe05}{Live}.
-\end{exercise}
-
-\begin{exercise}
-Given a reference triangle $T$, its tangential triangle $T'$ has sides tangent to the circumcircle at the vertices of $T$. A known fact is that the sides of $T'$ are parallel to those of the orthic $T_h$ of $T$, see \cite[Tangential Triangle]{mw}. For any acute triangle $T$, the Gergonne point $X_7'$ of the tangential triangle coincides with the symmedian $X_6$ of $T$, see \cite[Contact Triangle]{mw}.
-
-Let $T$ denote the Poncelet family of excentral triangles. We've seen above that (i) this family is all acute, and that (ii) its symmedian point $X_6$ is stationary. Let $T'$ denote their tangential triangles. This family will be non-Ponceletian: its vertices do not sweep a conic nor do its sides envelop one.
-
-Since the $T$ are all acute, they can be thought of as the contact triangles of the $T'$. Therefore the Gergonne point $X_7'$ of the tangentials to the excentrals will coincide with $X_6$ of the excentrals and be stationary, see \cite[Contact Triangle]{mw}.
-
-Prove that the ratio of homothety between the orthics (billiard 3-periodics) and the tangentials is invariant. Corollaries: (i) the $T'$ conserve perimeter; (ii) they conserve the same $r/R$ as the excentral orthics, i.e., the corresponding billiard 3-periodics. See it \href{https://bit.ly/3o7JM8V}{Live}.
-
-Also prove that the locus of $X_9'$ of the $T'$ is an ellipse.
-
-Derive equations for the curves swept by the vertices of $T'$ as well as their caustic. 
-\end{exercise}
-
-\section{Research Questions}
-
-\begin{question}
-Referring to \cref{fig:03-n3-dual}, are there any conserved quantities for the dual family besides stationarity of $X_4$ at the common center?
-\end{question}
-
-\begin{question}
-Referring to  the dashed green triangle in \cref{fig:03-n3-affine}(middle), are there any conserved quantities and/or fixed triangle centers for the family which is an $s$-affine image of billiard excentrals?
-\end{question}
-
-\begin{question}
-\textcolor{red}{inversive}
-Consider the family of inversive images of excentral triangles with respect to a circle centered at a point $M$ in the plane. Show the symmedian point $X_6$ of such a family will be stationary regardless of $M$. Compute the location of $X_6$. See this curious phenomenon in a \href{https://youtu.be/wwX_QfkjVi0}{Video}.
-\end{question}
-
-\begin{question}
-Consider the homothetic family and its polar image with respect to a focus of the outer ellipse $\E$. Prove that (i) the caustic is a circle, derive its location and radius. (ii) the family is inscribed in a conic, namely, below (resp. above) a certain aspect ratio $a/b$ of $\E$, the conic is an an ellipse (resp. hyperbola). (iii) the Gergonne point $X_7$ of the family is stationary.
-Live: family inscribed in \href{https://bit.ly/33p7xj6}{ellipse}, \href{https://bit.ly/3bbTaTt}{hyperbola}.
-\end{question}
-
+\input{chap_03/03_045_other_conc_exercises}
+\input{chap_03/03_047_other_conc_research}
