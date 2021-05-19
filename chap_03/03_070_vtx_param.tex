@@ -63,17 +63,22 @@ where,
 
 A basic fact to obtain this parametrization is the following.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chap_03/pics/pics-cap2-100-param-jacobi.pdf}
+    \caption{ Angular velocity $\vec v=\vec \omega\wedge \vec r$. } 
+    \end{figure}
 Referring to \cref{fig:03-velocidade-angular}:
 
 \begin{proposition} 
-Consider a billiard orbit $P_i(t)$ $(i=1,2,\ldots, N$ and contact points $Q_i(t)$ with the caustic. Let $\vec v$ the vector velocity of $P_2(t)$. Let $\vec r_1=Q_1-P_2$ and $\vec r_2=Q_2-P_2$. Then
+Consider   segment of orbits $P_1P_2$ and $P_2P_3$  and contact points $Q_1$ and $Q_2$ with the caustic in an elliptic billiard. Let $\vec v$ the vector velocity of $P_2(t)$. Let $\vec r_1=Q_1-P_2$ and $\vec r_2=Q_2-P_2$. Then
 \[ |\vec \omega_1|\;|\vec r_1|=|\vec \omega_2|\; |\vec r_2|\]
 where $\vec v=\vec\omega_1\wedge r_1= \vec\omega_2\wedge \vec r_2$.
 
 \label{fig:03-velocidade-angular}
 \end{proposition}
 
-\begin{proof}
+\begin{proof} Let $\vec v=P_2'(t)$. From Graves's theorem we have that  $|\vec r_1|+|\vec r_2|-\text{arc}(Q_1,Q_2)=\text{cte}$,  it follows that in decomposition of $\vec v=\vec v_{t_1}+\vec v_{n_1}=\vec v_{t_2}+\vec v_{n_2}$ we have that $|\vec v_{t_1}|=|\vec v_{t_2}|$ and  $|\vec v_{n_1}|=|\vec v_{n_2}|$. So the result follows from the   definition of angular velocity. More details see \cite{stachel2021-billiards-param}.
 \end{proof}
  
 

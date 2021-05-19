@@ -57,7 +57,8 @@ It turns out the locus of $X_4$ can be used to determine if the billiard 3-perio
 \begin{proposition}
 The locus of $X_4$ is internally tangent to the elliptic billiard at its top and bottom vertices when $a/b=\alpha_4$ given by:
 
-\[\sqrt{2\,\sqrt {2}-1}\;{\simeq}\;1.352.\]
+\[\alpha_4 = \sqrt{2\,\sqrt {2}-1}\;{\simeq}\;1.352.\]
+\label{prop:04-alpha4}
 \end{proposition}
 
 \begin{proof}
@@ -223,30 +224,45 @@ As shown in \cref{fig:04-locus-x11-x100}, the loci of vertices of some other tri
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{pics_04_070_non_elliptic.eps}
-    \caption{Over billiard 3-periodics, the loci of vertices of certain derived triangles is non-elliptic, namely: the (i) intouch (green), (ii) Feuerbach (not to be confused with the Feuerbach {\em point}) (blue), (iii) medial (red), triangles, and many others not shown. A noteworthy excpetion is the extouch triangle, whose vertices sweep the confocal caustic.
-     \href{https://youtu.be/OGvCQbYqJyI}{Video}}
+    \caption{Non-elliptic loci of the vertices of triangles derived from billiard 3-periodics: the (i) intouch (green), (ii) Feuerbach (not to be confused with the Feuerbach {\em point}) (blue), (iii) medial (red), triangles. A noteworthy excpetion is the extouch triangle (light brown), whose vertices sweep the confocal caustic.
+     \href{https://youtu.be/OGvCQbYqJyI}{Video}, \href{https://bit.ly/3orrSxQ}{Live}}
     \label{fig:04-locus-x11-x100}
 \end{figure}
+
+\section{Orthic incenter: a locus with kinks}
+
+Loci considered thus far have been smooth, regular curves. Here we give an example of one with four sharp corners. Recall the {\em orthic triangle} has vertices at the feet of a triangle's altitudes; see \cref{fig:04-orthic-incenter}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\textwidth]{pics_04_140_orthic_incenter.eps}
+    \caption{\textbf{Left}: the orthic triangle (orange) is shown of an acute reference triangle $T$ (blue), for with an interior orthocenter $X_4$. In this case, the orthic incenter $X_1'$ coincides with $X_4$. \textbf{Right}: When $T$ (blue) is obtuse, $X_4$ is exterior. Furthermore, two orthic vertices are outside of $T$ and $X_1'$ coincides with the obtuse vertex, $B$ in the picture. \href{https://youtu.be/-bLuvICzmqM}{Video}}
+    \label{fig:04-orthic-incenter}
+\end{figure}
+
+
+Let $\alpha_4$ be as defined in \cref{prop:04-alpha4}. Referring to
+\cref{fig:04-orthocenter-loci}:
 
 % \includegraphics[trim={left bot right upper},clip]
 \begin{figure}
     \centering
     \includegraphics[trim={0 0 0 20},clip,width=\textwidth]{pics_04_120_ort_loci_kink.eps}
-    \caption{Let $T$ and $T_h$ be a billiard 3-periodic and its Orthic Triangle (blue and purple, respectively). Above (resp. below) a certain aspect ratio, the locus of the incenter of the orthic is a 4-elliptic arc quadrilateral (resp. ellipse). Shown here are 3 snapshots of the former case. \textbf{(a)} $T$ is acute ($X_4$ is interior to the EB), and $I_h=X_4$. \textbf{(b)} $X_4$ is on the EB and $T$ is a right triangle. $T_h$ degenerates to a segment. \textbf{(c)} $X_4$ is exterior to the EB. Two of $T_h$'s vertices are outside $T$. $I_h$ is pinned to $T$'s obtuse vertex, on the EB. $X_4$ is an Excenter of the 3-periodic. The complete locus of $I_h$ comprises therefore 4 elliptic arcs (thick purple) joined at the corners. \href{https://youtu.be/3qJnwpFkUFQ}{Video}, \href{https://bit.ly/33TVjit}{Live}}
-    \label{fig:orthic_incenter_locus}
+    \caption{From left to right: the orthic triangle (purple) of billiard 3-periodics (blue) is shown at 3 different positions. The locus of $X_4$ (orange ellipse) intersects the billiard, i.e., $a/b>\alpha_4$. When a 3-periodic is acute (left), the orthic incenter coincides with $X_4$. When it is a right triangle (middle), $X_4$ is on the elliptic billiard and the orthic is a degenerate segment. When it is obtuse (right), the orthic incenter remains ``pinned'' to the obtuse vertex. The end result is that the locus of the orthic incenter is a quadrilateral with four elliptic arcs (thick purple, right) with four corners.  \href{https://youtu.be/3qJnwpFkUFQ}{Video}, \href{https://bit.ly/33TVjit}{Live}}
+    \label{fig:04-orthic_incenter_locus}
 \end{figure}
 
-%%% BEGIN EXERCISES
-\section{Exercises}
+\begin{proposition}
+If $a/b>\alpha_4$, the locus of the incenter of the orthic triangle of billiard 3-periodics is a ``quadrilateral'' of four elliptic arcs.
+\end{proposition}
 
-\begin{exercise}
-Calculate the elliptic billiard aspect ratio $a/b$ such that top and bottom vertices of the elliptic locus of $X_3$ coincide each with the billiard top and bottom vertices. Repeat for the locus of $X_5$.
-\end{exercise}
+To see this, let $T$ be a triangle, $T_h$ its Orthic\footnote{Its vertices are the feet of the altitudes.}, and $I_h$ be the latter's Incenter. It is well-known that if $T$ is acute $I_h$ coincides with $T$'s Orthocenter $X_4$. However, for obtuse $T$:
 
-\begin{exercise}
-Calculate the elliptic billiard aspect ration $a/b$ such that the locus of $X_4$ is identical to a $90^\circ$ rotated copy of billiard.
-\end{exercise}
+\begin{lemma}
+$T_h$ has two vertices outside of $T$, and $I_h$ is ``pinned'' to the obtuse vertex
+\label{lem:pinned}
+\end{lemma}
 
-\begin{exercise}
-Over billiard 3-periodics, the envelope of the Euler line is an astroidal-like curve with four cusps, see it \href{https://bit.ly/3yiCvrn}{Live}. Derive its equation. Also, find the elliptic billiard aspect ratio $a/b$ such that the top and bottom cusps of said curve coincide each with top and bottom vertices of the elliptic billiard.
-\end{exercise}
+This is a known result  \cite[Chapter 1]{coxeter67}, which we revisit in Appendix~\ref{app:orthic-incenter}. This curious phenomenon is illustrated in Figure~\ref{fig:orthic-incenter}. 
+
+\input{chap_04/04_034_confocal_exercises}
