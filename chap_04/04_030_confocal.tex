@@ -43,7 +43,7 @@ As it turns out, the locus of 49 out of the first 200 centers in \cite{etc} are 
 \end{figure}
 
 %%% begin X4
-\section{The locus of the orthocenter: when 3-periodics are obtuse}
+\section{When billiard 3-periodics are obtuse}
 
 \begin{figure}
     \centering
@@ -84,6 +84,16 @@ If $a/b<\alpha_4$ (resp. $a/b>\alpha_4$) the 3-periodic family will not (resp. w
 \begin{proof}
 If the 3-periodic is acute, $X_4$ is in its interior, therefore also internal to the EB. If the 3-periodic is a right triangle, $X_4$ lies on the right-angle vertex and is therefore on the EB. If the 3-periodic is obtuse, $X_4$ lies on exterior wedge between sides incident on the obtuse vertex (feet of altitudes are exterior). Since the latter is on the EB, $X_4$ is exterior to the EB.
 \end{proof}
+
+Another way to think of this is depicted in \cref{fig:04-obtuse-zones}: $a/b>\alpha_4$, opens up two ``zones'' along the top and bottom halves of the elliptic billiard. A 3-periodic will be obtuse if and only if one of its vertices is on either zone. These zones are precisely portions of the elliptic billiard which are interior to the locus of $X_4$; see \cref{fig:04-orthocenter-loci}(right). When $a/b=\alpha_4$ said zones collapse to the top and bottom vertices of the elliptic billiard; see \cref{fig:04-orthocenter-loci}(bottom left).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.66\textwidth]{pics_04_150_rect_zones.eps}
+    \caption{Both acute (blue) and obtuse (dashed blue) billiard 3-periodics are shown. In this case $a/b=1.618>\alpha_4$. If a 3-periodic vertex is located in the red arcs along the top and bottom halves of the elliptic billiard, the 3-periodic will be obtuse.}
+\label{fig:04-obtuse-zones}
+\end{figure}
+
 %%% end X4
 
 %%% begin X6
@@ -213,7 +223,7 @@ A few triangles derived from billiard 3-periodics are shown in \cref{fig:04-deri
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{pics_04_100_confocal_derived.eps}
-    \caption{Triangles derived from an isosceles billiard 3-periodic (blue). These contain one vertex on the axis of symmetry. \href{https://youtu.be/xyroRTEVNDc}{Video}}
+    \caption{Triangles derived from an isosceles billiard 3-periodic (blue). These contain one vertex on the axis of symmetry. \href{https://youtu.be/xyroRTEVNDc}{Video}, \href{https://bit.ly/3fyylD0}{Live}}
     \label{fig:04-derived-isosceles}
 \end{figure}
 
@@ -231,7 +241,7 @@ As shown in \cref{fig:04-locus-x11-x100}, the loci of vertices of some other tri
 
 \section{Orthic incenter: a locus with kinks}
 
-Loci considered thus far have been smooth, regular curves. Here we give an example of one with four sharp corners. Recall the {\em orthic triangle} has vertices at the feet of a triangle's altitudes; see \cref{fig:04-orthic-incenter}. 
+Loci considered thus far have been smooth, regular curves. Here we give an example of one with four corners. Recall that given a triangle $T$, the orthic triangle has vertices at the feet of $T$'s altitudes.
 
 \begin{figure}
     \centering
@@ -240,8 +250,17 @@ Loci considered thus far have been smooth, regular curves. Here we give an examp
     \label{fig:04-orthic-incenter}
 \end{figure}
 
+Referring to \cref{fig:04-orthic-incenter}, 
+it is easy to see that if a triangle $T$ is acute (resp. obtuse), all three vertices (only one vertex) of the orthic will lie on a sideline. In the obtuse case, the other two will lie on extensions of two sidelines, i.e., they will be exterior to $T$.
 
-Let $\alpha_4$ be as defined in \cref{prop:04-alpha4}. Referring to
+An interesting result, mentioned in \cite[Chapter 1]{coxeter67}, is the ``switching'' behavior of the incenter of the orthic triangle:
+
+\begin{lemma}
+If a triangle is acute (resp. obtuse), the incenter of the orthic will coincide with the orthocenter (resp. the obtuse vertex of $T$).
+\label{lem:04-pinned}
+\end{lemma}
+
+Recall that for billiard 3-periodics to include obtuse triangles, $a/b>\alpha_4$; see \cref{prop:04-alpha4}. Referring to
 \cref{fig:04-orthocenter-loci}:
 
 % \includegraphics[trim={left bot right upper},clip]
@@ -252,17 +271,32 @@ Let $\alpha_4$ be as defined in \cref{prop:04-alpha4}. Referring to
     \label{fig:04-orthic_incenter_locus}
 \end{figure}
 
-\begin{proposition}
-If $a/b>\alpha_4$, the locus of the incenter of the orthic triangle of billiard 3-periodics is a ``quadrilateral'' of four elliptic arcs.
-\end{proposition}
+\begin{corollary}
+If $a/b>\alpha_4$, the locus of the incenter of the orthic triangle of billiard 3-periodics is an elliptic arc ``quadrilateral'' with four corners.
+\end{corollary}
 
-To see this, let $T$ be a triangle, $T_h$ its Orthic\footnote{Its vertices are the feet of the altitudes.}, and $I_h$ be the latter's Incenter. It is well-known that if $T$ is acute $I_h$ coincides with $T$'s Orthocenter $X_4$. However, for obtuse $T$:
+%%% begin self-inter
 
-\begin{lemma}
-$T_h$ has two vertices outside of $T$, and $I_h$ is ``pinned'' to the obtuse vertex
-\label{lem:pinned}
-\end{lemma}
+\section{The self-intersecting locus of \torp{$X_{59}$}{X(59)}}
 
-This is a known result  \cite[Chapter 1]{coxeter67}, which we revisit in Appendix~\ref{app:orthic-incenter}. This curious phenomenon is illustrated in Figure~\ref{fig:orthic-incenter}. 
+Consider the curious case of a triangle center which is the isogonal conjugate of the Feuerbach point, listed on \cite{etc} as $X_{59}$. We revisit its intriguing locus, shown previously in \cref{fig:01-intouch-x59}(right).
 
+This is a continuous curve with four self-intersections, internally tangent to the elliptic billiard on its four vertices independently of $a/b$; see \cref{fig:04-x59-locus}. Since it intersects a line parallel to and infinitesimally away from either axis at six points, its degree must be at least 6.
+
+We propose leave it as a research question (below) the derivation of this locus (as an implicit and/or parametric equation) and of its critical points. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pics_04_160_x59_center.eps}
+    \caption{Over billiard 3-periodics, the locus of $X_{59}$ is a continuous curve with four self-intersections, tangent to the billiard at its four vertices. \textbf{Top Left}: if $a/b$ is slightly above 1, the locus of  $X_{59}$ is nearly four-fold symmetric. Not shown: if $a/b=1$, $X_{59}$ will be on the line at infinity. \textbf{Bottom Left}: An acute 3 periodic $a/b<\alpha_4$, and an acute 3-periodic. \textbf{Right}: a right-angle 3-periodic in an $a/b>\alpha_4$ elliptic billiard. \href{https://youtu.be/pl_PqSuhlx0}{Video}, \href{https://bit.ly/3fvDlZd}{Live}}
+    \label{fig:04-x59-locus}
+\end{figure}
+
+%%% end self-inter
+
+%%% begin non-compact
+
+%%% end non-compact
+
+%%% EXERCISES
 \input{chap_04/04_034_confocal_exercises}
