@@ -24,7 +24,7 @@ Trilinears coordinates $[p,q,r]$  of a point $X=(x,y) \in \mathbb{R}^2$ can be  
 
 \begin{equation}
 \label{eqn:appAtrilin-cartesian}
-X=\frac{p a A + q b B + r c C}{pa+qb+rc}
+X=\frac{p a A + q b B + r c C}{pa+q b+r c}
 \end{equation}
 where $A=(x_a,y_a)$, $B=(x_b,y_b)$, $C=(x_c,y_c)$ are the vertices of the triangle $ABC$ expressed in cartesian coordinates.
 
@@ -100,6 +100,8 @@ Constructions for a few basic Triangle Centers are shown in \cref{fig:constructi
               \hline
                $X_{33}$ &  \makecell[cc]{perspector of the orthic\\and intangents triangles}  & $1 +\sec{A}$ \\
             \hline
+            %  $X_{88}$ & ss & $1/(b+c-2a)$ \\
+         %     \hline
     \end{tabular}
     \caption{Some triangle centers and their first trilinear coordinate expressed as a symmetric function $f(a,b,c)$ on the sidelengths. The complete trilinear vector is given cyclically by $[f(a,b,c):f(b,c,a):f(c,a,b)]$. Note that sometimes these are more concisely expressed as trig functions on the angles $A,B,C$ which can be converted back to $f(a,b,c)$ via the law of sines and/or cosines.}
     \label{tab:Xitrilinear}
@@ -279,11 +281,15 @@ Developing the calculations it follows that the Euler line is given by:
 \[  \cos A   (  \cos ^  {2}B - \cos^{2}C
 ) x+\cos B \left( \cos ^{2} C  -\cos^2 A 
 \right) y+\cos C \left(   \cos  ^{2}A-  \cos ^2 B   \right) z=0.\]
+
+In terms of the sides $a$, $b$ and $c$, the Euler line is given by:
+\[a(c^2 - b^2) (-a^2 + b^2 + c^2)x + b(a^2 - c^2) (a^2 - b^2 + c^2)y + c(b^2 - a^2) (a^2 + b^2 - c^2)z=0
+\]
 The point at infinity in the Euler line is the intersection of the Euler line with the line  $ax+by+cz=0$ ( or equivalently 
 $\sin A \;x+\sin B\; y+\sin C \; z=0$).
 
 A notable point in the Euler line is the barycenter $X_2$,  which has trilinear coordinates
-$[a,b,c]\equiv [\sin A, \sin B, \sin C]$. 
+$[1/a,1/b,1/c]\equiv [\sin A, \sin B, \sin C]$. 
 
 
 
@@ -295,3 +301,16 @@ $[a,b,c]\equiv [\sin A, \sin B, \sin C]$.
 \begin{proof}
 	
 	\end{proof}
+	
+	\begin{proposition}
+	    Consider the triangle $A=[\alpha,\beta]$, $B=[-1,0], C=[1,0]$.
+	    The Euler line is given by:
+	   \[ (3-3\alpha^2 - \beta^2  )x - 2\alpha \beta y + \alpha(\alpha^2 + \beta^2 - 1)=0\]
+	\end{proposition}
+	
+	\begin{proof} In cartesian coordinates:
+	\[ X_3=[0, \frac{\alpha^2 + \beta^2 - 1}{2\beta}],\;\; X_4=[\alpha, \frac{1-\alpha^2  }{\beta}]
+	\]
+	 Therefore the result follows from direct calculations.   
+	\end{proof}
+	

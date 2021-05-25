@@ -231,9 +231,8 @@ Consider an isosceles 3-periodic orbit given by \cref{eq:orbita3-isosceles}.
 %	\textcolor{red}{localizar depois}
 \end{proof}
 
-\section{Vertex Parametrization with Jacobi's Elliptic Functions}
-\input{chap_03/03_070_vtx_param}
-
+\section{Confocal Vertex Parametrization}
+\input{chap_03/03_035_confocal_vtx_param}
 
 \section{Exercises}
 
@@ -300,6 +299,24 @@ Show that the polygon $\{C_1(t),C_2(t),C_3(t)\}$ is a segment that can be bounde
 \begin{exercise} Which simple or self-intersected $N$- gon (closed polygon with $N$ vertices and $N$ sides) can be an orbit on an elliptic billiard? 
 
  For $N=4$ only the parallelogram can be a non self-intersected orbit on an elliptic billiard, see \cite{connes07}. For the analysis of self-intersected $4-gons$ see \cite{garcia2020-self-intersected}.
+\end{exercise}
+
+\begin{exercise}
+ Consider a 3-periodic billiard orbit and its antipodal orbit. Show that the six points of intersections of the two triangles are contained in a stationary confocal ellipse $\mathcal{E}_h$: $x^2/a_h^2+y^2/b_h^2=1$ where:
+
+
+\begin{align*}
+	a_h=& {\frac { \left(  \delta -b^2\right) \left( {a}^{2}+{b}^{2}+2\,\delta \right)\sqrt {2\delta-{a}^{2}-{b}^{2} 
+			 }  }{3 \left( {a}^{2}-{
+				b}^{2} \right) ^{2}}}\\
+	%
+b_h=&  \,{\frac {\left( {a}^{2}-\delta \right)  \left( {a}^{2}+{b}^{2}+2\,\delta \right) \sqrt {2\delta -{a}^{2
+			}-{b}^{2} } }{3 \left( {a}^{2}-
+		{b}^{2} \right) ^{2}}}
+%
+\end{align*}
+Conclude that the pair of ellipses $\{\mathcal{E}_h, \mathcal{E}_1\}$ is a billiard pair having all orbits of period 6.
+Also show that the pair $\{\mathcal{E} , \mathcal{E}_h \}$ defines a zig-zag billiard and that the orbits have period 12 and  that the perimeter is  constant. %See Fig. \ref{fig:6zigzag}.
 \end{exercise}
 
 \section{Research Questions}

@@ -25,7 +25,7 @@ Introduce the symbolic variables $u, u_1, u_2$
 \end{equation*} % \smallskip
 Let sidelengths $s_1=|P_3-P_2|,\; s_2=|P_1-P_3|,\;s_3=|P_2-P_1|$. Define $g_1=s_1^2-|P_3-P_2|^2$, $g_2=s_2^2-|P_3-P_1|^2$
 and $g_3=s_3^2-|P_2-P_1|^2$. 
-Therefore, $g_i$(i=1,2,3)   are polynomial expressions on $s_i$ and $u,u_1,u_2$:
+Therefore, $g_i$(i=1,2,3)   are polynomial expressions on $s_i$ and $(u,u_1,u_2)$:
 
 
 	\begin{align*}
@@ -40,7 +40,8 @@ omitted, but can be evaluated from the vertex parametrization given in \cref{pro
 \begin{equation*} P_1 = (a\,u, b\,u_1),\;\;P_2 = (p_{2x}, p_{2y})/p_3,\;\;\;P_3 = (p_{3x}, p_{3y})/p_3 
 \end{equation*}
  
-\noindent Expressions for the vertices appear in \cref{prop:03-vtx-param}. Equations $g_i=0$, $i=1,2,3$, are polynomial in $ s_i,u,u_1,u_2$.
+%\noindent Expressions for the vertices appear in %\cref{prop:03-vtx-param}.
+Equations $g_i=0$ \, ($i=1,2,3$), are polynomial in $ (s_i,u,u_1,u_2)$.
  
 \begin{step} Express the locus  $X$ as a  rational function on  $u,u_1, u_2, s_1, s_2, s_3$.
 \end{step}
@@ -102,38 +103,6 @@ When not rational in the sidelengths, except a few cases\footnote{For instance H
 in Kimberling's list have explicit Trilinears involving fractional powers and/or terms containing the triangle area. Those can be made implicit, i.e,
 given by zero sets of polynomials involving $p,q,r, s_1, s_2, s_3$.  The chain of resultants to be computed will be increased by three, in order to eliminate the variables $p,q, r$ before (or after) $s_1, s_2, s_3$.
 
-\subsubsection{Supporting Lemmas}
-\label{sec:supporting-lemmas}
-
-\begin{lemma}
-\label{lem:1coord}
-Let $P_1=({a}{u},b\sqrt{1-u^2}).$
-	The coordinates of $P_2$ and $P_3$ of the 3-periodic billiard orbit are rational functions in the variables $u, u_1, u_2$, where
-	$u_1=\sqrt{1-u^2}$, $u_2=\sqrt{k_1+k_2 u^2}$ 
-and
-%\textcolor{red}{checar valores de k1 e k2}
-	$k_1= a_c^2(b^2 - b_c^2)a^2b^2,$ $ k_2= a^2b^2(a^2b_c^2 - a_c^2b^2)$.  
-		
-	\end{lemma}
-	
-	\begin{proof}
-	Follows directly from the vertex parametrization in \cref{prop:03-vtx-param}.
- 
-	In fact,  $P_2=(x_2(u),y_2(u)) =( p_{2x}/A_{11}, p_{2y}/A_{11})$ and $P_3=(x_3(u),y_3(u))$ $=( p_{3x}/A_{11}, p_{3y}/A_{11})$, where $p_{2x}$, $p_{2y}$, $p_{3x}$ and $p_{3y}$ have degree $2$ in $(u,u_1,u_2)$  and $A_{11}$ algebraic of degree $2$ in $u$. 
-%	Expressions for $u_1,u_2$ appear in %Appendix~\ref{app:exit-angle}.	\textcolor{red}{ver equacao a referenciar}
-\end{proof}
-	
-\begin{lemma}
-\label{lem:2sides} Let $P_1=(a u,b\sqrt{1-u^2}).$ Let $s_1$, $s_2$ and $s_3$ the sides of the triangular orbit ${P_1}{P_2}{P_3}$. Then $g_1(u,s_1)=0$, $g_2(s_2,u_2,u)=0$ and $g_3(s_3,u_2,u)=0$ for polynomial functions $g_i$.  
-\end{lemma}
-	
-\begin{proof}
-Using the parametrization of the 3-periodic Poncelet orbit it follows that $s_1^2-|P_2-P_3|^2=0$ is a rational equation in the variables $u,s_1$. Simplifying, leads to $g_1(s_1,u)=0.$
-
-Analogously for $s_2$ and $s_3$. In this case, the equations $s_2^2-|P_1-P_3|^2=0$ and  $s_3^2-|P_1-P_2|^2=0$   have   square roots $u_2=\sqrt{k_2-k_1 u^2}$ and $u_1=\sqrt{1-u^2}$ and  are rational in the variables $s_2,u_2,u_1,u$ and $s_3,u_2,u_1,u$ respectively. It follows that the degrees of $g_1$, $g_2$, and $g_3$ are $10$.  Simplifying, leads to $g_2(s_2,u_2,u_1,u)=0 $ and $g_3(s_3,u_2,u_1,u)=0$. 
-\end{proof}
-
-
  \begin{theorem}\label{thm:loci_algebraic_general}
  In the family of 3-periodic orbits in a generic Poncelet pair of conics the locus of a rational triangle center is an algebraic curve. 
  \end{theorem}
@@ -141,3 +110,38 @@ Analogously for $s_2$ and $s_3$. In this case, the equations $s_2^2-|P_1-P_3|^2=
  \begin{proof}
  The analysis follow the same steps as in the case of a Poncelet pair of ellipses.  See proof of \cref{thm:04-rational-center}. 
 \end{proof}
+
+\subsubsection{Supporting Lemmas}
+\label{sec:supporting-lemmas}
+
+\begin{lemma}
+\label{lem:1coord}
+Let $P_1=({a}{u},b\sqrt{1-u^2}).$
+	The coordinates of $P_2$ and $P_3$ of the 3-periodic billiard orbit are rational functions in the variables $u, u_1, u_2$, where
+	$u_1=\sqrt{1-u^2}$, $u_2=\sqrt{r_1+r_2 u^2}$ 
+and
+%\textcolor{red}{checar valores de k1 e k2}
+	$r_1= a_c^2(b^2 - b_c^2)a^2b^2,$ $ r_2= a^2b^2(a^2b_c^2 - a_c^2b^2)$.  
+		
+	\end{lemma}
+	
+	\begin{proof}
+	Follows directly from the vertex parametrization in \cref{prop:03-vtx-param}.
+%\noindent	In fact,  $P_2=(x_2(u),y_2(u)) =( %p_{2x}/A_{11}, p_{2y}/A_{11})$ and %$P_3=(x_3(u),y_3(u))$ $=( p_{3x}/A_{11}, %p_{3y}/A_{11})$, where $p_{2x}$, $p_{2y}$, %$p_{3x}$ and $p_{3y}$ have degree $2$ in %$(u,u_1,u_2)$  and $A_{11}$ algebraic of degree %$2$ in $u$. 
+%	Expressions for $u_1,u_2$ appear in %Appendix~\ref{app:exit-angle}.	\textcolor{red}{ver equacao a referenciar}
+\end{proof}
+	
+	
+	
+
+
+\begin{lemma}
+\label{lem:2sides} Let $P_1=(a u,b\sqrt{1-u^2}).$ Let $s_1$, $s_2$ and $s_3$ the sides of the triangular orbit ${P_1}{P_2}{P_3}$. Then $g_1(u,s_1)=0$, $g_2(s_2,u_2,u)=0$ and $g_3(s_3,u_2,u)=0$ for polynomial functions $g_i$.  
+\end{lemma}
+	
+\begin{proof}
+Using the parametrization of the 3-periodic Poncelet orbit it follows that $s_1^2-|P_2-P_3|^2=0$ is a rational equation in the variables $u,s_1$. Simplifying, leads to $g_1(s_1,u)=0.$
+
+Analogously for $s_2$ and $s_3$. In this case, the equations $s_2^2-|P_1-P_3|^2=0$ and  $s_3^2-|P_1-P_2|^2=0$   have   square roots $u_2=\sqrt{r_1+r_2 u^2}$ and $u_1=\sqrt{1-u^2}$ and  are rational in the variables $s_2,u_2,u_1,u$ and $s_3,u_2,u_1,u$ respectively. It follows that the degrees of $g_1$, $g_2$, and $g_3$ are $10$.  Simplifying, leads to $g_2(s_2,u_2,u_1,u)=0 $ and $g_3(s_3,u_2,u_1,u)=0$. 
+\end{proof}
+

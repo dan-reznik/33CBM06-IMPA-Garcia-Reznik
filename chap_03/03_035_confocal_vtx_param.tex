@@ -1,4 +1,63 @@
-Let us term $P(t)=[a\cos{t},b\sin{t}]$ the {\em standard} parametrization of a point $P$ on an ellipse. Conversely, obtain the ``position'' $t$ of $P=[x,y]$ on an ellipse:
+\subsection{Standard}
+\label{sec:03-confocal-standard-param}
+
+We call ``standard'' parametrization that where a first vertex $P_1(t)$ of the billiard 3-periodic is parametrized as $P_1(t)=[x_1,y_1]=[a\cos{t},b\sin{t}]$.
+
+As derived in \cite{garcia2019-incenter}, $P_2=(x_2,y_2)/q_2$ and $P_3=(x_3,y_3)/q_3$ where:
+
+ \begin{equation}\label{eq:03-p2} \aligned 
+x_{2}=&-{b}^{4} \left(  \left(   a^2+{b}^{2}\right)\cos^{2}\alpha   -{a}^{2}  \right) x_1^{3}-2{a}^{6} \,\cos  \alpha  \sin   \alpha  \, y_1^{3}\\
+&+{a}^{4} \left(  ({a
+}^{2}-3\, {b}^{2}) \cos^{2} \alpha  +{b}^{2}
+ \right) {x_1}\,y_1^{2}-2\,{a}^{4}{b}^{2} \cos \alpha  \,\sin  \alpha    x_1^{2}{y_1},
+\\
+y_{2}=& 2{b}^{6} \,\cos \alpha\sin \alpha\,   x_1^{3}-{
+a}^{4}  \left(  \left(   a^2+{b}^{2}\right)\cos^{2}  \alpha  -{b}^{2}  \right)  y_1^{3}\\
+&+  2\,{a}^{2} {b}^{4}\cos \alpha \sin
+  \alpha \; {x_1} y_1^{2} +{b}^{4}\left(  ({b
+ }^{2}-3\, {a}^{2}) \cos^{2} \alpha  +{a}^{2}
+  \right) x_1^{2}{y_1}
+\\
+q_2=&{b}^{4} \left( a^2-(a^2-b^2)\cos^2  \alpha   \right)
+x_1^{2}+{a}^{4} \left(  {b}^{2}+(a^2-b^2)\cos^2 \alpha  
+ \right) y_1^{2}\\
+ & - 2\, {a}^{2}{b}^{2} \left({a}^{2} -{b}^{2} \right)\cos \alpha\sin \alpha \; {x_1}\,{
+y_1}.
+\endaligned
+%
+\end{equation}
+
+ \begin{equation} \label{eq:03-p3} \aligned 
+x_{3}\; =& \; {b}^{4} \left( {a}^{2}- \left( {b}^{2}+{a}^{2} \right) 
+ \cos^{2}\alpha\right)   x_1^{3}+2\, {a}^{6} 
+ \cos \alpha\,\sin \alpha\, y_1^{3}\\
+ &+{a}^{4} \left( 
+  \cos^{2}  \alpha  \left( {a}^{2}-3\,{b}^{2}
+ \right) +{b}^{2} \right) { x_1}\, y_1^{2}+2\,{a}^{4}{b}^{2} \cos  \alpha\sin \alpha\,   x_1^{2}{ y_1}
+\\
+y_{3} \;=&\; -2\, {b}^{6} \cos \alpha\sin \alpha\, x_1^{3}+
+{a}^{4} \left( {b}^{2}- \left( {b}^{2}+{a}^{2} \right)   \cos^{2}  \alpha  \right)\,  y_1^{3}\\
+& -2\,{a}^{2}  {b}^{4}\cos
+ \alpha  \sin \alpha\,  x_1 y_1^{2}+
+{b}^{4} \left( {a}^{2}+ \left( {b}^{2}-3\,{a}^{2} \right)  \left( \cos
+ \alpha  \right) ^{2} \right) {{ x_1}}^{2}{ y_1},
+\\
+q_3 \;=& \; {b}^{4} \left( {a}^{2}- \left(a^2 -{b}^{2}  \right)   \cos^{2} \alpha   \right) x_1^{2}+{a}^{4} \left( {b}^{2}+ \left( a^2-{b}^{2}  \right)  \cos^{2} \alpha  \right)  y_1^{2}\\
+&+2\,{a}^{2}{b}^{
+2} \left( {a}^{2}-{b}^{2} \right) \cos \alpha \sin \alpha\, { x_1}\,{ y_1}.
+\endaligned
+%
+\end{equation}
+where:
+\[\cos \alpha={\frac {a^2 b  \, \sqrt {-{a}^{2}-{b}^{2}+2\,\sqrt {{a}^{4}-{b}^{2}{c}^{2}}}}{{c}^{2}\sqrt {{a}^{4}-{c}^{2} x_1^{2}}}}=
+\frac{  a^2 b^2 \, \sqrt {2\delta-{a}^{2}-{b}^{2}}} {c^2\sqrt{ a^4y_1^2 + b^4x_1^2}  } \]
+
+Note that in \cref{sec:03-cap-vtx-param} we generalize the above to any concentric, axis-parallel pair.
+
+\subsection{Jacobi's Universal Measure}
+\label{sec:03-confocal-jacobi-param}
+
+Under the standard parametrization, we can obtain the ``position'' $t$ of $P=[x,y]$ on an ellipse:
 
 \[ t=\tan^{-1}{\frac{a y}{b x}}. \]
 
@@ -29,7 +88,7 @@ The elliptic sine $\text{sn}$, cosine $\text{cn}$, and delta-amplitude $\text{dn
 \end{align*}
 where $\varphi=\text{am}(u,k)$ is known as the amplitude, i.e., the upper-limit in the integral in \cref{eqn:03-ellipticK} such that $K(\varphi,k)=u$.
 \end{definition}
-For a review of these functions see \cref{app:appD-jacob-functions}.
+A review of these functions appears in \cref{app:appD-jacob-functions}.
 
 \begin{remark} The above functions, when called in Mathematica, expect $ k^2 =m$  instead of $k$. In Maple this is not the case.
 With this terminology the  Jacobi elliptic functions are defined    as follows:
@@ -42,9 +101,8 @@ K(\varphi,m)&=\int_0^{\varphi} \frac{dy}{\sqrt{1-m\sin^2y}}=u,\;\; \varphi=\text
 For example, in Maple we have $\sn(2,0.4)=\text{JacobiSN}(2,.4)=0.94569756\ldots$. In    Mathematica   $\sn(2,0.16)=\text{JacobiSN}(2,.16)=0.945698 \ldots$  and $\text{JacobiSN}(2,.4)=0.985090\ldots$.
 \end{remark}
 
+\textcolor{red}{ronaldo: modifiquei abaixo, em nenhum lugar usamos $m^2$, mas sempre $m=k^2$. Fale q o Maple aceita o $k$, e o mathematica o $m$, pronto}.
 
- \textcolor{red}{cuidado aqui. Na parametrizacao o m deve ser a excentricidade. Ja estou confuso com a incompatibilidade do maple mathematica}
- 
 \begin{theorem}
 A billiard orbit $P_i$ $(i=1,\ldots, N) $ of period $N$  with turning number $\tau$, where $\mathrm{gcd}(N,\tau) =1$,  is parametrized on $u$ with period $4K$ where:
 
@@ -56,7 +114,7 @@ P_i=
 \]
 
 where,
-\[ m^2=\frac{a_c^2-b_c^2}{a_c^2},\;\;\Delta{u}=\frac{4\tau K}{N},\;\;\;K=\int_{0}^{\frac{\pi}{2}} \frac {dx}{\sqrt {1-m^2\sin^2 x}} \]
+\[ k^2=m=\frac{a_c^2-b_c^2}{a_c^2},\;\;\Delta{u}=\frac{4\tau K}{N}\]
 \[a= \sqrt{b^2+ a_c^2-b_c^2}, \;\; b=\frac{b_c}{\cn(\frac{\Delta{u}}{2}, m)}\]
 \end{theorem}
 \begin{proof} See \cite{stachel2021-billiards}.\end{proof}
@@ -78,16 +136,12 @@ where $\vec v=\vec\omega_1\wedge r_1= \vec\omega_2\wedge \vec r_2$.
 \label{fig:03-velocidade-angular}
 \end{proposition}
 
-\begin{proof} Let $\vec v=P_2'(t)$. From Graves's theorem we have that  $|\vec r_1|+|\vec r_2|-\text{arc}(Q_1,Q_2)=\text{cte}$,  it follows that in decomposition of $\vec v=\vec v_{t_1}+\vec v_{n_1}=\vec v_{t_2}+\vec v_{n_2}$ we have that $|\vec v_{t_1}|=|\vec v_{t_2}|$ and  $|\vec v_{n_1}|=|\vec v_{n_2}|$. So the result follows from the   definition of angular velocity. More details see \cite{stachel2021-billiards-param}.
+\begin{proof} Let $\vec v=P_2'(t)$. From Graves's theorem, $|\vec r_1|+|\vec r_2|-\text{arc}(Q_1,Q_2)=\text{cte}$,  and therefore it follows that in decomposition of $\vec v=\vec v_{t_1}+\vec v_{n_1}=\vec v_{t_2}+\vec v_{n_2}$ we have that $|\vec v_{t_1}|=|\vec v_{t_2}|$ and  $|\vec v_{n_1}|=|\vec v_{n_2}|$. The result follows from the   definition of angular velocity. More details see \cite{stachel2021-billiards-param}.
 \end{proof}
  
-
 \textcolor{red}{ronaldo}
  
-
 Since in this chapter we are considering billiard 3-periodics, so above $N=3$, and $\tau=1$. As shown in \cref{fig:03-jacobi-param}, under the Jacobi parametrization each of the 3 vertices of billiard 3-periodics follows the exact same curve, albeit with a 120-degree phase.
-
-
 
 Recall the sum of cosines is constant for billiard 3-periodics. \cref{fig:03-jacobi-cos-param} shows how individual cosines follow either (i) 3-distinct curves, or (ii) the same exact curve (at different phases) if the parametrization is standard or Jacobi, respectively.
 

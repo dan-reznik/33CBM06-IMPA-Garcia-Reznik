@@ -1,8 +1,7 @@
-
-In this section we analyze the locus of the incenter. Recall it was proved to be an ellipse in \cref{thm:03-incenter-excenter}. Here we provide an alternative proof using the Blaschke parametrization.
+Recall the locus of the incenter (and excenters) are ellipses if the pair is confocal, see \cref{thm:03-incenter-excenter}. Here we expand the analysis and consider all CAP pairs.
 
 \begin{proposition}\label{prop:04-X1c}
-Over Poncelet 3-periodics in the pair with an outer circle and an ellipse in generic position, the locus $X_1$ given by:
+Over Poncelet 3-periodics in the pair with an outer circle and an ellipse in generic position, the locus $X_1$ is given by:
 \begin{align*}
   X_1:&\;z^4 - 2(( \bar{f} + \bar{g}) \lambda +  f g) z^2 + 8   \lambda z\\
   &+ (\bar{f} - \bar{g})^2 \lambda^2 +2 (  |f|^2 g +   f |g|^2 - 2 f - 2 g) \lambda + f^2 g^2=0\\
@@ -22,7 +21,7 @@ Eliminating the square roots in  the equation $X_1-z=0$ and using the relations 
 
 \begin{proposition}
 \label{prop:04-X1g}
-Over Poncelet 3-periodics in a generic nested ellipse pair, the locus of $X_1$ is given by the following sextic polynomial in $z,\lambda$:
+Over Poncelet 3-periodics in a generic nested ellipse pair, the locus of $X_1$ and the excenters is given by the roots of the following quartic polynomial in $z$:
 {\small
 \begin{align*}
 X_1&: \;{\lambda}^{2} \left( p^2-q^2 \right) {
@@ -53,16 +52,34 @@ z}^{4}+4\,\lambda\, \left( \alpha\,\lambda\,p q^2  - q\,{
 $T(z)=pz+q\ol z$ and set $w_i=T(z_i)$. The proof is similar to that given in \cref{prop:04-X1c}. 
 \end{proof}
 
+\textcolor{red}{ronaldo: organiza, eu chamaria $p_1$ e $p_2$ talvez de $X_1$ e de $[e_1,e_2,e_3]$, mexer no exercicio.}
+
 \begin{proposition} In the confocal pair the locus $X_1$ is defined by:
-\[2\,ab{\lambda}^{2}{z}^{2}+2\,\lambda\, \left( {a}^{3}{\lambda}^{2}-{b}
-^{3}{\lambda}^{2}-{a}^{3}-{b}^{3} \right) z+{c}^{2} \left( {c}^{2}{
-\lambda}^{4}-2\,ab{\lambda}^{2}-{c}^{2} \right)=0 \]
+
+
+%\[2\,ab{\lambda}^{2}{z}^{2}+2\,\lambda\, \left( {a}^{3}{\lambda}^{2}-{b}
+%^{3}{\lambda}^{2}-{a}^{3}-{b}^{3} \right) z+{c}^{2} \left( {c}^{2}{
+%\lambda}^{4}-2\,ab{\lambda}^{2}-{c}^{2} \right)=0 \]
+ \[   X_1 =z-\left({\frac { \left( a-b \right)  \left( -{a}^{2}-a b-{b}^{2}+\delta
+ \right) \lambda}{2\,a b}}-{\frac { \left( a+b \right)  \left( -{a}^{2}
++a b-{b}^{2}+\delta \right) }{2\,a b\lambda}}\right)=0\]
 \label{prop:04-X1q2} 
 \end{proposition}
 
-\begin{proof}
-We have that
+\begin{proof} In the confocal pair 
+we have that
 \[f={\frac {1}{c}\sqrt {-{a}^{2}-{b}^{2}+2\,\delta}}, \;\; g= -{\frac {1}{c}\sqrt {-{a}^{2}-{b}^{2}+2\,\delta}}\]
+The result follows by factorization of the quartic  polynomial that defines $X_1$ in \cref{prop:04-X1c}.
+
+Using CAS we obtain that $X_1$ is factorizable as $E_1 E_2$, where
+\begin{align*}
+    E_1&=z-\left({\frac { \left( a-b \right)  \left( -{a}^{2}-a b-{b}^{2}+\delta
+ \right) \lambda}{2\,a b}}-{\frac { \left( a+b \right)  \left( -{a}^{2}
++a b-{b}^{2}+\delta \right) }{2\,a b\lambda}}\right)
+\\
+    E_2&=2 a b \lambda^2 z^3 - ((a - b) (a^2 + 3 a b + b^2 + \delta) \lambda^3 - (a + b) (a^2 - 3 a b + b^2 + \delta) \lambda) z^2\\
+    &+ 6 a b  (a^2 - b^2) \lambda^2 z + (a + b)^3 (a^2 - a b + b^2 + \delta) \lambda^3 - (a - b)^3 (a^2 + a b + b^2 + \delta) \lambda
+\end{align*}
 \end{proof}
 
 \begin{corollary}
@@ -75,25 +92,11 @@ The locus $X_1$ is the ellipse with semi-axes given by $a_1=(a^2-\delta)/b$ and 
 \end{corollary}
 
 \begin{proof}
-The quartic polynomial is factorizable as $p_1p_2$, where
-\begin{align*}
-    p_1&=z-\left({\frac { \left( a-b \right)  \left( -{a}^{2}-a b-{b}^{2}+\delta
- \right) \lambda}{2\,a b}}-{\frac { \left( a+b \right)  \left( -{a}^{2}
-+a b-{b}^{2}+\delta \right) }{2\,a b\lambda}}\right)
-\\
-    p_2&=2 a b \lambda^2 z^3 - ((a - b) (a^2 + 3 a b + b^2 + \delta) \lambda^3 - (a + b) (a^2 - 3 a b + b^2 + \delta) \lambda) z^2\\
-    &+ 6 a b  (a^2 - b^2) \lambda^2 z + (a + b)^3 (a^2 - a b + b^2 + \delta) \lambda^3 - (a - b)^3 (a^2 + a b + b^2 + \delta) \lambda
-\end{align*}
 Follows directly from  \cref{lem:ell-param} and  \cref{prop:04-X1q2}.
 \end{proof}
-
-%\cite{schwartz2016-com}
-
-\begin{conjecture}
-Over 3-periodics interscribed between two ellipses in general position, the locus of a triangle center $X_k$ is an ellipse if and only if $X_k$ is a fixed linear combination of $X_3$ and $X_4$.
-\end{conjecture}
 
 \begin{conjecture}
 Over Poncelet 3-periodics in a given pair of conics, the locus of the incenter and excenters are ellipses if and only if the pair is confocal.
 \label{conj:04-incenter-excenter-loci}
 \end{conjecture}
+
