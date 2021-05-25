@@ -1,6 +1,10 @@
-Recall the locus of the incenter (and excenters) are ellipses if the pair is confocal, see \cref{thm:03-incenter-excenter}. Here we expand the analysis and consider all CAP pairs.
+\section{Locus of the Incenter in a CAP pair}
+\label{sec:07-proof-theorem}
 
-\begin{proposition}\label{prop:04-X1c}
+Recall the locus of the incenter (and excenters) are ellipses if the pair is confocal, see \cref{thm:02-incenter-excenter}. Here we expand the analysis and consider all CAP pairs.
+
+\begin{proposition}
+\label{prop:07-X1c}
 Over Poncelet 3-periodics in the pair with an outer circle and an ellipse in generic position, the locus $X_1$ is given by:
 \begin{align*}
   X_1:&\;z^4 - 2(( \bar{f} + \bar{g}) \lambda +  f g) z^2 + 8   \lambda z\\
@@ -20,7 +24,7 @@ Eliminating the square roots in  the equation $X_1-z=0$ and using the relations 
 \end{proof}
 
 \begin{proposition}
-\label{prop:04-X1g}
+\label{prop:07-X1g}
 Over Poncelet 3-periodics in a generic nested ellipse pair, the locus of $X_1$ and the excenters is given by the roots of the following quartic polynomial in $z$:
 {\small
 \begin{align*}
@@ -49,7 +53,7 @@ z}^{4}+4\,\lambda\, \left( \alpha\,\lambda\,p q^2  - q\,{
 \end{proposition}
 
 \begin{proof} Let $p,q\in \mathbb{R}$. Consider the affine transformation
-$T(z)=pz+q\ol z$ and set $w_i=T(z_i)$. The proof is similar to that given in \cref{prop:04-X1c}. 
+$T(z)=pz+q\ol z$ and set $w_i=T(z_i)$. The proof is similar to that given in \cref{prop:07-X1c}. 
 \end{proof}
 
 \textcolor{red}{ronaldo: organiza, eu chamaria $p_1$ e $p_2$ talvez de $X_1$ e de $[e_1,e_2,e_3]$, mexer no exercicio.}
@@ -63,13 +67,13 @@ $T(z)=pz+q\ol z$ and set $w_i=T(z_i)$. The proof is similar to that given in \cr
  \[   X_1 =z-\left({\frac { \left( a-b \right)  \left( -{a}^{2}-a b-{b}^{2}+\delta
  \right) \lambda}{2\,a b}}-{\frac { \left( a+b \right)  \left( -{a}^{2}
 +a b-{b}^{2}+\delta \right) }{2\,a b\lambda}}\right)=0\]
-\label{prop:04-X1q2} 
+\label{prop:07-X1q2} 
 \end{proposition}
 
 \begin{proof} In the confocal pair 
 we have that
 \[f={\frac {1}{c}\sqrt {-{a}^{2}-{b}^{2}+2\,\delta}}, \;\; g= -{\frac {1}{c}\sqrt {-{a}^{2}-{b}^{2}+2\,\delta}}\]
-The result follows by factorization of the quartic  polynomial that defines $X_1$ in \cref{prop:04-X1c}.
+The result follows by factorization of the quartic  polynomial that defines $X_1$ in \cref{prop:07-X1c}.
 
 Using CAS we obtain that $X_1$ is factorizable as $E_1 E_2$, where
 \begin{align*}
@@ -92,11 +96,19 @@ The locus $X_1$ is the ellipse with semi-axes given by $a_1=(a^2-\delta)/b$ and 
 \end{corollary}
 
 \begin{proof}
-Follows directly from  \cref{lem:ell-param} and  \cref{prop:04-X1q2}.
+Follows directly from  \cref{lem:ell-param} and  \cref{prop:07-X1q2}.
 \end{proof}
+
+\begin{remark}
+The space of possible choices of two conics which admits a 3-periodic family is five dimensional.
+\end{remark}
+
+This stems from the fact that a conic has five degrees of freedom, so two conics have 10; the euclidean transformation group is 4-dimensional, and Cayley deducts one degree of freedom. Therefore: 10-4-1=5.
+
+Note that over said 5d space, the possible confocal configurations are 1-dimensional. Interestingly, experimental evidence suggests that our very first result (elliptic locus of the incenter and excenters) is actually very rare:
 
 \begin{conjecture}
 Over Poncelet 3-periodics in a given pair of conics, the locus of the incenter and excenters are ellipses if and only if the pair is confocal.
-\label{conj:04-incenter-excenter-loci}
+\label{conj:07-incenter-excenter-loci}
 \end{conjecture}
 

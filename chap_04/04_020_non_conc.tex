@@ -5,21 +5,20 @@ Here we introduce a few Poncelet triangle families interscribed in non-concentri
 \begin{figure}
     \centering
     %\includegraphics[width=\textwidth]{pics/0010x_obtuse_poristics.eps}
-    \includegraphics[width=\textwidth]{
-    pics_03_180_obtuse_poristics.eps}
+    \includegraphics[width=\textwidth]{pics_04_180_obtuse_poristics}
     \caption{Poristic Triangle family (blue): fixed incircle (green) and circumcircle (purple). \textbf{Left}: a few poristic triangles (blue and dashed blue) in a pair of circles such that $d<r$, i.e.,  all poristic triangles are acute. \textbf{Right}: the same but with $d>r$; since $X_3$ can be either interior or exterior to the family, both acute and obtuse triangles will be present. \href{https://bit.ly/3bg19iD}{Live}}
-    \label{fig:03-poristic obtuse}
+    \label{fig:04-poristic obtuse}
 \end{figure}
 
-Poristic triangles, shown in \cref{fig:03-poristic obtuse}, are the simplest case of Poncelet's porism: a 1d family of triangles with fixed incircle and circumcircle. They are they $N=3$ case of the bicentric family covered in \cref{chap:06-bicentric}.
+Poristic triangles, shown in \cref{fig:04-poristic obtuse}, are the simplest case of Poncelet's porism: a 1d family of triangles with fixed incircle and circumcircle. They are they $N=3$ case of the bicentric family covered in \cref{chap:06-bicentric}.
 
 First described by \cite{chapple1746-poristics}, the family was later studied by both Euler and Poncelet. The so-called Euler's triangle formula\footnote{Chapple had stated it in 1746, Euler in 1765, and Poncelet's porism was published in 1822; see \cite{centina15}.}, constrains the distance $d$ between incenter $X_1$ and circumcenter $X_3$ as follows:
 
 \begin{equation}
 d^2=R(R-2 r)
-\label{eq:03-euler-poristic}
+\label{eq:04-euler-poristic}
 \end{equation}
-where $r,R$ are the radii of outer and inner circle. Referring to \cref{fig:03-poristic obtuse}:
+where $r,R$ are the radii of outer and inner circle. Referring to \cref{fig:04-poristic obtuse}:
 
 \begin{proposition}
 The Poristic family will contain obtuse triangles iff $d>r$.
@@ -36,21 +35,21 @@ The poristic family conserves the sum of its internal angle cosines.
 \end{proposition}
 
 \begin{proof}
-Direct application of \cref{eqn:03-sum-cos}, noting by definition $r/R$ is constant.
+Direct application of \cref{eqn:02-sum-cos}, noting by definition $r/R$ is constant.
 \end{proof}
 
 \begin{figure}
     \centering
-    \includegraphics[width=.7\textwidth]{pics_03_220_poristic_antiorthic.eps}
+    \includegraphics[width=.7\textwidth]{pics_04_220_poristic_antiorthic}
     \caption{Over the poristic family, the antiorthic axis (solid blue) is stationary and perpendicular to $X_1 X_3$. \href{https://youtu.be/DS4ryndDK6Q}{Video}.}
-    \label{fig:03-antiorthic}
+    \label{fig:04-antiorthic}
 \end{figure}
 
-In \cite[Antiorthic axis]{mw} the anti-orthic axis is defined as containing the three intersections of a triangle's sidelines with those of the excentral triangle. As illustrated in \cref{fig:03-antiorthic}, the following was proved by \cite{weaver1927-poristic}:
+In \cite[Antiorthic axis]{mw} the anti-orthic axis is defined as containing the three intersections of a triangle's sidelines with those of the excentral triangle. As illustrated in \cref{fig:04-antiorthic}, the following was proved by \cite{weaver1927-poristic}:
 
 \begin{proposition}
 The antiorthic family is stationary over the poristic family and perpendicular to $X_1 X_3$.
-\label{prop:03-antiorthic}
+\label{prop:04-antiorthic}
 \end{proposition}
 
 Let a first vertex $P_1$ of the poristic family be parametrized by $P_1(t)=R[\cos{t},\sin{t}]$.
@@ -70,14 +69,14 @@ Follows directly computing the 3-vertices explicitly and using $L(t)=|P_1-P_2|+|
 
 It turns out poristic triangles can be regarded as the image of billiard 3-periodics (and vice-versa) under (i) a variable similarity transform, and (ii) a polar transformation wrt to a focus-centered circle. We now proceed to prove these results, but first we will need a couple of lemmas.
 
-In \cite[page 17]{odehnal2011-poristic}, one finds the following result, illustrated in \cref{fig:03-poristic-x9}:
+In \cite[page 17]{odehnal2011-poristic}, one finds the following result, illustrated in \cref{fig:04-poristic-x9}:
 
 \begin{figure}
     \centering
     %\includegraphics[width=.8\textwidth]{pics/0050x_poristic_cb.eps}
-    \includegraphics[width=.8\textwidth]{pics_03_190_poristic_cb.eps}
+    \includegraphics[width=.8\textwidth]{pics_04_190_poristic_cb}
     \caption{A poristic triangles (blue) is shown along as its circumbilliard (dashed magenta) whose aspect ratio is invariant. The locus of the mittenpunkt $X_9$ is a circle (red). \href{https://youtu.be/LGgh11LMGGY}{Video}, \href{https://bit.ly/3tcGtOj}{Live}}
-    \label{fig:03-poristic-x9}
+    \label{fig:04-poristic-x9}
 \end{figure}
 
 \begin{lemma}
@@ -96,7 +95,7 @@ In fact we can derive $X_9(t)$ explicitly:
 }^{2}-2\,dR\mathbf{c}_t  \right)  \left( 9\,{R}^{2}-{d}^{2}
  \right) }
     \right]
-\label{eq:03-x9-poristic}
+\label{eq:04-x9-poristic}
 \end{align}
 where $\mathbf{c}_t$ and $\mathbf{s}_t$ are shorthand for $\cos(t)$ and $\sin(t)$ respectively.
 }
@@ -149,9 +148,9 @@ So given a smooth curve, we can speak of its {\em polar image} with respect to a
 
 \begin{figure}
     \centering
-    \includegraphics[width=.8\textwidth]{chap_03/pics/pics_03_200_polar_poristic.eps}
+    \includegraphics[width=.8\textwidth]{pics_04_200_polar_poristic}
     \caption{The poristic family (orange) is the polar image of billard 3-periodics (blue) with respect to a circle (dashed gray) centered on one of the foci of the confocal pair ($f_1$ in the picture). \href{https://bit.ly/3nQ2wcH}{Live}}
-    \label{fig:03-polar-poristic}
+    \label{fig:04-polar-poristic}
 \end{figure}
 
 The fact that the polar image of an ellipse with respect to a focus is a circle is a well-known result \cite{akopyan2007-conics}.
@@ -173,7 +172,7 @@ Their radii $r,R$ and distance $d$ between their centers are given by:
 %The limiting points $\ell_1,\ell_2$ of the polar image of a confocal pair $\E,\E'$ with respect to a $f_1$-centered circle are located at $f_1=[-c,0]$ and $[-c+\frac{\rho^2}{c},0]$.
 %\end{lemma}
  
-Referring to \cref{fig:03-polar-poristic}:
+Referring to \cref{fig:04-polar-poristic}:
 
 \begin{corollary}
 The poristic family is the polar image of billiard 3-periodics with respect to a circle centered on a focus. 
@@ -184,23 +183,23 @@ The sum of cosines of the polar image of billiard 3-periodics with respect to a 
 
 \begin{equation}
 \sum\cos\theta' = 1+\frac{r}{R} = 1+\frac{a b'^2}{a' b^2}
-\label{eq:03-bic-cos}
+\label{eq:04-bic-cos}
 \end{equation}
 \end{corollary}
 
 \begin{figure}
     \centering
-    \includegraphics[width=.7\textwidth]{pics_03_230_excentral_poristic_inconics.eps}
+    \includegraphics[width=.7\textwidth]{pics_04_230_excentral_poristic_inconics}
     \caption{A poristic triangle (blue) is shown, as well as $I_1$, the $X_1$-centered inconic (light blue). Also shown is the excentral triangle (green), the circle (orange) the excentral family is inscribed in and their MacBeath caustic (dashed green). Also shown is $I_3'$ (dark red), the $X_3'$-centered excentral inconic (red). Note $X_3'=X_{40}$. Over the poristic family, both $I_1$ and $I_3'$ rotated rigidly at 90-degrees from each other. \href{https://youtu.be/hz0qEyVVvaI}{Video}}
-    \label{fig:03-excentral-poristic-inconics}
+    \label{fig:04-excentral-poristic-inconics}
 \end{figure}
 
 Given a triangle, an inconic is is fully defined by its center and is tangent to the three sidelines, see \cite[Inconic]{mw}.
 
-Referring to \cref{fig:03-excentral-poristic-inconics}, let $E_1$ be the $X_1$-centered circumconcic to the poristic family, i.e., it contains the vertices. Let $\mu_1$, and $\nu_1$ denote its semi-axes. Interestingly:
+Referring to \cref{fig:04-excentral-poristic-inconics}, let $E_1$ be the $X_1$-centered circumconcic to the poristic family, i.e., it contains the vertices. Let $\mu_1$, and $\nu_1$ denote its semi-axes. Interestingly:
 
 \begin{proposition}
-$\mu_1=R+d$ and $\nu_1=R-d$ are invariant over the poristic family, i.e., $E_1$ rigidly rotates about $X_1$. \label{prop:03-e1}
+$\mu_1=R+d$ and $\nu_1=R-d$ are invariant over the poristic family, i.e., $E_1$ rigidly rotates about $X_1$. \label{prop:04-e1}
 \end{proposition}
 
 A proof appears in \cite[Appendix C]{garcia2020-similarity-I}.
@@ -209,12 +208,12 @@ A proof appears in \cite[Appendix C]{garcia2020-similarity-I}.
 \begin{figure}
     \centering
     %\includegraphics[width=.7\textwidth]{pics/0170_poristic.eps}
-    \includegraphics[width=\textwidth]{pics_03_170_poristic.eps}
+    \includegraphics[width=\textwidth]{pics_04_170_poristic}
     \caption{The poristic family (blue) is interscribed between two fixed circles, i.e., their circumcenter $X_3$ and incenter $X_1$ are stationary. The family of its excentral triangles (solid green) are inscribed in a circle (orange) centered on the Bevan point $X_{40}$ and of radius twice the original circumradius. This family circumscribes the MacBeath inellipse (dashed orange), centered on $X_3$ with foci on $X_1$ and $X_{40}$. A second for both poristics and excentrals configuration is also shown (dashed blue and dashed green).  \href{https://youtu.be/DS4ryndDK6Q}{Video}, \href{https://bit.ly/2RoYJHm}{Live}}
-    \label{fig:03-poristic-excentrals}
+    \label{fig:04-poristic-excentrals}
 \end{figure}
 
-The family of excentral triangles to the poristic family, shown in \cref{fig:03-poristic-excentrals} is also Ponceletian: in \cite{odehnal2011-poristic}, it is shown to be inscribed in a circle of radius $2R$ where $R$ is the circumradius of its reference poristic family, centered on $X_{40}$, the Bevan point, or $X_3'$ of the family in questions (to avoid confusion, we will be priming quantities associated with this family).
+The family of excentral triangles to the poristic family, shown in \cref{fig:04-poristic-excentrals} is also Ponceletian: in \cite{odehnal2011-poristic}, it is shown to be inscribed in a circle of radius $2R$ where $R$ is the circumradius of its reference poristic family, centered on $X_{40}$, the Bevan point, or $X_3'$ of the family in questions (to avoid confusion, we will be priming quantities associated with this family).
 
 \begin{proposition}
 The barycenter $X_2'$ of poristic excentrals is stationary.
@@ -240,7 +239,7 @@ It is straightforward to verify the sidelines of poristic excentrals are dynamic
 with center $X_3=(d,0)$ and foci $X_{40}=(0,0)$ and $X_1=(2d,0)$.
 \end{proof}
 
-Correspondences between the centers and foci of the excentral MacBeath inconic and those of the reference triangle appear in \cref{tab:03-macbeath}.
+Correspondences between the centers and foci of the excentral MacBeath inconic and those of the reference triangle appear in \cref{tab:04-macbeath}.
 
 \begin{table}
 \centering
@@ -256,10 +255,10 @@ focus & $X_3'$ & $X_{40}$ \\
 \hline
 \end{tabular}
 \caption{Center and foci of the MacBeath inconic of an excentral triangle and the corresponding triangle center of the reference.} 
-\label{tab:03-macbeath}
+\label{tab:04-macbeath}
 \end{table}
 
-Since $\mu'_5/\nu_5'=R/\sqrt{R^2-d^2}$, use \cref{eq:03-euler-poristic} to obtain:
+Since $\mu'_5/\nu_5'=R/\sqrt{R^2-d^2}$, use \cref{eq:04-euler-poristic} to obtain:
 
 \begin{corollary}
 The aspect ratio of the caustic to the excentral poristics is given by:
@@ -268,11 +267,11 @@ The aspect ratio of the caustic to the excentral poristics is given by:
 \end{equation*}
 \end{corollary}
 
-As shown in \cref{fig:03-excentral-poristic-inconics}, let $I_3'$ be the $X_3'$-centered inconic to poristic excentrals. Let $\mu_3'$ and $\nu_3'$ denot its major and minor semi-axes, respectively.
+As shown in \cref{fig:04-excentral-poristic-inconics}, let $I_3'$ be the $X_3'$-centered inconic to poristic excentrals. Let $\mu_3'$ and $\nu_3'$ denot its major and minor semi-axes, respectively.
 
 \begin{proposition}
 Over poristic excentrals,  $\mu_3'=R+d$ and $\nu_3'=R-d$ are invariant, i.e., $I_3'$ rigidly rotates about $X_3'$.
-\label{prop:03-inconic-x3p}
+\label{prop:04-inconic-x3p}
 \end{proposition}
 
 We omit the long proof kindly contributed by B. Odehnal and appearing in \cite[Appendix C]{garcia2020-similarity-I}.
@@ -289,7 +288,7 @@ Recall \cref{prop:03-circumcircle-rh}: the orthic triangles of the circumcircle 
 
 \section{The Brocard Porism}
  
-A property-rich family of Poncelet triangles is the so-called ``Brocard porism'', introduced in  \cite{bradley2007-brocard,shail1996-brocard, bradley2011-brocard}. It is inscribed in a circle and circumscribes the so-called {\em Brocard inellipse}. Remarkably, its foci coincide with the stationary Brocard points $\Omega_1$ and $\Omega_2$ of the family; see \cref{fig:03-brocard-porism}.
+A property-rich family of Poncelet triangles is the so-called ``Brocard porism'', introduced in  \cite{bradley2007-brocard,shail1996-brocard, bradley2011-brocard}. It is inscribed in a circle and circumscribes the so-called {\em Brocard inellipse}. Remarkably, its foci coincide with the stationary Brocard points $\Omega_1$ and $\Omega_2$ of the family; see \cref{fig:04-brocard-porism}.
 
 Let $R$ denote the radius of the outer circle and $a',b'$ the caustic semi-axes, with $(c')^2=(a')^2-(b')^2$. Let also, $d=|X_{3}-X_{39}|$ the distance between the centers of the circle and of the caustic.
 
@@ -307,7 +306,7 @@ For any triangle $T$, the circumcircle and Brocard inellipse are Ponceletian, th
 \end{proposition}
 
 \begin{proof}
-Follows from vertex parametrization for the Brocard family and/or from stationarity of $X_6$, see \cref{prop:04-x6-stationary}. 
+Follows from vertex parametrization for the Brocard family and/or from stationarity of $X_6$, see \cref{prop:03-x6-stationary}. 
 \end{proof}
 
 \begin{proposition}
@@ -334,7 +333,7 @@ Remarkably, and echoing a property seen above for the homothetic family, leaving
 \begin{proposition}
 Over the Brocard porism, the Brocard angle $\omega$ is invariant and given by:
 \[\cot\omega=\frac{\delta_1}{b'} \geq \sqrt{3} \]
-\label{prop:03-brocard-w}
+\label{prop:04-brocard-w}
 \end{proposition}
 
 Henceforth we shall use symbol $\Sha$  $\cot\omega$. Recall for any triangle $\Sha=\sum_{i=1}^3{\cot{\theta_i}}$, i.e.:
@@ -346,7 +345,7 @@ The Brocard porism conserves the sum of its internal angle cotangents.
 \cite{shail1996-brocard} derives the distance between Brocard points (the foci of the Brocard inellipse), in terms of invariant $R$ and $\omega$:
 
 \begin{equation} |{\Omega_1}-{\Omega_2}|^2=4 R^2\sin^2{\omega}(1-4\sin^2{\omega})=(c')^2
-\label{eq:03-omega-dist}
+\label{eq:04-omega-dist}
 \end{equation}
 
 \begin{corollary}
@@ -355,16 +354,16 @@ The Brocard porism conserves the sum of its internal angle cotangents.
  
  \begin{figure}
      \centering
-     \includegraphics[width=\textwidth]{pics_03_240_brocard_porism.eps}
+     \includegraphics[width=\textwidth]{pics_04_240_brocard_porism}
      \caption{A triangle (blue) in the Brocard porism is shown inscribed in an outer circle (black) and having the Brocard inellipse (brown) as its caustic, with foci at the stationary Brocard points $\Omega_1$ and $\Omega_2$ of the family, and centered on the Brocard midpoint $X_{39}$. The Brocard points as well as the stationary circumcenter $X_3$ and symmedian point $X_6$ are concyclic on the Brocard circle (dashed magenta), whose center is $X_{182}$. \href{https://bit.ly/2QX3lEt}{Live}}
-     \label{fig:03-brocard-porism}
+     \label{fig:04-brocard-porism}
  \end{figure}
 
-Referring to \cref{fig:03-brocard-porism}, all of $\Omega_1$, $\Omega_2$, $X_3$, and $X_6$ are concyclic on the so-called Brocard circle, see \cite[Brocard Circle]{mw}, whose center is $X_{182}$. The Brocard axis is defined in \cite[Brocard Axis]{mw} as the line containing the circumcenter $X_3$ and symmedian point $X_6$ of a triangle.
+Referring to \cref{fig:04-brocard-porism}, all of $\Omega_1$, $\Omega_2$, $X_3$, and $X_6$ are concyclic on the so-called Brocard circle, see \cite[Brocard Circle]{mw}, whose center is $X_{182}$. The Brocard axis is defined in \cite[Brocard Axis]{mw} as the line containing the circumcenter $X_3$ and symmedian point $X_6$ of a triangle.
  
 \begin{proposition}
 Over the Brocard porism, the following 3 objects are stationary: (i) the Brocard circle, (ii) the Brocard axis, and (iii) the symmedian point $X_6$ are stationary.
-\label{prop:04-x6-stationary}
+\label{prop:03-x6-stationary}
 \end{proposition}
 
 \begin{proof}
@@ -382,7 +381,7 @@ X_{15}=\left[0, \frac{R(\sqrt{3}-\Sha)}{
  X_{16}=\left[0, -\frac{R(\sqrt{3}+\Sha)}{
  \sqrt{\Sha^2-3}}\right]
 \]
-\label{prop:03-x15x16}
+\label{prop:04-x15x16}
 \end{proposition}
 
 \begin{proof}
@@ -403,7 +402,7 @@ The semi-axes $a'$ and $b'$ and center $X_{39}$ of the Brocard inellipse are giv
 [a',b']= R\left[\sin\omega,2\sin^2\omega\right]=R\left[\frac{1}{\sqrt{1+\Sha^2}},\frac{2}{{1+\Sha^2}}\right]\\
  X_{39}=\left[0,-\frac{R\Sha\sqrt{\Sha^2-3}}{\Sha^2+1}\right]
 \end{gather*}
- \label{prop:03-brocard-axes}
+ \label{prop:04-brocard-axes}
 \end{proposition}
 
 \begin{proof}
@@ -412,14 +411,14 @@ Consider a triangle $T$ with sidelengths $s_1,s_2,s_3$, area  $\Delta$, and circ
 
 \begin{equation}
 R=\frac{s_1 s_2 s_3}{4\Delta}, \;\;\; \sin\omega=\frac{2\Delta}{\sqrt{\Gamma}}
-\label{eq:03-broc-R-sinw}
+\label{eq:04-broc-R-sinw}
 \end{equation}
 
-\noindent where $\Gamma=(s_1 s_2)^2+(s_2 s_3)^2+ (s_3 s_1)^2$. Bringing in \cref{eq:03-omega-dist}, the result follows from combining the above into expressions for the Brocard inellipse semi-axes given in \cite[Brocard Inellipse]{mw}:
+\noindent where $\Gamma=(s_1 s_2)^2+(s_2 s_3)^2+ (s_3 s_1)^2$. Bringing in \cref{eq:04-omega-dist}, the result follows from combining the above into expressions for the Brocard inellipse semi-axes given in \cite[Brocard Inellipse]{mw}:
 
 \begin{equation}
 a' =\frac{s_1 s_2 s_3}{2\sqrt{\Gamma}},\;\;\;\;\;\;b' =\frac{2 s_1 s_2 s_3 \Delta}{\Gamma}
-\label{eq:03-broc-axes}
+\label{eq:04-broc-axes}
 \end{equation}
 
 \end{proof}
@@ -442,7 +441,7 @@ Let $a'$ be the major axis of a generic triangle's Brocard inellipse. Interestin
 \begin{proof}
 As
 \[\frac{1}{s_1^2}+\frac{1}{s_2^2}+\frac{1}{s_3^2}=\frac{s_2^ 2s_3^2+s_1^2 s_3^2+s_1^2 s_2^2}{s_1^2 s_2^2 s_3^2}\]
-the result follows from \cref{eq:03-broc-axes}.  
+the result follows from \cref{eq:04-broc-axes}.  
 \end{proof}
 
 \noindent Therefore, we have:
@@ -453,24 +452,24 @@ Over the Brocard porism, the sum of inverse squared sidelengths is invariant
 
 \noindent \textbf{Similarity and Polar image:} As it will be seen below, the Brocard porism is the image of the Homothetic family under two different transformations: variable similarity and polar.
 
-Referring to \cref{fig:03-homot-broc-inell}, we will first prove a handy lemma, introduced in  \cite{reznik2020-similarityII}:
+Referring to \cref{fig:04-homot-broc-inell}, we will first prove a handy lemma, introduced in  \cite{reznik2020-similarityII}:
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{pics_03_270_homot_broc_inell.eps}
+    \includegraphics[width=\textwidth]{pics_04_270_homot_broc_inell}
     \caption{Over the homothetic family, the Brocard inellipse has semi-axes of variable lengths but invariant aspect ratio. \href{https://youtu.be/DIm2qTxGWXE}{Video}}
-    \label{fig:03-homot-broc-inell}
+    \label{fig:04-homot-broc-inell}
 \end{figure}
 
 \begin{lemma}
 Over the homothetic family, though the semi-axes of the Brocard inellipse have variable lengths, their ratio $\beta$ is invariant and given by:
 \[\beta=
 \frac{\sqrt{3a^4+10a^2b^2+3b^4}}{4ab} > 1\]
-\label{lem:03-beta}
+\label{lem:04-beta}
 \end{lemma}
 
 \begin{proof}
-The result follows from combining \cref{eq:03-broc-R-sinw} with \cref{eq:03-broc-axes}, using the sidelengths $s_i$ of the homothetic family using the parametrization in \cref{sec:03-confocal-standard-param}.
+The result follows from combining \cref{eq:04-broc-R-sinw} with \cref{eq:04-broc-axes}, using the sidelengths $s_i$ of the homothetic family using the parametrization in \cref{sec:02-confocal-standard-param}.
 \end{proof}
 
 The result below was introduced in \cite[Thm 4.1]{reznik2020-similarityII}:
@@ -484,17 +483,17 @@ Consider the following similarity transform which sends points $X$ in the plane 
 
 \[X'=Scale(1/b'').Rot(-\theta).Transl(-X_{39}).X\]
 
-\noindent where  $b''$ is the variable minor semi-axis length of the the (moving) Brocard inellipse $\E''$ in the homothetic pair, $\theta$ the angle between said minor axis and the horizontal, and $X_{39}$ the moving center of $\E''$. Clearly, $\E''$ will be sent to an origin-centered ellipse which is axis-parallel to the homothetic ones. By Lemma~\ref{lem:03-beta}, the aspect ratio $\beta$ of $\E''$ is invariant over the homothetic family, implying the transformed inellipse will have fixed axes $(\beta, 1)$. Notice its circumcenter and circumradius are prescribed by the semi-axes of the caustic (Equation~\ref{eqn:broc-circumcircle}). This completes the proof. 
+\noindent where  $b''$ is the variable minor semi-axis length of the the (moving) Brocard inellipse $\E''$ in the homothetic pair, $\theta$ the angle between said minor axis and the horizontal, and $X_{39}$ the moving center of $\E''$. Clearly, $\E''$ will be sent to an origin-centered ellipse which is axis-parallel to the homothetic ones. By Lemma~\ref{lem:04-beta}, the aspect ratio $\beta$ of $\E''$ is invariant over the homothetic family, implying the transformed inellipse will have fixed axes $(\beta, 1)$. Notice its circumcenter and circumradius are prescribed by the semi-axes of the caustic (Equation~\ref{eqn:broc-circumcircle}). This completes the proof. 
 \end{proof}
 
 \begin{figure}
     \centering
-    \includegraphics[width=.7\textwidth]{pics_03_260_brocard_homothetic_polar.eps}
+    \includegraphics[width=.7\textwidth]{pics_04_260_brocard_homothetic_polar}
     \caption{The Brocard family (magenta) is the polar image of the homothetic family (solid blue) with respect to a circle (dashed gray) centered on a focus of the homothetic caustic (light brown) which is sent to the Brocard circumcircle (dashed magenta). The outer ellipse (black) is sent to the Brocard inellipse (green). \href{https://bit.ly/2RwKmAM}{Live}}
-    \label{fig:03-brocard-homoth}
+    \label{fig:04-brocard-homoth}
 \end{figure}
 
-Referring to \cref{fig:03-brocard-homoth}, let $a,b$ be the semi-axes of the outer ellipse in the homothetic pair. 
+Referring to \cref{fig:04-brocard-homoth}, let $a,b$ be the semi-axes of the outer ellipse in the homothetic pair. 
 
 \begin{proposition}
 The Brocard porism is the polar image of the homothetic family with respect to a circle centered on a caustic focus $f'$.  The symmedian point $X_6$ of the image coincides with $f'$. Its outer circle and ellipse are given by:
@@ -507,7 +506,7 @@ The Brocard porism is the polar image of the homothetic family with respect to a
     (b') = \frac{2a\rho^2 }{b\sqrt{4a^2 - c^2}},\;\; R=\frac{2a\rho^2}{b^2} 
 \end{align*}
 Here $b'>a'$.
-\label{prop:03-brocard-polarimage}
+\label{prop:04-brocard-polarimage}
 \end{proposition}
  
 \begin{proof}
@@ -516,7 +515,7 @@ Proof is left as an exercise.
 
 %%% It follows from the same approach developed in \cref{sec:09-polarimage}.  Details are left to the reader.
 \begin{remark}
- From the relations obtained in \cref{prop:03-brocard-polarimage} it follows that
+ From the relations obtained in \cref{prop:04-brocard-polarimage} it follows that
  \[a=\rho^2\frac{(4 (b')^2-(a')^2)}{3 a' (b')^2},\;\; b=\rho^2\frac{\sqrt{4 (b')^2-(a')^2}}{\sqrt{3} (b')^2}\]
  
 \end{remark}
@@ -536,7 +535,7 @@ In terms of the homothetic pre-image semi-axes $a,b$, the invariant sum of inver
 \end{align*}
 \end{corollary}
 
-\begin{proof} By \cref{prop:03-brocard-axes} and \cref{prop:03-brocard-polarimage} it follows that
+\begin{proof} By \cref{prop:04-brocard-axes} and \cref{prop:04-brocard-polarimage} it follows that
   $\sin\omega=(a')/(2b')=b/\sqrt{4a^2-c^2}.$
 Using that $\csc^2\omega-\cot^2\omega=1$ the result follows.
 \end{proof}
@@ -603,104 +602,9 @@ Vertices $P_i=[x_i,y_i]$, $i=1,2,3$ of Brocard porism triangles are given by:
     q_2&= 2 d h (3 d^2 - h^2)\cos{t} - (9 d^4 - h^4) \sin{t}  + 9 d^4 + 2 d^2 h^2 + h^4\\
     q_3&= 2 d h (3 d^2 - h^2)\cos{t} + (9 d^4 - h^4)\sin{t} - 9 d^4 - 2 d^2 h^2 - h^4
 \endaligned
-\label{eqn:03-vertices-brocard}
+\label{eqn:04-vertices-brocard}
 \end{equation}
 }
 
-\section{Summary}
-
-Fixed points and (known) conserved quantites for the non-concentric (NCAP) families in chapter appear in
-\cref{tab:n3-non-conc-families} (compare with 
-\cref{tab:n3-conc-families}).
-
-A diagram depicting how certain pairs of families are interrelated by either similarity or polar transformations appears in in \cref{fig:03-transformations}.
-
-\begin{table}
-\centering
-\begin{tabular}{|r|c|c|l|}
-\hline
-Family & Fixed & Conserves & Notes \\
-\hline
-\makecell[rc]{Poristic\\(bicentric)} & $X_1$, $X_3$, $X_{40}$, $\ldots$ & $\sum\cos\theta_i,a_9/b_9$ & \makecell[lc]{polar image of Confocal family\\wrt to a focus} \\
-\hline
-\makecell[rt]{Poristic\\Excentrals} & $X_2$, $X_3$, $X_4$, $X_5$ & $\sum{s_i^2}$, $\prod\cos\theta_i$ & \makecell[lt]{Inscribed in circle;\\caustic is MacBeath inconic} \\
-\hline
-Brocard & \makecell[lc]{$X_3$, $X_6$, $X_{15}$, $X_{16}$,\\$X_{39}$, $X_{182},\ldots$,\\$\Omega_1$, $\Omega_2$} & $\sum{s_i^{-2}}$, $\omega$, $\sum\cot\theta_i$ & \makecell[lc]{polar image of Homothetic\\family wrt caustic focus;\\inscribed in circle;\\caustic is Brocard inellipse}\\
-%\hline
-%focus-Inversive & $X_7$ & $L,\sum\cos\theta_i$ & \makecell[lc]{inversive image of Confocals\\wrt a focus; non-Ponceletian;\\inscribed in Pascal's limaçon;\\caustic non-ellipse}\\
-\hline
-\end{tabular}
-\caption{Summary of fixed points and (known) conserved quantites for the non-concentric, axis-parallel (NCAP) families in this chapter.}
-\label{tab:n3-non-conc-families}
-\end{table}
-
-% \includegraphics[trim={left bot right top},clip]
-\begin{figure}
-    \centering
-    \includegraphics[trim={60 90 80 90},clip,width=\textwidth]{chap_03/pics/pics_03_250_poncelet_transformations.pdf}
-  \caption{Families mentioned in this chapter (blue ones are concentric, tan ones are non-concentric), as well as the transformations under which certain families are interrelated.}
-    \label{fig:03-transformations}
-\end{figure}
-
-\section{Exercises}
-
-\begin{exercise}
-Show that over the poristic family, the locus of the foci of the $X_9$-centered circumconic (the circumbilliard) is a circle.
-\end{exercise}
-
-\begin{exercise}
-Prove \cref{prop:03-antiorthic}. Furthermore, prove the intersection point of $X_1 X_3$ with the antiorthic axis is the Schröder point $X_{1155}$.
-\end{exercise}
-
-\begin{exercise}
-Prove that over the poristic family the inconic centered on $X_1$ is axis-parallel with the circumconic centered on $X_9$ (i.e., the circumbilliard), see this \href{https://youtu.be/0VHBjdHXbJc}{Video}.
-\end{exercise}
 
 
-\begin{exercise}
-Recall the cosine circle $\Cm$ (also known as the second Lemoine circle) is centered on a triangle's symmedian point $X_6$. Let $\E'$ be the Brocard ellipse of some triangle $T$. Let $\beta$ be the aspect ratio of $\E'$, i.e., $a'/b'$. Show that for any $T$, above (resp. below) a certain $\beta$, $\Cm$ is tangent to $\E'$ at two distinct points (resp. it is exterior to $\E'$). See it \href{https://bit.ly/2RqhUQV}{Live}.
-\end{exercise}
-
-
-\begin{exercise}
-Show that the poristic excentral family is also the polar image of billiard excentrals wrt to a circle centered on a billiard (i.e., the caustic) focus. See it \href{https://bit.ly/33c1s9A}{Live}.
-\end{exercise}
-
-\begin{exercise}
-Show that over the Brocard porism the radius $r^*$ of the cosine circle is invariant.
-\end{exercise}
-
-\begin{exercise}
-Show that the first Lemoine circle (centered on $X_{182}$ is stationary over the Brocard porism. Above a certain $a'/b'$, this circle is tangent to one of the minor vertices of the caustic. See it \href{https://bit.ly/3tp0XUq}{Live}.
-\end{exercise}
-
-\begin{exercise}
-Ehrmann's ``third'' Lemoine circle is studied in \cite{darij2012-ehrmann}, centered on $X_{576}$, is defined as follows: for each vertex, consider the 3 circles containing pairs of vertices and the symmedian point $X_6$. The third Lemoine circle contains the 6 intersections of said circles (2 each) with the sidelines. Prove this circle is also stationary over the Brocard porism, i.e., all three Lemoine circles are; see it \href{https://bit.ly/3tw09gA}{Live}. 
-\end{exercise}
-
-
-\begin{exercise}
-Prove the expression and inequality for $\cot{\omega}$ in \cref{prop:03-brocard-w}.
-\end{exercise}
-
-\begin{exercise}
-That the Brocard axis $X_3 X_6$ is stationary over the Brocard porism is established. Prove that the Lemoine axis, which intersects the Brocard axis at the Schoutte point $X_{187}$, is also stationary; see it \href{https://bit.ly/3nTRi75}{Live}.
-\end{exercise}
-
-\begin{exercise}
-The so-called ``second'' Brocard triangle, defined in \cite[Second Brocard Triangle]{mw}, has vertices at the intersections of symmedians (cevians through $X_6$) with the Brocard circle. Show that over the Brocard porism, the family of second Brocard triangles is a new, smaller Brocard porism which shares the isodynamic points $X_{15}$ and $X_{16}$ with the original family. Prove that if this is iterated, the shrinking porisms converge to $X_{15}$. See it \href{https://bit.ly/3ttMNBg}{Live}.
-\end{exercise}
-
-\section{Research Questions}
-
-\begin{question}
-Show that (i) the family of tangential triangles to the Brocard porism is also Ponceletian (caustic is the Brocard circumcircle).(ii) Derive the axes for the ellipse it is inscribed in.  and that (iii) its Gergonne point $X_7$ is stationary and coincides with the symmedian point $X_6$ of the Brocard porism; (iv) the locus of $X_{20}$ of the tangentials is a segment along the Brocard axis of the original family. \href{https://bit.ly/2RpNxdn}{Live} 
-\end{question}
-
-\begin{question}
-The 3 Apollonius' circles of a triangle pass through a vertex and its two isodynamic points $X_{15}$ and $X_{16}$, see \cite[Isodynamic points]{mw}. Prove that over the Brocard porism, the sum of the inverse squared radii of the three Apollonius circles is invariant, see them \href{https://bit.ly/3elEzXI}{Live}.
-\end{question}
-
-\begin{question}
-Prove that the polar image of the Brocard porism with respect to a circle centered on a caustic focus is another (tilted, smaller) Brocard porism whose Brocard inellipse shares a focus with the original one. Where does the sequence of Porisms converge? See it \href{https://bit.ly/3b7erOg}{Live}.
-\end{question}

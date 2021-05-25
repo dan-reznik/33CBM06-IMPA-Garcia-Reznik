@@ -1,21 +1,23 @@
+\section{Loci in Generic Nested Ellipses}
+\label{sec:07-loci}
 
- In this Section we prove the locus of a given fixed linear combination of $X_2$ and $X_3$ is an ellipse. We will use Blaschke products since, as shown in \cref{fig:04-affine}, a generic non-concentric pair is always the affine image of a pair with circumcircle.
+ In this Section we prove the locus of a given fixed linear combination of $X_2$ and $X_3$ is an ellipse. We will use Blaschke products since, as shown in \cref{fig:07-affine}, a generic non-concentric pair is always the affine image of a pair with circumcircle.
  
  \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{pics_04_030_affine_circumcircle.eps}
+    \includegraphics[width=\textwidth]{pics_07_030_affine_circumcircle}
     \caption{Affine transformation that sends a generic ellipse pair and its 3-periodic family (left) to a new pair with circumcircle (right). We parametrize the 3-periodic orbit with vertices $z_i$ in the circumcircle pair using the foci of the latter's caustic $f$ and $g$, and then apply the inverse affine transformation to get a parametrization of the vertices $P_i$ of the original Poncelet pair. \href{https://youtu.be/6xSFBLWIkTM}{Video}}
-    \label{fig:04-affine}
+    \label{fig:07-affine}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=.8\textwidth]{pics_04_010_n3_nonconcentric.eps}
+    \includegraphics[width=.8\textwidth]{pics_07_010_n3_nonconcentric}
     \caption{A pair of ellipses in general position which admits a Poncelet 3-periodic family (blue). Let the outer one be centered at the origin $O$. Their major axes are tilted by $\theta$, and their centers displaced by $O_c=(x_c,y_c)$. \href{https://youtu.be/bjHpXVyXXVc}{Video}}
-    \label{fig:04-n3-nonconcentric}
+    \label{fig:07-n3-nonconcentric}
 \end{figure}
 
-Consider the generic pair of nested ellipses $\E=(O,a,b)$ and $\E_c=(O_c,a_c,b_c.\theta)$ in Figure~\ref{fig:04-n3-nonconcentric}. Let s$\theta$, c$\theta$ denote the sine and cosine of $\theta$, respectively. Define $c_c^2=a_c^2-b_c^2$. The Cayley condition for the pair to admit a 3-periodic family is given by:
+Consider the generic pair of nested ellipses $\E=(O,a,b)$ and $\E_c=(O_c,a_c,b_c.\theta)$ in Figure~\ref{fig:07-n3-nonconcentric}. Let s$\theta$, c$\theta$ denote the sine and cosine of $\theta$, respectively. Define $c_c^2=a_c^2-b_c^2$. The Cayley condition for the pair to admit a 3-periodic family is given by:
 
 {\small
 \begin{align}
@@ -39,18 +41,18 @@ a_c-a b+b b_c \right) = 0\nonumber
 
 %A related result is that the locus of the circumcenter-of-mass \cite{sergei2014-circumcenter-of-mass}, a generalization of $X_3$ for $N>3$ is also an ellipse.
 
-Referring to Figure~\ref{fig:04-nonconcentric-xns}:
+Referring to Figure~\ref{fig:07-nonconcentric-xns}:
 
 \begin{theorem}
 Over the family of 3-periodics interscribed in an ellipse pair in general position (non-concentric, non-axis-aligned),
 if $\X\ab$ is a fixed linear combination of $X_2$ and $X_3$, i.e., $\X\ab=\alpha X_2+\beta X_3$ for some fixed $\alpha,\beta\in\mathbb{C}$, then its locus is an ellipse. 
-\label{thm:04-ellipse-locus}
+\label{thm:07-ellipse-locus}
 \end{theorem}
 
 \begin{proof}
 Consider a general $N=3$ Poncelet pair of ellipses that forms a 1-parameter family of triangles. Without loss of generality, by translation and rotation, we may assume the outer ellipse is centered at the origin and axis-aligned with the plane $\R^2$, which we will also identify with the complex plane $\mathbb{C}$. Let $a,b$ be the semi-axis of the outer ellipse, and $a_c,b_c$ the semi-axis of the inner ellipse, as usual. 
 
-Referring to Figure~\ref{fig:04-affine}, consider the linear transformation that takes $(x,y)\mapsto(x/a,y/b)$. This transformation takes the outer ellipse to the unit circle $\T$ and the inner ellipse to another ellipse. Thus, it transforms the general Poncelet $N=3$ system into a pair where the outer ellipse is the circumcircle, which we can parametrize using Blaschke products \cite{daepp-2019}. In fact, to get back to the original system, we must apply the inverse transformation that takes $(x,y)\mapsto(a x,b y)$. As a linear transformation from $\mathbb{C}$ to $\mathbb{C}$, we can write it as $L(z):=p z+q \ol{z}$, where $p:=(a+b)/2, q:=(a-b)/2$.
+Referring to Figure~\ref{fig:07-affine}, consider the linear transformation that takes $(x,y)\mapsto(x/a,y/b)$. This transformation takes the outer ellipse to the unit circle $\T$ and the inner ellipse to another ellipse. Thus, it transforms the general Poncelet $N=3$ system into a pair where the outer ellipse is the circumcircle, which we can parametrize using Blaschke products \cite{daepp-2019}. In fact, to get back to the original system, we must apply the inverse transformation that takes $(x,y)\mapsto(a x,b y)$. As a linear transformation from $\mathbb{C}$ to $\mathbb{C}$, we can write it as $L(z):=p z+q \ol{z}$, where $p:=(a+b)/2, q:=(a-b)/2$.
 
 Let $z_1,z_2,z_3\in\T\subset\mathbb{C}$ be the three vertices of the circumcircle family, parametrized as in \cref{def:bla}, and let $v_1:=L(z_1),v_2:=L(z_2),v_3:=L(z_3)$ be the three vertices of the original general family. The barycenter $X_2$ of the original family is given by $(v_1+v_2+v_3)/3$, and the circumcenter $X_3$ is given by \cite{stackexchange-x3a}:
 
@@ -95,7 +97,7 @@ Let $f,g\in\mathbb{C}$ be the foci of the inner ellipse in the circumcircle syst
 By   \cref{lem:ell-param}, this is the parametrization of an ellipse centered at $w$, as desired. As in  \cref{lem:ell-param}, it is also possible to explicitly calculate its axis and rotation angle, but these expressions become very long.
 \end{proof}
 
-In \cref{thm:04-ellipse-locus} a linear combination of $X_2$ and $X_3$ was considered in terms of complex parameters $\alpha,\beta$. Below this result is specialized to the case of an affine combination of said centers in terms of a real parameter $\gamma$.
+In \cref{thm:07-ellipse-locus} a linear combination of $X_2$ and $X_3$ was considered in terms of complex parameters $\alpha,\beta$. Below this result is specialized to the case of an affine combination of said centers in terms of a real parameter $\gamma$.
 
 \begin{corollary}
 Over the family of 3-periodics interscribed in an ellipse pair in general position (non-concentric, non-axis-aligned),
@@ -103,7 +105,7 @@ if $\X_\gamma$ is a real affine combination of $X_2$ and $X_3$, i.e., $\X_\gamma
 \end{corollary}
 
 \begin{proof}
-Apply   \cref{thm:04-ellipse-locus} with $\alpha=1-\gamma, \beta=\gamma$ to get the elliptical loci. As in the end of the proof of  \cref{thm:04-ellipse-locus}, the center of the locus of $\X_\gamma$ can be computed explicitly as 
+Apply   \cref{thm:07-ellipse-locus} with $\alpha=1-\gamma, \beta=\gamma$ to get the elliptical loci. As in the end of the proof of  \cref{thm:07-ellipse-locus}, the center of the locus of $\X_\gamma$ can be computed explicitly as 
 \begin{gather*}
     w=w_0+w_1 \gamma \text{, where}\\
     w_0=\frac{1}{3} \left(q \left(\ol{f}+\ol{g}\right)+p (f+g)\right)\\
@@ -122,9 +124,9 @@ Amongst the 40k+ centers listed on \cite{etc}, about 4.9k triangle centers lie o
 
 \begin{figure}
      \centering
-     \includegraphics[width=\textwidth]{pics_04_020_n3_nonconcentric_loci.eps}
-     \caption{A 3-periodic is shown interscribed between two nonconcentric, non-aligned ellipses (black). The loci of $X_k$, $k=2,3,4,5,20$ (and many others) remain ellipses. Those of $X_2$ and $X_4$ remain axis-aligned with the outer one. Furthermore the centers of all said elliptic loci are collinear (magenta line). \href{https://youtu.be/p1medAei_As}{Video}}
-     \label{fig:04-nonconcentric-xns}
+     \includegraphics[width=\textwidth]{pics_07_020_n3_nonconcentric_loci}
+     \caption{A 3-periodic is shown interscribed between two non-concentric, non-aligned ellipses (black). The loci of $X_k$, $k=2,3,4,5,20$ (and many others) remain ellipses. Those of $X_2$ and $X_4$ remain axis-aligned with the outer one. Furthermore the centers of all said elliptic loci are collinear (magenta line). \href{https://youtu.be/p1medAei_As}{Video}}
+     \label{fig:07-nonconcentric-xns}
  \end{figure}
  
 %\begin{corollary}
@@ -144,10 +146,10 @@ The elliptic loci of $X_2$ and $X_4$ are axis-aligned with the outer ellipse.
 %    \label{fig:04-circular-caustic}
 %\end{figure}
 
-Experimental evidence suggests:
+Experimental evidence suggests the converse of \cref{thm:07-ellipse-locus} is also true:
 
 \begin{conjecture}
 Over 3-periodics interscribed between two ellipses in general position, the locus of a triangle center $X_k$ is an ellipse if and only if $X_k$ is a fixed linear combination of $X_3$ and $X_4$.
-\label{conj:04-locus}
+\label{conj:07-locus}
 \end{conjecture}
 

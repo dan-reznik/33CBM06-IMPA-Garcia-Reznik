@@ -1,15 +1,12 @@
 \section{Preliminaries}
 
-
 Henceforth let {\em billiard 3-periodics} refer to the 1d family of Poncelet triangles interscribed between pair of confocal ellipses $\E$ and $\E_c$ given by:
 \[ \E:\frac{x^2}{a^2}+\frac{y^2}{b^2}-1=0,\;\;\;\E_c:\frac{x^2}{a_c^2}+\frac{y^2}{b_c^2}-1=0\]
 where $c^2=a^2-b^2=a_c^2-b_c^2$.
 
-
 Billiard N-periodics classically conserve  perimeter $L$ and Joachimsthal's constant $J$. The latter one is equivalent to stating all trajectory segments are tangent to a confocal caustic, see \cite[Thm 4.4]{sergei91} and \cite{arnold2020-joachim}.
-When $N=3$, we can derive these explicitly using the vertex parametrization given in \cref{prop:03-vtx-param}.
+When $N=3$, we can derive these explicitly using the vertex parametrization given in \cref{eq:02-p2}.
  
-
 \begin{proposition}
 For billiard 3-periodics, the perimeter and Joachimsthal's constant are given by:
 
@@ -44,11 +41,11 @@ where $\delta=\sqrt{a^4-a^2b^2+b^4}$.
  	We have that
  	\[L=|P_2-P_3|+2|P_1-P_2|,\;\;
  	 J=\langle \frac{P_1-P_3}{|P_1-P_3|},[\frac{1}{a},0]\rangle\]
- 	 Straightforward calculations using the vertex parametrization given in \cref{prop:03-vtx-param}, lead to the stated result.
+ 	 Straightforward calculations using the vertex parametrization in \cref{eq:02-p2}, leads to the stated result.
 %\textcolor{red}{ronaldo: CAS+parametrization}
 \end{proof}
 
-Henceforth the oft-ocurring quantity $\delta$ will be referred to as the Darboux constant. An interesting geometric interpretation for it appears in \cref{prop:03-delta}.
+Henceforth the oft-ocurring quantity $\delta$ will be referred to as the Darboux constant. An interesting geometric interpretation for it appears in \cref{prop:02-delta}.
 
 %\noindent Note: the use of $J$ in this chapter refers to its value for the $N=3$ case.
 
@@ -68,7 +65,7 @@ The semi-axes $a_c,b_c$ of the confocal caustic are given by:
 a_c=&\frac{a\left(\delta-{b}^{2}\right)}{c^2},\;\;\;\;
 b_c=\frac{b\left({a}^{2}-\delta\right)}{c^2}\cdot
 \end{align*}
-\label{prop:03-n3-caustic}
+\label{prop:02-n3-caustic}
 \end{proposition}
 
 When $a=b$, we have that $a_c=b_c=a/2$.
@@ -81,20 +78,20 @@ w_1&=a_c^2-(4 c a_c b_c)^{\frac{2}{3}},\;\; w_2=2 a_c^2+ (4 c a_c b_c)^{\frac{2}
 \end{align*}
 The implicit equation that defines $a$ above is the quartic  given by
 \[c^2( a_c^2   - 2   a_c   a )+ a^2(2a_c a  - a^2)=0\]
-\label{prop:03-caustic-to-billiard}
+\label{prop:02-caustic-to-billiard}
 \end{proposition}
 
 \section{Incenter and excenter loci}
-\label{sec:03-inc-exc-loci}
+\label{sec:02-inc-exc-loci}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{pics_03_080_billiard_grid.eps}
+    \includegraphics[width=\textwidth]{pics_02_010_billiard_grid}
     \caption{\textbf{Top Left:} An elliptic billiard 3-periodic (solid blue) is shown inscribed in an outer ellipse (black) and a confocal caustic (brown). Graves' theorem implies its internal angles will be bisected by ellipse normals (black arrows). Also shown is the incenter $X_1$ defined as the intersection of said bisectors. \textbf{Bottom Left:} Poncelet's porism implies a 1d family of such triangles exists. Some samples are shown (dashed blue). A classic invariant is  perimeter. The Mittenpunkt $X_9$ remains stationary at the center. The incenter $X_1$ sweeps an ellipse (dashed green). \textbf{Right:} The excentral triangle (solid green) has sides perpendicular to the bisectors. Over billiard 3-periodics, the excentral is of variable perimeter. Its vertices (known as the ``excenters'') also sweep an ellipse (dashed green) whose aspect ratio is the reciprocal of that of the incenter locus. The Symmedian point $X_6'$ of the excentral triangle coincides with $X_9$ of the reference and is therefore stationary. \href{https://bit.ly/3gWl3CI}{Live}}
     \label{fig:billiard-grid}
 \end{figure}
 
-An intriguing phenomenon is that over billiard 3-periodics, the locus of both incenter and the excenters are ellipses, as was initially detected experimentally (see an early \href{https://youtu.be/BBsyM7RnswA}{Video}). This was proved by \cite{olga14} and \cite{garcia2019-incenter}. Indeed, we haven't yet found another Poncelet pair where this is the case, see \cref{conj:04-incenter-excenter-loci}.
+An intriguing phenomenon is that over billiard 3-periodics, the locus of both incenter and the excenters are ellipses, as was initially detected experimentally (see an early \href{https://youtu.be/BBsyM7RnswA}{Video}). This was proved by \cite{olga14} and \cite{garcia2019-incenter}. Indeed, we haven't yet found another Poncelet pair where this is the case, see \cref{conj:07-incenter-excenter-loci}.
 
 Referring to \cref{fig:billiard-grid}:
 
@@ -105,23 +102,22 @@ a_1 =& \frac{\delta-b^2 }{a},\;\;\;b_1=\frac{a^2-\delta}{b}\\
 a_e= &\frac{{b}^{2}+\delta}{a},\;\;\;b_e=\frac{{a}^{2}+\delta}{b}
 \end{align*}
 Furthermore, $\E_1$ and $\E_e$ have reciprocal aspect ratios, i.e., $a_1/b_1=b_e/a_e$.
-\label{thm:03-incenter-excenter}
+\label{thm:02-incenter-excenter}
 \end{theorem}
 
 \begin{proof}
-It follows from the vertex parametrization in \cref{prop:03-vtx-param} and the definition of incenter and excenters.  
-We have that
+It follows from the vertex parametrization in \cref{eq:02-p2} and the definition of incenter and excenters. We have that
 \[X_1=\frac{s_1 P_1+s_2P_2+s_3P_3}{s_1+s_2+s_3}=
 \frac{1}{L}(s_1P_1+s_2P_2+s_3P_3)\]
 where $s_1=|P_2-P_3|$, $s_2=|P_1-P_3|$ and $s_3=|P_1-P_2|$.
 A careful symbolic analysis shows that $\mathcal{E}_1(X_1)=0$. A similar analysis considering the excenters shows that the locus of the three points is the ellipse $\mathcal{E}_e$ stated.
 \end{proof}
 
-\noindent A more general treatment to the above is given in \cref{chap:04-n3-loci}.
+\noindent A more general treatment to the above is given in \cref{chap:07-n3-loci}.
 
 \begin{corollary}
 The pair $\{\mathcal{E},\mathcal{E}_e\}$ is Ponceletian.
-\label{cor:03-excentral-billiard-poncelet}
+\label{cor:02-excentral-billiard-poncelet}
 \end{corollary}
 
 \begin{proof}
@@ -131,9 +127,9 @@ Direct from Cayley condition
 \end{proof}
 
 \section{A stationary point}
-\label{sec:03-stationary}
+\label{sec:02-stationary}
 
-The Mittenpunkt $X_9$ is a triangle center where lines from each excenter thru the side midpoint meet. Referring to \cref{fig:03-x9}:
+The Mittenpunkt $X_9$ is a triangle center where lines from each excenter thru the side midpoint meet. Referring to \cref{fig:02-x9}:
 \begin{theorem}
 Over the family of 3-periodics in the elliptic billiard, $X_9$ is stationary at the common center.
 \end{theorem}
@@ -146,10 +142,10 @@ Let $\E$ be the outer ellipse in the confocal pair, $O$. By definition, the Mitt
 
 \begin{figure}
      \centering
-    \includegraphics[width=\linewidth]{pics_03_090_mitten_proof.pdf}
+    \includegraphics[width=\linewidth]{pics_02_020_mitten_proof.pdf}
      \caption{\textbf{Left}: 3-periodic billiard triangle (blue), its excentral triangle (green). The Mittenpunkt $X_9$ is the point of concurrence of lines drawn from the excenters through sides' midpoints $M_i$. \textbf{Right}: the affine image which sends the billiard to a circle. Lines from imaged excenters through sides' midpoints must pass through the origin. Since the latter is stationary, so must be its pre-image $X_9$, which is stationary at the billiard center.  % done
      \href{https://youtu.be/tMrBqfRBYik}{Video}}
-     \label{fig:03-x9} 
+     \label{fig:02-x9} 
 \end{figure}
 
 \section{Conserved Quantities}
@@ -162,7 +158,7 @@ $r/R$ is invariant over the 3-periodic orbit family and given by:
 \label{eqn:rovR}
 \frac{r}{R}=\frac{2 (\delta-b^2)(a^2-\delta)}{c^4}.
 \end{equation*}
-\label{thm:03-confocal-rovR}
+\label{thm:02-confocal-rovR}
 \end{theorem}
 
 \begin{proof}
@@ -179,14 +175,14 @@ The following relation, found in \cite{johnson1960}, holds for any triangle:
 \label{eqn:rovR-cas}
 \end{equation}
 
-Next, let $P_1=(a,0)$ be a vertex of an isosceles 3-periodic. Obtain a candidate expression for $r/R$. This yields \eqref{eqn:rovR} exactly. Using the vertex parametrization in \cref{prop:03-vtx-param}, derive an expression for the square of the right-hand side of \eqref{eqn:rovR-cas} as a function of $x_1$ and subtract from it the square of \eqref{eqn:rovR}. In  \cite{garcia2020-new-properties}
+Next, let $P_1=(a,0)$ be a vertex of an isosceles 3-periodic. Obtain a candidate expression for $r/R$. This yields \eqref{eqn:rovR} exactly. Using the vertex parametrization in \cref{eq:02-p2}, derive an expression for the square of the right-hand side of \eqref{eqn:rovR-cas} as a function of $x_1$ and subtract from it the square of \eqref{eqn:rovR}. In  \cite{garcia2020-new-properties}
 it is shown $\left(s_1s_2s_3/R^2\right)^2$ is rational on $x_1$. For simplification, use $R=s_1 s_2 s_3/(4A)$, where $A$ is the triangle area. With a CAS, show said difference is identically zero for all $x_1\in(-a,a)$.
 \end{proof}
 
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{pics_03_100_radii}
+    \includegraphics[width=\textwidth]{pics_02_030_radii}
     \caption{The incircle (green), circumcircle (purple), and 9-point (Euler's) circle (pink) of a billiard triangle (blue). These are centered on $X_1$, $X_3$, and $X_5$, respectively. Their radii are the inradius $r$, circumradius $R$, and 9-point circle radius $r_9=2R$. Over the family, the ratio $r/R$ is invariant. In turn this implies an invariant sum of cosines. \href{https://bit.ly/337hvpf}{Live}}
     \label{fig:radii}
 \end{figure}
@@ -194,14 +190,14 @@ it is shown $\left(s_1s_2s_3/R^2\right)^2$ is rational on $x_1$. For simplificat
 Let $\theta_i$, $r$, $R$, and $A$ denote the ith internal angle, inradius, circumradius, and area of a reference triangle. Primed quantities refer to the excentral triangle. The relations below, appearing in  \cite{johnson1960},  hold for any triangle:
 
 \begin{align}
-\sum_{i=1}^{3}{\cos\theta_i}&=1+\frac{r}{R} \label{eqn:03-sum-cos} \\
-\prod_{i=1}^{3}{\cos\theta_i'}&=\frac{r}{4R} \label{eqn:03-exc-prod-cos} \\
-\frac{A}{A'}&=\frac{r}{2R} \label{eqn:03-area-ratio}
+\sum_{i=1}^{3}{\cos\theta_i}&=1+\frac{r}{R} \label{eqn:02-sum-cos} \\
+\prod_{i=1}^{3}{\cos\theta_i'}&=\frac{r}{4R} \label{eqn:02-exc-prod-cos} \\
+\frac{A}{A'}&=\frac{r}{2R} \label{eqn:02-area-ratio}
 \end{align}
 
 \begin{corollary}
 Over billiard 3-periodics, also invariant are the sum of the orbit cosines, the product of excentral cosines, and the ratio of excentral-to-orbit areas.
-\label{cor:03-rOvR}
+\label{cor:02-rOvR}
 \end{corollary}
 
 Direct calculations yields an expression for the invariant sum of cosines in terms of elliptic billiard constants $J$ and $L$.
@@ -218,7 +214,7 @@ The Darboux constant $\delta$ appearing above has a curious geometric interpreta
 
 \begin{proposition}
 The power of $O$ with respect to $\Cm$ is constant and equal to $-\delta$.
-\label{prop:03-delta}
+\label{prop:02-delta}
 \end{proposition}
 
 \begin{proof}
@@ -227,103 +223,9 @@ Consider an isosceles 3-periodic orbit given by \cref{eq:orbita3-isosceles}.
 	Therefore, the power of the center of the ellipse with respect to the circumcircle is given by  
 	$$|OC_0|^2-R_0^2=\left(\frac { {b}^{2}-\delta}{2b}\right)^2 - \left(\frac {{b}^{2}+\delta}{2b}\right)^2=-\delta.$$
 	
-	For a generic 3-periodic orbit, the stated invariance is confirmed with a CAS using the vertex parametrization in \cref{prop:03-vtx-param}.  
+	For a generic 3-periodic orbit, the stated invariance is confirmed with a CAS using the vertex parametrization in \cref{eq:02-p2}.  
 %	\textcolor{red}{localizar depois}
 \end{proof}
 
-\section{Confocal Vertex Parametrization}
-\input{chap_03/03_035_confocal_vtx_param}
-
-\section{Exercises}
-
-\begin{exercise}
-\label{ex:03-circumbilliard} 
-Referring to \cref{fig:03-circumbilliard}, show that every triangle has a circumbilliard, i.e., an ellipse to which it is inscribed and to which it is a billiard 3-periodic. Compute the axes of said circumbilliard with respect to triangle vertices. 
-\end{exercise}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=.8\textwidth]{pics_03_320_circumplot.eps}
-    \caption{Two random triangles shown with their circumbilliards. \href{https://youtu.be/vSCnorIJ2X8}{Video}}
-    \label{fig:03-circumbilliard}
-\end{figure}
-
-\begin{exercise}
-A pair of circles uniquely defines a {\em pencil} of coaxial circles; see \cite[Limiting Points]{mw}. The pencil contains exactly two circles which degenerate to a point, known as {\em limiting points}. Derive the location of such points for the poristic pair obtained from the image of two confocal ellipses centered at $[0,0]$ and with axes $a,b$ and $a',b'$.
-\end{exercise}
-
-\begin{exercise}
-Let $\ell_1,\ell_2$ be the limiting points of the two circles which are polar images of a confocal pair $\E,\E'$ with respect to a circle centered on $f_1$. At what aspect ratio $a/b$ of $\E$ will $\ell_2$ coincide with $f_2$?
-\end{exercise}
-
-\begin{exercise}
-A well-known result is that the inversion of a circle pair $\Cm,\Cm'$ with respect to a circle $\Cm_1$ centered on $\ell_1$ (resp. $\Cm_2$ centered on $\ell_2$) is a pair of concentric circles $\Cm_1'$ and $\Cm_1''$ (resp. $\Cm_1'$ and $\Cm_1''$). Prove the following lesser known result: the ratio of radii between $\Cm_1'$ and $\Cm_1''$ is the same as the ratio between $\Cm_2'$ and $\Cm_2''$. 
-\end{exercise}
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=.8\textwidth]{pics_03_210_concentric_inverted_pairs.eps}
-    \caption{Concentric circle pairs (light blue) which are the inversions of the circumcircle and incircle (dashed orange) of the bicentric family  (blue) with respect to its two limiting point $\ell_1$ and $\ell_2$. Also shown are Billiard 3-periodics (blue) in the polar pre-image with respect to a circle (dashed gray) -- centered on $f_1=\ell_1$.}
-    \label{fig:03-concentric-inverted}
-\end{figure}
-
-\begin{exercise}
-Referring to \cref{fig:03-concentric-inverted}, let $\Cm,\Cm'$ be the pair of circles which are the polar image of a confocal pair of ellipses $\E,\E'$. Let $\Cm_1', \Cm_1''$ be the inversive images of $\Cm,\Cm'$ wrt to a circle centered on a focus of the ellipse pair. Prove that: (i) $\Cm_1'$ and $\Cm_1''$ are concentric with the ellipse pair and (ii) $\Cm_1'$ (resp. $\Cm_1''$) is externally tangent to $\E$ (resp. $\E'$) at its left and right major vertices.
-\end{exercise}
-
-
-\begin{exercise}
-Prove the inversive image of billiard 3-periodics with respect to a focus-centered circle is a non-Ponceletian family inscribed in Pascal's Limaçon whose Gergonne point $X_7$ is stationary; see it \href{https://bit.ly/3edwKD7}{Live}. Indeed, this family has constant perimeter (to be shown later).
-\end{exercise}
-
-\begin{exercise}
- Consider the ellipse $x^2/a^2+y^2/b^2=1$. For a  3-periodic  billiard orbit with vertices $P_i=[x_i,y_i]$ (i=1,2,3)  show that:  
-
-\[ 
- \left( x_2\,y_3-x_3\,y_2 \right) x_1\,
-y_1+ \left(x_3\,y_1  - x_1\,y_3\right) x_2\, y_2+ \left( x_1\,y_2-x_2\,y_1 \right) x_3
-\,y_3=0
-\]
-
-\end{exercise}
-
-\begin{exercise} For a  3-periodic  billiard orbit with vertices $P_i=[x_i(t),y_i(t)]$ (i=1,2,3)
-Let $C_i(t)=[1/x_i(t),1/y_i(t)]$. 
-%Here $P_i(t)=[x_i(t),y_i(t)]$.
-
-Show that the polygon $\{C_1(t),C_2(t),C_3(t)\}$ is a segment that can be bounded or unbounded.
- \label{exe:chap02-inverse-envelope}
-\end{exercise}
-
-\begin{exercise} Which simple or self-intersected $N$- gon (closed polygon with $N$ vertices and $N$ sides) can be an orbit on an elliptic billiard? 
-
- For $N=4$ only the parallelogram can be a non self-intersected orbit on an elliptic billiard, see \cite{connes07}. For the analysis of self-intersected $4-gons$ see \cite{garcia2020-self-intersected}.
-\end{exercise}
-
-\begin{exercise}
- Consider a 3-periodic billiard orbit and its antipodal orbit. Show that the six points of intersections of the two triangles are contained in a stationary confocal ellipse $\mathcal{E}_h$: $x^2/a_h^2+y^2/b_h^2=1$ where:
-
-
-\begin{align*}
-	a_h=& {\frac { \left(  \delta -b^2\right) \left( {a}^{2}+{b}^{2}+2\,\delta \right)\sqrt {2\delta-{a}^{2}-{b}^{2} 
-			 }  }{3 \left( {a}^{2}-{
-				b}^{2} \right) ^{2}}}\\
-	%
-b_h=&  \,{\frac {\left( {a}^{2}-\delta \right)  \left( {a}^{2}+{b}^{2}+2\,\delta \right) \sqrt {2\delta -{a}^{2
-			}-{b}^{2} } }{3 \left( {a}^{2}-
-		{b}^{2} \right) ^{2}}}
-%
-\end{align*}
-Conclude that the pair of ellipses $\{\mathcal{E}_h, \mathcal{E}_1\}$ is a billiard pair having all orbits of period 6.
-Also show that the pair $\{\mathcal{E} , \mathcal{E}_h \}$ defines a zig-zag billiard and that the orbits have period 12 and  that the perimeter is  constant. %See Fig. \ref{fig:6zigzag}.
-\end{exercise}
-
-\section{Research Questions}
-
-\begin{question}
-Recall the extouch triangle has vertices at the points of contact of the excircles with a triangle's sidelines \cite[Extouch triangle]{mw}. 
-In \cref{chap:04-n3-loci} we show that the vertices of the extouch triangles of billiard 3-periodics coincide with the caustic touchpoints, see it 
-\href{https://bit.ly/33PufRv}{Live}. Show that said extouch family is also Ponceletian and concentric with the elliptic billiard; derive expressions for the semi-axes of its elliptic caustic. Is its center a triangle center? 
-\label{que:03-extouch}
-\end{question}
