@@ -1,6 +1,7 @@
 Here we introduce a few Poncelet triangle families interscribed in non-concentric, axis-parallel (NCAP) ellipse pairs. In some of the families below, at least one of the ellipses is a circle, so perhaps ``co-axial'' could also be employed.
 
 \section{Poristic Family (Bicentric Triangles)}
+\label{sec:04-poristic}
 
 \begin{figure}
     \centering
@@ -540,6 +541,83 @@ In terms of the homothetic pre-image semi-axes $a,b$, the invariant sum of inver
 Using that $\csc^2\omega-\cot^2\omega=1$ the result follows.
 \end{proof}
 
+\subsection{A digression: Equilateral Isodynamic Pedals}
+\label{sec:04-brocard-isodyn-pedals}
+
+Referring to Figure~\ref{fig:04-isodynamic-equis}, the pedal (resp. antipedal) triangles of the isodynamic points $X_{15}$ and $X_{16}$ (resp. isogonic points $X_{13}$ and $X_{14}$) are equilaterals centered on $X_{396}$ and $X_{395}$ (resp.  $X_{5463}$ and $X_{5464}$) \cite{etc}.
+
+Let $A$ denote the area of a triangle and $A_k$, $k={13,14,15,16}$ denote the area of said equilaterals. \cite{moses2020-private-equilaterals} has kindly contributed the following expressions:
+
+\begin{proposition}
+\begin{align*}
+A_{13}/A =& 2 + \frac{2 \Sha}{\sqrt{3}},\;\;\;A_{14}/A = 2 - \frac{2 \Sha}{\sqrt{3}}\\
+A_{15}/A =& \frac{-3 + \sqrt{3} \Sha}{2(\csc^2\omega - 4)},\;\;\;
+A_{16}/A = \frac{-3 - \sqrt{3} \Sha}{2(\csc^2\omega - 4)}
+\end{align*}
+\label{prop:04-equi-areas}
+\end{proposition}
+
+
+\begin{corollary}
+For any triangle:
+\[ \frac{A_{13}}{A_{14}}=\frac{A_{16}}{A_{15}}= \frac{\Sha+\sqrt{3}}{\Sha -\sqrt{3}} \]
+\end{corollary}
+
+\begin{corollary}
+The Brocard porism conserves $A_{13}/A_{14}$ and $A_{16}/A_{15}$.
+\end{corollary}
+
+%\[
+%\frac{A_{16}}{A_{15}}= {\frac { \left( s_1^{2}+s_2^{2}+s_3^{2} \right)  \left( s_1^{2}+s_2^{2}+s_3^{2}+2\,2\sqrt {3}A \right) }{2\,s_1^{4}-2\,s_1^{2}s_2^{2}-2\,s_1^{2}s_3^{2}+2\,s_2^{4}-2\,s_2^{2}s_3^{2}+2\,s_3^{4}}}-1\]
+
+%Using Conwayng the above over the Brocard porism vertices (Proposition~\ref{prop:orbita}) and using a CAS for simplication obtain:
+
+%\[\frac{A_{16}}{A_{15}}= \frac{(\sqrt{3}h-3d)^2}{(\sqrt{3}h+3d)^2}\]
+
+%A further simplification using Lemma \ref{lem:7} leads to the result.
+%\end{proof}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pics_04_280_broc_isos.eps}
+    \caption{The pedal (resp. antipedal) triangles (orange, resp. purple) of the isodynamic points $X_{15}$ and $X_{16}$ (resp. isogonic points $X_{13}$ and $X_{14}$) are equilaterals centered on $X_{396}$ and $X_{395}$, collinear with $X_6$ (resp. $X_{5463}$ and $X_{5464}$, collinear with $X_3$) \cite{etc}. Over the porism, the area ratios $A_{16}/A_{15}$ and $A_{13}/A_{14}$ are invariant and identical. The loci of $X_{396}$ and $X_{395}$ are circles (dashed orange) as are those of $X_{5463}$ and $X_{5464}$ (not shown).
+    \href{https://youtu.be/s4DF-iZZO8Y}{Video}}
+    \label{fig:04-isodynamic-equis}
+\end{figure}
+
+The centroid of the pedal triangle of $X_{15}$ (resp. $X_{16}$) is  $X_{396}$ (resp. $X_{395}$).
+
+
+\begin{proposition}
+The locus of $X_{15}$ and $X_{16}$ pedal centroids $X_{396}$ and $X_{395}$ are the following circles:
+
+\[C_{395}= \left[ 0,  \frac {R \left(  3(\Sha^2+1)-2\,\sqrt {3}\;\Sha \right) 
+ \left( \Sha+ \sqrt {3} \right) }{3\sqrt { \Sha^2-3} \left(  
+\Sha^2+1 \right) }
+ \right],\;\;
+r_{395}=\frac{R (\sqrt{3}\Sha +3)}{3(\Sha^2+1)}\]
+\[C_{396}= \left[ 0,  \frac {R \left(3\, ( \Sha^2+1 )+ 2\,\sqrt {3}\;\Sha \right) 
+ \left(  \Sha -\sqrt {3}\right) }{3\sqrt {\Sha^2-3} \left( \Sha^{2}+1 \right) }
+ \right],\;\;
+r_{396}=\frac{R (\sqrt{3}\Sha -3)}{3(\Sha^2+1)}\]
+
+\end{proposition}
+
+\begin{proof}
+Obtained via CAS.
+\end{proof}
+
+\begin{remark}
+Notice the ratio $r_{395}/r_{396}$ is equal to $A_{396}/A_{395}$.
+\end{remark}
+
+Still referring to \cref{fig:04-isodynamic-equis}:
+
+\begin{proposition}
+The locus of $X_{13}$ and $X_{14}$ antipedal centroids $X_{5463}$ and $X_{5464}$ are the following circles:
+\end{proposition}
+
+
 \section{Vertex Parametrization}
 
 \subsection{Poristic family}
@@ -562,6 +640,7 @@ P_1&=[x_1,y_1]\nonumber \\
 Its vertices sweep a circle centered on $X_{40}$ of the original poristic family, so we omit the parametrization.
 
 \subsection{Brocard Porism}
+\label{sec:04-broc-porism}
 
 Consider an isosceles Poncelet triangle $\Tm=ABC$ in the Brocard porism, where $AB$ is tangent to $\E$ at one of its minor vertices. Let $|AB|=2d$ and the height be $h$. Let $\zeta=d^2+h^2$. Let the origin $(0,0)$ be at its circumcenter $X_3$. Its vertices will be given by:
 

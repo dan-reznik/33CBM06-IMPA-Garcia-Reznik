@@ -2,7 +2,7 @@
 	\begin{center}
 	%	\def\svgwidth{1.0\textwidth}
 	%	\input{pics_tex/caustica1.pdf_tex}
-	 \includegraphics[scale=0.55]{chap_05/pics/pics-05-3tipos-orbitas.pdf}
+	 \includegraphics[scale=0.55]{pics-05-3tipos-orbitas.pdf}
 		\caption{Three types of billiard orbits in the ellipse.}
 	\end{center}
 \label{fig:caustic1}
@@ -57,7 +57,7 @@ Finally, when the orbit passes through a focus, the billiard map is conjugated w
 	\begin{center}
 	%	\def\svgwidth{1.0\textwidth}
 	%	\input{pics_tex/bilharorbita.pdf_tex}
-		 \includegraphics[scale=0.45]{chap_05/pics/pics-05-050-orbitas-dinamica.pdf}
+		 \includegraphics[scale=0.45]{pics-05-050-orbitas-dinamica.pdf}
 		\caption{Maps $\sigma$, $\tau$ and the the diffeomorphism $\sigma\circ\tau$.}
 	\end{center}
 \label{fig:caustic2}
@@ -79,7 +79,7 @@ Then
 \begin{proof} Direct from the definitions of $\sigma$ and $\tau$. The line passing through $(x,y)$ and $(\bar x, \bar y)$ is the polar line of $(z,w)$ with respect to $\mathcal{E}_c$. Also the line passing through $(z,w) $ and $(\bar z,\bar w)$ is tangent to $\mathcal{E}_c$ at $(x,y)$. It is useful to write $\sigma=\sigma_{\pm}$ and $\tau=\tau_{\pm}$. See \cref{fig:05-pics-poncelet-bryant}.
 \begin{figure}
     \centering
-    \includegraphics[scale=0.5]{chap_05/pics/pics-05-0010-bryant_poncelet_pair.pdf}
+    \includegraphics[scale=0.5]{pics-05-0010-bryant_poncelet_pair.pdf}
     \caption{Deck transformations $\sigma (x,y,z,w)=(\bar x,\bar y,z,w)=(\sigma_{\pm}(x,y),z,w)$ and $\tau_{\pm}(x,y,z,w)=(x,y,\bar z,\bar w)= (x,y, \tau_{\pm}(z,w) )$. }
     \label{fig:05-pics-poncelet-bryant}
 \end{figure}
@@ -103,6 +103,7 @@ Then expressions below define a differential 1-form in $\Sigma.$
   d\theta=  -\frac{dx}{ a_c^2 y\,    Q_1}& =  \frac{dy}{b_c^2 x\,    Q_1}= -\frac{b^2dz}{w\,    Q_2}=\frac{a^2 dw}{z \,   Q_2}\\
  %      Q_1&=\frac{x w}{ a_c^2 b^2} - \frac{y z}{a^2 b_c^2} , \;\;   Q_2=x w-y z
 \end{align*}
+\label{prop:08-dtheta}
 \end{proposition}
 
 \begin{proof}
@@ -153,40 +154,65 @@ By \cref{prop:05-invariant-measure} it follows that $(\tau\circ \sigma)^{*}(d\th
 Therefore, $\tau\circ\sigma$ is conjugated to a rotation of the circle.
 \end{proof}
 
-\begin{remark} The number $\alpha/L$ is the rotation number of the diffeomorphism $f=\tau\circ\sigma$.   Considering an orbit $p_0, p_1, p_2,\ldots, $ it follows that
-\[ \rho(f)=\frac{\alpha}{L}=\lim_{n\infty}\left(\frac{1}{n} \sum_{i=0}^{n}\int_{p_i}^{p_{i+1}} F(p)d\theta \right) \]
+%\begin{remark} The number %$\alpha/L$ is the rotation number of the diffeomorphism $f=\tau\circ\sigma$.   Considering an orbit $p_0, p_1, p_2,\ldots, $ it follows that
+%\[ \rho(f)=\frac{\alpha}{L}=\lim_{n\infty}\left(\frac{1}{n} \sum_{i=0}^{n}\int_{p_i}^{p_{i+1}} F(p)d\theta \right) \]
 
-See \cite{franks-2003}. 
-
+%See \cite{franks-2003}. 
+%\end{remark}
  
 
-\textcolor{red}{corrigir usando teorema de Franks para definir F(p) no nosso caso}
-In our discussion, 
-  the rotation number is a measure of a segment of an orbit over the total measure of $\Sigma$. 
- For example, we can compute:
+%\textcolor{red}{corrigir usando teorema de Franks para definir F(p) no nosso caso}
+%In our discussion, 
+%  the rotation number is a measure of a segment of an orbit over the total measure of $\Sigma$. 
+ 
+ 
+ 
+ 
+ \begin{proposition}
+ We have that
+ \[d\theta={\frac {{b}^{2} \left( {a}^{2}{  w\,dz} -{b}^{2}{ z\, dw}\, 
+ \right) }{ ({a}^{2}-b^2)w^2+{b}^{4} }{\frac {1}{\sqrt {
+b_c^{2}z^{2} + a_c^2 {w}^{2}  -a_c^2b_c^{2}      }}}}\]
+
+ 
+ \end{proposition}
+ \begin{proof}
+ From the equations $g(x,y)=h(x,y,z,w)=0$ it follows that
+ \[ Q_2=xw-yz=\sqrt{ b_c^2 z^2+  a_c^2 w^2      -a_c^2 b_c^2}  \]
+ The result follows from \cref{prop:08-dtheta}.
+ \end{proof}
+ 
+ \begin{proposition}
+ The rotation number is given by
+ $\alpha/L$, where
 \begin{align*}
-  \alpha &= \int_{p_0}^{p_{1}}d\theta&= \int_{x_1}^ {a_c}\frac{dx}{a_c^2y Q_1} \\ p_0&=\left[1,0,a_c,-\frac{b\sqrt{a^2 - ac^2}}{a}\right], \;p_1=\left[x_1,y_1, a_c,\frac{b\sqrt{a^2 - ac^2}}{a}\right]\\
+  \alpha &= \int_{p_0}^{p_{1}}d\theta, \;\;\; L=\int_{\Sigma_+} d\theta    \\ p_0&=\left[1,0,a_c,-\frac{b\sqrt{a^2 - ac^2}}{a}\right], \;p_1=\left[x_1,y_1, a_c,\frac{b\sqrt{a^2 - ac^2}}{a}\right]\\
     x_1&=-\frac {a_c\, \left( {a}^{2}({b}^{2}- b_c^{2})-{b}^{2}a_c^{2} \right) }{a^{2}(b^{2}+ b_c^{2})-b^{2}
 a_c^2}, \; y_1= \,\frac {2 a b_c^{2}b\sqrt {{a}^{2}-a_c^{2}}}{ \left( {b}^{2}+b_c^{2} \right) {a}^{2}-{b}^{2}a_c^2}
     \end{align*}
+\label{prop:08-rotation}
+ \end{proposition}
+ \begin{proof}
+ As the measure $d\theta$ is invariant the rotation number can be computed using only a segment of orbit, and it is the quotient of the measure of this segment over the total measure of $\Sigma_+$.
+ \end{proof}
  
+ \begin{corollary}
+ In the above conditions we have
+ \begin{align*}
+     \alpha &=\int_{0}^{u_0}\frac{2k_2du}{\sqrt{1-k_1\sin^2 u}},\;\; L=\int_{0}^{2\pi}\frac{k_2du}{\sqrt{1-k_1\sin^2 u}}\\
+     k_1&=\frac{a^2 b_c^2 - a_c^2 b^2 }{(a^2  - a_c^2) b_c^2},\;\; k_2=\frac{ab}{b_c\sqrt{a^2   - a_c^2}  },\;\;
+     u_0=\arctan{\left(\frac{\sqrt{a^2-a_c^2}}{a_c}\right)}
+ \end{align*}
+ \end{corollary}
+ 
+ \begin{proof}
+ Direct from \cref{prop:08-rotation} taking the parametrization $z=a\cos u, w=b\sin u$.
+ \end{proof}
+
+\begin{remark}
+In  \cite{kolod1985} the rotation number of an elliptic billiard  is explicitly derived. % and expressed in terms of elliptic functions.
 \end{remark}
-In  \cite{kolod1985} the rotation number of an elliptic billiard  is explicitly derived and expressed in terms of elliptic functions.
-\textcolor{red}{checar notacao abaixo}
-\begin{theorem}
-  \label{th:cap5-rotation-number} Let $T$ be the billiard map such that all orbits are simple. Then
-the rotation number of $T$ is equal to
-\begin{equation}
-    \frac{1}{2}- \frac{F(\beta/2,k)}{F(\pi/2,k}
-\end{equation}
-where $F(\alpha,k)$ is the elliptic integral
-\[ F(\alpha,k)=\int_0^{\alpha} \frac{dx}{\sqrt{1-k^2 \sin^2x}}\]
-and
-\begin{align*}
-\alpha&=\frac{1}{4c^2}\frac{f^2-e^2}{(1-f^2)(1-e^2)},\; e=a/c, f=a_c/c\\
-\beta&=\frac{1-f^2 }{1-e^2}\arcsin{\frac{e}{f}},\;\;\; k=\frac{2+\sqrt{2}}{1+f}.    
-\end{align*}
-\end{theorem}
+
  
 \begin{corollary} 
 In   above conditions  the Poncelet pair $\{\E,\E_c\}$ has a $N-$periodic orbit if and only if $\alpha/L$ is rational.

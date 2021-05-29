@@ -76,7 +76,7 @@ As shown in \cref{fig:03-incircle-circum}:
 
 \begin{proposition}
 The incircle family has invariant circumradius given by $R=(a+b)/2$. Furthermore, the locus of its circumcenter $X_3$ is a circle of radius $d=R-b=a-R$ centered on the common center $O=X_1$.
-\label{prop:n3-incircle-R}
+\label{prop:03-n3-incircle-R}
 \end{proposition}
 
 \begin{proof}
@@ -198,6 +198,16 @@ Over the circumcircle family, the locus of the orthic circumcenter (i.e., the 9-
 
 %Below we analyze a Poncelet family with fixed incircle and non-concentric fixed circumcircle, known as the ``poristic'' family. The previous result implies that the orthics derived from the circumcircle family can be regarded as a rigidly moving poristic family.
 
+Let $\kappa_i'$ denote the curvature of the inner ellipse at the points of contact of circumcircle 3-periodics (the proof is left to the reader in \cref{que:03-circum-caustic-curvs}):
+
+\begin{proposition}
+Over circumcircle 3-periodics, the following quantity is conserved:
+\[ \sum_{i=1}^3 (\kappa_i')^{\frac{2}{3}} =
+\frac{ a_c^2 + a_c b_c + b_c^2 }{(a_c b_c)^{\frac{4}{3}}  }
+  \]
+\label{prop:03-circum-caustic-curvs}
+\end{proposition}
+
 \subsection{Confocal affine image} As \cref{fig:03-n3-affine}(right) depicts, the circumcircle family can also be obtained from an affine image of billiard 3-periodics which sends the billiard ellipse with semi-axes $\alpha,\beta$ to a circle with radius $R=\beta$. Therefore billiard 3-periodics are sent to the circumcircle family by scaling it along the major axis by an amount $s'={\beta/\alpha}$. Therefore \cref{prop:02-n3-caustic} implies:
 
 \begin{lemma}
@@ -276,6 +286,25 @@ Direct calculations using the explicit parametrization of homothetic vertices.
 \begin{corollary}
 The homothetic family conserves the sum of its internal angle cotangents.
 \end{corollary}
+
+As in \cref{prop:02-confocal-curv-sum}, let $\kappa_i$ denote the curvature of the outer ellipse at vertex $P_i$.
+
+\begin{proposition}
+Over homothetic 3-periodics, the following quantities are conserved:
+\begin{align*}
+\sum_{i=1}^3{\kappa_i^{-\frac{2}{3}}} &=\frac{3}{2} \frac{ (a^2 + b^2)}{  (a b)^{\frac{2}{3}}} \\
+\sum_{i=1}^3{\kappa_i^{-\frac{4}{3}}} &=\frac{3}{8}
+\frac{(3a^4 +   a^2 b^2 + 3b^4)}{(a b)^{\frac{4}{3}} }
+\end{align*}
+\cref{prop:03-homoth-curv}
+\end{proposition}
+
+\begin{proof} In the homothetic pair, a 3-periodic    orbit is given by:
+\[P_i=[a\cos(u + \frac{2 i \pi}{3} ), b\sin(u + \frac{2 i \pi}{3})]\]
+and $k_i^{-\frac{2}{3}}$  is the following 
+\[  k_i^{-\frac{2}{3}}=\frac{  b^4 x_i^2 + a^4 y_i^2 }{(a b)^{\frac{8}{3}}}\]  
+The result follows by direct computation using CAS.
+\end{proof}
 
 \section{Dual Family}
 
@@ -393,15 +422,15 @@ Fixed points and (known) conserved quantites for the concentric, axis-parallel (
 \hline
 Family & Fixed & Conserves & Notes \\
 \hline
-Confocal & $X_9$ & $L$, $J$, $r/R$, $\sum\cos\theta_i$ & i.e., billiard 3-periodics \\
+Confocal & $X_9$ & \makecell[cc]{$L$, $J$, $r/R$,\\$\sum\cos\theta_i,\kappa_i^{2/3}$} & i.e., billiard 3-periodics \\
 \hline
 Incircle & $X_1$ & $R$, $\sum\cos\theta_i$ & \makecell[lc]{sum of cosines same as\\confocal affine pre-image} \\
 \hline
-Circumcircle & $X_3$ & \makecell[cc]{$\sum{s_i^2}$, $\prod\cos\theta_i$,\\$r_h$,$R_h$} & \makecell[lc]{product of cosines same as\\excentrals' in confocal affine\\pre-image} \\
+Circumcircle & $X_3$ & \makecell[cc]{$\sum{s_i^2}$, $\prod\cos\theta_i$,\\$r_h$,$R_h$,$(\kappa_i')^{2/3}$} & \makecell[lc]{product of cosines same as\\excentrals' in confocal affine\\pre-image} \\
 \hline
 \makecell[rc]{Confocal\\Excentrals} & $X_6$ & \makecell[cc]{$A'/A$, $\prod\cos\theta_i'$,\\$\sum{(s_i')^2}/\prod{s_i'}$} & \makecell[lc]{primed quantities refer to those\\of the excentral family}  \\
 \hline
-Homothetic & $X_2$ & $A$, $\sum{s_i^2}$, $\omega$, $\sum\cot\theta_i$ & affine image of concentric circles  \\
+Homothetic & $X_2$ & \makecell[cc]{$A$, $\sum{s_i^2}$, $\omega$,\\$\sum\cot\theta_i$, $\kappa_i^{-2/3}$, $\kappa_i^{-4/3}$} & affine image of concentric circles  \\
 \hline
 Dual & $X_4$ & n/a &  \\
 \hline

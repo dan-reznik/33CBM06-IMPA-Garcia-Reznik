@@ -17,7 +17,7 @@ J=\frac{\sqrt{2\delta-a^2-b^2}}{c^2},\;\;\;L=2(\delta+a^2+b^2)J
 where $\delta=\sqrt{a^4-a^2b^2+b^4}$.
 \end{proposition}
 
-\begin{proof} We compute the values considering  an isosceles 3-periodic orbit with $P_1=[a,0]$, and
+\begin{proof} We compute the values considering  an isosceles 3-periodic with $P_1=[a,0]$, and
 
 % {\small  
 % \begin{equation}\label{eq:isosceles_3orbit}
@@ -153,7 +153,7 @@ Let $\E$ be the outer ellipse in the confocal pair, $O$. By definition, the Mitt
 Given a triangle, let $r$ and $R$ denote the radius of its incircle and circumcircle, known as the {\em inradius} and {\em circumradius}, respectively. Over billiard 3-periodics, note these two radii are variable. Referring to \cref{fig:radii}:
 
 \begin{theorem}
-$r/R$ is invariant over the 3-periodic orbit family and given by:
+$r/R$ is invariant over billiard 3-periodics and given by:
 \begin{equation*}
 \label{eqn:rovR}
 \frac{r}{R}=\frac{2 (\delta-b^2)(a^2-\delta)}{c^4}.
@@ -168,7 +168,7 @@ The following relation, found in \cite{johnson1960}, holds for any triangle:
  r R=\frac{s_1s_2s_3}{2 L}, 
 \end{equation*}
 
-\noindent where $L=s_1+s_2+s_3$ is the perimeter, constant for 3-periodic orbits. Therefore:
+\noindent where $L=s_1+s_2+s_3$ is the perimeter, constant over billiard 3-periodics. Therefore:
 
 \begin{equation}
 \frac{r}{R}=\frac{1}{2L} \frac{s_1s_2s_3}{R^2}\cdot
@@ -196,7 +196,7 @@ Let $\theta_i$, $r$, $R$, and $A$ denote the ith internal angle, inradius, circu
 \end{align}
 
 \begin{corollary}
-Over billiard 3-periodics, also invariant are the sum of the orbit cosines, the product of excentral cosines, and the ratio of excentral-to-orbit areas.
+Over billiard 3-periodics, also invariant are the sum of 3-periodic cosines, the product of excentral cosines, and the ratio of excentral-to-3-periodic areas.
 \label{cor:02-rOvR}
 \end{corollary}
 
@@ -208,6 +208,35 @@ $\sum_{i=1}^{3}{\cos\theta_i}=J L - 3$
 
 At it will be seen later in \cref{chap:05-billiard}, the above generalizes to $J L -N$ for all $N$.
 
+Let $P_i$ be a billiard 3-periodic vertex and $d_{j,i}=|P_i-f_j|$ its distance to billiard focus $f_j$. 
+
+\begin{proposition}
+ Over billiard 3-periodics, the following sum is invariant:
+\[  \sum\frac{1}{d_{1,i}}=\sum\frac{1}{d_{2,i}}=\frac {{a}^{2}+{b}^{2}+\delta}{a{b}^{
+2}}
+\]
+\label{prop:02-confocal-inv-spokes}
+\end{proposition}
+
+\begin{proof}
+Direct computation with CAS using vertex parametrization given in \cref{sec:02-vertex-para}.
+\end{proof}
+
+Let $P=(x,y)$ be a point on an ellipse with semi-axes $a,b$. In \cite[Ellipse]{mw}, the curvature at $P$ is expressed both in terms of its coordinates and the distances $d_1,d_2$ to the foci as follows:
+
+\begin{equation}
+\kappa = \frac{1}{a^2 b^2} \left(\frac{x^2}{a^4}+\frac{y^2}{b^4}\right)^{-3/2} = \frac{a b}{(d_1 d_2)^{3/2}}
+\label{eqn:02=curv}
+\end{equation}
+
+Let $\kappa_i$ denote the billiard ellipse curvature at vertex $P_i$ of a Poncelet 3-periodic. From the above and \cref{prop:02-confocal-inv-spokes} obtain:
+
+\begin{corollary}
+Over billiard 3-periodics, the following quantity is conserved:
+\[ \sum_{i=1}^3{\kappa_i^\frac{2}{3}} =\frac{ a^2 + b^2 + \delta}{ (ab)^{\frac{4}{3}} }\]
+\label{prop:02-confocal-curv-sum}
+\end{corollary}
+
 \section{An interpretation for \torp{$\delta$}{delta}}
 
 The Darboux constant $\delta$ appearing above has a curious geometric interpretation. Recall the power of a point $Q$ with respect to a circle $\Cm=(C_0,R_0)$ is given by $|Q-C_0|^2-R_0^2$, see \cite[Circle Power]{mw}. Let $\Cm$ denote the (moving) circumcircle of billiard 3-periodic, and $O=X_9$ the billiard center.
@@ -218,12 +247,12 @@ The power of $O$ with respect to $\Cm$ is constant and equal to $-\delta$.
 \end{proposition}
 
 \begin{proof}
-Consider an isosceles 3-periodic orbit given by \cref{eq:orbita3-isosceles}.  
+Consider an isosceles billiard 3-periodic given by \cref{eq:orbita3-isosceles}.
 	Its circumcircle will be centered at $C_0=[ {\frac { {b}^{2}-\delta}{2b}},0]$ with circumradius $R_0=\frac {{b}^{2}+\delta}{2b}.$
 	Therefore, the power of the center of the ellipse with respect to the circumcircle is given by  
 	$$|OC_0|^2-R_0^2=\left(\frac { {b}^{2}-\delta}{2b}\right)^2 - \left(\frac {{b}^{2}+\delta}{2b}\right)^2=-\delta.$$
 	
-	For a generic 3-periodic orbit, the stated invariance is confirmed with a CAS using the vertex parametrization in \cref{eq:02-p2}.  
+	The stated invariance is confirmed with a CAS using the vertex parametrization in \cref{eq:02-p2}.  
 %	\textcolor{red}{localizar depois}
 \end{proof}
 
