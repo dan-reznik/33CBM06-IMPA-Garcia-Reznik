@@ -1,7 +1,7 @@
 \section{Locus of the Incenter in a CAP pair}
 \label{sec:07-proof-theorem}
 
-Recall the locus of the incenter (and excenters) are ellipses if the pair is confocal, see \cref{thm:02-incenter-excenter}. Here we expand the analysis and consider all CAP pairs.
+Recall the locus of the incenter and excenters are ellipses if the pair is confocal, see \cref{thm:02-incenter-excenter}. Here we expand the analysis and consider all CAP pairs.
 
 \begin{proposition}
 \label{prop:07-X1c}
@@ -12,14 +12,16 @@ Over Poncelet 3-periodics in the pair with an outer circle and an ellipse in gen
   \;&:\;  z^4 - 2\beta  z^2+ 8\lambda z+  (\beta^2-4\alpha\lambda) =0
 \end{align*}
 \end{proposition}
-
+\textcolor{red}{ronaldo pode mudar $a$,$b$,$c$ em $z_{12}$ etc?}
+\textcolor{red}{mark tb sugeriu q vc olhe a prop 3.5 neste \href{https://studymath.github.io/assets/docs/real_complex_bash.pdf
+}{pdf}}
 \begin{proof} The incenter of a triangle with vertices $\{z_1,z_2,z_3\}$ is given by:
 \begin{align*}
-    X_1&=\frac{\sqrt{a}\;z_1+\sqrt{b}\;z_2+\sqrt{c}\;z_3}{\sqrt{a}+\sqrt{b}+\sqrt{c}}\\
-    a&=|z_2-z_3|^2, \; b=|z_1-z_3|^2, \;\; c=|z_2-z_1|^2
+    X_1&=\frac{\sqrt{a_1}\;z_1+\sqrt{b_1}\;z_2+\sqrt{c_1}\;z_3}{\sqrt{a_1}+\sqrt{b_1}+\sqrt{c_1}}\\
+    a_1&=|z_2-z_3|^2, \; b_1=|z_1-z_3|^2, \;\; c_1=|z_2-z_1|^2
 \end{align*}
 Using that $z_i\in \T$ it follows that
-\[a=2-(\frac{z_3}{z_2}+\frac{z_3}{z_2}),\;\; b=2-(\frac{z_1}{z_3}+\frac{z_3}{z_1}),\;\;c=2-(\frac{z_1}{z_2}+\frac{z_2}{z_1})\]
+\[a_1=2-(\frac{z_3}{z_2}+\frac{z_3}{z_2}),\;\; b_1=2-(\frac{z_1}{z_3}+\frac{z_3}{z_1}),\;\;c_1=2-(\frac{z_1}{z_2}+\frac{z_2}{z_1})\]
 Eliminating the square roots in  the equation $X_1-z=0$ and using the relations  $\sigma_i$ (i=1,2,3) given in Blaschke's parametrization the result follows.
 \end{proof}
 
@@ -113,7 +115,7 @@ Over Poncelet 3-periodics in a given pair of conics, the locus of the incenter a
 \end{conjecture}
 
 Evidence also suggests:
-\textcolor{red}{ronaldo is this correct? da uma olhada nos \href{https://bernard-gibert.pagesperso-orange.fr/Tables/table28.html}{strong and weak points do gibert}}
+\textcolor{red}{ronaldo is this correct? da uma olhada nos \href{https://bernard-gibert.pagesperso-orange.fr/Tables/table28.html}{strong and weak points do gibert} -- mark sugere investigar se a conjectura certa é nao-racional nos sidelenghts squared}
 
 \begin{conjecture}
 If a given triangle center $X_k$ has trilinear (or barycentric) coordinates which are irrational on the sidelengths, then the locus of $X_k$ is non-elliptic.

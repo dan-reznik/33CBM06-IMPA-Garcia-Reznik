@@ -7,9 +7,11 @@ Two triangles $T=ABC$ and $T_1=A_1B_1C_1$ are called in perspective when  the th
 Also, the perspective axis of a pair of triangles is the line passing through the   three points of intersection of the correspondent sidelines $AB\cap A_1B_1$,
 $AC\cap A_1C_1$ and $BC\cap B_1C_1$.
 See \cref{fig:appA-perspector}.
+
 \begin{figure}
     \centering
-    \includegraphics[scale=0.4]{zappA/pics/pics-appA-101-perspector.pdf}
+    %[trim=left bottom right top, clip]
+    \includegraphics[trim=0 0 0 30, clip,width=.8\textwidth]{zappA/pics/pics-appA-101-perspector.pdf}
     \caption{Perspector and perspective axis of a pair of triangles $ABC$ and $A_1B_1C_1$.}
     \label{fig:appA-perspector}
 \end{figure}
@@ -17,34 +19,63 @@ See \cref{fig:appA-perspector}.
 Given a triangle $T=ABC$ and a conic $\E$ the polar triangle of $T$ with respect to $\E$ is the triangle whose sidelines are the polar lines of the vertices   $A,B,C$. See \cref{fig:appA-polar-triangle}
 \begin{figure}
     \centering
-    \includegraphics[scale=0.3]{zappA/pics/pics-appA-150-perspector-triangle-ellipse.pdf}
+    \includegraphics[trim=0 0 0 60, clip,width=.8\textwidth]{zappA/pics/pics-appA-150-perspector-triangle-ellipse.pdf}
     \caption{Polar triangle $A_1B_1C_1$ and perspector $X$.}
     \label{fig:appA-polar-triangle}
 \end{figure}
 
 A conic $\E$ that is tangent to the sidelines of a triangle $ABC$ is called {\em inconic}. The perspector of the triangles $ABC$ and its polar with respect to $\E$ is called the perspector of the inconic.
 
-In   an elliptic  billiard having a 3-periodic orbit, i.e., a triangle $T=ABC$ the perspector of the caustic is the triangular center $X_8$ of $T$. The perspector of the billiard is $X_1$. See \cref{fig:appA-X8-X1-perspectors}.
+In trilinear coordinates, an inconic is of the form:
+
+\[p^2 x^2+q^2 y^2 +r^2 z^2 - 2 q r y z -2 p r x z- 2 p q  x y=0\]
+ 
+ The center of the inconic is given by 
+ \[ [c q + b r : a r + c p : b p + a q] \]
+ 
+ The perspector is 
+ \[ [\frac{1}{p},\frac{1}{q},\frac{1}{r}] \]
+
+
+ \begin{remark}
+ The Brocard inellipse of a triangle $T=ABC$ is the inconic with parameters $[p,q,r]=[ 1/a,1/b,1/c]$.
+ \[ a^2 b^2 z^2 - 2 a^2 b c y z + a^2 c^2 y^2 - 2 a b^2 c x z - 2 a b c^2 x y + b^2 c^2 x^2=0\]
+ The center is $X_{39}=[a(b^2 + c^2), b(a^2  +  c^2), c( a^2  + b^2)]$ 
+  and their perpesctor is $X_6=[a,b,c]$.
+ \end{remark}
+ 
+In   an elliptic  billiard having  3-periodic orbits the perspector of the caustic is the triangular center $X_8$. 
+\textcolor{red}{corrigir acima}
+The perspector of the billiard is $X_1$. See \cref{fig:appA-X8-X1-perspectors}.
 \begin{figure}
     \centering
-    \includegraphics[scale=0.7]{zappA/pics/pics-appA-170-inconic-billiardggb.pdf}
-    \caption{Perspectors of the caustic $\E_c$ is $X_8$ o and of the billiard $\E$ is the $X_1$ (incenter). }
+    %\includegraphics[trim=left bot right top,clip,width=.6\textwidth,frame]
+    \includegraphics[trim=80 20 100 15, clip,width=.6\textwidth]{zappA/pics/pics-appA-170-inconic-billiardggb.pdf}
+    \caption{Perspectors of the caustic $\E_c$ is $X_8$, and of the billiard $\E$ is the $X_1$ (incenter). }
     \label{fig:appA-X8-X1-perspectors}
 \end{figure}
 
-Given a triangle $T=ABC$ the conic passing through the vertices is called {\em circumconic}. The circumconic is unique when the center is fixed; otherwise we have a 2d-family of circumconics circumscribing a given triangle. 
+Given a triangle $T=ABC$ the conic passing through the vertices is called {\em circumconic}. The circumconic is unique when the center is fixed; otherwise we have a 2d family of circumconics circumscribing a given triangle. 
 
+In trilinear coordinates the circumconic is of the form
+\[ \frac{p}{x}+\frac{q}{y}+\frac{r}{z}=0\]
 
+ The center of the circumconic is given by 
 
-	\section{Isogonal and isotomic conjugation}
+ \[ [p (-a p u + b q + c r), q  (a p - b q + c r),   r (a p + b q - cr)] \]
+ 
+ The perspector of the circumconic (considered as an inconic of the excentral triangle)  is the point $[p,q,r]$.
+ 
+\section{Isogonal and isotomic conjugation}
 	
-	Consider a triangle $T=ABC$ and a point $P$. Denote by $A_1$, $B_1$ and $C_1$ the contact points of the sidelines of $T$ with the incircle. Consider the reflection of the line $AP$ with respect to $AA_1$ and repeat this process for the other two lines, i.e., reflect the line $BP$ (resp. $PC$) with respect to the bisector $BB_1$ (resp. $CC_1$).
-	The intersection of these three reflected lines is called the {\em isogonal conjugate} of $P$. 
+Consider a triangle $T=ABC$ and a point $P$. Denote by $A_1$, $B_1$ and $C_1$ the contact points of the sidelines of $T$ with the incircle. Consider the reflection of the line $AP$ with respect to $AA_1$ and repeat this process for the other two lines, i.e., reflect the line $BP$ (resp. $PC$) with respect to the bisector $BB_1$ (resp. $CC_1$).
+
+The intersection of these three reflected lines is called the {\em isogonal conjugate} of $P$. 
 	
-	Analogously, when we consider reflection of points  with respect to midpoints   we obtain the so called {\em isotomic conjugate} of $P$. More precisely, consider the intersection $A_1$ of the line $AP$ with the sideline $BC$. Reflect $A_1$ with respect to the midpoint $A_m$ of the side $BC$ obtaining the point $A_1'$. Repeat for the other two sides obtaining the points $B_1'$ and $C_1'$. The intersection of the three lines $AA_1'$, $BB_1'$ and $CC_1'$ is the isotomic conjugate of $P$.
+Analogously, when we consider reflection of points  with respect to midpoints   we obtain the so called {\em isotomic conjugate} of $P$. More precisely, consider the intersection $A_1$ of the line $AP$ with the sideline $BC$. Reflect $A_1$ with respect to the midpoint $A_m$ of the side $BC$ obtaining the point $A_1'$. Repeat for the other two sides obtaining the points $B_1'$ and $C_1'$. The intersection of the three lines $AA_1'$, $BB_1'$ and $CC_1'$ is the isotomic conjugate of $P$.
 	
-		\begin{figure}
-	    \centering
+\begin{figure}
+\centering
 	    \includegraphics[scale=0.35]{zappA/pics/pics-appA_180-isogonal.pdf}
 	     \includegraphics[scale=0.4]{zappA/pics/pics-appA_190-isotomic.pdf}
 	    \caption{Isogonal and isotomic conjugatation.}

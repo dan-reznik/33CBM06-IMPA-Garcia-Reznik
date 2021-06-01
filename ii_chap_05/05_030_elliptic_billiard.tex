@@ -127,7 +127,7 @@ Now consider a positive  orientation in $\Sigma_+$ such $d\theta$ is a positive 
 Define the map
 $\theta:\Sigma_+\to \mathbb{R}/(L \mathbb{Z})$ by
 
-\[\theta(x,y,z,w)=\left(\int_{p_0}^p d\theta\right) \text{mod} L ,\;\; p_0=(1,0,z_0,w_0),\; p=(x,y,z,w)\]
+\[\theta(x,y,z,w)=\left(\int_{p_0}^p d\theta\right) \text{mod} L ,\;\; p_0=\left[a_c,0,a_c,-\frac{b\sqrt{a^2 - ac^2}}{a}\right],\; p=(x,y,z,w)\]
 
 \begin{theorem}
 The map $\theta $ is a conjugation of $\tau\circ \sigma$ and a translation $T:\mathbb{R}/(L\mathbb{Z})\to \mathbb{R}/(L\mathbb{Z})$ given by $T(x)=x+\alpha$, for some $\alpha$.
@@ -154,11 +154,18 @@ By \cref{prop:05-invariant-measure} it follows that $(\tau\circ \sigma)^{*}(d\th
 Therefore, $\tau\circ\sigma$ is conjugated to a rotation of the circle.
 \end{proof}
 
-%\begin{remark} The number %$\alpha/L$ is the rotation number of the diffeomorphism $f=\tau\circ\sigma$.   Considering an orbit $p_0, p_1, p_2,\ldots, $ it follows that
-%\[ \rho(f)=\frac{\alpha}{L}=\lim_{n\infty}\left(\frac{1}{n} \sum_{i=0}^{n}\int_{p_i}^{p_{i+1}} F(p)d\theta \right) \]
+% \begin{remark} The number  $\rho$ is the rotation number of the diffeomorphism $f=\tau\circ\sigma$.   Considering an orbit $p_0, p_1, p_2,\ldots, $ it follows that
+% \[ \rho(f)= \frac{1}{L} \lim_{n\infty}\left(\frac{1}{n} \sum_{i=0}^{n}\int_{p_i}^{p_{i+1}} \varphi(p) d\theta \right) \]
 
-%See \cite{franks-2003}. 
-%\end{remark}
+
+% \end{remark}
+  %See \cite{franks-2003} 
+ %\begin{theorem}
+ %Let $f : \mathbb{T}^1\to\mathbb{T}^1 $ be an orientation preserving homeomorphism
+%which preserves a probability measure $d\mu$, and let $F:\mathbb R\to\mathbb R$ be a lift of $f$ and suppose $\varphi:\mathbb{T}^1\to\mathbb R$ 
+ % is the displacement function of $F$. Then
+ % \[\rho(f)=\int_{\mathbb T^1} \varphi d\mu\]
+ %\end{theorem}
  
 
 %\textcolor{red}{corrigir usando teorema de Franks para definir F(p) no nosso caso}
@@ -182,19 +189,19 @@ b_c^{2}z^{2} + a_c^2 {w}^{2}  -a_c^2b_c^{2}      }}}}\]
  The result follows from \cref{prop:08-dtheta}.
  \end{proof}
  
- \begin{proposition}
- The rotation number is given by
- $\alpha/L$, where
+\begin{proposition} 
+The rotation number of $f=\tau\circ\sigma:\Sigma_+\to \Sigma_+$
+is $\rho(f)=\alpha/L$, where:
 \begin{align*}
-  \alpha &= \int_{p_0}^{p_{1}}d\theta, \;\;\; L=\int_{\Sigma_+} d\theta    \\ p_0&=\left[1,0,a_c,-\frac{b\sqrt{a^2 - ac^2}}{a}\right], \;p_1=\left[x_1,y_1, a_c,\frac{b\sqrt{a^2 - ac^2}}{a}\right]\\
+  \alpha &= \int_{p_0}^{p_{1}}d\theta, \;\;\; L=\int_{\Sigma_+} d\theta    \\ p_0&=\left[a_c,0,a_c,-\frac{b\sqrt{a^2 - a_c^2}}{a}\right], \;p_1=\left[x_1,y_1, a_c,\frac{b\sqrt{a^2 - a_c^2}}{a}\right]\\
     x_1&=-\frac {a_c\, \left( {a}^{2}({b}^{2}- b_c^{2})-{b}^{2}a_c^{2} \right) }{a^{2}(b^{2}+ b_c^{2})-b^{2}
 a_c^2}, \; y_1= \,\frac {2 a b_c^{2}b\sqrt {{a}^{2}-a_c^{2}}}{ \left( {b}^{2}+b_c^{2} \right) {a}^{2}-{b}^{2}a_c^2}
     \end{align*}
-\label{prop:08-rotation}
+    \label{prop:08-rotation}
  \end{proposition}
- \begin{proof}
- As the measure $d\theta$ is invariant the rotation number can be computed using only a segment of orbit, and it is the quotient of the measure of this segment over the total measure of $\Sigma_+$.
- \end{proof}
+  \begin{proof}
+  As the measure $d\theta$ is invariant the rotation number can be computed using only a segment of orbit, and it is the quotient of the measure of this segment over the total measure of $\Sigma_+$.
+  \end{proof}
  
  \begin{corollary}
  In the above conditions we have
@@ -206,7 +213,7 @@ a_c^2}, \; y_1= \,\frac {2 a b_c^{2}b\sqrt {{a}^{2}-a_c^{2}}}{ \left( {b}^{2}+b_
  \end{corollary}
  
  \begin{proof}
- Direct from \cref{prop:08-rotation} taking the parametrization $z=a\cos u, w=b\sin u$.
+ Direct from \cref{prop:08-inv-perimeter},  taking the parametrization $z=a\cos u, w=b\sin u$.
  \end{proof}
 
 \begin{remark}
@@ -215,7 +222,9 @@ In  \cite{kolod1985} the rotation number of an elliptic billiard  is explicitly 
 
  
 \begin{corollary} 
-In   above conditions  the Poncelet pair $\{\E,\E_c\}$ has a $N-$periodic orbit if and only if $\alpha/L$ is rational.
+In   above conditions, 
+%let $\rho=\alpha/L$ the rotation number of $\tau\circ\sigma$. Then 
+the Poncelet pair $\{\E,\E_c\}$ has a  periodic orbit if and only if $\rho(f)$ is rational.
 \end{corollary}
 
  

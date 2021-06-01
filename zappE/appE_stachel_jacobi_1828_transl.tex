@@ -1,0 +1,438 @@
+%\usepackage{german}
+%\usepackage[latin1]{inputenc} % wegen Umlauten
+% \pagestyle{empty}
+\chapter{Translation of Jacobi's paper  }
+\label{app:jacobi-paper}
+
+\def\wkl{<\mskip-10mu)\mskip4mu}
+\newcommand\Frac[2]{{\displaystyle\frac{#1}{#2}}}
+\def\zwi{\mskip 2mu}
+\def\AM{\mskip 2mu\mbox{am}\mskip 2mu}
+\def\DAM{\varDelta\mskip 2mu\mbox{am}\mskip 1mu}
+\newcommand\SN{\mskip 2mu\mathrm{sn}\mskip 2mu}
+\newcommand\Sn{\mskip 2mu\mathrm{sn}}
+\newcommand\CN{\mskip 2mu\mathrm{cn}\mskip 2mu}
+\newcommand\Cn{\mskip 2mu\mathrm{cn}}
+\newcommand\DN{\mskip 2mu\mathrm{dn}\mskip 2mu}
+\newcommand\Dn{\mskip 2mu\mathrm{dn}}
+\newcommand\strqu{^{\prime\mskip 2mu 2}}
+\def\Quadrat#1{\vbox{\hrule\hbox{\vrule height #1\hskip #1\vrule height #1}       \hrule}}
+\def\Beweisende{\Quadrat{2.0mm}}
+\def\BewEnde{\hfill{\Beweisende}}
+\def\mBewEnde{\eqno{\Beweisende}}
+% \definecolor{blau}{cmyk}{1.00,0.30,0.00,0.20} 
+\definecolor{blau}{rgb}{0.00,0.00,1.00} 
+\newcommand\blue{\color{blau}}
+
+\newif\ifPrivat
+% \Privattrue
+\Privatfalse 
+
+
+
+Below is a translation of \cite{jacobi1828} from the original German, kindly contributed by Prof. Hellmuth Stachel. 
+\vskip .5cm
+
+Given an $N$-sided polygon with a circumcircle and an incircle, let $R$ and $r$ denote their radii and $a$ the distance between the centers.
+After Euler cleared the case $N=3$, Steiner reported in \cite[Problem 57]{Steiner1827} about the cases $N=3,4,5,6,8$ without proofs.
+He was not aware that already in 1798 Nicolaus Fuß \cite{Fuss1798} published  formulas for $N = 5,6,7,8\,$.
+However, Fuß studied only a symmetric position of the polygon and conjectured that his equations are not of the necessary generality.
+Of course, since Poncelet's Theorem we know that his assumption does not limit the generality.
+
+
+Steiner's results:
+\[ \begin{array}{ll}
+ N=3: &R^2 - a^2 = 2rR \quad \mbox{(L.\ Euler)},
+ \\[1.5mm]
+ N=4: &1.\ (R^2-a^2)^2 = 2r^2(R^2+a^2) \ \mbox{or} \\
+      &2.\ (R+r+a)(R+r-a)(R-r+a)(R-r-a) = r^4,
+ \\[1.5mm]
+ N=5: &r(R-a) = (R+a)\sqrt{(R-r+a)(R-r-a)}\\[0.4mm]
+      &+\,(R+a)\sqrt{(R-r-a)\cdot 2R}\,,
+ \\[1.5mm]
+ N=6: &3(R^2-a^2)^4 = 4r^2(R^2+a^2)(R^2-a^2)^2 + 16r^4a^2R^2,
+ \\[1.5mm]
+ N=8: &8r^2[(R^2-a^2)^2 - r^2(R^2+a^2)]\left[(R^2+a^2)[(r^2-a^2)^4 + 4r^4a^2R^2]
+       \right.
+      \\[0.5mm]
+      &\left.-\,8r^2a^2R^2(R^2-a^2)^2\right] = \left[(r^2-a^2)^4 - 4r^2a^2R^2\right]^2.
+ \end{array}
+\]      
+
+Fuß' results, using the notations \,$p:= R+a$, \ $q:= R-a\,$:
+\[ \begin{array}{ll}
+  N=5: &p^3q^3 + p^2q^2r(p+q) - pqr^2(p+q)^2 - r^3(p+q)(p-q)^2 = 0\,,
+ \\[1.5mm]
+  N=6: &3p^4q^4 - 2p^2q^2r^2(p^2+q^2) = r^4(p^2-q^2)^2,
+ \\[1.5mm]
+  N=7: &[pq - r(p-q) -2r^2]\cdot 2pqr\sqrt{(p-r)(p+q)}
+        +[p^2q^2 - r^2(p^2+q^2)]
+       \\[0.5mm]
+       &\cdot 2r\sqrt{(q-r)(p+q)} = \pm[pq - r(p-q)][p^2q^2 + r^2(p^2-q^2)]\,, 
+ \\[1.5mm]
+  N=8: &p^2r\sqrt{p^2-r^2} + q^2r\sqrt{p^2-r^2} = pqr^2 - pq\sqrt{(p^2-r^2)(q^2-r^2)}\,.
+ \end{array}
+\]      
+For $N=8$, there seems to be no equivalence to Steiner's result.
+% ----------------------------------------------------------------------------
+\goodbreak
+\bigskip\medskip{\large\bf 4.}
+
+\medskip\noindent
+We want to formulate the basic formulas of this contribution.
+Given are two circles, where the circle with center $C$ and radius $R$ encloses the other with center $c$ and radius $r$.
+Let $a$ denote the distance $Cc$.
+
+Suppose that one tangent drawn from any point $A\in C$ to the circle $c$ intersects $C$ for a second time at $A'$.
+Similarly, we draw the tangents $A'A''$, $A''A'''$ and so on, where $A'',A'''\dots\in C$ and $AA'A''A'''\dots$ is a polygon inscribed in $C$ and circumscribed to $c$.
+
+Let the common diameter $cC$ of the two circles intersect $C$ at $P$ such that $CP = R$ and $cP = R+a$.
+If for the angles we introduce the notation $\wkl ACP = 2\varphi$, $\wkl A'CP = 2\varphi'$, $\wkl A''CP = 2\varphi''$, and so on, then for two consecutive angles hold
+\def\arraycolsep{0.8mm}
+\[ \begin{array}{ccccc}
+      R\cos(\varphi'-\varphi) &+ &a\cos(\varphi' + \varphi) &= &r\,,\\ 
+    R\cos(\varphi''-\varphi') &+ &a\cos(\varphi''+\varphi') &= &r\,,\\ 
+  R\cos(\varphi'''-\varphi'') &+ &a\cos(\varphi'''+\varphi'') &= &r\,,\\
+   \multicolumn{5}{c}{\dots\dots}
+  \end{array}
+\]   
+which can be rewritten as
+\[ \begin{array}{ccccc}
+    (R+a)\cos\varphi' \cos\varphi &+ &(R-a)\sin\varphi' \sin\varphi &= &r\,,\\
+   (R+a)\cos\varphi''\cos\varphi' &+ &(R-a)\sin\varphi''\sin\varphi' &= &r\,,\\
+  (R+a)\cos\varphi'''\cos\varphi''&+ &(R-a)\sin\varphi'''\sin\varphi''&= &r\,,\\
+   \multicolumn{5}{c}{\dots\dots}
+  \end{array}
+\]   
+If we subtract from each equation the following one and pay attention to
+\[  \frac{\cos x - \cos y}{\sin y - \sin x} = \tan\frac{x+y}2\,,
+\]
+then follows
+\[ \begin{array}{ccl} 
+    \tan \Frac{\varphi''+\varphi}2 &= &\Frac{R-a}{R+a}\,\tan\varphi'\,,
+    \\[3.0mm]
+   \tan \Frac{\varphi'''+\varphi'}2 &= &\Frac{R-a}{R+a}\,\tan\varphi''\,,
+    \\[2.5mm]
+   \multicolumn{3}{c}{\dots\dots}
+  \end{array}
+\]   
+In this form, the equations remind on those with elliptic functions.
+    
+If for any given constant $\kappa$, we set 
+\[  u = \int_0^{\varphi} \frac{\mbox d\mskip 1mu\varphi}{\sqrt{1 - \kappa^2\sin^2\varphi}}\,,
+\]
+and, as introduced by myself, the amplitude with
+\[  \varphi = \AM (u)
+\]
+as well as
+\[  \alpha = \AM(t)
+\]
+for any angle $\alpha$, and
+\[ \begin{array}{ccl}
+      \varphi' &= &\AM(u+t),\\
+     \varphi'' &= &\AM(u+2t),
+   \end{array}
+\]
+then follows from the theory of elliptic functions
+\[  \tan\frac{\varphi + \varphi''}2 = \DAM(t)\tan\varphi'
+\]
+where
+\[ \ifPrivat \DAM(t) = \sqrt{1 - \kappa^2\sin^2\alpha} 
+     = \sqrt{1 - \kappa^2 \sin^2(\AM(t))} 
+     \begin{blue} = \sqrt{1 - \kappa^2\,\SN t} = \DN t\,.\end{blue}
+   \else \DAM(t) = \sqrt{1 - \kappa^2\sin^2\alpha} 
+    = \sqrt{1 - \kappa^2 \sin^2(\AM(t))}\,.
+   \fi \footnotemark
+\]  
+% +++++++++
+\footnotetext{Translator's comment: in todays notation holds $\DAM(t) = \mbox{dn}\mskip 2mu t\,.$} 
+% +++++++++
+\ifPrivat \begin{blue} 
+\noindent Proof:
+We use from above
+\[  \tan\frac{\varphi + \varphi''}2 = \frac{\cos\varphi - \cos\varphi''}
+    {\sin\varphi'' - \sin\varphi}\,.
+\]    
+Then the stated equation means, in terms of elliptic functions,
+\begin{equation}\label{eq:1}
+  \frac{\CN u - \CN(u+2t)}{\SN(u+2t) - \SN u} = \DN t\,\frac{\SN(u+t)}{\CN(u+1)}
+\end{equation}
+or 
+\begin{equation}\label{eq:1*}
+  \left[\CN u - \CN(u+2t)\right]\,\CN(u+t) 
+  = \left[\SN(u+2t) - \SN u\right]\,\DN t\,\SN(u+t)\,.
+\end{equation}
+Below, we have in \eqref{eq:2}
+\[ \CN u\,\CN(u+t) + \SN u\,\SN(u+t)\,\DN(t) = \CN t
+\]
+and, after the shift $u\,\mapsto\,u+t\,$, 
+\[ \CN(u+1)\,\CN(u+2t) + \SN(u+t)\,\SN(u+2t)\,\DN(t) = \CN t\,.
+\]
+The difference of these two equations confirms the statement in \eqref{eq:1}.
+\BewEnde
+
+\medskip\noindent
+\end{blue} \fi
+If $\kappa$, $t$ and $\alpha$ satisfy
+\[  \frac{R-a}{R+a} = \DAM(t) = \sqrt{1 - \kappa^2\sin^2\alpha}\,, \quad
+    \varphi' = \AM(u+t),
+\]
+then we obtain
+\[ \begin{array}{ccl}
+       \varphi &= &\AM(u),\\
+      \varphi' &= &\AM(u+t),\\
+     \varphi'' &= &\AM(u+2t),\\
+   \multicolumn{3}{c}{\dots\dots}
+   \end{array}
+\]
+% ----------------------------------------------------------------------------
+\goodbreak
+\bigskip\medskip{\large\bf 5.}
+
+\medskip\noindent
+Now we want to determine $\alpha$ and $\kappa$.
+From the theory of elliptic functions follows
+\[  \cos\varphi \cos\varphi' + \sin\varphi \sin\varphi'
+     \sqrt{1 - \kappa^2\sin^2 \alpha} = \cos\alpha.
+\]
+\ifPrivat \begin{blue}
+Proof: This means in terms of elliptic functions
+\begin{equation}\label{eq:2}
+   \CN u\,\CN(u+t) + \SN u\,\SN(u+t)\,\DN(t) = \CN t
+\end{equation}
+and follows from the addition theorems
+\[ \begin{array}{rcl}
+   \SN(u+t) &= &\Frac{\SN u\,\CN t\,\DN t + \CN u\,\DN u\,\SN t}
+    {1 - \kappa^2\Sn^2 u\,\Sn^2 t}\,, 
+    \\[3.5mm]
+   \CN(u+t) &= &\Frac{\CN u\,\CN t - \SN u\,\DN u\,\SN t\,\DN t}
+   {1 - \kappa^2\Sn^2 u\,\Sn^2 t}
+  \end{array}
+\]
+as a linear combination.
+Similarly holds
+\[  \CN u\,\SN(u+t) - \SN u\,\CN(u+t)\,\DN t = \DN u\,\SN t\,. \mBewEnde
+\] 
+\end{blue} \fi
+According to the formulas above holds
+\[  \cos\varphi \cos\varphi' + \sin\varphi \sin\varphi'\cdot
+     \frac{R-a}{R+a} = \frac r{R+a}\,,
+\]
+hence
+\[  \sqrt{1 - \kappa^2\sin\alpha^2} = \frac{R-a}{R+a}\quad\mbox{and}\quad
+    \cos\frac r{R+a}\,,
+\]
+consequently
+\[  \kappa^2 = \frac{4Ra}{(R+a)^2 - r^2}\,,\quad
+    1 - \kappa^2 = \kappa\strqu = \frac{(R-a)^2 - r^2}{(R+a)^2 - r^2}\,.
+\]    
+Moreover,
+\[ \begin{array}{ccc}
+    R+a = \Frac r{\cos\alpha}\,,\quad &2R = \Frac{r(1+\DAM(t))}{\cos\alpha}\,,
+     \quad &r = \Frac{2R\cos\alpha}{1+\DAM(t)}\,, 
+    \\[3.5mm]
+    R-a = \Frac{r\DAM(t)}{\cos\alpha}\,,\quad 
+     &2a = \Frac{r(1-\DAM(t))}{\cos\alpha}\,,\quad 
+     &a = \Frac{R(1-\DAM(t))}{1+\DAM(t)}\,.
+  \end{array}    
+\]     
+Due to these equations, we obtain from $\AM(u) = \varphi$ and $\AM(t) = \alpha$ the value $\AM(u + mt)$ by the following geometric construction:
+Draw the circle with center $c$ and radius $r$ as well as the circle centered at $C$ with radius $R$ with the distance $Cc = a$ and
+\[  a = \frac{r(1 - \DAM(t))}{2\cos\alpha}\,, \quad
+    R = \frac{r(1 + \DAM(t))}{2\cos\alpha}\,.
+\]
+Choose point $A\in C$ with $\wkl ACP = 2\varphi$ and determine iteratively the points $A', A'', A''',\dots$ as described above.
+Then 
+\[  \frac{\wkl A^{(m)}CP}2 = \varphi^{(m)} = \AM(u + mt).
+\]
+For determining $mt$, we have to specify $A=P$.
+Of course, the sequence of angles $2\varphi$, $2\varphi'$, $2\varphi'', \dots$ is increasing, so that the angles will exceed $360^\circ$.
+% ----------------------------------------------------------------------------
+\goodbreak
+\bigskip\medskip{\large\bf 6.}
+
+\medskip\noindent
+It needs to be noted that the values $\kappa$ and $\alpha$ are independent of $\varphi$ and $u$.
+Wherever point $A$ is specified on $C$, if \ $\frac 12\!\wkl ACP = \varphi = \AM(u)$ and point $A'$ satisfies \ $\frac 12\!\wkl A'CP = \varphi' = \AM(u+t)$, then the line $AA'$ will contact the circle which is defined by
+\[  a = R\,\frac{1 - \DAM(t)}{1 + \DAM(t)} \quad\mbox{and}\quad
+    r = \frac{2R\cos\alpha}{1 + \DAM(t)}\,.
+\]
+Namely, one assumes the line $CP$ to be fixed, and from this line, which contains the center $c$, we protract the angle $2\varphi$.
+
+Similarly, wherever $A$ is chosen, the line $AA''$ will contact a circle which is defined by
+\[  a = R\,\frac{1 - \DAM(2t)}{1 + \DAM(2t)}\,, \quad
+    r = \frac{2R\cos\alpha^{(2)}}{1 + \DAM(2t)}\,,
+\]
+where
+\[  \alpha^{(2)} = \AM(2t),\quad 
+    \DAM(2t) = \sqrt{1 - \kappa^2\sin^2 \alpha^{(2)}}\,.
+\]
+And general, wherever $A$ is chosen, the line $AA^{(m)}$ will contact a circle given by
+\[ \begin{array}{c}
+    a = R\,\Frac{1 - \DAM(mt)}{1 + \DAM(mt)}\,, \quad
+     r = \Frac{2R\cos\alpha^{(m)}}{1 + \DAM(mt)}\,,
+   \\[3.5mm] 
+    \alpha^{(m)} = \AM(mt),\quad 
+     \DAM(mt) = \sqrt{1 - \kappa^2\sin^2 \alpha^{(m)}}\,.
+  \end{array}
+\]
+The centers of all circles are placed on the line $CP$.\footnote{
+% +++++++
+Translator's comment: Jacobi wrote falsely `on the line $AP$'.} 
+% +++++++
+Now we want prove that all pairs of circles share the line of equal power w.r.t.\ the circles,\footnote{
+% +++++++
+Translator's comment: i.e., the radical axis}
+% +++++++
+ which is orthogonal to the common diameter.   
+For this purpose, we look for a point on $CP$ with equal power w.r.t.\ $c$ and $C$.
+If we denote the distance of this point to $C$ with $D$, then the distance to $c$ is $D-a$, and we obtain the condition
+\[  D^2 - R^2 = (D-a)^2 - r^2
+\]
+or
+\[  D = \frac{F^2 + a^2 - r^2}{2a} = \frac{(R+a)^2 - r^2}{2a} - R\,.
+\]
+From above follows 
+\[  \kappa^2 = \frac{4aR}{(R+a)12 - r^2}\,,
+\]
+hence
+\[  \frac{(R+a)^2 - r^2}{2a} = \frac{2R}{\kappa^2}
+\]
+and finally
+\[  D = \frac{2R}{\kappa^2} - R\,.
+\]
+We notice that $D$ depends on $\kappa$, but not on $\alpha$.
+However, the circles share $\kappa$ and differ only in $\alpha$.
+Hence, if we replace $c$ by another circle, the radical axis with $C$ remains the same.
+A direct computation of the circle which contacts $AA^{(m)}$ would have been very complicated, even for small $m$.
+
+Poncelet stated the existence of a circle tangent to all lines $AA''$ in \cite[p.~326 and Pl.~XI, Fig.~93]{poncelet1822} in the following form:\\[0.5mm]
+``If the vertex of an angle runs along a circle $C$ while the two sides are tangent to another circle $c$, then the connection of the remaining points of intersection between $C$ and the sides of the angle will envelope a third circle which has the same radical axis with the other two circles.''
+\\
+A projective transformation gives rise to a theorem on conics.
+% ----------------------------------------------------------------------------
+\goodbreak
+\bigskip\medskip{\large\bf 7.}
+
+\medskip\noindent
+Up to now, we assumed that the sides of the polygon contact the same circle (or conic).
+As a generalization, Poncelet weakened this condition by demanding that the sides in given order contact given conics, provided that these conics share with the circumscribed conic common chords, to say, two pairs of real or complex conjugate points.\footnote{
+% +++++++++
+Poncelet defined the situation that two conics share a chord --- in particular in the case that the endpoints are complex conjugate --- as follows:  
+Let the diameters respectively conjugate to the chord intersect the conics in $A,B$ or $A',B'$ and have the lengths $a$ or $a'$, and the diameters meet at a point $O$ of the common chord. 
+On the other hand, let the diameters parallel to the common chord have the lengths $b$ or $b'$.
+Then must hold $\frac{b^2}{a^2}\,OA\cdot OB = \frac{b\strqu}{a\strqu}\,OA'\cdot OB'$.}
+% +++++++++
+
+Poncelet stated in \cite[p.~327]{poncelet1822}:
+\\[0.5mm]
+``If a polygon is incribed a conic $C$ such that the consecutive sides except one contact other conics $c, c', c'',\dots$ which mutually and with $C$ share a common chord and if this polygon varies, then the free side and all diagonals will envelope conics which again share the common chords\footnote{
+% +++++++++
+Translator's comment: in other words, the conics belong to the pencil spanned by $C$ and $c$.} 
+% +++++++++
+ with the given ones.''
+
+Also this generalisation can easily be concluded from our study on circles by applying a projective transformation.
+Even more, we obtain formulas to the wanted circle.
+
+Let $c,c',c'',\dots,c^{(m-1)}$ be the centers of the circles with radii $r, r',r'',\dots, r^{(m-1)}$ with center distances $cC=a$, $c'C=a'$, \dots, $c^{(m-1)}C = a^{(m-1)}$.
+Moreover, we define the angles $\alpha,\alpha_1,\dots,\alpha_{m-1}$ by
+\[ \cos\alpha = \frac r{R+a}, \quad \cos\alpha_1 = \frac{r'}{R+a'}, \ \dots \ ,
+   \quad \cos\alpha_{m-1} = \frac{r^{(m-1)}}{R+a^{(m-1)}}
+\]
+and set
+\[ \alpha_m = \AM t, \quad \alpha_1 = \AM t_1, \ \dots, \quad \alpha_{m-1} = \AM t_{m-1}\,.
+\]    
+Now we specify any $A\in C$ and draw a tangent $AA'$ to $c$, $A'A''$ to $c'$, and so on until the tangent $A^{(m-1)}A^{(m)}$ to $c^{(m-1)}$, where all points $A', A'',\dots,A^{(m)}$ belong to $C$.     
+We denote
+\[ \wkl ACP = 2\varphi, \quad \wkl A'CP = 2\varphi', \ \dots, \quad 
+    \wkl A^{(m)}CP = 2\varphi^{(m)}.
+\]     
+If $\varphi = \AM u$, then
+\[ \varphi':= \AM(u+t), \ \varphi'' = \AM(u+t+t'), \ \dots, \
+   \varphi^{(m)} = \AM(u+t+t'+\dots+t^{(m-1)}.
+\]
+If we assume $t + t' + \dots + t^{(m-1)} = 5$, then the line $A^{(m)}A$, which closes the polygon, will contact a circle given by
+\[  r_m = \frac{2R\cos(\mbox{am}\zwi 5)}{1 + \DAM 5} \quad \mbox{and} \quad
+    a_m = \frac{R(1 - \DAM 5)}{1 + \DAM 5},
+\]
+where $r_m$ is the radius and $a_m$ the center distance to $C$ along the line $CP$.
+The condition that the circles share the radical axis is equivalent to the identity of the modulus $\kappa$.
+
+The above represents a construction for the addition of elliptic functions.
+Moreover, the formulas above reveal that the point $A^{(m)}$ remains the same independent of the order in which the sides $AA'$, $A'A''$, \dots\ contact the given circles.
+
+% ----------------------------------------------------------------------------
+\goodbreak
+\bigskip\medskip{\large\bf 8.}
+
+\medskip\noindent
+For $K$ with $\AM K = \frac{\pi}2$ holds $\AM(u+2K) = \pi +\AM u$, and more general, for any integer $i$ holds $\AM(u+2iK) = i \pi + \AM u$\,.
+Hence, if $AA'A''\dots A^{(m)}A$ traverses the circle $C$ $i$-times, we should set
+more precisely $5 = 2iK - (t+t'+t''+\dots t^{(m-1)})$.
+But this does not change the formulas for $a_m$ and $r_m$.
+If all circles $c, c', c'',\dots,c^{(m-1)},c_m$ coincide, then
+\[  (m+1)t = 2iK \quad \mbox{or}\quad t = \frac{2iK}{m+1}\,.
+\]
+This is the analytic condition in terms of the radii and center distance for admitting an inscribed and circumscribed $(m+1)$-gon which traverses the circumscribed circle $i$-times.  
+
+We summarize this in the following
+
+\smallskip\noindent
+{\bf Theorem.} {\em Let $R$ and $r$ be the radii of two circles where the first is circumscribed an $n$-gon and the other inscribed.
+If $a$ is the distance between the centers and
+\[ \cos\alpha = \frac{r}{R+a}, \quad \kappa^2 = \frac{4aR}{(R+a)^2 - r^2}\,,
+\]
+then 
+\[  \int_0^{\alpha} \frac{\mathrm{d}\mskip 1mu\varphi}
+     {\sqrt{1 - \kappa^2\sin^2\varphi}} =
+    \frac in \int_0^\pi \frac{\mathrm{d}\mskip 1mu\varphi}
+    {\sqrt{1 - \kappa^2\sin^2\varphi}}\,,
+\]
+where $i$ counts the surroundings of the $n$-gon.
+This equation expresses at the same time the relation between $r$, $R$ and $\alpha$.}
+
+\smallskip
+Since $t = 2iK/n$ is independent of $u$, the choice of the initial vertex $A$ plays no role, as Poncelet stated in \cite{poncelet1822}.
+By the way, one can assume that $\mbox{gcd}(i,n)=1$, since otherwise the $n$-gon is multiply covered.
+
+Thus, the problem as mentioned in the title has been solved completely and in full generality.
+
+% ----------------------------------------------------------------------------
+\goodbreak
+\bigskip\medskip{\large\bf 9.}
+
+\medskip\noindent
+If the number $n = 2m$ of vertices is even, then $A$ and $A^{(m)}$, $A'$ and $A^{(m+1)}$, \dots, $A^{(m-1)}$ and $A^{(2m-2)}$ are opposite.
+Then the diagonals $AA^{(m)}$, $A'A^{(m+1)}$, $A''A^{(m+2)}$, \dots\ will contact a circle defined by
+\[   \alpha = \frac{R\,[1 - \DAM(mt)]}{1 + \DAM(mt)}, \quad
+     r = \frac{2R\cos\AM(mt)}{1 + \DAM(mt)}\,.
+\]     
+From $t = 2iK/2m$ with an odd $i$ follows $mt = iK$ and $\AM(mt) = i\pi/2$.
+Therefore,
+\[  r = 0 \quad\mbox{and}\quad 
+    \alpha = R\,\frac{1 - \sqrt{1-\kappa^2}}{1 + \sqrt{1-\kappa^2}}\,.
+\]
+The circle shrinks to a point which remains the same for all $A$, since $\alpha$ is independent of $u$ and $\varphi$.
+This point is one of the zero-circles included in the family of circles with a common chord.
+On the other hand, this point belongs to all circles which intersect the circles of the family orthogonally (according to Steiner's result published in Crelle's Journal 1, p.~161).
+In projective setting, the result on concurrent diagonals can also be found in \cite[p.~364]{poncelet1822}.
+
+It should be interesting for the theory of elliptic functions to investigate the analogue problem for pairs of conics.
+The integral will appear in a more complicated form, but should be reducible to a simpler form.
+Perhaps, I'll return to this problem occasionally. 
+
+%(submitted?)
+April 1, 1828
+    
+% --------------------------------------------------------------
+%\bibitem{Fuss}
+%Nicolaus Fuß: {\em De Polygonis symmetrice irregularibus circulo simul inscriptis et circumscriptis.} 
+%Nova Acta Academiae Scientiarum imperialis Petropolitanae {\bf 13}, 166--189 (1798).
+
+%Jean-Victor Poncelet: {\em Trait\'e des propri\'ete\'es projective des figures.} Bachelier, Libraire, Paris 1822.
+
+%Jacob Steiner: {\em Problem 57,} Crelle's Journal {\bf 2},  p.~289 (1827).
+
+
+
