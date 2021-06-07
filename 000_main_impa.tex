@@ -23,7 +23,9 @@
 
 % authors in alpha order
 \maketitle
-%\frontmatter
+
+\chapter*{Preface}
+\input{010_preface}
  %\tableofcontents
 %\mainmatter
 
@@ -33,58 +35,76 @@
 
 \part{\torp{$N=3$}{N=3} Phenomena}
 
-\chapter{N=3 Confocal Pair}
-\label{chap:03-n3-confocal}
-%\input{chap_03/03_030_n3_billiard}
+\chapter{Confocal Pair}
+\label{chap:02-n3-confocal}
+\input{chap_02/02_010_main}
 
-\chapter{N=3 Concentric, Axis Parallel}
+\chapter{Concentric, Axis-Parallel (CAP)}
 \label{chap:03-n3-cap}
-%\input{chap_03/03_040_other_conc}
+\input{chap_03/03_010_main}
 
-\chapter{N=3 Non-concentric, Axis Parallel}
-\label{chap:03-n3-ncap}
-%\input{chap_03/03_050_non_conc}
-
-\chapter{Analyzing Loci of N=3 Poncelet Families}
-\label{chap:04-n3-loci}
+\chapter{Non-concentric, Axis-Parallel (NCAP)}
+\label{chap:04-n3-ncap}
 \input{chap_04/04_010_main}
+
+\chapter[Confocal Loci]{Locus Phenomena in the Confocal Family}
+\label{chap:05-confocal-loci}
+\input{chap_05/05_010_main}
+
+\chapter[Loci in CAP Pairs]{Locus Phenomena in other CAP Families}
+\label{chap:06-cap-loci}
+\input{chap_06/06_010_main}
+
+\chapter{Analyzing Loci}
+\label{chap:07-n3-loci}
+\input{chap_07/07_010_main}
+
+\chapter{The Focus-Inversive Family}
+\label{chap:08-focus-inversive}
+\input{chap_08/08_010_main}
+
+\chapter{A Locus Visualization App}
+\label{chap:09-experimental}
+\input{chap_09/09_010_main}
 
 %%% PART II -- N>3 phenomena
 \part{\torp{$N>3$}{N>3} Phenomena}
 
+% 80- or 50-invariants
 \chapter[Billiard Invariants]{Invariants in the Elliptic Billiard}
-\label{chap:05-billiard}
- %\input{chap_05/05_010_main}
-
-\chapter[Bicentric Invariants]{Invariants of the Bicentric Family}
-\label{chap:06-bicentric}
-%\input{chap_06/06_010_main}
-
+%\label{chap:11-billiard}
+ %\input{chap_11/11_010_main} 
+ 
+% galkin + pedro?
 \chapter[Homothetic and Brocard Invariants]{Invariants of the Homothetic and Brocard Families}
-\label{chap:07-homoth}
-%\input{chap_07/07_010_main}
+%\label{chap:12-homoth}
+%\input{chap_12/12_010_main}
 
-\chapter{Experimental Techniques}
-\label{chap:08-experimental}
-%\input{chap_08/08_010_main}
+% pedro
+\chapter[Bicentric Invariants]{Invariants of the Bicentric Family}
+%\label{chap:13-bicentric}
+%\input{chap_13/13_010_main}
+
+\chapter{\torp{$N>3$}{N>3} Experimental Notes}
+%\label{chap:13-experimental}
+%\input{chap_13/13_010_main}
 
 \part{Poncelet Machinery}
-%%% PART III -- Poncelet Machinery
 
-\chapter{Poncelet Preliminaries}
-\label{chap:02-poncelet-prelims}
-\input{chap_02/02_010_main}
+\chapter{Poncelet's Closure Theorem}
+%\label{chap:10-poncelet-prelims}
+% \input{chap_10/10_010_main}
 
 \chapter{Epilogue: Properties of Pairs of Conics}
-\label{chap:09-conics}
-\input{chap_09/09_010_main}
+%\label{chap:09-conics}
+%\input{ii_chap_09/09_010_main}
 
 \chapter{Conclusion}
-\label{chap:10-conclusion}
-%\input{chap_10/10_010_main}
+%\label{chap:20-conclusion}
+\input{chap_20/20_020_main}
 
 \appendix
-\input{200_app}
+\input{200_appendices}
 
 \backmatter
 
